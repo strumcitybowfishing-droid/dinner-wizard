@@ -1,0 +1,80 @@
+USDA MyPlate Kitchen harvest
+Source: USDA MyPlate Kitchen (US government public domain)
+List API: https://myplate.food/api/v1/recipes (1072 cards, reported total 1072)
+Details: JSON-LD / HTML from https://myplate.food/recipes/{slug}
+Canonical sourceUrl: https://www.myplate.gov/recipes/{slug}
+Official myplate.gov fetches returned HTTP 403; myplate.gov Kitchen was retired Jan 2026.
+
+Complete recipes (ingredients AND steps): 460
+Dinner-like candidates: 460
+Skipped incomplete: 0
+Skipped after detail (not dinner): 0
+Fetch errors: 0
+
+List API categories:
+  Main dish: 318
+  Side dish: 190
+  Salad: 135
+  Soup: 107
+  Sauce: 99
+  Dessert: 81
+  Breakfast: 53
+  Bread: 43
+  Snack: 26
+  Beverage: 20
+
+Kept by category tag:
+  main-dish: 308
+  soup: 106
+  salad: 40
+  side-dish: 5
+  unknown: 1
+
+Primary protein counts:
+  chicken: 133
+  vegetarian: 92
+  beef: 55
+  beans: 43
+  turkey: 29
+  fish: 20
+  tuna: 19
+  eggs: 18
+  pork: 12
+  salmon: 10
+  ham: 6
+  tofu: 5
+  steak: 5
+  catfish: 3
+  shrimp: 3
+  sausage: 2
+  ground-beef: 2
+  trout: 1
+  lamb: 1
+  bacon: 1
+
+Sample titles:
+  2-Step Chicken [chicken] ings=4 steps=7 usda-2-step-chicken
+  20-Minute Chicken Creole [chicken] ings=11 steps=7 usda-20-minute-chicken-creole
+  3-Can Chili [beans] ings=4 steps=6 usda-3-can-chili
+  Anytime Pizza [vegetarian] ings=7 steps=5 usda-anytime-pizza
+  Apple & Chicken Salad [chicken] ings=9 steps=3 usda-apple-chicken-salad
+  Apple Carrot Soup [pork] ings=7 steps=5 usda-apple-carrot-soup
+  Apple Corn Chili [chicken] ings=15 steps=11 usda-apple-corn-chili
+  Apple, Fennel & Chicken Salad with Couscous [chicken] ings=12 steps=10 usda-apple-fennel-chicken-salad-couscous
+  Apricot & Lemon Chicken [chicken] ings=5 steps=7 usda-apricot-lemon-chicken
+  Asian Mango Chicken Wraps [chicken] ings=11 steps=9 usda-asian-mango-chicken-wraps
+  Asparagus, Mandarin Orange, Chicken, and Rice [chicken] ings=10 steps=6 usda-asparagus-mandarin-orange-chicken-and-rice
+  Avocado Pita Pockets [beans] ings=5 steps=4 usda-avocado-pita-pockets
+  Avocado, Potato, and Grilled Chicken Salad [chicken] ings=10 steps=5 usda-avocado-potato-and-grilled-chicken-salad
+  Baked Bananas [vegetarian] ings=5 steps=5 usda-baked-bananas
+  Baked Chicken [chicken] ings=4 steps=4 usda-baked-chicken
+  Baked Chicken Nuggets [chicken] ings=6 steps=15 usda-baked-chicken-nuggets
+  Baked Chicken with Vegetables [chicken] ings=7 steps=7 usda-baked-chicken-vegetables
+  Baked Eggs & Cheese [eggs] ings=6 steps=7 usda-baked-eggs-cheese
+  Baked Fish [fish] ings=7 steps=10 usda-baked-fish
+  Baked Fish [fish] ings=9 steps=8 usda-baked-fish-0
+  Baked Fish and Vegetables [fish] ings=7 steps=10 usda-baked-fish-and-vegetables
+  Baked Fish with Tomatoes, Peppers, and Onions [fish] ings=5 steps=5 usda-baked-fish-tomatoes-peppers-onions
+  Baked Lemon Chicken [chicken] ings=9 steps=9 usda-baked-lemon-chicken
+  Baked Lentils Casserole [beans] ings=9 steps=10 usda-baked-lentils-casserole
+  Baked Meatballs [turkey] ings=7 steps=7 usda-baked-meatballs

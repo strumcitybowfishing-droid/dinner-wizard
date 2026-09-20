@@ -1,0 +1,6 @@
+data/_cache/
+data/_probe*
+data/_harvest_usda.py
+__pycache__/
+*.pyc
+.DS_Store

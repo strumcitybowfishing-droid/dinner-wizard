@@ -1,0 +1,1 @@
+Harvested 585 meals from TheMealDB (raw=791, skipped=206); proteins: vegetarian=131, chicken=76, beef=64, fish=48, shrimp=36, lamb=35, beans=34, pork=31, sausage=25, ground-beef=23, bacon=22, eggs=16, ham=12, salmon=7, steak=7, goat=3, tofu=3, tuna=3, duck=2, turkey=2, crab=1, lobster=1, other=1, ribs=1, trout=1; fetch failures: none

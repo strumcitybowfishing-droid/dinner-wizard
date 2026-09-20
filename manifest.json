@@ -1,0 +1,26 @@
+{
+  "name": "DINNER WIZARD",
+  "short_name": "Dinner Wizard",
+  "description": "A family dinner picker. You tap. The hat decides.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1c3a2e",
+  "theme_color": "#1c3a2e",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "./icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/wizard.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}

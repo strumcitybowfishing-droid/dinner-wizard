@@ -1,0 +1,228 @@
+Wild-game dinner harvest: 97 complete recipes
+
+By protein:
+  venison: 36
+  turkey: 20
+  fish: 8
+  squirrel: 7
+  crawfish: 4
+  dove: 4
+  duck: 4
+  rabbit: 3
+  catfish: 2
+  chicken: 2
+  goose: 1
+  other: 1
+  pheasant: 1
+  quail: 1
+  sausage: 1
+  trout: 1
+  wild-hog: 1
+
+By source:
+  Missouri Department of Conservation: 69
+  Connecticut DEEP: 11
+  Texas Parks & Wildlife: 11
+  Wikibooks Cookbook (CC BY-SA): 5
+  University of Missouri Extension: 1
+
+Rules: public US state DNR / wildlife agency / university extension / CC-BY-SA Wikibooks only.
+Skipped commercial cookbooks (MeatEater, AllRecipes, Food Network, NYT, ATK, BBC, Afield, Hudson's).
+Each recipe has title, ingredients, and step-by-step instructions.
+Skipped incomplete/duplicate/non-dinner fetches: 85
+
+Titles:
+  - [catfish] Cajun Blackened Catfish Tacos  (Texas Parks & Wildlife)
+    https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/blackened_catfish_tacos.phtml
+  - [catfish] Catfish with Crabmeat Sauce  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/fish/catfish-crabmeat-sauce
+  - [chicken] Cookbook:Chicken and Dumplings  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook:Chicken_and_Dumplings
+  - [chicken] Cookbook:Fried Chicken  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook:Fried_Chicken
+  - [crawfish] Crawdad Pilaf  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/crayfish/crawdad-pilaf
+  - [crawfish] Crayfish Etouffee I  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/crayfish/crayfish-etouffee-i
+  - [crawfish] Crayfish Etouffee II  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/crayfish/crayfish-etouffee-ii
+  - [crawfish] Crayfish Salad  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/crayfish/crayfish-salad
+  - [dove] Carter Smith's Jalapeño Dove Poppers  (Texas Parks & Wildlife)
+    https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/jalapeno-dove-poppers.phtml
+  - [dove] Charcoal Dove  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/dove/charcoal-dove
+  - [dove] Dove d'Elegence  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/dove/dove-delegence
+  - [dove] Dove Empanadas  (Texas Parks & Wildlife)
+    https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/dove-empanadas.phtml
+  - [duck] Duck Breast with Red Chili Glaze  (Texas Parks & Wildlife)
+    https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/duck_breast_red_chili_glaze.phtml
+  - [duck] Mississippi Duck Gumbo  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/waterfowl/mississippi-duck-gumbo
+  - [duck] Sassafras-Marinated Mallard Satays  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/waterfowl/sassafras-marinated-mallard-satays
+  - [duck] Wild Rumake  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/waterfowl/wild-rumake
+  - [fish] Carp Cajun  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/fish/carp-cajun
+  - [fish] Carp on a Stick  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/fish/carp-stick
+  - [fish] Crappie Francaise  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/fish/crappie-francaise
+  - [fish] Fish Chowder  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/fish/fish-chowder
+  - [fish] Old-School-Style Fried Carp  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/fish/old-school-style-fried-carp
+  - [fish] Pecan-Crusted Crappie  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/fish/pecan-crusted-crappie
+  - [fish] Three-Alarm Spoonbill Jambalaya  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/fish/three-alarm-spoonbill-jambalaya
+  - [fish] Walleye Tidbits  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/fish/walleye-tidbits
+  - [goose] Wild Goose Barbacoa with Spicy Peach Pico  (Connecticut DEEP)
+    https://portal.ct.gov/DEEP/Hunting/Cooking-with-Wild-Game
+  - [other] Cookbook:Shepherd's Pie I  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook:Shepherd%27s_Pie
+  - [pheasant] Pheasant Tortilla Soup  (Texas Parks & Wildlife)
+    https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/pheasant_tortilla_soup.phtml
+  - [quail] Texas Bandera Smoked Quail Egg Roll  (Texas Parks & Wildlife)
+    https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/bandera_quail.phtml
+  - [rabbit] Rabbit Cacciatore  (Connecticut DEEP)
+    https://portal.ct.gov/DEEP/Hunting/Cooking-with-Wild-Game
+  - [rabbit] Rabbit Swill  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/rabbit/rabbit-swill
+  - [rabbit] Sweet and Sour Rabbit  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/rabbit/sweet-sour-rabbit
+  - [sausage] Cookbook:Chicken and Andouille Sausage Gumbo  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook:Gumbo
+  - [squirrel] Kentucky Burgoo (Squirrel, Beaver, and Pheasant)  (Connecticut DEEP)
+    https://portal.ct.gov/DEEP/Hunting/Cooking-with-Wild-Game
+  - [squirrel] Rosemary Parmesan Squirrel  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/squirrel/rosemary-parmesan-squirrel
+  - [squirrel] Skillet Squirrel  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/squirrel/skillet-squirrel
+  - [squirrel] Squirrel and Dumplings  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/squirrel/squirrel-dumplings
+  - [squirrel] Squirrel Country Sausage  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/squirrel/squirrel-country-sausage
+  - [squirrel] Squirrel Dumplings  (Connecticut DEEP)
+    https://portal.ct.gov/DEEP/Hunting/Cooking-with-Wild-Game
+  - [squirrel] Squirrel Potpie  (Connecticut DEEP)
+    https://portal.ct.gov/DEEP/Hunting/Cooking-with-Wild-Game
+  - [trout] Trout Stuffed With Crabmeat  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/fish/trout-stuffed-crabmeat
+  - [turkey] Almond Turkey Bake  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/turkey/almond-turkey-bake
+  - [turkey] Barbecued Wild Turkey I  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/turkey/barbecued-wild-turkey-i
+  - [turkey] Barbecued Wild Turkey II  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/turkey/barbecued-wild-turkey-ii
+  - [turkey] Barded Wild Turkey Hors d'Oeuvres  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/turkey/barded-wild-turkey-hors-doeuvres
+  - [turkey] Chicken of the Woods Marsala (Wild Turkey)  (Connecticut DEEP)
+    https://portal.ct.gov/DEEP/Hunting/Cooking-with-Wild-Game
+  - [turkey] Cookbook:Jambalaya I  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook:Jambalaya
+  - [turkey] Grilled Turkey  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/turkey/grilled-turkey
+  - [turkey] Grilled Turkey With Lemon Sauce  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/turkey/grilled-turkey-lemon-sauce
+  - [turkey] Orange-Clove Smoked Wild Turkey  (Connecticut DEEP)
+    https://portal.ct.gov/DEEP/Hunting/Cooking-with-Wild-Game
+  - [turkey] Roast Turkey and Dressing  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/turkey/roast-turkey-dressing
+  - [turkey] Roast Wild Turkey in White Wine with Mushroom Paté Stuffing  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/turkey/roast-wild-turkey-white-wine-mushroom-pate-stuffing
+  - [turkey] Smoked Wild Turkey Legs  (Connecticut DEEP)
+    https://portal.ct.gov/DEEP/Hunting/Cooking-with-Wild-Game
+  - [turkey] Stuffed Wild Turkey Cutlets with Green Beans, Cranberries, and Pecans  (Connecticut DEEP)
+    https://portal.ct.gov/DEEP/Hunting/Cooking-with-Wild-Game
+  - [turkey] Turkey Fingers  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/turkey/turkey-fingers
+  - [turkey] Turkey Fruit Salad  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/turkey/turkey-fruit-salad
+  - [turkey] Turkey, Wild Rice, and Mushroom Soup  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/turkey/turkey-wild-rice-mushroom-soup
+  - [turkey] Wild Turkey Barbecue  (Connecticut DEEP)
+    https://portal.ct.gov/DEEP/Hunting/Cooking-with-Wild-Game
+  - [turkey] Wild Turkey Fajitas  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/turkey/wild-turkey-fajitas
+  - [turkey] Wild Turkey Tetrazzini  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/turkey/wild-turkey-tetrazzini
+  - [turkey] Wild Turkey Tortilla Soup  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/turkey/wild-turkey-tortilla-soup
+  - [venison] Basic Deer Sausage with Three Seasoning Mixes  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/basic-deer-sausage-three-seasoning-mixes
+  - [venison] Can  (University of Missouri Extension)
+    https://extension.missouri.edu/publications/n670
+  - [venison] Canned Venison  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/canned-venison
+  - [venison] Cheese-Filled Venison Rolls  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/cheese-filled-venison-rolls
+  - [venison] Green Bean and Venison Stir-Fry  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/green-bean-venison-stir-fry
+  - [venison] Grilled Venison Loin with Herbs and Horseradish Cream  (Texas Parks & Wildlife)
+    https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/grilled_venison.phtml
+  - [venison] Happy Camper Venison  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/happy-camper-venison
+  - [venison] Killer Calzone  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/killer-calzone
+  - [venison] Mushroom and Venison Stew  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/mushroom-venison-stew
+  - [venison] Philly Steak Sandwiches  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/philly-steak-sandwiches
+  - [venison] Red Pepper Ravioli with Morel Sauce  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/red-pepper-ravioli-morel-sauce
+  - [venison] Rita's Eggplant Casserole  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/ritas-eggplant-casserole
+  - [venison] Skewered Venison Steak With Peanut Sauce  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/skewered-venison-steak-peanut-sauce
+  - [venison] Sliced Venison Saute  (Texas Parks & Wildlife)
+    https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/venison_sliced.phtml
+  - [venison] Summer Sausage  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/summer-sausage
+  - [venison] Swiss Venison Steak  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/swiss-venison-steak
+  - [venison] Teriyaki Venison  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/teriyaki-venison
+  - [venison] Venison and Vegetable Kabobs  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/venison-vegetable-kabobs
+  - [venison] Venison and Vegetable Stir-Fry  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/venison-vegetable-stir-fry
+  - [venison] Venison Chili  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/venison-chili
+  - [venison] Venison Chili Mole  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/venison-chili-mole
+  - [venison] Venison Chimichangas  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/venison-chimichangas
+  - [venison] Venison Kabobs  (Connecticut DEEP)
+    https://portal.ct.gov/DEEP/Hunting/Cooking-with-Wild-Game
+  - [venison] Venison Loin Roast  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/venison-loin-roast
+  - [venison] Venison Mignons  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/venison-mignons
+  - [venison] Venison Pizza  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/venison-pizza
+  - [venison] Venison Pot Pie  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/venison-pot-pie
+  - [venison] Venison Pot Roast  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/venison-pot-roast
+  - [venison] Venison Pot Roast With Vegetables  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/venison-pot-roast-vegetables
+  - [venison] Venison Quesadillas I  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/venison-quesadillas-i
+  - [venison] Venison Quesadillas II  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/venison-quesadillas-ii
+  - [venison] Venison Spiedini  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/venison-spiedini
+  - [venison] Venison Steak Rolls  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/venison-steak-rolls
+  - [venison] Venison Stew with Wild Mushroom and Biscuits  (Texas Parks & Wildlife)
+    https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/venison_stew.phtml
+  - [venison] Venison-Bacon Appetizer  (Missouri Department of Conservation)
+    https://mdc.mo.gov/discover-nature/recipes/venison/venison-bacon-appetizer
+  - [venison] Wild Game Chili  (Texas Parks & Wildlife)
+    https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/game_chili.phtml
+  - [wild-hog] Green Chile Bake  (Texas Parks & Wildlife)
+    https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/green_chile_bake.phtml

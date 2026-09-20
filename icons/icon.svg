@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="DINNER WIZARD">
+  <rect width="128" height="128" rx="28" fill="#1c3a2e"/>
+  <!-- skillet handle -->
+  <path fill="#8a6a32" d="M98 70c14 6 24 16 26 24-10 2-22-2-32-10l-6-8z"/>
+  <rect x="102" y="78" width="22" height="7" rx="3.5" transform="rotate(22 113 81.5)" fill="#c4a35a"/>
+  <!-- skillet body -->
+  <ellipse cx="58" cy="86" rx="42" ry="18" fill="#243830"/>
+  <ellipse cx="58" cy="82" rx="40" ry="16" fill="#162820" stroke="#c4a35a" stroke-width="2.5"/>
+  <ellipse cx="58" cy="80" rx="32" ry="11" fill="#1c3a2e"/>
+  <!-- wizard hat cone -->
+  <path fill="#c4a35a" d="M58 18c5 1 10 8 12 20 3 16 6 32 6 38H40c1-6 3-22 6-38 2-12 7-21 12-20z"/>
+  <!-- brim -->
+  <ellipse cx="58" cy="76" rx="24" ry="7" fill="#a88840"/>
+  <ellipse cx="58" cy="74" rx="23" ry="6" fill="#d4b56c"/>
+  <!-- copper band -->
+  <rect x="44" y="58" width="28" height="5" rx="1.5" fill="#b87333"/>
+  <!-- moon + stars -->
+  <circle cx="54" cy="44" r="3.2" fill="#b87333"/>
+  <circle cx="55.6" cy="43.2" r="2.2" fill="#c4a35a"/>
+  <path fill="#b87333" d="M66 36l1.2 2.6 2.8.3-2.1 2 .6 2.7L66 42.3l-2.5 1.3.6-2.7-2.1-2 2.8-.3z"/>
+  <path fill="#b87333" d="M50 54l.9 1.8 2 .2-1.5 1.4.4 1.9-1.8-1-1.8 1 .4-1.9-1.5-1.4 2-.2z"/>
+  <!-- sparks -->
+  <circle cx="90" cy="36" r="2" fill="#c4a35a"/>
+  <circle cx="96" cy="46" r="1.4" fill="#d4b56c"/>
+  <circle cx="84" cy="28" r="1.1" fill="#f4efe4"/>
+  <path stroke="#c4a35a" stroke-width="1.2" stroke-linecap="round" d="M90 30v-6M87 33h-6M93 33h6"/>
+</svg>

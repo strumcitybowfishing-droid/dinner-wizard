@@ -1,0 +1,3956 @@
+[
+  {
+    "id": "game-cajun-blackened-catfish-tacos",
+    "title": "Cajun Blackened Catfish Tacos",
+    "protein": "catfish",
+    "proteins": [
+      "catfish",
+      "fish"
+    ],
+    "budget": 2,
+    "difficulty": 3,
+    "timeMin": 20,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Texas Parks & Wildlife",
+    "sourceUrl": "https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/blackened_catfish_tacos.phtml",
+    "image": "",
+    "ingredients": [
+      "1 teaspoon ground black pepper",
+      "2 Tablespoons Blackened seasoning",
+      "1 teaspoon kosher salt",
+      "4 (4 ounce) catfish fillets, skinned",
+      "¾ cup olive oil",
+      "Tortillas"
+    ],
+    "steps": [
+      "Watch the Wild Game Cooking: Blackened Catfish Tacos video",
+      "In a bowl, mix together the black pepper, kosher salt and blackened seasoning until thoroughly combined. Press the catfish fillets into the spice mixture in the bowl and coat thoroughly.",
+      "Arrange a portable heat source outdoors, such as a butane burner or side burner of a gas grill. Light the burner and place a skillet onto the burner over high heat. Pour the olive oil into the skillet covering the entire cooking surface.",
+      "When the oil in the skillet is hot, lay the catfish fillets into the skillet. Cook until the spices are seared onto the fillets and the catfish is opaque and flaky inside, about 3 minutes per side. Don't breathe smoke from burning spices.",
+      "To serve, place the fish on the tortillas along with toppings. × Close"
+    ],
+    "tags": [
+      "wild-game",
+      "fish",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-catfish-with-crabmeat-sauce",
+    "title": "Catfish with Crabmeat Sauce",
+    "protein": "catfish",
+    "proteins": [
+      "catfish",
+      "fish",
+      "trout"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 20,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/fish/catfish-crabmeat-sauce",
+    "image": "",
+    "ingredients": [
+      "1-6 oz. can crabmeat",
+      "2 T. butter",
+      "3/4 c. green onions, sliced",
+      "1/4 c. shredded carrot",
+      "2 tsp. oregano",
+      "1 T. cornstarch",
+      "1 clove garlic, minced",
+      "3 T. lemon juice",
+      "1 bay leaf",
+      "3/4 c. milk",
+      "Salt and pepper",
+      "1 1/2 c. chardonnay or dry white wine",
+      "4 catfish fillets (or trout, crappie or other mild fish)"
+    ],
+    "steps": [
+      "Preheat oven to 350F.",
+      "In saucepan, combine wine, juice from crabmeat, 1/4 cup green onions, 1 teaspoon oregano, garlic, bay leaf and salt and pepper to taste. Bring to boil and simmer 5 minutes. Place fish in glass baking dish and pour hot herbed wine over fish. Bake for 10 to 15 minutes until fish is flaky.",
+      "While cooking, prepare sauce by melting butter in a saucepan and adding the rest of the ingredients except for cornstarch and milk. Cook until onions are tender. Mix cornstarch and milk together. Add to saucepan and cook until thickened, then serve over wine-poached fish."
+    ],
+    "tags": [
+      "wild-game",
+      "fish"
+    ]
+  },
+  {
+    "id": "game-cookbook-chicken-and-dumplings",
+    "title": "Cookbook:Chicken and Dumplings",
+    "protein": "chicken",
+    "proteins": [
+      "chicken"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 20,
+    "servings": 4,
+    "style": "Country / camp",
+    "source": "Wikibooks Cookbook (CC BY-SA)",
+    "sourceUrl": "https://en.wikibooks.org/wiki/Cookbook:Chicken_and_Dumplings",
+    "image": "",
+    "ingredients": [
+      "Approximately 1 kilogram (2 pounds) cooked boneless chicken meat, cut into bite-sized pieces",
+      "1 carrot, sliced into rounds",
+      "1 celery rib or ¼ celeriac, chopped",
+      "1 bay leaf",
+      "1 onion, chopped",
+      "1 teaspoon dried thyme",
+      "Salt, pepper, and liquid seasoning to taste",
+      "150 grams (1¼ U.S. cups) all-purpose flour",
+      "1½ teaspoons baking powder",
+      "½ teaspoon salt",
+      "20 grams (1½ tablespoons) solid fat (such as vegetable shortening, lard or butter)",
+      "150 milliliters (5 U.S. fluid ounces) milk",
+      "Combine all the stew ingredients in a large pot and bring to a boil.",
+      "You can buy chicken stock in cans or jars if you don't want to make it by hand.",
+      "The stew portion of the recipe is very flexible. You can use whatever vegetables and flavorings you like and have on hand."
+    ],
+    "steps": [
+      "Combine all the stew ingredients in a large pot and bring to a boil.",
+      "Reduce heat and allow to simmer while you make the dumplings.",
+      "Add milk and mix just until combined into a dough.",
+      "Drop dough by spoonfuls onto the stew.",
+      "Simmer 5 minutes with the lid off and 15–20 minutes longer with the lid on."
+    ],
+    "tags": [
+      "wild-game",
+      "country"
+    ]
+  },
+  {
+    "id": "game-cookbook-fried-chicken",
+    "title": "Cookbook:Fried Chicken",
+    "protein": "chicken",
+    "proteins": [
+      "chicken"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 60,
+    "servings": 4,
+    "style": "Country / camp",
+    "source": "Wikibooks Cookbook (CC BY-SA)",
+    "sourceUrl": "https://en.wikibooks.org/wiki/Cookbook:Fried_Chicken",
+    "image": "",
+    "ingredients": [
+      "Dry ground seasonings as desired (e.g. pepper, paprika, onion powder, garlic powder, etc.)",
+      "1 fryer chicken, cut up (see notes below)",
+      "1 quart buttermilk",
+      "½ cup salt",
+      "Wings can also be saved, along with other leftover bits of carcass, to make chicken soup.",
+      "Medium Difficulty recipes",
+      "Recipes using whole chicken"
+    ],
+    "steps": [
+      "Combine all seasonings in desired quantities to make a spice rub.",
+      "Pour the buttermilk into a bowl and dissolve in the salt.",
+      "Cover the bowl of buttermilk and chicken and refrigerate. You can get by with as few as two hours if you are in a hurry, but the flavor will suffer. You can also park it overnight, but in this case you should reduce the salt to ⅓ cup.",
+      "Shortly before you want to cook the chicken, remove it from the buttermilk and drain. Roll it around in flour so that it is well covered in flour. Shake off the excess flour.",
+      "Drain the chicken on a wire rack over a sheet pan.",
+      "Heat enough oil (or shortening) to come 3–4 mm up the side of the pan to 325°F.",
+      "Carefully place chicken in pan, skin side down. Cook until brown (10–12 minutes). Turn over and cook other side. Doing this will require some careful placement in the pan so as to cook the slow-cooking meat (such as thighs) more intensely than the fast-cooking meat (such as wings and breasts).",
+      "Put the chicken pieces into hot oil (larger pieces first) and fry about 3 minutes until very light brown. Then put on the lid and lock it.",
+      "Cook at a pressure of 5–6 pounds for about 7 minutes."
+    ],
+    "tags": [
+      "wild-game",
+      "country"
+    ]
+  },
+  {
+    "id": "game-crawdad-pilaf",
+    "title": "Crawdad Pilaf",
+    "protein": "crawfish",
+    "proteins": [
+      "crawfish"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 30,
+    "servings": 6,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/crayfish/crawdad-pilaf",
+    "image": "",
+    "ingredients": [
+      "2 cups cooked rice",
+      "1/2 cup stuffed olives, sliced",
+      "1 small onion, chopped",
+      "1 medium green pepper, chopped",
+      "1/2 cup grated cheddar cheese",
+      "3 cups cooked crawfish meat",
+      "4 T. flour",
+      "2 cups milk",
+      "3 T. melted butter"
+    ],
+    "steps": [
+      "Combine rice, olives, onion, green pepper, crayfish meat and most of the grated cheese together in a well greased casserole.",
+      "Make a medium white sauce of flour, butter and milk, and season to taste.",
+      "Pour over casserole and sprinkle with remaining cheese.",
+      "Bake at 350F for about 30 minutes or until top is brown."
+    ],
+    "tags": [
+      "wild-game",
+      "fish"
+    ]
+  },
+  {
+    "id": "game-crayfish-etouffee-i",
+    "title": "Crayfish Etouffee I",
+    "protein": "crawfish",
+    "proteins": [
+      "crawfish"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 20,
+    "servings": 6,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/crayfish/crayfish-etouffee-i",
+    "image": "",
+    "ingredients": [
+      "2 1/2 lbs. crawfish tails",
+      "1 stick margarine",
+      "3 large onions",
+      "finely chopped parsley",
+      "salt and pepper to taste"
+    ],
+    "steps": [
+      "Saute onions in margarine about 15 to 20 minutes until soft.",
+      "Add crawfish fat (from the body cavity) and cook over low heat, stirring constantly until fat comes to the top.",
+      "Add tail meat and season the taste.",
+      "Add just enough hot water to etouffee for desired consistency.",
+      "Simmer for 20 minutes.",
+      "Serve over steaming hot rice."
+    ],
+    "tags": [
+      "wild-game",
+      "fish"
+    ]
+  },
+  {
+    "id": "game-crayfish-etouffee-ii",
+    "title": "Crayfish Etouffee II",
+    "protein": "crawfish",
+    "proteins": [
+      "crawfish"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 45,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/crayfish/crayfish-etouffee-ii",
+    "image": "",
+    "ingredients": [
+      "3 c. onions, white or yellow",
+      "1 c. green onions",
+      "½ stick butter",
+      "1 c. chopped fresh parsley",
+      "1 tsp. dried oregano",
+      "2 lbs. crayfish tails",
+      "2 tsp. lemon juice ½ tsp. cayenne or",
+      "1 T. soy sauce",
+      "Tabasco sauce",
+      "2 tsp. minced garlic",
+      "Salt to taste"
+    ],
+    "steps": [
+      "Saute onions and parsley in butter.",
+      "Add oregano, lemon juice, soy sauce and garlic. Cook for 10 minutes, until onions are clear.",
+      "Add crayfish and cayenne or Tabasco. Cover, reducing heat to “low” and simmer 30 to 45 minutes.",
+      "Serve over white rice and garnish with fresh parsley or spearmint. Salt to taste."
+    ],
+    "tags": [
+      "wild-game",
+      "fish"
+    ]
+  },
+  {
+    "id": "game-crayfish-salad",
+    "title": "Crayfish Salad",
+    "protein": "crawfish",
+    "proteins": [
+      "crawfish"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 45,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/crayfish/crayfish-salad",
+    "image": "",
+    "ingredients": [
+      "2 cups boiled crayfish meat, diced",
+      "1 cup celery, chopped",
+      "2 hard-cooked eggs, chopped",
+      "2 T. dill pickles, chopped",
+      "1/2 t. Worcestershire sauce",
+      "mayonnaise",
+      "salt and pepper"
+    ],
+    "steps": [
+      "Combine all ingredients thoroughly and mix with mayonnaise to desired consistency.",
+      "Serve on bed of shredded lettuce."
+    ],
+    "tags": [
+      "wild-game",
+      "fish"
+    ]
+  },
+  {
+    "id": "game-carter-smith-s-jalape-o-dove-poppers",
+    "title": "Carter Smith's Jalapeño Dove Poppers",
+    "protein": "dove",
+    "proteins": [
+      "dove",
+      "bacon"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 20,
+    "servings": 9,
+    "style": "Wild game / camp",
+    "source": "Texas Parks & Wildlife",
+    "sourceUrl": "https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/jalapeno-dove-poppers.phtml",
+    "image": "",
+    "ingredients": [
+      "Serves 8 to 10",
+      "15 whole plucked dove breasts",
+      "Garlic salt",
+      "Black pepper",
+      "1 package (8 ounces) cream cheese",
+      "15 jalapeño slices, each slice halved (fresh or canned)",
+      "2 packages regular-sliced bacon, cut in half"
+    ],
+    "steps": [
+      "With a paring knife, separate breasts from breastbones to make 30 lobes.",
+      "Sprinkle very lightly with garlic salt and pepper.",
+      "Take a breast lobe, some cream cheese and a jalapeño slice, and wrap in bacon.",
+      "Secure with a toothpick.",
+      "Grill over mesquite, oak, or charcoal for 3 to 5 minutes, then turn and continue grilling until bacon is crisp.",
+      "Carter Smith served as Executive Director of the Texas Parks and Wildlife Department from 2008 through 2023. From Texas Parks & Wildlife Magazine"
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-charcoal-dove",
+    "title": "Charcoal Dove",
+    "protein": "dove",
+    "proteins": [
+      "dove"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 45,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/dove/charcoal-dove",
+    "image": "",
+    "ingredients": [
+      "12 dove breasts",
+      "Marinade",
+      "3/4 cup lemon juice",
+      "3/4 cup soy sauce",
+      "3/4 cup vegetable oil",
+      "1 tsp. salt",
+      "1 onion chopped",
+      "2 cloves garlic, chopped",
+      "1 T. Worcestershire sauce"
+    ],
+    "steps": [
+      "Mix marinade ingredients together.",
+      "Place dove breasts in large pan; add marinade."
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird"
+    ]
+  },
+  {
+    "id": "game-dove-d-elegence",
+    "title": "Dove d'Elegence",
+    "protein": "dove",
+    "proteins": [
+      "dove"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 45,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/dove/dove-delegence",
+    "image": "",
+    "ingredients": [
+      "12 Doves",
+      "1 onion, chopped",
+      "1 stalk celery, chopped",
+      "1/3 cup chives, chopped",
+      "1 T. salt",
+      "1 T. pepper",
+      "1/2 cup evaporated milk",
+      "3/4 cup water",
+      "1 can (10 3/4 oz.) cream of mushroom soup",
+      "3/4 cup brandy",
+      "1 can (17 oz.) English peas",
+      "3 beef bouillon cubes",
+      "3 tsp. margarine or butter"
+    ],
+    "steps": [
+      "Place doves in casserole dish.",
+      "Arrange onions, celery and chives around.",
+      "Add milk, water, mushroom soup, brandy, peas, margarine and bouillon cubes.",
+      "Remove doves and place on platter.",
+      "Serve with wild rice."
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird"
+    ]
+  },
+  {
+    "id": "game-dove-empanadas",
+    "title": "Dove Empanadas",
+    "protein": "dove",
+    "proteins": [
+      "dove",
+      "fish",
+      "pork",
+      "chicken"
+    ],
+    "budget": 2,
+    "difficulty": 3,
+    "timeMin": 60,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Texas Parks & Wildlife",
+    "sourceUrl": "https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/dove-empanadas.phtml",
+    "image": "",
+    "ingredients": [
+      "1/2 pound of ground dove breasts",
+      "1/2 pound fatty ground pork",
+      "2 packages of Goya Empanada Dough (20 discs) Make sure you thaw it overnight before preparing meal",
+      "Vegetable oil for deep frying",
+      "1 red bell pepper, diced",
+      "1 medium onion, diced",
+      "1 tsp. ground cumin",
+      "1 tbs. sweet paprika",
+      "1 1/2 tsp. dried oregano",
+      "4 cloves garlic, minced",
+      "Pinch of cayenne pepper",
+      "1 1/2 tsp. kosher salt, plus extra",
+      "Freshly cracked black pepper",
+      "3/4 cup low-sodium chicken/game stock",
+      "1/3 cup golden raisins",
+      "5 Spanish Queen green olives, rinsed and coarsely chopped"
+    ],
+    "steps": [
+      "Heat oil in a large skillet over medium-high heat. Add ground dove and pork to the skillet, allow the bottom to form a crust before stirring and continue to cook. Transfer meat to plate or bowl with a slotted spoon and set aside. Lower heat to medium.",
+      "Sauté Bell Pepper & Onion",
+      "In the same pan, add an additional tablespoon of oil, onion, bell pepper and a pinch of salt. Sauté until softened, but do not brown.",
+      "Add Cumin & Other Spices",
+      "Stir in cumin, paprika, oregano and garlic for 30 seconds.",
+      "Add Back Meat & Add stock",
+      "Next, return ground meat to the skillet and season with about 1 1/2 tsp. kosher salt, freshly cracked black pepper and cayenne pepper to taste. Add chicken stock and simmer until mixture is no longer watery, but still moist, stirring occasionally. Take off heat. Olives & Cool Mixture",
+      "Stir in coarsely chopped olives (about 1/4 cup) and raisins. Allow mixture to cool before filling empanadas. Mixture could be made a couple days in advance. Fill Empanadas",
+      "Add the remaining butter to the hot pan and baste the fish. Increase amount of butter as desired. Brush, Fold & Crimp",
+      "Brush the edge with water and fold over to form half circles. Crimp with a fork. Fry & Serve",
+      "Heat frying oil to 325-350° Fahrenheit. Fry empanadas in batches until golden on both sides and drain. Keep warm in an oven and serve hot. Chef Bio - Jenny Nguyen-Wheatley",
+      "Jenny, who immigrated to the US from Vietnam, was first introduced to hunting in college and started a cooking website, Food for Hunters. Since then, Jenny has written for numerous hunting and outdoor magazines, and co-authored – with her husband,Rick Wheatley, – the book, Hunting for Food: Guide to Harvesting, Field Dressing and Cooking Wild Game. × Close"
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird",
+      "fish"
+    ]
+  },
+  {
+    "id": "game-duck-breast-with-red-chili-glaze",
+    "title": "Duck Breast with Red Chili Glaze",
+    "protein": "duck",
+    "proteins": [
+      "duck"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 20,
+    "servings": 8,
+    "style": "Wild game / camp",
+    "source": "Texas Parks & Wildlife",
+    "sourceUrl": "https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/duck_breast_red_chili_glaze.phtml",
+    "image": "",
+    "ingredients": [
+      "Serves 8",
+      "8 duck breasts (1 per person)",
+      "1 cup champagne vinegar",
+      "1 to 1-1/2 tablespoons red chili flakes (if you like it hot use 1-1/2 to 2 tablespoons flakes; if not, use 1 tablespoon or less)",
+      "1 tablespoon garlic, minced",
+      "2 tablespoons onions, minced",
+      "2 cups light brown sugar, packed",
+      "2 tablespoons tomato paste",
+      "½ cup soy sauce",
+      "1 teaspoon salt",
+      "1 stick sweet butter, cut into 8-10 chunks"
+    ],
+    "steps": [
+      "Simmer champagne vinegar, chili flakes, garlic and onion in a heavy saucepan until reduced by half.",
+      "Add brown sugar, tomato paste, soy sauce and salt and bring back to a simmer for 3 minutes.",
+      "Remove from heat and whisk in butter chunks. This glaze can burn easily, so brush it on just prior to serving. Duck Breast",
+      "Score the skin and fat layer of the raw bird with a sharp knife in a crosshatch pattern. Lightly season with salt and pepper.",
+      "Place the duck breast, skin side down, over a hot charcoal or hardwood fire. Keep a watchful eye as the duck fat will begin to cook out and the fire will flare up. If this happens, move the breast to the side until it dies down. Flame-kissed duck skin will become crispy and delicious.",
+      "Cook the breast skin-side down for the majority of the grill time - approximately 8 minutes depending on the heat of the fire. Turn breast over and grill the inside for 2 minutes maximum. You'll find that most good restaurants serve duck medium rare to medium, so don't be afraid of a little pinkness on the inside.",
+      "Slice the duck breast and fan it out on the plate to increase the eye appeal.",
+      "Serve topped with Red Chili Glaze."
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-mississippi-duck-gumbo",
+    "title": "Mississippi Duck Gumbo",
+    "protein": "duck",
+    "proteins": [
+      "duck"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 30,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/waterfowl/mississippi-duck-gumbo",
+    "image": "",
+    "ingredients": [
+      "Roux",
+      "¾ c. oil",
+      "¾ c. all-purpose flour",
+      "Broth",
+      "4-5 medium ducks, skinned",
+      "1 medium onion, chopped",
+      "2 carrots, cut into 2\" pieces",
+      "1 bay leaf",
+      "1-2 qts. water",
+      "3 medium onions",
+      "2 Tbsp. Worcester Sauce",
+      "3 medium peppers",
+      "1 Tbsp. salt",
+      "2 c. celery",
+      "2 Tbsp. pepper",
+      "1 clove minced garlic",
+      "½ tsp. oreganoa",
+      "½ tsp. Thyme",
+      "1-10 oz. bag of okra OR gumbo vegetables",
+      "1-28 oz. can whole tomatoes - drained, cut up"
+    ],
+    "steps": [
+      "In a large stock pot, combine skinned ducks, onion, carrots and a bay leaf...adding enough water to cover the ducks. Bring to a boil, then reduce the heat, cover, and simmer for an hour to an hour and a half. Remove the ducks, strain and reserve the broth, and discard the vegetables. Remove the duck meat from bones and cut it into small pieces. Skim the broth, measure 1 quart and set aside.",
+      "Heat oil in a large pot over medium heat, and blend in flour. Cook, stirring constantly, until the roux is golden brown...around 30 minutes. Carefully stir in onions, pepper, celery and garlic. Cook, stirring constantly, until vegetable are tender. Stir in duck meat, reserved broth and remaining ingredients except the okra. Heat to boiling, stirring occasionally. Reduce heat and simmer uncovered for about 30 minutes. Stir in okra, simmer another 30 minutes and serve over hot cooked rice."
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird"
+    ]
+  },
+  {
+    "id": "game-sassafras-marinated-mallard-satays",
+    "title": "Sassafras-Marinated Mallard Satays",
+    "protein": "duck",
+    "proteins": [
+      "duck"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 60,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/waterfowl/sassafras-marinated-mallard-satays",
+    "image": "",
+    "ingredients": [
+      "4 mallard breasts",
+      "4 cloves garlic, crushed",
+      "½ c. soy sauce",
+      "2 T. grated fresh ginger",
+      "½ c. red wine",
+      "Juice of 1 lime",
+      "Sassafras wood",
+      "Thai Peanut Dipping Sauce",
+      "2 tsp. vegetable oil",
+      "1/4 c. soy sauce",
+      "4 cloves garlic, chopped",
+      "1 tsp. brown sugar",
+      "1 c. water",
+      "1 small fresh chili pepper, chopped",
+      "1/3 c. peanut butter (crunchy is best)"
+    ],
+    "steps": [
+      "Soak 6\" x 1\" sticks of sassafras wood in water overnight. Cut mallard breasts into 3/4\" strips and marinate for at least one hour in mixture of soy sauce, wine, garlic, ginger and lime juice. Thread breast strips onto skewers.",
+      "Fill one side of a kettle-style grill with a generous amount of charcoal briquettes and top with the sassafras sticks. Place the meat on the grill opposite the charcoal for indirect heat and cook until just pink in the middle. Don’t overcook! Serve hot with dipping sauce.",
+      "Dipping sauce: Heat oil in a small saucepan, add garlic and chili pepper and cook briefly. Add remaining ingredients and cook until thickened. Serve dipping sauce warm or at room temperature."
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-wild-rumake",
+    "title": "Wild Rumake",
+    "protein": "duck",
+    "proteins": [
+      "duck",
+      "goose",
+      "bacon"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 495,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/waterfowl/wild-rumake",
+    "image": "",
+    "ingredients": [
+      "Duck/goose breast, thin-sliced strips (2\"-3\"x1\")",
+      "12-oz. bottle zesty Italian salad dressing",
+      "Toothpicks",
+      "1 pkg. Lipton onion soup mix",
+      "1 c. soy sauce",
+      "Green, yellow or red bell peppers, onions, water chestnuts, jalapenos, cut into 1\"x ½\" pieces",
+      "1 lb. bacon strips, cut in half",
+      "½ c. water",
+      "OR",
+      "Teriyaki sauce",
+      "Garlic powder",
+      "Chopped onion & green pepper",
+      "Bacon"
+    ],
+    "steps": [
+      "Mix onion soup, salad dressing, soy sauce, and water together and pour over meat. Marinate for at least 8 hours. Drain and lay slice of marinated meat on ½ slice of bacon, add a piece of onion and one other of the vegetables, and roll. Secure roll with a toothpick.",
+      "Grill rumake over medium heat on gas or charcoal grill. Cook for 10 to 15 minutes, keeping a close eye on it and pushing it around on the grill to keep it from burning. The fat from the bacon will cause the fire to flame up. Serve hot.",
+      "OR Slice duck breast in 1/8” thick slices, cover with teriyaki sauce and marinate for 6 hours. Drain and lay slices out flat. Top with finely chopped onion and green pepper and sprinkle with garlic powder to taste. Wrap in bacon and grill until bacon is brown."
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-carp-cajun",
+    "title": "Carp Cajun",
+    "protein": "fish",
+    "proteins": [
+      "fish",
+      "shrimp",
+      "chicken"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 20,
+    "servings": 2,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/fish/carp-cajun",
+    "image": "",
+    "ingredients": [
+      "2 cups cooked, flaked carp",
+      "1 1/2 teaspoons Cajun seasoning",
+      "1 large red onion 1/2 teaspoon paprika",
+      "2 bell peppers, green, red or yellow",
+      "3 stalks celery 1/2 teaspoon salt",
+      "1/4 cup butter 1/2 teaspoon Tabasco",
+      "4 teaspoons flour",
+      "6 Roma tomatoes chopped, or canned tomatoes",
+      "1 can (14 1/4 oz.) chicken broth",
+      "1/2 pound peeled large shrimp",
+      "3 tablespoons chopped fresh parsley",
+      "2 cups cooked white rice"
+    ],
+    "steps": [
+      "Steam or bake the carp, then remove the meat from the bones. Reserve 2 cups. Prepare vegetables: slice onion in 1/4-inch-thick rings, then cut the rings in half; slice peppers lengthwise in 1/4\" strips; and slice celery 1/2\" thick. Melt the 1/4-cup butter in a large saucepan or skillet. Add flour and stir until light brown. Add onion, peppers and celery. Cook and stir until vegetables are softened. Add broth and seasonings.",
+      "Bring mixture to a boil, then simmer until vegetables are almost done and broth is slightly thickened, about 15 minutes. Add tomatoes, shrimp and carp. Cook until shrimp is done, about 5 minutes. Serve over rice and garnish with parsley. Serves 4."
+    ],
+    "tags": [
+      "wild-game",
+      "fish"
+    ]
+  },
+  {
+    "id": "game-carp-on-a-stick",
+    "title": "Carp on a Stick",
+    "protein": "fish",
+    "proteins": [
+      "fish"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 60,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/fish/carp-stick",
+    "image": "",
+    "ingredients": [
+      "1 pound boneless invasive carp fillets (cut into 5-inch long pieces)",
+      "1/3 cup soy sauce (low sodium)",
+      "1/3 cup water",
+      "1/3 cup packed brown sugar",
+      "1 tablespoon Sriracha sauce (optional)",
+      "2 teaspoons minced garlic",
+      "1 teaspoon freshly grated ginger",
+      "1 teaspoon sesame oil",
+      "12 wooden skewers"
+    ],
+    "steps": [
+      "Preheat grill to 400 degrees, and treat grill surface with non-stick spray.",
+      "Create the marinade. In a large plastic bowl combine soy sauce, water, brown sugar, Sriracha sauce, garlic, ginger, and sesame oil. Whisk thoroughly.",
+      "Marinate the fish. Add fillets to marinade (making sure each fillet is evenly coated) and refrigerate overnight.",
+      "Make the kabobs. Thread the fillets on soaked wooden or bamboo skewers.",
+      "Place the kabobs on the barbecue grill, and cook 3 to 4 minutes on each side (or until done)."
+    ],
+    "tags": [
+      "wild-game",
+      "fish",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-crappie-francaise",
+    "title": "Crappie Francaise",
+    "protein": "fish",
+    "proteins": [
+      "fish"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 20,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/fish/crappie-francaise",
+    "image": "",
+    "ingredients": [
+      "8-12 crappie, filleted",
+      "2 c. flour",
+      "4 eggs",
+      "1 T. chopped parsley",
+      "1-2 lemons",
+      "1 T. chopped oregano",
+      "1 stick butter",
+      "½ tsp. black pepper",
+      "1 tsp. garlic salt",
+      "2 c. fresh morels or button mushrooms, sliced",
+      "1 c. white wine"
+    ],
+    "steps": [
+      "Mix herbs and spices with flour, and roll fillets with herbed flour in a plastic bag until coated.",
+      "Dip coated fillets in beaten eggs. Lightly fry fish in 3-5 T. hot oil in large pan or skillet. Turn once.",
+      "Reduce heat and add butter, wine, mushrooms, and juice of ½ lemon. Cover and simmer 10-15 minutes until mushrooms are soft. Garnish with lemon slices. Serves 3-4."
+    ],
+    "tags": [
+      "wild-game",
+      "fish"
+    ]
+  },
+  {
+    "id": "game-fish-chowder",
+    "title": "Fish Chowder",
+    "protein": "fish",
+    "proteins": [
+      "fish",
+      "bacon"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 30,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/fish/fish-chowder",
+    "image": "",
+    "ingredients": [
+      "1 large fish, approx. 4 lbs.",
+      "6-8 strips bacon",
+      "1 c. green pepper",
+      "½ c. chopped onion",
+      "½ c. chopped celery",
+      "¼ c. cornstarch",
+      "2-3 c. diced potatoes",
+      "Salt",
+      "1 qt. half-and-half",
+      "Pepper",
+      "2 tsp. minced garlic",
+      "Celery Salt",
+      "1 qt. milk",
+      "Onion Salt"
+    ],
+    "steps": [
+      "Cook fillets in enough water to cover about 20-30 minutes. Remove, cool, then debone and crumble fillets. Fry bacon until crisp. Remove bacon and saute green pepper, onion and celery in the drippings.",
+      "Place 2 cups of fish stock in a large pan. Add diced potatoes and cook until tender. Add sauteed vegetables and crumbled fish. Season to taste with spices.",
+      "Add half and half. Mix cornstarch with milk to thicken, or just add milk. Heat just to boiling. Top each bowl with crumbled bacon and serve immediately."
+    ],
+    "tags": [
+      "wild-game",
+      "fish"
+    ]
+  },
+  {
+    "id": "game-old-school-style-fried-carp",
+    "title": "Old-School-Style Fried Carp",
+    "protein": "fish",
+    "proteins": [
+      "fish"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 20,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/fish/old-school-style-fried-carp",
+    "image": "",
+    "ingredients": [
+      "1 pound boneless invasive carp fillets (cut into 5-inch long pieces)",
+      "4 cups frying oil (vegetable or peanut oil)",
+      "3 cups of your preferred fish coating (Andy’s is recommended)",
+      "3 tablespoons Cajun seasoning (optional)",
+      "1 gallon zip-close bag"
+    ],
+    "steps": [
+      "Preheat cast-iron skillet with oil to 375 degrees.",
+      "Combine fish coating and cajun seasoning in a gallon-sized zip-close bag.",
+      "Drop each fillet into the fish coating mixture and shake bag.",
+      "Place the fillets into the hot skillet (do not overcrowd). Cook 4 to 5 minutes until crispy and golden brown (should flake easily with a fork). Place cooked fillets on paper towel lined plate."
+    ],
+    "tags": [
+      "wild-game",
+      "fish"
+    ]
+  },
+  {
+    "id": "game-pecan-crusted-crappie",
+    "title": "Pecan-Crusted Crappie",
+    "protein": "fish",
+    "proteins": [
+      "fish"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 30,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/fish/pecan-crusted-crappie",
+    "image": "",
+    "ingredients": [
+      "¾ cup chopped pecans",
+      "1 tablespoon sesame seeds",
+      "1½ pounds of crappie (4 servings)",
+      "1 clove garlic, minced",
+      "2 T. butter, melted",
+      "Salt and pepper"
+    ],
+    "steps": [
+      "Stir together the pecans and sesame seeds and set aside. Arrange fish on a baking dish or baking sheet. Add garlic to melted butter and brush on the fish. Cover fish with nut mixture. Salt and pepper to taste. Chill or let stand for 30 minutes. Heat oven to 400F.",
+      "Heat a small amount of olive oil in the bottom of a skillet and sauté the fish, pecan side down for about 5 minutes. Transfer to an oiled baking sheet. When all fish are sautéd, bake with pecan side up until meat flakes."
+    ],
+    "tags": [
+      "wild-game",
+      "fish"
+    ]
+  },
+  {
+    "id": "game-three-alarm-spoonbill-jambalaya",
+    "title": "Three-Alarm Spoonbill Jambalaya",
+    "protein": "fish",
+    "proteins": [
+      "fish"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 20,
+    "servings": 5,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/fish/three-alarm-spoonbill-jambalaya",
+    "image": "",
+    "ingredients": [
+      "2 lbs. fresh spoonbill, cut into 1\" chunks",
+      "1 c. chopped onions",
+      "½ c. chopped green pepper",
+      "½ c. chopped red pepper",
+      "Lots of fresh parsley, chopped",
+      "1 T. chopped fresh ginger",
+      "16 oz. can skinless stewed tomatoes",
+      "Ground cayenne, white, black, and chili pepper to taste",
+      "½ bulb chopped garlic",
+      "4-6 fresh chiles",
+      "4-6 servings cooked white rice"
+    ],
+    "steps": [
+      "In a wok or large fry pan, stir-fry the green and red peppers in about a quarter cup of water over high heat with the garlic, onions and ginger.",
+      "Add everything else, except the fresh chiles and rice, and bring to a boil. Reduce heat, cover and simmer about 15 minutes or until the fish is done.",
+      "Serve over rice to soak up the alarm juice and garnish with fresh chiles. Serves 4-6."
+    ],
+    "tags": [
+      "wild-game",
+      "fish"
+    ]
+  },
+  {
+    "id": "game-walleye-tidbits",
+    "title": "Walleye Tidbits",
+    "protein": "fish",
+    "proteins": [
+      "fish"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 45,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/fish/walleye-tidbits",
+    "image": "",
+    "ingredients": [
+      "Walleye filets",
+      "Cornmeal",
+      "Salt Pepper",
+      "Peanut oil"
+    ],
+    "steps": [
+      "Clean and wash walleye filets. Use a very sharp knife and cut across the width of each filet, shaving extremely thin slices from the fish.",
+      "Combine cornmeal, salt and pepper in a bag, add tidbits and shake until coated. Fry the tidbits in hot peanut oil until crisp and golden brown.",
+      "For easier browning, use oil to fry potatoes, pre-seasoning it."
+    ],
+    "tags": [
+      "wild-game",
+      "fish"
+    ]
+  },
+  {
+    "id": "game-wild-goose-barbacoa-with-spicy-peach-pico",
+    "title": "Wild Goose Barbacoa with Spicy Peach Pico",
+    "protein": "goose",
+    "proteins": [
+      "goose"
+    ],
+    "budget": 2,
+    "difficulty": 3,
+    "timeMin": 120,
+    "servings": 6,
+    "style": "Wild game / camp",
+    "source": "Connecticut DEEP",
+    "sourceUrl": "https://portal.ct.gov/DEEP/Hunting/Cooking-with-Wild-Game",
+    "image": "",
+    "ingredients": [
+      "2 pounds goose breast (about 2 Canada goose breasts)",
+      "1/4 large red onion, sliced",
+      "4 cloves garlic, smashed and roughly chopped",
+      "2 tbsp apple cider vinegar",
+      "1/2 lime, juiced",
+      "1 cup sliced peaches (fresh or frozen)",
+      "1 can chile in adobo",
+      "1 cup chicken stock",
+      "2 tsp kosher salt",
+      "1/2 tsp cumin",
+      "1 tsp oregano",
+      "1/4 tsp cloves",
+      "1 cinnamon stick",
+      "Oil for browning",
+      "Tortillas, cilantro, diced red onion, and sliced peaches for serving"
+    ],
+    "steps": [
+      "Season meat with kosher salt and pepper.",
+      "Heat a pressure cooker on saute. Brown goose in oil in batches; set aside. Saute red onion until soft, then garlic 1 minute.",
+      "Deglaze with vinegar, lime juice, and chicken stock. Add peaches, spices, and chile in adobo. Return meat and stir.",
+      "Pressure cook on high 60 minutes plus full natural release (about 25 minutes).",
+      "When fork-tender, shred the meat. Strain cooking liquid, reduce on the stove about 10 minutes, and pour over shredded goose.",
+      "Serve in tacos with cilantro, onion, and peaches."
+    ],
+    "tags": [
+      "wild-game"
+    ]
+  },
+  {
+    "id": "game-cookbook-shepherd-s-pie-i",
+    "title": "Cookbook:Shepherd's Pie I",
+    "protein": "other",
+    "proteins": [
+      "other"
+    ],
+    "budget": 2,
+    "difficulty": 3,
+    "timeMin": 50,
+    "servings": 4,
+    "style": "Country / camp",
+    "source": "Wikibooks Cookbook (CC BY-SA)",
+    "sourceUrl": "https://en.wikibooks.org/wiki/Cookbook:Shepherd%27s_Pie",
+    "image": "",
+    "ingredients": [
+      "30 g (1 oz) lard (optional)",
+      "1 lb (450 g) minced or ground lamb or beef",
+      "3 lb (1.3 kg) powdery old potatoes, such as King Edwards",
+      "1 large or 2 small onions",
+      "2 tbsp flour",
+      "2 cups (300 ml) beef stock (alternatively, bouillon cubes can be used, or gravy powder, if the flour is omitted)",
+      "1 handful of mixed vegetables such as sweetcorn or carrots (optional)",
+      "Finely chop the onion and lightly fry in a little butter with a small amount of salt until clear.",
+      "Peas or small chopped carrots are often integrated into the mince during the reduction step.",
+      "Medium Difficulty recipes",
+      "Recipes using ground beef"
+    ],
+    "steps": [
+      "Heat oil in a pan and brown the mince. Where lean meat is used, there may be no need to use additional oil.",
+      "Add the onions to the mince, mixed herbs, and some pepper.",
+      "Sprinkle the flour over the mixture, stir, and cook for 3–4 minutes (if using gravy powder, omit this step).",
+      "Cover with lamb or beef stock (or add water and beef bouillon/gravy powder) and simmer for 30 minutes.",
+      "Drain the potatoes until completely dry. Mash until smooth and free of any lumps.",
+      "Add butter to the mashed potato, taste and add seasoning as required.",
+      "Slowly add milk whilst mashing until the mash is soft and creamy (heavy mash will not float properly on top of the mince).",
+      "Layer the mash over the meat and brush the tops of the potatoes with melted butter.",
+      "Bake in a hot oven for about 30–50 minutes until the top is golden brown.",
+      "Serve with peas or beans, or other green vegetables."
+    ],
+    "tags": [
+      "wild-game",
+      "country"
+    ]
+  },
+  {
+    "id": "game-pheasant-tortilla-soup",
+    "title": "Pheasant Tortilla Soup",
+    "protein": "pheasant",
+    "proteins": [
+      "pheasant",
+      "chicken"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 210,
+    "servings": 1,
+    "style": "Wild game / camp",
+    "source": "Texas Parks & Wildlife",
+    "sourceUrl": "https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/pheasant_tortilla_soup.phtml",
+    "image": "",
+    "ingredients": [
+      "Poultry Stock",
+      "Yield: 1 gallon",
+      "8 lbs. chicken or any game bird, bones and carcass",
+      "6 quarts water",
+      "1 lb. mirepoix -- 50% onion, chopped; 25% carrot, chopped; 25% celery, chopped",
+      "12 black peppercorns",
+      "3 bay leaves",
+      "1 bunch parsley stems",
+      "Tortilla Soup",
+      "Serves 8 generously",
+      "½ cup fresh lime juice (Must be fresh!)",
+      "1-½ cups cilantro, leaves only",
+      "1-½ cups grilled or smoked pheasant or chicken meat, pulled off the bone and cut into bite-size pieces",
+      "1 quart pheasant or poultry stock",
+      "5 ribs of celery, diced in ¼\" dice",
+      "1 cup red onion, minced",
+      "1-½ cups fresh sweet kernel corn (frozen corn is OK)",
+      "½ cup carrots, julienned (use a mandoline to make this easy)",
+      "½ cup garlic, minced in food processor",
+      "1 poblano pepper, roasted, peeled, seeded and diced in ¼\" dice",
+      "1 jalapeño, minced (for spicy, leave in the seeds)",
+      "1-½ tablespoons salt"
+    ],
+    "steps": [
+      "Combine all ingredients in stock pot.",
+      "Bring to a boil, skim the scum.",
+      "Reduce to a simmer and cook for 3 hours.",
+      "Strain and refrigerate or freeze. Tortilla Soup",
+      "Set the lime juice, cilantro and cooked pheasant to the side to be added in the final 5 minutes before serving.",
+      "Add all the other ingredients to a large heavy-bottomed stock pot and bring to a rolling boil.",
+      "Reduce to a simmer for about 30 minutes.",
+      "Add the lime, cilantro, and pheasant and return to a simmer and serve."
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-texas-bandera-smoked-quail-egg-roll",
+    "title": "Texas Bandera Smoked Quail Egg Roll",
+    "protein": "quail",
+    "proteins": [
+      "quail"
+    ],
+    "budget": 2,
+    "difficulty": 3,
+    "timeMin": 20,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Texas Parks & Wildlife",
+    "sourceUrl": "https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/bandera_quail.phtml",
+    "image": "",
+    "ingredients": [
+      "Bronze Rub",
+      "½ cup of toasted and ground coriander seeds",
+      "1 tablespoon ground onion, onion powder",
+      "3 tablespoons lemon pepper",
+      "1 teaspoons oregano, dried",
+      "1 teaspoon white pepper",
+      "1 teaspoon black pepper",
+      "1 teaspoon cayenne pepper",
+      "1 teaspoon salt",
+      "Texas Bandera Smoked Quail Egg Roll",
+      "Serves: 6-8",
+      "6 boneless smoked quail, small dice",
+      "¼ cup Bronze Rub",
+      "½ cup diced green chilies, Hatch or Anaheims",
+      "½ cup goat cheese",
+      "1 tablespoon shallots, minced",
+      "2 tablespoons garlic, minced",
+      "½ cup jicama, small dice",
+      "1 bunch green onion tops, fine dice",
+      "2 bunches cilantro leaves, roughly chopped",
+      "2 limes, juiced",
+      "1 egg",
+      "½ cup milk",
+      "16 egg roll wrappers",
+      "1 quart canola or vegetable oil"
+    ],
+    "steps": [
+      "Our favorite on many things, low salt with a little spice.",
+      "Mix together in a food processor and use freely. Texas Bandera Smoked Quail Egg Roll",
+      "Smoke quail using ½ Bronze Rub. Set aside.",
+      "Dice the smoked quail and mix with remaining Bronze Rub.",
+      "Combine chilies, goat cheese, shallots, and garlic and reserve.",
+      "Mix jicama, green onion, chopped cilantro, lime juice, and salt and reserve.",
+      "Whisk the egg with the mil to make egg wash.",
+      "In center of each egg roll wrapper, place 1 tablespoon quail mixture, 1 tablespoon goat cheese mixture, and 1 tablespoon jicama mixture.",
+      "Fold egg roll wrappers around fillings. Follow the directions on the package. Brush last fold with egg wash to seal.",
+      "Deep fry in oil until golden brown. Do this in batches of 4 so the oil doesn't cool down. The egg rolls will float, so you will have to keep turning them to get even browning. It will probably take a couple of minutes to crisp the outside and heat the innards. If rolls have been refrigerated, increase cooking time to 3 -- 4 minutes."
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird"
+    ]
+  },
+  {
+    "id": "game-rabbit-cacciatore",
+    "title": "Rabbit Cacciatore",
+    "protein": "rabbit",
+    "proteins": [
+      "rabbit"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 90,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Connecticut DEEP",
+    "sourceUrl": "https://portal.ct.gov/DEEP/Hunting/Cooking-with-Wild-Game",
+    "image": "",
+    "ingredients": [
+      "2 small rabbits or 1 large rabbit, quartered and sectioned",
+      "1 can Italian whole tomatoes (stems removed)",
+      "1/3 to 1/2 cup dry white wine",
+      "1/2 red pepper",
+      "1/2 green pepper",
+      "1 large onion, coarse chopped",
+      "Fresh parsley, chopped fine",
+      "1 cup fresh mushrooms, sliced",
+      "2 bay leaves",
+      "1 tsp oregano",
+      "Salt and pepper to taste",
+      "Crushed red pepper to taste (optional)",
+      "1/3 to 1/2 cup olive oil",
+      "2 garlic cloves, sliced"
+    ],
+    "steps": [
+      "Season rabbit with salt and pepper and brown in olive oil with one clove garlic until golden.",
+      "Add onions and wine and allow to reduce.",
+      "Add tomatoes, peppers, parsley, mushrooms, bay leaves, oregano, remaining garlic, and seasonings.",
+      "Simmer covered until rabbit is tender. Serve with or without rice or pasta."
+    ],
+    "tags": [
+      "wild-game"
+    ]
+  },
+  {
+    "id": "game-rabbit-swill",
+    "title": "Rabbit Swill",
+    "protein": "rabbit",
+    "proteins": [
+      "rabbit"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 120,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/rabbit/rabbit-swill",
+    "image": "",
+    "ingredients": [
+      "2 rabbits, boned",
+      "Flour",
+      "Lemon pepper",
+      "8 oz. can French onion soup",
+      "8 oz. can cream of mushroom soup",
+      "1 can water",
+      "4 oz. can mushrooms, if desired",
+      "1 medium onion, sliced"
+    ],
+    "steps": [
+      "Thoroughly roll boned meat in flour/lemon pepper and brown in cast iron skillet.",
+      "Place browned meat in large cast iron Dutch oven or pot with alternating layers of sliced onions between and over each meat layer. Add soups, water and top with mushrooms, if desired.",
+      "Cover and simmer for 2 hours. Add quartered potatoes in the last hour, if desired. Serve over fresh-baked biscuits."
+    ],
+    "tags": [
+      "wild-game",
+      "small-game",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-sweet-and-sour-rabbit",
+    "title": "Sweet and Sour Rabbit",
+    "protein": "rabbit",
+    "proteins": [
+      "rabbit"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 20,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/rabbit/sweet-sour-rabbit",
+    "image": "",
+    "ingredients": [
+      "½ lb. lean, boneless rabbit, cut into 1\" or smaller cubes",
+      "1 tsp. dry sherry",
+      "¼ tsp. salt",
+      "Dash black pepper",
+      "Oil for frying",
+      "½ c. carrots, peeled and sliced",
+      "1 red onion, cut in 1\" chunks",
+      "1 each: small green, yellow and red pepper, cut into 1\" cubes",
+      "½ c. canned pineapple chunks, well drained",
+      "Batter",
+      "1 T. beaten egg + water to make ½ c.",
+      "½ c. all-purpose flour",
+      "¼ c. cornstarch",
+      "½ tsp. baking powder",
+      "1 tsp. oil (canola, corn or peanut)",
+      "Red Sauce",
+      "¾ c. sugar",
+      "2/3 c. water",
+      "1/3 c. ketchup",
+      "½ c. cider vinegar",
+      "1 T. light soy sauce",
+      "3½ T. cornstarch + 1/3 c. water"
+    ],
+    "steps": [
+      "Marinate rabbit in refrigerator in mixture of very dry sherry, soy sauce and McCormick’s meat marinade for 1-3 days. Stir together marinated rabbit, sherry, salt and pepper and set aside.",
+      "Combine the batter ingredients in a mixing bowl and beat with a wooden spoon until they make a smooth paste. In a wok or stir-fry pan, heat 2\" of oil to a temperature of 375-400E. Dip the meat into the batter to coat completely and place in the hot oil, 1 piece at a time. Fry until light golden brown, then remove with wire skimmer and drain. Transfer meat to 325F oven to keep warm (for no more than 10 minutes) Red Sauce",
+      "Combine sugar, ketchup, soy sauce, salt and water in a 2-qt. saucepan. Bring to a boil and add vinegar. When the liquid comes back to a boil, stir in the cornstarch-and-water solution and cook until thickened.",
+      "Parboil carrots for 1 minute. Add peppers and onion and blanch for less than a minute. Don’t let the water come back to a boil or peppers will be too soft. Drain and rinse in cold water. Add pineapple, then red sauce, and add 1 tablespoon of hot oil from the deep fry pan to give the sauce a shine. Pour sauce over meat and serve immediately."
+    ],
+    "tags": [
+      "wild-game",
+      "small-game"
+    ]
+  },
+  {
+    "id": "game-cookbook-chicken-and-andouille-sausage-gumbo",
+    "title": "Cookbook:Chicken and Andouille Sausage Gumbo",
+    "protein": "sausage",
+    "proteins": [
+      "sausage",
+      "chicken"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 60,
+    "servings": 12,
+    "style": "Country / camp",
+    "source": "Wikibooks Cookbook (CC BY-SA)",
+    "sourceUrl": "https://en.wikibooks.org/wiki/Cookbook:Gumbo",
+    "image": "",
+    "ingredients": [
+      "1 cup (240 ml) canola oil",
+      "1 cup (240 g) all-purpose flour",
+      "2 bell peppers, chopped into ¼-inch pieces",
+      "1 large onion, chopped into ¼-inch pieces",
+      "4 stalks of celery, chopped into ¼-inch pieces",
+      "about ½ lb (¼ kg) Andouille sausage or other spicy sausage",
+      "Salt to taste",
+      "Brown outside of chicken breasts in small amount of oil then set aside.",
+      "Make a roux from the flour in a large saucepan.",
+      "Slice up sausage and add ½ hour after the chicken.",
+      "Hot sauce can be added to taste.",
+      "Medium Difficulty recipes"
+    ],
+    "steps": [
+      "Brown outside of chicken breasts in small amount of oil then set aside.",
+      "Add peppers, onions, and celery to roux. Cook until softened.",
+      "Slowly stir in water, and bring to a simmer.",
+      "Cut up browned chicken breasts, add to gumbo, and cook until done.",
+      "Season to taste with cayenne and salt.",
+      "Serve in a bowl with a little rice and green onions on top."
+    ],
+    "tags": [
+      "wild-game",
+      "country"
+    ]
+  },
+  {
+    "id": "game-kentucky-burgoo-squirrel-beaver-and-pheasant",
+    "title": "Kentucky Burgoo (Squirrel, Beaver, and Pheasant)",
+    "protein": "squirrel",
+    "proteins": [
+      "squirrel",
+      "pheasant",
+      "other"
+    ],
+    "budget": 2,
+    "difficulty": 3,
+    "timeMin": 180,
+    "servings": 10,
+    "style": "Wild game / camp",
+    "source": "Connecticut DEEP",
+    "sourceUrl": "https://portal.ct.gov/DEEP/Hunting/Cooking-with-Wild-Game",
+    "image": "",
+    "ingredients": [
+      "3 tablespoons vegetable oil",
+      "1 to 2 squirrels, cut into serving pieces",
+      "2 to 3 pounds beaver, cut into large pieces (or substitute venison or goose)",
+      "4 to 6 pheasant legs/thighs, bone-in",
+      "1 green pepper, chopped",
+      "1 large onion, chopped",
+      "2 carrots, chopped",
+      "2 celery stalks, chopped",
+      "6 garlic cloves, chopped",
+      "1 quart chicken stock",
+      "1 quart beef stock",
+      "1 28-ounce can crushed tomatoes",
+      "2 large potatoes",
+      "1 bag frozen corn",
+      "1 bag frozen green beans",
+      "Salt and pepper",
+      "1/4 cup Worcestershire sauce"
+    ],
+    "steps": [
+      "Brown meats in batches in oil in a large Dutch oven; salt as they cook and set aside.",
+      "Brown onions, carrots, celery, and green pepper; add garlic 1 minute. Return meats with stocks and tomatoes. Simmer covered 2 hours.",
+      "Remove meat, strip from bones, tear large pieces, and return to the pot.",
+      "Add peeled potato chunks and simmer until tender. Stir in Worcestershire and adjust seasoning.",
+      "Add corn and green beans; cook 15 minutes until heated through."
+    ],
+    "tags": [
+      "wild-game"
+    ]
+  },
+  {
+    "id": "game-rosemary-parmesan-squirrel",
+    "title": "Rosemary Parmesan Squirrel",
+    "protein": "squirrel",
+    "proteins": [
+      "squirrel",
+      "chicken"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 20,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/squirrel/rosemary-parmesan-squirrel",
+    "image": "",
+    "ingredients": [
+      "3 squirrels (or 2 rabbits), cut in pieces",
+      "2 c. flour",
+      "Olive oil",
+      "¼ c. white wine (white zinfandel or Liebfraumilch)",
+      "1 tsp. rosemary",
+      "¼ c. sun-dried tomatoes (chopped coarsely)",
+      "¼ tsp. salt",
+      "¼ tsp. coarse black pepper",
+      "2 chicken bouillon cubes",
+      "¾ c. cream or half and half",
+      "½ pkg. onion soup mix",
+      "1 c. fresh Parmesan cheese, grated"
+    ],
+    "steps": [
+      "Place flour in bag, add meat and shake until thoroughly covered. In large frying pan, heat olive oil until it’s almost but not quite smoking. Place meat in pan and brown on all sides. Just before meat is completely browned, add 2 pats of butter to oil to finish browning. Remove and drain and cook meat in wine in a shallow saute pan, covered, on medium-low heat for about 15 minutes to tenderize. Remember to turn occasionally.",
+      "Put chopped tomatoes, rosemary, salt, pepper, and bouillon cubes in water and bring to a boil. Add rice and cook according to directions on rice package. Stir and fluff to distribute rosemary and tomatoes evenly.",
+      "In a saute pan on low heat, blend cream, onion soup mix and half of the Parmesan cheese. Stir constantly until the mixture is smooth and the cheese is melted into the sauce. Salt to taste. Use white pepper, if desired. Serve squirrel over a bed of rice, spoon sauce over top and garnish with remaining Parmesan cheese."
+    ],
+    "tags": [
+      "wild-game",
+      "small-game"
+    ]
+  },
+  {
+    "id": "game-skillet-squirrel",
+    "title": "Skillet Squirrel",
+    "protein": "squirrel",
+    "proteins": [
+      "squirrel"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 45,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/squirrel/skillet-squirrel",
+    "image": "",
+    "ingredients": [
+      "2 squirrels",
+      "Flour",
+      "2 large onions, chopped",
+      "1 clove garlic, minced",
+      "¼ c. red wine",
+      "½ large green pepper, halved",
+      "½ lb. fresh morel or button mushrooms, sliced",
+      "¼-½ c. sour cream",
+      "1 can, cream of mushroom soup",
+      "Salt",
+      "Pepper"
+    ],
+    "steps": [
+      "Dredge squirrel in flour and brown pieces in an electric skillet.",
+      "Smother browned meat in chopped onions.",
+      "Add garlic, salt, pepper, red wine, soup, mushrooms, sour cream and green pepper.",
+      "Put the lid on and simmer until the onions are clear and the meat is tender (about 225F)."
+    ],
+    "tags": [
+      "wild-game",
+      "small-game"
+    ]
+  },
+  {
+    "id": "game-squirrel-and-dumplings",
+    "title": "Squirrel and Dumplings",
+    "protein": "squirrel",
+    "proteins": [
+      "squirrel"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 20,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/squirrel/squirrel-dumplings",
+    "image": "",
+    "ingredients": [
+      "1 egg",
+      "1/2 cup water or cooled broth",
+      "1 teaspoon salt"
+    ],
+    "steps": [
+      "Mix ingredients with enough flour to make a firm dough. Turn out dough on a board and knead in flour until dough is stiff. Then roll out thin and leave for about one hour. Slice into either a diamond or noodle shape and drop into boiling broth.",
+      "Additional water may need to be added to the broth to handle the dumplings when all the dumplings have been added. Put squirrel meat in broth and simmer over low heat for at leas 15 to 20 minutes."
+    ],
+    "tags": [
+      "wild-game",
+      "small-game"
+    ]
+  },
+  {
+    "id": "game-squirrel-country-sausage",
+    "title": "Squirrel Country Sausage",
+    "protein": "squirrel",
+    "proteins": [
+      "squirrel",
+      "sausage",
+      "pork"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 60,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/squirrel/squirrel-country-sausage",
+    "image": "",
+    "ingredients": [
+      "4 ½ lbs. squirrel (approx. 15 fox squirrels)",
+      "1 Tbsp. sage",
+      "2 ½ lbs. fresh seasoned pork sausage (with sage)",
+      "2 tsp. basil",
+      "1 large onion",
+      "2-3 tsp. margarine",
+      "3 cloves garlic",
+      "1 Tbsp. chili powder",
+      "4 Tbsp. fresh parsley, chopped",
+      "1 Tbsp. black pepper",
+      "2 Tbsp. salt",
+      "1 tsp. thyme"
+    ],
+    "steps": [
+      "Bone the squirrel and grind or chop in food processor. (Squirrel leg meat is full of tendons and may not grind easily, but will be fine chopped in food processor.)",
+      "Mix together with fresh pork. Mince the onion and garlic.",
+      "Cook the onion until transparent and add the garlic and sauté slightly.",
+      "Mix together meats, onion, garlic and herbs.",
+      "To test seasonings, form a small patty and cook.",
+      "Taste and adjust seasonings accordingly.",
+      "Package and freeze in meal-size servings.",
+      "When thawing for use, form into small patties to cook or grill or use with your favorite sausage recipes.",
+      "Great on pizza, with pancakes or scrambled in eggs."
+    ],
+    "tags": [
+      "wild-game",
+      "small-game",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-squirrel-dumplings",
+    "title": "Squirrel Dumplings",
+    "protein": "squirrel",
+    "proteins": [
+      "squirrel"
+    ],
+    "budget": 2,
+    "difficulty": 3,
+    "timeMin": 150,
+    "servings": 6,
+    "style": "Wild game / camp",
+    "source": "Connecticut DEEP",
+    "sourceUrl": "https://portal.ct.gov/DEEP/Hunting/Cooking-with-Wild-Game",
+    "image": "",
+    "ingredients": [
+      "2 squirrels, cleaned, with heart and kidneys",
+      "About 2 quarts chicken stock",
+      "4 or 5 carrots, diced about 1/2 inch",
+      "1 or 2 white onions, diced about 1/2 inch",
+      "3 or 4 garlic cloves, finely diced",
+      "Egg noodles",
+      "Fresh thyme and sage, dried cayenne, celery seed, red pepper flakes, basil, salt, crushed peppercorns, bay leaves",
+      "Butter or bacon grease",
+      "Dumplings: 2 cups flour, 4 tsp baking powder, 1 tsp baking soda, pinch of salt, 3/4 cup milk, 2 tbsp butter or lard"
+    ],
+    "steps": [
+      "Simmer squirrels in lightly salted water until meat is falling off the bones; skim foam. Reserve cooking liquid and pick all meat from bones.",
+      "Sweat onion and garlic in bacon fat or butter until translucent. Add squirrel meat, giblets, and spices; saute briefly.",
+      "Add reserved squirrel broth (1-2 cups), stock, vegetables, and bay leaf. Simmer until well blended.",
+      "Cook noodles separately and add just before serving.",
+      "Mix dumpling dry ingredients. Warm milk with butter or lard until melted and stir into dry mix to a sticky dough.",
+      "Drop loose balls into simmering soup, cover, and cook 10-12 minutes. Serve immediately."
+    ],
+    "tags": [
+      "wild-game"
+    ]
+  },
+  {
+    "id": "game-squirrel-potpie",
+    "title": "Squirrel Potpie",
+    "protein": "squirrel",
+    "proteins": [
+      "squirrel"
+    ],
+    "budget": 2,
+    "difficulty": 3,
+    "timeMin": 150,
+    "servings": 6,
+    "style": "Wild game / camp",
+    "source": "Connecticut DEEP",
+    "sourceUrl": "https://portal.ct.gov/DEEP/Hunting/Cooking-with-Wild-Game",
+    "image": "",
+    "ingredients": [
+      "4 squirrels, cleaned and quartered",
+      "2 cloves garlic, minced",
+      "1 large onion, chopped",
+      "5 carrots, sliced",
+      "1/2 bunch celery, chopped",
+      "1 lb frozen peas",
+      "2 quarts game stock (or chicken or vegetable)",
+      "1 pint heavy cream",
+      "1 bay leaf",
+      "Flour",
+      "Salt and pepper to taste",
+      "Pie crust"
+    ],
+    "steps": [
+      "In a stockpot combine 1 quart stock, squirrel, bay leaf, salt, and pepper (add water to cover). Boil until meat is tender.",
+      "Remove squirrel, pick meat from bones, and strain/reserve stock.",
+      "In a large pot add remaining stock plus strained stock, carrots, garlic, onions, and celery. Boil until vegetables are tender.",
+      "Add picked squirrel meat, heavy cream, and peas. Stir in flour gradually to thicken.",
+      "Fill pie crust with filling and bake until golden brown."
+    ],
+    "tags": [
+      "wild-game"
+    ]
+  },
+  {
+    "id": "game-trout-stuffed-with-crabmeat",
+    "title": "Trout Stuffed With Crabmeat",
+    "protein": "trout",
+    "proteins": [
+      "trout",
+      "bacon"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 45,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/fish/trout-stuffed-crabmeat",
+    "image": "",
+    "ingredients": [
+      "3 stale rolls or several pieces of stale bread",
+      "1 egg",
+      "1 c. milk",
+      "1/3 c. chopped onion",
+      "1/3 c. chopped raw bacon",
+      "4-12\" trout",
+      "8 oz. crabmeat",
+      "Pinch of oregano",
+      "Juice of ½ lemon",
+      "Salt and Pepper",
+      "2 dashes Worcestershire sauce"
+    ],
+    "steps": [
+      "Split and bone trout, but do not separate the halves. To prepare stuffing, soak bread in milk, squeeze dry and add egg. Saute bacon and onions until the onions are limp but not brown. Add the crabmeat and saute for five minutes. Add to bread mixture, then stir in remaining ingredients.",
+      "Spread the stuffing on ½ of each trout and fold the other half on top. Sprinkle top of trout with paprika and brush with melted butter. Bake in 400F oven until skin is brown and crisp."
+    ],
+    "tags": [
+      "wild-game",
+      "fish"
+    ]
+  },
+  {
+    "id": "game-almond-turkey-bake",
+    "title": "Almond Turkey Bake",
+    "protein": "turkey",
+    "proteins": [
+      "turkey"
+    ],
+    "budget": 2,
+    "difficulty": 3,
+    "timeMin": 35,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/turkey/almond-turkey-bake",
+    "image": "",
+    "ingredients": [
+      "1 c. shredded cheddar cheese",
+      "1 T. flour",
+      "1 c. toasted slivered almonds",
+      "1 1/2 c. celery slices",
+      "3 c. cooked, chopped turkey",
+      "1 T. lemon juice",
+      "1/2 tsp. poultry seasoning",
+      "1 c. mayonnaise",
+      "1/2 tsp. salt",
+      "1/8 tsp. pepper",
+      "Pastry for 2-crust 9-inch pie"
+    ],
+    "steps": [
+      "Blend cheese and flour. Take 3/4 cup of the cheese/flour mix and combine with 1/2 cup almonds and remaining ingredients except the pastry. Mix well.",
+      "Fit the pastry into a baking dish (approximately 12 x 7); trim to 1” beyond the edge and flute the edge of the crust. Fill with turkey mixture and top with the remaining cheese/flour mix and almonds.",
+      "Bake at 400F for 30-35 minutes. Garnish with lemon twists and parsley."
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird"
+    ]
+  },
+  {
+    "id": "game-barbecued-wild-turkey-i",
+    "title": "Barbecued Wild Turkey I",
+    "protein": "turkey",
+    "proteins": [
+      "turkey"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 60,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/turkey/barbecued-wild-turkey-i",
+    "image": "",
+    "ingredients": [
+      "Wild turkey breast",
+      "½ c. soy sauce",
+      "½ c. water",
+      "2 T. brown sugar",
+      "2 T. vegetable or olive oil",
+      "¼ tsp. black pepper",
+      "½ tsp. crushed garlic",
+      "1 T. lemon juice (fresh squeezed)",
+      "¼ tsp. Tabasco sauce (or Frank’s Red Hot sauce)"
+    ],
+    "steps": [
+      "Cut fresh or fully-thawed meat into strips 1\" long by ¼\" thick.",
+      "Mix other ingredients together, add meat and marinate overnight.",
+      "Drain meat, keeping the marinade.",
+      "Grill on low-medium heat for 10 minutes, basting with marinade."
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-barbecued-wild-turkey-ii",
+    "title": "Barbecued Wild Turkey II",
+    "protein": "turkey",
+    "proteins": [
+      "turkey"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 30,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/turkey/barbecued-wild-turkey-ii",
+    "image": "",
+    "ingredients": [
+      "Barbecue Sauce",
+      "1/2 cup brown sugar",
+      "1 tablespoon dry mustard",
+      "2 teaspoons salt",
+      "1/4 teaspoon pepper",
+      "1/4 teaspoon ginger",
+      "1/2 teaspoon cinnamon",
+      "8 ounces tomato sauce",
+      "3/4 cup balsamic vinegar",
+      "1/4 teaspoon hot pepper sauce",
+      "2 tablespoons grated onion",
+      "1 1/2 cloves garlic, crushed"
+    ],
+    "steps": [
+      "Mix dry ingredients in medium saucepan. Add the remaining ingredients and simmer 15-30 minutes or until slightly thickened.",
+      "Cover each piece of turkey with sauce. Baste often on grill, cooking 4 to 5 minutes or until done."
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-barded-wild-turkey-hors-d-oeuvres",
+    "title": "Barded Wild Turkey Hors d'Oeuvres",
+    "protein": "turkey",
+    "proteins": [
+      "turkey",
+      "bacon"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 60,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/turkey/barded-wild-turkey-hors-doeuvres",
+    "image": "",
+    "ingredients": [
+      "1 pound wild turkey cuts",
+      "Italian salad dressing",
+      "Jalapeno pepper slices or water",
+      "chestnuts",
+      "Bacon slices, cut in half"
+    ],
+    "steps": [
+      "Cut turkey strips about 1 1/2 inches wide by 3 to 4 inches in length.",
+      "Marinate in Italian salad dressing for 1 hour or more.",
+      "Roll turkey strip around the pepper or chestnut.",
+      "Wrap with bacon slice and secure with toothpick or bamboo skewer.",
+      "Grill or broil until done."
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-chicken-of-the-woods-marsala-wild-turkey",
+    "title": "Chicken of the Woods Marsala (Wild Turkey)",
+    "protein": "turkey",
+    "proteins": [
+      "turkey"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 40,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Connecticut DEEP",
+    "sourceUrl": "https://portal.ct.gov/DEEP/Hunting/Cooking-with-Wild-Game",
+    "image": "",
+    "ingredients": [
+      "1/4 cup all-purpose flour for coating",
+      "1 tablespoon Cajun seasoning",
+      "1/2 teaspoon salt",
+      "1/4 teaspoon ground black pepper",
+      "2 wild turkey breasts, filleted and pounded 1/4 inch thick (venison or other game may be substituted)",
+      "4 tablespoons butter",
+      "4 tablespoons olive oil",
+      "1 cup sliced Chicken of the Woods mushrooms (or shiitake/bella)",
+      "1 cup dry Marsala wine",
+      "Chopped parsley for garnish"
+    ],
+    "steps": [
+      "In a shallow bowl, mix together flour and Cajun seasoning.",
+      "Fillet turkey into approximately 1/2-inch pieces then pound flat to about 1/4 inch.",
+      "Coat turkey in flour mixture.",
+      "In a large skillet, add butter and olive oil. Melt butter completely.",
+      "Lightly brown turkey on both sides and remove.",
+      "Add Marsala wine and bring to a simmer. Lower heat and allow wine to reduce about 5 minutes.",
+      "Add mushrooms and cook until tender.",
+      "Add turkey back to skillet and cook until 165 F internal temperature (140 F for venison medium-rare/medium).",
+      "Garnish with chopped parsley and serve with or without pasta."
+    ],
+    "tags": [
+      "wild-game"
+    ]
+  },
+  {
+    "id": "game-cookbook-jambalaya-i",
+    "title": "Cookbook:Jambalaya I",
+    "protein": "turkey",
+    "proteins": [
+      "turkey",
+      "chicken"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 20,
+    "servings": 3,
+    "style": "Country / camp",
+    "source": "Wikibooks Cookbook (CC BY-SA)",
+    "sourceUrl": "https://en.wikibooks.org/wiki/Cookbook:Jambalaya",
+    "image": "",
+    "ingredients": [
+      "1 bay leaf",
+      "½ teaspoon savory",
+      "½ teaspoon salt",
+      "1 teaspoon dried basil",
+      "1 teaspoon thyme",
+      "1½ teaspoons cumin",
+      "⅓ cup chopped celery",
+      "½ tablespoon butter",
+      "14.5 ounces (411 g) canned tomatoes, diced or torn apart",
+      "⅔ cup long-grain rice",
+      "1½ cups chicken broth",
+      "2 cups cooked and chopped turkey or chicken",
+      "1 small can of sliced mushrooms (optional), drained",
+      "Add everything to the pan. You can add the basil, meat, and mushrooms later if you prefer."
+    ],
+    "steps": [
+      "Mix the salt, savory, basil, thyme, and cumin together, then grind them to a powder.",
+      "Heat a wide pan with a lid. Lightly fry the celery in the butter. Soften the celery but do not brown it.",
+      "Add everything to the pan. You can add the basil, meat, and mushrooms later if you prefer.",
+      "Bring to a boil, then cover and simmer for about 20 minutes. The rice will absorb the liquid."
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird",
+      "country"
+    ]
+  },
+  {
+    "id": "game-grilled-turkey",
+    "title": "Grilled Turkey",
+    "protein": "turkey",
+    "proteins": [
+      "turkey"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 60,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/turkey/grilled-turkey",
+    "image": "",
+    "ingredients": [
+      "1 lime, juiced",
+      "1 teaspoon garlic powder",
+      "1/2 cup white cooking wine",
+      "1/2 teaspoon black pepper"
+    ],
+    "steps": [
+      "Tenderize meat on one side.",
+      "Sprinkle with garlic and place in bag to marinate.",
+      "Juice lime in bag and add wine, remaining garlic and pepper.",
+      "Seal and refrigerate at least 1 hour."
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-grilled-turkey-with-lemon-sauce",
+    "title": "Grilled Turkey With Lemon Sauce",
+    "protein": "turkey",
+    "proteins": [
+      "turkey"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 90,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/turkey/grilled-turkey-lemon-sauce",
+    "image": "",
+    "ingredients": [
+      "3 tablespoons olive oil",
+      "1/3cup lemon juice",
+      "3 tablespoons dried oregano",
+      "1 teaspoon salt",
+      "1 teaspoon fresh ground pepper",
+      "2 pounds gamebird, skin removed (¼-inch thick slices)",
+      "1 cup yogurt",
+      "2 teaspoons fresh orange juice",
+      "½ teaspoon minced garlic",
+      "½ teaspoon ground cumin",
+      "1 teaspoon orange zest"
+    ],
+    "steps": [
+      "Marinate the gamebird in a mix of the olive oil, 3 tablespoons lemon juice, 2 tablespoons oregano, ½ teaspoon salt and pepper. Chill and marinate 30 minutes to 1 hour.",
+      "Mix the sauce with the remaining ingredients, then cover and refrigerate.",
+      "Place the gamebird on wooden skewers to help hold in moisture and grill until done, 10 minutes or more.",
+      "Serve with lemon sauce."
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-orange-clove-smoked-wild-turkey",
+    "title": "Orange-Clove Smoked Wild Turkey",
+    "protein": "turkey",
+    "proteins": [
+      "turkey"
+    ],
+    "budget": 2,
+    "difficulty": 3,
+    "timeMin": 240,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Connecticut DEEP",
+    "sourceUrl": "https://portal.ct.gov/DEEP/Hunting/Cooking-with-Wild-Game",
+    "image": "",
+    "ingredients": [
+      "1 wild turkey breast (about 2 lb), or a whole turkey with brine scaled up",
+      "Brine: 1 cup water, 1/4 cup kosher salt, 1 tbsp brown sugar",
+      "3 large garlic cloves",
+      "3 slices fresh ginger",
+      "5 large fresh sage leaves",
+      "1 tbsp fresh thyme leaves",
+      "1 tbsp fresh rosemary leaves",
+      "1/2 tbsp whole cloves",
+      "1/2 tbsp anise seed",
+      "Zest from 1 orange, divided",
+      "6 red potatoes, quartered",
+      "3 large carrots, roughly chopped",
+      "1 red onion, quartered",
+      "1/2 cup water for the pan plus 5 smashed garlic cloves",
+      "Handfuls of fresh thyme and rosemary sprigs, 5 sage leaves",
+      "Glaze: 1/2 cup brown sugar mixed with 1/4 cup water"
+    ],
+    "steps": [
+      "Combine brine ingredients and bring to a boil, stirring until salt and sugar dissolve. Cool completely.",
+      "Place turkey in a sealed bag or container, cover with cooled brine, and refrigerate overnight.",
+      "Soak wood chips 30 minutes. Preheat smoker to 250 F with the water bowl filled.",
+      "Rinse brined turkey under cold water about 5 minutes. Arrange potatoes, carrots, onions, and garlic in a foil pan; set turkey on top and add 1/2 cup water.",
+      "Sprinkle herbs, cloves, anise, and orange zest over turkey and vegetables.",
+      "Smoke about 3 hours until turkey reaches 165 F and vegetables are tender.",
+      "Heat oven to 400 F. Brush brown-sugar glaze over turkey and vegetables and roast about 10 minutes until the glaze sets. Serve hot."
+    ],
+    "tags": [
+      "wild-game"
+    ]
+  },
+  {
+    "id": "game-roast-turkey-and-dressing",
+    "title": "Roast Turkey and Dressing",
+    "protein": "turkey",
+    "proteins": [
+      "turkey",
+      "fish"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 45,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/turkey/roast-turkey-dressing",
+    "image": "",
+    "ingredients": [
+      "Dressing",
+      "2 to 3 quarts soft bread crumbs",
+      "1 to 2 teaspoons poultry seasoning",
+      "1/2 to 1 cup celery, chopped",
+      "1/2 to 1 cup onion, chopped",
+      "1 teaspoon salt",
+      "2 eggs",
+      "Pepper to taste",
+      "Broth or milk to moisten"
+    ],
+    "steps": [
+      "Combine all ingredients and place in turkey cavity. Pour some dressing around the turkey and roast until dressing is lightly brown. Baste turkey occasionally while baking.",
+      "Modified from Cy Littlebee's Guide to Cooking Fish and Game"
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird",
+      "fish"
+    ]
+  },
+  {
+    "id": "game-roast-wild-turkey-in-white-wine-with-mushroom-pat-stuffing",
+    "title": "Roast Wild Turkey in White Wine with Mushroom Paté Stuffing",
+    "protein": "turkey",
+    "proteins": [
+      "turkey",
+      "fish",
+      "chicken"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 150,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/turkey/roast-wild-turkey-white-wine-mushroom-pate-stuffing",
+    "image": "",
+    "ingredients": [
+      "1/4 cup butter",
+      "2 medium onions, chopped",
+      "1 cup chopped morels or button mushrooms (about 1/4 pound)",
+      "2 quarts fresh white bread crumbs",
+      "1/4 teaspoon pepper",
+      "1/4 cup chopped parsley",
+      "1 teaspoon salt",
+      "1 teaspoon dried thyme",
+      "1 teaspoon dried marjoram",
+      "1 pound chicken livers, finely chopped",
+      "Ingredients for basting and later use:",
+      "1 tablespoon salt",
+      "1 teaspoon pepper",
+      "1/4 cup olive oil",
+      "1 small onion, sliced",
+      "1 clove garlic, halved",
+      "2 whole cloves",
+      "1 bay leaf",
+      "1/4 teaspoon dried basil",
+      "1 can (10 1/2 oz.) condensed chicken broth",
+      "1/2 cup white wine"
+    ],
+    "steps": [
+      "Melt butter in skillet and sauté onion and mushrooms until onion is tender, about 5 minutes. Turn into large bowl. Add chicken liver, bread-crumbs, parsley, salt, thyme, marjoram and pepper. Toss until thoroughly combined.",
+      "Preheat oven to 400F. Wash and dry turkey inside and out. Mix salt and pepper. Sprinkle part of mixture inside turkey. Spoon stuffing into neck and body cavity. Use twine to close cavity, fasten wing tips to body and tie ends of legs together. Place turkey, breast up, in a deep roasting pan with a tight-fitting cover. Brush with oil and sprinkle the remaining salt and pepper. Roast uncovered for 30 minutes or until lightly browned.",
+      "Remove from oven. Reduce oven temperature to 350F. Insert meat thermometer in turkey thigh at thickest part. Add onion, garlic, cloves, bay leaf and basil to roasting pan. Pour chicken broth and wine over turkey. Cover pan tightly. Roast, basting every 30 minutes, for 2 1/2 hours, or until thermometer reaches 185F. Leg joints should move freely. Remove turkey from roasting pan and remove twine to serve.",
+      "Modified from Cy Littlebee's Guide to Cooking Fish and Game"
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird",
+      "fish"
+    ]
+  },
+  {
+    "id": "game-smoked-wild-turkey-legs",
+    "title": "Smoked Wild Turkey Legs",
+    "protein": "turkey",
+    "proteins": [
+      "turkey"
+    ],
+    "budget": 2,
+    "difficulty": 3,
+    "timeMin": 240,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Connecticut DEEP",
+    "sourceUrl": "https://portal.ct.gov/DEEP/Hunting/Cooking-with-Wild-Game",
+    "image": "",
+    "ingredients": [
+      "2 wild turkey legs (skin on or off)",
+      "Cajun dry rub: 4 tsp salt, 4 tsp garlic powder, 6 tsp smoked paprika, 2 tsp black pepper, 2 tsp onion powder, 2 tsp cayenne, 2 1/2 tsp oregano, 2 1/2 tsp thyme, 1/2-1 tsp red pepper flakes",
+      "Wet brine: 1/4 cup kosher salt, 2 tablespoons brown sugar, 2 cups hot water, 2 cups ice",
+      "2 tablespoons peppercorns, 2 lemon slices, 2 orange slices, 2 onion slices, 2 minced garlic cloves, 1 bay leaf",
+      "Olive oil for coating"
+    ],
+    "steps": [
+      "Dissolve salt and brown sugar in hot water. Add citrus, peppercorns, onion, garlic, and bay leaf, then ice to cool.",
+      "Submerge turkey legs in brine, cover, and refrigerate up to 24 hours.",
+      "Heat smoker to 225 F (cherry or apple for mild smoke; hickory or mesquite for stronger).",
+      "Dry legs, coat with oil, and season with Cajun rub.",
+      "Smoke at 225 F until internal temperature reaches 165 F. Tent with foil and rest 10 minutes before serving."
+    ],
+    "tags": [
+      "wild-game"
+    ]
+  },
+  {
+    "id": "game-stuffed-wild-turkey-cutlets-with-green-beans-cranberries-and",
+    "title": "Stuffed Wild Turkey Cutlets with Green Beans, Cranberries, and Pecans",
+    "protein": "turkey",
+    "proteins": [
+      "turkey"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 35,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Connecticut DEEP",
+    "sourceUrl": "https://portal.ct.gov/DEEP/Hunting/Cooking-with-Wild-Game",
+    "image": "",
+    "ingredients": [
+      "8 turkey cutlets, about 1/4 inch thick",
+      "Salt and pepper",
+      "3 cups fresh green beans, trimmed",
+      "1 tablespoon butter, melted",
+      "1 tablespoon minced garlic",
+      "1 tablespoon chopped fresh sage",
+      "1/4 cup dried cranberries",
+      "1/4 cup chopped pecans",
+      "1 cup chicken stock or broth",
+      "1 teaspoon paprika",
+      "1/4 teaspoon poultry seasoning"
+    ],
+    "steps": [
+      "Season both sides of turkey cutlets with salt and pepper.",
+      "Combine green beans, melted butter, garlic, sage, cranberries, and pecans for the filling.",
+      "Add filling to the center of each cutlet, roll up, and secure with toothpicks.",
+      "Place a rack in a pressure cooker, pour in chicken stock, and set stuffed cutlets on the rack. Sprinkle with paprika and poultry seasoning.",
+      "Lock the lid and cook 10 minutes on HIGH. Quick-release pressure and rest 5 minutes before serving."
+    ],
+    "tags": [
+      "wild-game"
+    ]
+  },
+  {
+    "id": "game-turkey-fingers",
+    "title": "Turkey Fingers",
+    "protein": "turkey",
+    "proteins": [
+      "turkey"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 20,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/turkey/turkey-fingers",
+    "image": "",
+    "ingredients": [
+      "1 cup dry bread-crumbs",
+      "1/4 cup Parmesan cheese",
+      "1 tablespoon fresh parsley (or 1 teaspoon thyme or oregano)",
+      "1 teaspoon salt",
+      "1/2 teaspoon pepper."
+    ],
+    "steps": [
+      "Coat the turkey with flour.",
+      "Dip in egg, then roll in breadcrumbs.",
+      "Pan fry in a small amount of butter or olive oil until lightly brown, 2 to 3 minutes on each side."
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird"
+    ]
+  },
+  {
+    "id": "game-turkey-fruit-salad",
+    "title": "Turkey Fruit Salad",
+    "protein": "turkey",
+    "proteins": [
+      "turkey"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 45,
+    "servings": 8,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/turkey/turkey-fruit-salad",
+    "image": "",
+    "ingredients": [
+      "1 red apple, cored and chopped",
+      "3 c. cooked rice",
+      "2 c. smoked turkey, cubed",
+      "20-oz. can pineapple chunks in juice, drained",
+      "1 c. seedless grapes",
+      "½ c. sliced celery",
+      "2 T. orange marmalade",
+      "1 T. grated orange peel",
+      "8 oz. carton light peach yogurt",
+      "Lettuce leaves"
+    ],
+    "steps": [
+      "Combine pineapple, apple, rice, turkey, grapes, and celery in large bowl.",
+      "Blend yogurt, marmalade and orange peel in separate bowl, mixing well. Add yogurt mixture to fruit and turkey, tossing to mix. Spoon salad into bowl lined with lettuce leaves. Serves 8."
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird"
+    ]
+  },
+  {
+    "id": "game-turkey-wild-rice-and-mushroom-soup",
+    "title": "Turkey, Wild Rice, and Mushroom Soup",
+    "protein": "turkey",
+    "proteins": [
+      "turkey",
+      "chicken"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 20,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/turkey/turkey-wild-rice-mushroom-soup",
+    "image": "",
+    "ingredients": [
+      "3-4 cups cooked turkey, cubed",
+      "3 stalks celery, sliced",
+      "8 oz. morel or button mushrooms, sliced.",
+      "1 cup long grain and wild rice",
+      "1/2 cup white wine",
+      "2 cups milk",
+      "1 clove garlic",
+      "Salt and pepper to taste",
+      "1/2 cup sliced green onion",
+      "1/2 teaspoon thyme",
+      "2 tablespoons parsley",
+      "3 chicken bouillon cubes",
+      "1/4 cup Parmesan cheese",
+      "2 tablespoons butter",
+      "2 tablespoons cornstarch"
+    ],
+    "steps": [
+      "Cook the rice as directed.",
+      "In a skillet, melt the butter and add the garlic, onion, celery and mushrooms.",
+      "When tender, add turkey, wine and seasonings.",
+      "Mix cornstarch and part of milk and thicken.",
+      "Combine rice and turkey mixture in large pan.",
+      "Add remaining ingredients and enough water to make slightly soupy.",
+      "Simmer for 20 minutes."
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird"
+    ]
+  },
+  {
+    "id": "game-wild-turkey-barbecue",
+    "title": "Wild Turkey Barbecue",
+    "protein": "turkey",
+    "proteins": [
+      "turkey"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 420,
+    "servings": 6,
+    "style": "Wild game / camp",
+    "source": "Connecticut DEEP",
+    "sourceUrl": "https://portal.ct.gov/DEEP/Hunting/Cooking-with-Wild-Game",
+    "image": "",
+    "ingredients": [
+      "2 wild turkey leg/thigh quarters",
+      "1/2 cup Sprite",
+      "1/2 cup apple cider vinegar",
+      "1/2 cup barbecue sauce",
+      "1 onion, thinly sliced",
+      "1 heaping tablespoon Traeger Big Game or favorite BBQ dry rub"
+    ],
+    "steps": [
+      "Add turkey, Sprite, vinegar, barbecue sauce, onion, and dry rub to a slow cooker.",
+      "Cook on low 6 to 8 hours, until the meat falls from the bones.",
+      "Remove bones, tendons, and connective tissue.",
+      "Return meat to the cooker and shred into the juices. Serve."
+    ],
+    "tags": [
+      "wild-game"
+    ]
+  },
+  {
+    "id": "game-wild-turkey-fajitas",
+    "title": "Wild Turkey Fajitas",
+    "protein": "turkey",
+    "proteins": [
+      "turkey"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 62,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/turkey/wild-turkey-fajitas",
+    "image": "",
+    "ingredients": [
+      "3 wild turkey tenderloins",
+      "½ tsp. black pepper",
+      "1 lime",
+      "½ c. salsa",
+      "1 tsp. garlic powder",
+      "1 T. oil",
+      "½ c. white cooking wine",
+      "1 medium onion, sliced",
+      "Guacamole",
+      "1 medium tomato, chopped",
+      "1½ c. sliced morel or button mushrooms",
+      "1 medium green pepper, cut in strips",
+      "Sour cream",
+      "Salsa",
+      "Shredded cheddar cheese",
+      "8 flour tortillas"
+    ],
+    "steps": [
+      "Tenderize meat on one side. Sprinkle w/ garlic and place in bag to marinate. Juice lime in bag and add wine, remaining garlic and pepper. Seal and refrigerate about 1 hour.",
+      "Heat skillet and add oil. Cook and stir onions (1½ minutes). Add green pepper and mushrooms and stir until tender. Remove from pan. Add meat, salsa and marinade; cook until done. Add vegetables and tomato. Cook 1-2 minutes longer.",
+      "Warm tortillas and fill w/ meat, guacamole, sour cream, cheese and salsa. Makes 4 servings."
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird"
+    ]
+  },
+  {
+    "id": "game-wild-turkey-tetrazzini",
+    "title": "Wild Turkey Tetrazzini",
+    "protein": "turkey",
+    "proteins": [
+      "turkey",
+      "chicken"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 20,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/turkey/wild-turkey-tetrazzini",
+    "image": "",
+    "ingredients": [
+      "½ lb. sliced morel or button mushrooms (approx. 3 c.)",
+      "1 T. butter",
+      "1 T. cornstarch",
+      "½ tsp. salt",
+      "½ tsp. coarse black pepper",
+      "1 green or sweet red pepper, diced",
+      "2 c. skim milk",
+      "2 chicken bouillon cubes",
+      "2 c. cooked turkey, cubed (½ lb.)",
+      "4 T. Worcestershire sauce",
+      "½ c. shredded cheddar cheese",
+      "½ lb. spaghetti, cooked al dente",
+      "1/3 c. sliced scallions",
+      "¼ c. Parmesan cheese"
+    ],
+    "steps": [
+      "In heavy skillet over medium heat, saute mushrooms in butter until tender. Stir in salt/pepper.",
+      "Use portion of milk to dissolve cornstarch, then add remaining milk and cornstarch mixture, stirring constantly. Add Worcestershire sauce and bouillon and simmer until somewhat thickened. Add cheese, pepper and scallions to sauce.",
+      "Toss turkey and spaghetti in large saucepan, then add sauce, stirring well. Pour into greased 2-quart shallow casserole or baking dish. Sprinkle top with Parmesan and bake at 350F for about 20 minutes or until heated through."
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird"
+    ]
+  },
+  {
+    "id": "game-wild-turkey-tortilla-soup",
+    "title": "Wild Turkey Tortilla Soup",
+    "protein": "turkey",
+    "proteins": [
+      "turkey",
+      "chicken"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 45,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/turkey/wild-turkey-tortilla-soup",
+    "image": "",
+    "ingredients": [
+      "1 pound cooked turkey or game bird",
+      "1 lime, juiced",
+      "1 quart chicken broth",
+      "1 jalapeno, chopped",
+      "2 cloves garlic, minced",
+      "1 ½ pepper (green, yellow or red)",
+      "½ teaspoon cumin",
+      "½ cup onion, chopped",
+      "2 tablespoons cilantro",
+      "½ cup carrots, sliced",
+      "2 tomatoes, diced"
+    ],
+    "steps": [
+      "Bring broth to boil and add garlic, onion, carrots, peppers and rice. When rice is done, add meat, lime juice, cumin, cilantro and tomatoes.",
+      "Cook until tomato is slightly soft.",
+      "Serve with grated cheese, tortilla chips and a wedge of lime."
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird"
+    ]
+  },
+  {
+    "id": "game-basic-deer-sausage-with-three-seasoning-mixes",
+    "title": "Basic Deer Sausage with Three Seasoning Mixes",
+    "protein": "venison",
+    "proteins": [
+      "venison",
+      "sausage",
+      "pork"
+    ],
+    "budget": 2,
+    "difficulty": 3,
+    "timeMin": 80,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/basic-deer-sausage-three-seasoning-mixes",
+    "image": "",
+    "ingredients": [
+      "5 lbs. venison",
+      "1 lb. fresh pork fat",
+      "2-4 tablespoons salt"
+    ],
+    "steps": [
+      "Grind the meat and fat thoroughly, mix in salt and add one of the seasoning recipes. Knead one of the seasoning mixes listed below into meat. Keep mixture cold. Salami Seasoning",
+      "2 tablespoons sugar",
+      "1 tablespoon cayenne pepper",
+      "1 teaspoon ground cloves",
+      "1 tablespoon fine-ground pepper",
+      "2 teaspoons garlic powder",
+      "3/4 cup dry milk (mix to a thin paste) Sausage Seasoning",
+      "1 teaspoon cayenne pepper",
+      "1 1/2 tablespoons chili powder",
+      "1 tablespoon garlic powder",
+      "1 1/2 teaspoons ground celery seed",
+      "3/4 cup dry milk (mix to a thin paste) Pepperoni Seasoning",
+      "1 teaspoon ground cumin",
+      "1 1/2 teaspoons leaf oregano",
+      "1 teaspoon thyme",
+      "1 tablespoon cracked pepper",
+      "3 tablespoons chili powder",
+      "1 teaspoon whole anise",
+      "3/4 cup dry milk (mix to a thin paste)",
+      "To stuff and cook the sausage, you can use casings available from a local meat processor or aluminum foil wrapping.",
+      "If using casings, follow instructions for the type (run water through animal casings). To fill, use stuffing attachments for your meat grinder and pack tightly into casings.",
+      "For foil wrapping, place 1-2 pounds of mixture on a rectangle of foil and pull up opposite sides. Press to pack meat tightly, then fold the foil tightly against the meat. Turn and roll ends until tight.",
+      "Bake sausage in the oven by placing the stuffed casings or foil on a rack in a baking pan. Bake for 1 hour and 20 minutes at 300F. Remove and cool rapidly."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-can",
+    "title": "Can",
+    "protein": "venison",
+    "proteins": [
+      "venison",
+      "sausage",
+      "pork",
+      "chicken"
+    ],
+    "budget": 2,
+    "difficulty": 3,
+    "timeMin": 75,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "University of Missouri Extension",
+    "sourceUrl": "https://extension.missouri.edu/publications/n670",
+    "image": "",
+    "ingredients": [
+      "1 pound ground venison",
+      "One 14.5-ounce can diced tomatoes with jalapeños, drained",
+      "One 15-ounce can pinto beans, drained and rinsed",
+      "One 10.75-ounce can condensed cheddar cheese soup",
+      "5 ounces (about 4 dozen medium) unsalted tortilla chips"
+    ],
+    "steps": [
+      "In a 10-inch skillet over medium-high, cook the venison until the meat is well-browned, stirring often to separate.",
+      "Add tomatoes, pinto beans and cheese soup to browned meat. Heat until the mixture is hot and bubbling, stirring often.",
+      "Spoon the meat mixture over chips. Serve immediately.",
+      "Refrigerate leftovers. Shepherd’s Pie Yield: 4 Servings Ingredients",
+      "1 pound ground venison",
+      "1/2 cup chopped onion",
+      "One 10.5-ounce can condensed cream of mushroom soup",
+      "1 tablespoon ketchup",
+      "1/8 teaspoon ground black pepper",
+      "One 15-ounce can of mixed vegetables, drained or one 12-ounce package frozen mixed vegetables",
+      "2 1/2 cups milk",
+      "1/4 cup (1/2 stick) butter",
+      "2 cups instant mashed potato flakes or buds",
+      "1 cup cheddar cheese, shredded (optional) Directions",
+      "Preheat the oven to 400 F. Wash hands and surfaces.",
+      "In a 10-inch skillet over medium-high, cook the venison and onion until the meat is well-browned, stirring often to separate meat.",
+      "Add soup, ketchup, black pepper and mixed vegetables in the skillet. Pour meat mixture into 9-inch pie pan.",
+      "In 2-quart saucepan over medium-high, bring milk and butter to a boil. Remove from heat. Stir in the flakes or buds with fork until potatoes are stiff. Spread potatoes over the meat mixture and sprinkle with cheddar cheese, if desired.",
+      "Bake for 15 minutes or until the potatoes are lightly browned.",
+      "Enjoy! Refrigerate leftovers immediately. Mama Patty’s Deer Loaf Yield: 4 Servings Ingredients",
+      "1/2 to 3/4 pound ground pork sausage",
+      "1 medium onion, finely chopped",
+      "18 to 24 crackers, crushed",
+      "1 tablespoon horseradish (optional) Salt and pepper Topping",
+      "1/2 cup ketchup",
+      "2 tablespoons brown sugar",
+      "1 tablespoon horseradish (optional)",
+      "2 tablespoons mustard Directions",
+      "Preheat the oven to 375 F. Wash hands and surfaces.",
+      "In a large bowl, mix together venison, pork, egg, onion, crackers, milk and horseradish with salt and pepper to taste. Shape into a log and place in lightly greased 9-by-13-inch baking dish.",
+      "In a separate small bowl, combine ketchup, brown sugar, horseradish and mustard. Mix well and pour over the loaf.",
+      "Bake for 1 hour, until loaf reaches 160 F in the center. Enjoy! Refrigerate leftovers immediately. Zippy Venison Cheese Skillet Yield: 4 Servings Ingredients",
+      "1 pound ground venison One 10.5-ounce can condensed beef broth",
+      "1 1/3 cups water",
+      "2 cups uncooked medium shell pasta",
+      "One 10.5-ounce can condensed cheddar cheese soup One 14.5-ounce can salsa of choice Directions Wash hands and surfaces.",
+      "In a large skillet, brown ground venison.",
+      "Stir broth and water into skillet and heat to a boil. Stir in the pasta. Reduce the heat to medium and cook for 10 minutes or until the pasta is tender, stirring often.",
+      "Stir in the soup and salsa and cook until mixture is hot and bubbling.",
+      "Enjoy! Refrigerate leftovers immediately. file_copy Reprint guidelines insert_comment Share Feedback Publication No. N670 n00670.pdf Price from $1 to $20 shopping_cart Buy now Print This Page Related publications Can-Do Recipes: Chicken Can-Do Recipes: Rice Can-Do Recipes: Tuna Can-Do Recipes: Tomato Can-Do Recipes: Corn Can-Do Recipes: Ramen Noodles Can-Do Recipes: Beans Can-Do Recipes: Pork Can-Do Recipes: Green Beans Can-Do Recipes: Pears Can-Do Recipes: Crackers Can-Do Recipes: Peaches Can-Do Recipes: Pumpkin Can-Do Recipes: Cranberries"
+    ],
+    "tags": [
+      "wild-game",
+      "big-game"
+    ]
+  },
+  {
+    "id": "game-canned-venison",
+    "title": "Canned Venison",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 90,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/canned-venison",
+    "image": "",
+    "ingredients": [
+      "Venison, cut into cubes",
+      "Salt",
+      "Beef soup bone",
+      "Water"
+    ],
+    "steps": [
+      "Set aside part of your harvest to enjoy later using this canned venison recipe.",
+      "Brown deer chunks in water in a soup pot. Add a beef soup bone to give the broth some fat. Fill quart jars with meat chunks within 1 inch of lid. Add 1 teaspoon salt (1/2 teaspoon for pint jars). Fill jar with enough broth to just cover meat. Pressure-cook according to your cooker manufacturer's recommendations or for 90 minutes at 10 pounds."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game"
+    ]
+  },
+  {
+    "id": "game-cheese-filled-venison-rolls",
+    "title": "Cheese-Filled Venison Rolls",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 45,
+    "servings": 6,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/cheese-filled-venison-rolls",
+    "image": "",
+    "ingredients": [
+      "2 lb. venison round steak",
+      "¼ c. flour",
+      "¾ tsp. salt",
+      "¼ tsp. pepper",
+      "3 T. cooking oil",
+      "1 c. water",
+      "1 ½ tsp. instant beef bouillon granules",
+      "½ tsp. dry mustard",
+      "2 T. butter",
+      "¾ c. chopped celery",
+      "1 c. grated American cheese",
+      "½ tsp. thyme",
+      "½ c. chopped onion",
+      "1/3 c. soft bread crumbs",
+      "1 tsp. finely chopped fresh parsley",
+      "¼ c. cold water",
+      "2 T. cornstarch"
+    ],
+    "steps": [
+      "Cut meat into serving sized pieces that are longer than they are wide. Mix ¼ c. flour, salt and pepper. Pound mixture into both sides of each piece of meat.",
+      "Cook celery, onion, and parsley in butter until tender but not brown & remove from heat. Stir in cheese and bread crumbs. Spread ¼-½ cup cheese mixture on each steak.",
+      "Roll steaks up, jelly-roll style, and secure with toothpicks. Brown steaks in oil. Drain excess oil, then add 1 cup water, bouillon, mustard, and thyme. Cover and cook 2 ½ hours."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game"
+    ]
+  },
+  {
+    "id": "game-green-bean-and-venison-stir-fry",
+    "title": "Green Bean and Venison Stir-Fry",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 20,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/green-bean-venison-stir-fry",
+    "image": "",
+    "ingredients": [
+      "2 teaspoons cornstarch",
+      "1/3 cup beef broth",
+      "1 tablespoon soy sauce",
+      "1 tablespoon sherry",
+      "1 teaspoon cider vinegar",
+      "1 tablespoon oil",
+      "1 pound green beans, trimmed and sliced diagonally",
+      "2 teaspoons finely minced fresh ginger",
+      "2 cloves garlic, minced",
+      "1/4 teaspoon hot red pepper flakes",
+      "1/2 pound ground venison or steak sliced for stir-fry"
+    ],
+    "steps": [
+      "Stir up your regular venison routine with this green bean and venison stir-fry.",
+      "Mix together all of the sauce ingredients and set aside. Heat the oil in a wok or large skillet and add the green beans. Stir-fry beans for about 4 minutes or until tender. Remove and set beans aside. Add the ginger and garlic to the pan and cook them lightly. Add the pepper and venison, crumbling the venison with a fork or spatula. Stir-fry until meat is done, then add sauce mix. Cook and stir until sauce thickens. Fold in the green beans and heat for 1 minute. Serve with rice or noodles. Serves 4."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game"
+    ]
+  },
+  {
+    "id": "game-grilled-venison-loin-with-herbs-and-horseradish-cream",
+    "title": "Grilled Venison Loin with Herbs and Horseradish Cream",
+    "protein": "venison",
+    "proteins": [
+      "venison",
+      "fish"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 130,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Texas Parks & Wildlife",
+    "sourceUrl": "https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/grilled_venison.phtml",
+    "image": "",
+    "ingredients": [
+      "Serves 4",
+      "1 ½ – 2 pounds venison loin, trimmed of all silverskin",
+      "Salt and pepper",
+      "Fresh chopped herbs: thyme, marjoram, oregano, rosemary, savory and/or parsley, to yield about 2 tablespoons finely chopped herbs.",
+      "3 tbsp olive oil",
+      "1 cup crème fraiche or sour cream",
+      "2 tbsp freshly grated or prepared horseradish, or more to taste",
+      "2 tsp chopped fresh chives or parsley",
+      "Juice and zest of one lemon",
+      "Salt to taste"
+    ],
+    "steps": [
+      "Start a hot fire in a grill or preheat a grill to high heat. Season the loins with salt and pepper, and marinate in the herbs and olive oil for 2 hours or overnight, refrigerated. Once the coals have burned down, make an even and hot fire. Grill on one side without moving until nicely browned, about 4-5 minutes, then turn 90 degrees. Flip the loins, cooking them about 4-5 minutes more and still nice and rare on the inside. Aim for a good, deeply browned char on the outside. Remove to a warm plate and allow to rest for at least 10 minutes while you prepare the sauce.",
+      "For the horseradish sauce, mix the crème fraiche, horseradish, chives, and zest together in a small bowl, adding salt to taste. Serve the loin, sliced thinly against the grain with mashed potatoes, the horseradish cream and a simple salad or green beans.",
+      "From \"Afield: A Chef's Guide to Preparing and Cooking Wild Game and Fish\" By Jesse Griffiths",
+      "Copyright ©2012 Welcome Enterprises, Inc. Text ©2012 by Jesse Griffiths × Close"
+    ],
+    "tags": [
+      "wild-game",
+      "big-game",
+      "fish",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-happy-camper-venison",
+    "title": "Happy Camper Venison",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 60,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/happy-camper-venison",
+    "image": "",
+    "ingredients": [
+      "1 pound ground venison or 4 small chops",
+      "4 tablespoons butter",
+      "4 potatoes, peeled and sliced",
+      "2 medium onions, cleaned and quartered",
+      "4 carrots, sliced",
+      "Seasoning salt",
+      "Salt and pepper",
+      "Honey"
+    ],
+    "steps": [
+      "Form ground venison into four burgers or separate chops.",
+      "Tear off four sheets of heavy aluminum foil for grilling.",
+      "Place burger in center of foil and cover with sections of onion and a pat of butter.",
+      "Lay slices of carrot and potato atop onion.",
+      "Sprinkle with salt, pepper and seasoning as you layer vegetables.",
+      "Seal foil packet and repeat for other three meat patties.",
+      "Place on grill or hot coals and cook for about one hour."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-killer-calzone",
+    "title": "Killer Calzone",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 20,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/killer-calzone",
+    "image": "",
+    "ingredients": [
+      "DOUGH",
+      "1 tsp. salt",
+      "1 c. warm water",
+      "1 tsp. sugar",
+      "2½ c. all-purpose flour",
+      "1 pkt. dry yeast",
+      "1 Tbsp. olive oil",
+      "FILLING",
+      "½ lb. ground venison, browned",
+      "1½ tsp. fennel seed",
+      "8 oz. crushed tomatoes or tomato puree",
+      "1 Tbsp. grated Romano cheese",
+      "½ medium pepper, diced",
+      "1 egg, beaten",
+      "½ c. grated mozzarella",
+      "Sesame Seeds",
+      "Salt and Pepper to taste"
+    ],
+    "steps": [
+      "Preheat oven to 350F.",
+      "Simmer tomatoes, fennel seed, salt and pepper about 5 minutes and cool. Combine salt, sugar and yeast in a large mixing bowl and add water. Let stand for 5 minutes. Add flour and oil and mix with a large spoon until all flour is moistened. Beat 20 more strokes, cover and put in warm place (atop range) for 15 minutes.",
+      "Roll out dough on a floured surface in an oblong shape about 1/4 inch thick. Spread tomato over dough, then distribute other ingredients on top and roll up into a roll. Brush with egg and sprinkle with sesame seeds. Bake in a jelly roll pan until golden brown, 10-15 minutes. Cool five minutes, slice and serve."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game"
+    ]
+  },
+  {
+    "id": "game-mushroom-and-venison-stew",
+    "title": "Mushroom and Venison Stew",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 150,
+    "servings": 6,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/mushroom-venison-stew",
+    "image": "",
+    "ingredients": [
+      "2 tablespoons flour",
+      "1-2 pounds venison stew meat, cut in 3/4-inch cubes",
+      "2 tablespoons cooking oil",
+      "3 teaspoons beef bouillon",
+      "4 cups water",
+      "1 large onion, cut into wedges",
+      "1 clove garlic, sliced",
+      "1 teaspoon Worcestershire sauce",
+      "1/4 cup red wine",
+      "1/2 teaspoon marjoram",
+      "1/2 teaspoon oregano",
+      "1 bay leaf",
+      "1 teaspoon coarse pepper",
+      "2 1/2 cups cubed potatoes",
+      "1 cup sliced carrots",
+      "1 cup sliced celery",
+      "1 1/2 cups sliced morel or button mushrooms"
+    ],
+    "steps": [
+      "Dredge meat cubes in flour and brown in a large saucepan in hot oil.",
+      "Add the bouillon, water, onion, garlic, Worcestershire, wine, herbs, salt and pepper.",
+      "Bring to a boil and simmer until meat is tender (1-2 hours).",
+      "Stir in potatoes, carrots, celery and mushrooms.",
+      "Bring to a boil, then reduce heat.",
+      "Simmer 20-30 minutes until vegetables are done."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game"
+    ]
+  },
+  {
+    "id": "game-philly-steak-sandwiches",
+    "title": "Philly Steak Sandwiches",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 45,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/philly-steak-sandwiches",
+    "image": "",
+    "ingredients": [
+      "2 lb. venison round steak",
+      "Salt and pepper",
+      "1 med. onion, sliced thin and ringed",
+      "1 long loaf of French bread",
+      "Shredded cheddar, pepper jack or sliced Swiss cheese"
+    ],
+    "steps": [
+      "Slice bread length-wise.",
+      "Spread butter or margarine on each side and sprinkle with garlic powder.",
+      "Lay slices of meat on bottom half of bread, top with onions if desired, spread cheese over top of meat and onions, top with other half of bread.",
+      "Wrap in foil, heat in 300F oven until bread is crusty.",
+      "Cut into serving-size pieces and serve with sliced pickles, peppers, tomatoes, etc."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-red-pepper-ravioli-with-morel-sauce",
+    "title": "Red Pepper Ravioli with Morel Sauce",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 3,
+    "timeMin": 20,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/red-pepper-ravioli-morel-sauce",
+    "image": "",
+    "ingredients": [
+      "1 red pepper, seeded",
+      "2 cups flour",
+      "2 eggs",
+      "Pinch of salt",
+      "1 cup ground venison or beef",
+      "1 tablespoon chopped parsley",
+      "½ onion, chopped",
+      "1½ cup whole milk",
+      "4 tablespoons butter",
+      "2 cups morel mushrooms, chopped"
+    ],
+    "steps": [
+      "Blend the pepper in a food processor until liquid.",
+      "Set aside in small bowl so pulp will rise to surface. Measure out 3 tablespoons of the pulp and set the rest aside for sauce. Place the flour in a bowl, add salt, then eggs and the pulp. Mix together and form in ball. Set aside to rest. Ravioli Filling",
+      "Brown the meat in a skillet and add the parsley and onion. Season with salt and pepper. Let cool. Roll out the dough very thin with pasta machine or rolling pin. Cut the dough in half. Place small balls of filling about 1½ inches apart on one half of the dough. Place the other half on top and cut with pastry cutter. Seal the edges by pinching together. Bring a large pan of salted water to boil. Place raviolis in water and boil for 8-10 minutes until desired doneness. Remove carefully with slotted spoon. Morel Sauce",
+      "Saute mushrooms in 1 tablespoon of butter until tender and set aside. Place milk and red pepper in saucepan and bring to a boil. Whisk in the butter and add mushrooms. Salt and pepper to taste. Serve sauce over ravioli. Top with Parmesan cheese."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game"
+    ]
+  },
+  {
+    "id": "game-rita-s-eggplant-casserole",
+    "title": "Rita's Eggplant Casserole",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 30,
+    "servings": 6,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/ritas-eggplant-casserole",
+    "image": "",
+    "ingredients": [
+      "1½ lb. ground venison",
+      "1 c. Marinara Sauce",
+      "1 c. chopped onions",
+      "1 c. water",
+      "1 clove garlic, minced",
+      "¾ c. dry red wine",
+      "3 T. olive oil",
+      "1½ tsp. basil leaf, crumbled",
+      "½ tsp. oregano leaf, crumbled",
+      "1 medium eggplant, peeled and sliced (1 lb.)",
+      "½ c. olive oil",
+      "½ c. grated Parmesan cheese",
+      "1 lb. mozzarella cheese, thickly sliced"
+    ],
+    "steps": [
+      "Brown venison with onion and garlic in 3 Tbs. olive oil in a large skillet. Add Marinara Sauce, water, wine, basil and oregano.",
+      "Cover and simmer 2 minutes.",
+      "Saute a half pound of eggplant slices in ¼ c. of olive oil until limp and golden. Add remaining oil and saute the remaining half pound of eggplant.",
+      "When all the eggplant is browned, place in a shallow baking dish. Spoon meat sauce over eggplant and sprinkle evenly with Parmesan cheese. Top with sliced mozzarella. Bake at 350F for 20 to 30 minutes. Serves 6."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game"
+    ]
+  },
+  {
+    "id": "game-skewered-venison-steak-with-peanut-sauce",
+    "title": "Skewered Venison Steak With Peanut Sauce",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 45,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/skewered-venison-steak-peanut-sauce",
+    "image": "",
+    "ingredients": [
+      "1-1½ lbs. venison round steak cut into thin ropes, 3/8 ” thick",
+      "2 cloves garlic",
+      "1 tsp. coriander",
+      "3 Tbs. diced yellow onion",
+      "1 Tbs. brown sugar",
+      "2 Tbs. light soy sauce",
+      "Dash Tabasco",
+      "2 Tbs. lemon juice",
+      "3 Tbs. dry sherry"
+    ],
+    "steps": [
+      "Combine marinade ingredients in glass bowl and mix well. Add meat and refrigerate at least one hour.",
+      "Remove meat from marinade and skewer in “S” shape on bamboo or stainless steel skewers. Place on broiler pan and broil 4-5\" from source of heat. Turn skewers when top side is well- browned. Top with peanut sauce and serve immediately. Peanut Sauce",
+      "Saute ½ cup diced yellow onions in ¼ cup butter. Add 2 Tbs. brown sugar, 1 Tbs. lemon juice, ½ cup soy sauce, dash Tabasco and 1 cup chopped dry roasted peanuts and warm throughout."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game"
+    ]
+  },
+  {
+    "id": "game-sliced-venison-saute",
+    "title": "Sliced Venison Saute",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 45,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Texas Parks & Wildlife",
+    "sourceUrl": "https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/venison_sliced.phtml",
+    "image": "",
+    "ingredients": [
+      "1 pound venison steak, sliced thin",
+      "2 tbs. butter",
+      "1 tbs. seasoning salt"
+    ],
+    "steps": [
+      "In a large skillet, melt butter and stir in seasoning salt (to dissolve) over a medium-high heat.",
+      "When the butter is turning brown, add the sliced venison.",
+      "Quickly brown on both sides and place on a warm platter. Can be served as an appetizer. By Patrick Mullin",
+      "Patrick Mullin is an award-winning wild game chef and is the Co-host of T.J. Greaney’s highly acclaimed Texas Outdoor Zone radio show in Austin, Texas. He is a prolific writer who specializes in outdoor cooking with his monthly column “The Camp Cook” appearing in the award-winning Texas lifestyle magazine Country Line Magazine."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-summer-sausage",
+    "title": "Summer Sausage",
+    "protein": "venison",
+    "proteins": [
+      "venison",
+      "sausage"
+    ],
+    "budget": 2,
+    "difficulty": 3,
+    "timeMin": 720,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/summer-sausage",
+    "image": "",
+    "ingredients": [
+      "2 pounds ground venison",
+      "1 cup water",
+      "3 tablespoons quick cure salt",
+      "1/4 teaspoon pepper",
+      "1/8 teaspoon garlic powder",
+      "1/4 teaspoon onion salt",
+      "1/2 teaspoon mustard seed",
+      "1 tablespoon liquid smoke"
+    ],
+    "steps": [
+      "Mix all ingredients well.",
+      "Shape on aluminum foil in two rolls.",
+      "Twist ends of rolls to secure.",
+      "Refrigerate for 24 hours.",
+      "Place in kettle and cover with water and boil 1 hour.",
+      "Remove and punch holes in foil to drain water."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-swiss-venison-steak",
+    "title": "Swiss Venison Steak",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 120,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/swiss-venison-steak",
+    "image": "",
+    "ingredients": [
+      "1-2 pounds venison round steak",
+      "3 tablespoons flour",
+      "1/2 teaspoon salt",
+      "1/4 teaspoon pepper",
+      "2 tablespoons oil",
+      "1 16-ounce can tomatoes, sliced",
+      "1 medium onion, sliced and ringed",
+      "1/2 cup sliced celery",
+      "1/2 cup sliced carrot",
+      "1/2 teaspoon thyme",
+      "Rice or noodles"
+    ],
+    "steps": [
+      "Cut steaks into 4 or more pieces.",
+      "Mix the flour, salt and pepper.",
+      "Tenderize meat with a mallet, pounding flour mixture into meat.",
+      "Brown meat in a large skillet of hot oil.",
+      "Add tomatoes, onion, celery, carrot and thyme.",
+      "Bring to a boil, then reduce heat.",
+      "Cover and simmer for 1-2 hours, until meat is tender.",
+      "(Or place in covered casserole dish and bake for 1 hour at 350 ° F.) Serve with rice or noodles."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game"
+    ]
+  },
+  {
+    "id": "game-teriyaki-venison",
+    "title": "Teriyaki Venison",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 60,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/teriyaki-venison",
+    "image": "",
+    "ingredients": [
+      "1/3 c. soy sauce",
+      "1 Tbsp. brown sugar",
+      "1 Tbsp. vegetable oil",
+      "½ tsp. black pepper",
+      "½ tsp. ground ginger",
+      "½ tsp. garlic powder",
+      "1-2 lb. venison steak"
+    ],
+    "steps": [
+      "Combine all ingredients and marinate overnight (if possible).",
+      "Cook on a hot grill or over an open fire, basting occasionally with reserved marinade.",
+      "Cook until meat is slightly charred outside, but still pink inside.",
+      "Serve with a rice dish."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-venison-and-vegetable-kabobs",
+    "title": "Venison and Vegetable Kabobs",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 260,
+    "servings": 5,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/venison-vegetable-kabobs",
+    "image": "",
+    "ingredients": [
+      "½ c. red wine vinegar",
+      "¼ c. honey",
+      "Dash garlic powder",
+      "2 Tbsp. catsup",
+      "¼ c. soy sauce",
+      "Dash pepper",
+      "1½ lb. boneless venison steak",
+      "8-12 cherry tomatoes",
+      "8-12 fresh morel or button mushrooms",
+      "1-2 small zucchini (optional)",
+      "1 large onion",
+      "½ medium green or sweet red peppers",
+      "8-12 small new potatoes (parboiled)"
+    ],
+    "steps": [
+      "In plastic bag, combine vinegar, honey, soy sauce, catsup, pepper and garlic powder. Set aside 1/4 cup. Add meat to bag, shake to coat, close bag and refrigerate 4 hours.",
+      "One hour before grilling, toss vegetables with reserved marinade. Drain meat, saving marinade. Thread meat and vegetables alternately on skewers, brush w/ marinade and grill over medium-hot coals, turning and basting often, for 15-20 minutes. Remove from skewers and serve. Serves 4-6."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-venison-and-vegetable-stir-fry",
+    "title": "Venison and Vegetable Stir-Fry",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 30,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/venison-vegetable-stir-fry",
+    "image": "",
+    "ingredients": [
+      "1 cup water",
+      "1/4 cup soy sauce",
+      "2 tablespoons white wine",
+      "2 teaspoons cornstarch",
+      "1 pound venison, tenderized",
+      "2 tablespoons oil",
+      "10 green onions, chopped",
+      "1 cup morel or button mushrooms, sliced",
+      "5 cloves garlic, sliced",
+      "3 cups broccoli and green peppers, chopped",
+      "Hot cooked rice"
+    ],
+    "steps": [
+      "Stir up your regular venison routine with this venison and vegetable stir-fry.",
+      "Stir together water, soy sauce, wine and cornstarch for marinade. Pound venison cuts with a meat tenderizer and cut into 1/2-inch pieces. Mix meat with half the marinade. Refrigerate 30 minutes, remove and drain. Heat oil in wok or large skillet. Stir-fry onions, mushrooms, vegetables and garlic. Remove from wok or skillet. Add venison to hot pan. Stir-fry until done. Push meat to center and add remaining marinade. Cook until thick, then add vegetables to coat. Serve on cooked rice. Serves 4."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game"
+    ]
+  },
+  {
+    "id": "game-venison-chili",
+    "title": "Venison Chili",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 90,
+    "servings": 5,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/venison-chili",
+    "image": "",
+    "ingredients": [
+      "1-2 pounds ground venison (or cuts in 1-inch cubes)",
+      "1 cup chopped onion",
+      "1/2 cup chopped green pepper",
+      "2 cloves garlic, minced",
+      "1 14 1/2-ounce can tomatoes, chopped",
+      "1 15-ounce can dark red kidney beans, rinsed and drained",
+      "1 8-ounce can tomato sauce",
+      "2 to 3 teaspoons chili powder",
+      "1/2 teaspoon basil",
+      "1/2 teaspoon salt",
+      "1/4 teaspoon pepper"
+    ],
+    "steps": [
+      "Place venison, onion, pepper and garlic in a large saucepan and brown in about 2 tablespoons oil.",
+      "Add the remainder of ingredients and bring to a boil.",
+      "Reduce heat, cover and simmer for 30 minutes to 1 hour until meat is tender."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game"
+    ]
+  },
+  {
+    "id": "game-venison-chili-mole",
+    "title": "Venison Chili Mole",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 45,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/venison-chili-mole",
+    "image": "",
+    "ingredients": [
+      "2 lbs. ground venison",
+      "6-12 fresh green onions",
+      "1/2 to 1 tsp. crushed dried (or freshly diced) chili peppers (jalapeño or preferred pepper)",
+      "1 large green pepper",
+      "1/2 to 1 packet (1 oz.) chili seasoning",
+      "1 12-oz. can chili beans",
+      "1 12-oz. can black beans",
+      "1 Tbs. Worcestershire sauce",
+      "2-4 lbs. fresh tomatoes cut bite size",
+      "1 29-oz. can tomato sauce",
+      "1 double square Bakers semi-sweet chocolate"
+    ],
+    "steps": [
+      "In large pot, brown the venison, diced onions (complete with green tops), chili peppers, and chopped green pepper on low to medium heat. When browned, drain off any excess fat, stir in the chili seasoning and continue browning another 5 minutes.",
+      "Add beans and Worcestershire sauce with about 1/4 cup water. Stir in tomatoes and tomato sauce and raise heat. Grate the chocolate square over the chili then stir it in. Bring the chili to a mild boil, reduce the heat, cover and simmer for 30-45 minutes.",
+      "or slow cook a large venison roast until meat is tender and stringy, then pull apart for browning"
+    ],
+    "tags": [
+      "wild-game",
+      "big-game"
+    ]
+  },
+  {
+    "id": "game-venison-chimichangas",
+    "title": "Venison Chimichangas",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 20,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/venison-chimichangas",
+    "image": "",
+    "ingredients": [
+      "1-2 lbs venison, cubed in large chunks",
+      "Toothpicks",
+      "2 quarts water",
+      "Oil to deep fry",
+      "Taco or Fajita Seasoning pouch per pound of venison",
+      "2 Tbsp. sour cream",
+      "½ head shredded lettuce",
+      "2 Tbsp. guacamole",
+      "4-5 cups shredded cheddar cheese",
+      "¼ cup salsa",
+      "1-2 tomatoes, diced",
+      "2 Tbsp. black olives",
+      "1 medium onion, diced",
+      "1-2 Tbsp. taco/hot sauce",
+      "10 taco-sized flour tortillas"
+    ],
+    "steps": [
+      "Place cubed venison in a stock pot, cover with water and bring to boil until venison is cooked thoroughly. Drain. Shred with a fork.",
+      "Add seasoning with package-recommended amount of water.",
+      "For homemade mixtures add 1-1½ cup water.",
+      "Mix well and simmer for 15-20 minutes.",
+      "On wraps, put ¼ cup shredded cheese in a line in the middle, then ½ cup meat mixture. Wrap the narrow ends inward first, then fold the longer sides inward. Use toothpick to secure the flaps closed.",
+      "Deep fry tooth pick side down until golden brown, then fry other side and remove from oil onto a paper towel lined plate.",
+      "To serve, place the chimichanga on plate, surround with lettuce, add tomato, onions, sour cream, guacamole, olives, and salsa on top to taste. Sprinkle shredded cheese over top and drizzle taco or hot sauce over entire mixture."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game"
+    ]
+  },
+  {
+    "id": "game-venison-kabobs",
+    "title": "Venison Kabobs",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 45,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Connecticut DEEP",
+    "sourceUrl": "https://portal.ct.gov/DEEP/Hunting/Cooking-with-Wild-Game",
+    "image": "",
+    "ingredients": [
+      "Venison loin or round, cut into 1 1/2-inch chunks",
+      "Teriyaki marinade",
+      "1/2 chopped green pepper",
+      "1 medium chopped onion, plus extra onion pieces for skewers",
+      "Pineapple chunks (fresh or canned without syrup)",
+      "Mushrooms and/or cherry tomatoes",
+      "Cooked rice, for serving"
+    ],
+    "steps": [
+      "Marinate venison chunks 8 hours or overnight in teriyaki marinade with chopped green pepper and onion.",
+      "On long skewers, alternate onion, green pepper, pineapple, venison, mushrooms, and/or cherry tomatoes.",
+      "Cook over charcoal, turning often and basting with marinade, until browned outside but rare in the center. Serve with rice."
+    ],
+    "tags": [
+      "wild-game"
+    ]
+  },
+  {
+    "id": "game-venison-loin-roast",
+    "title": "Venison Loin Roast",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 30,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/venison-loin-roast",
+    "image": "",
+    "ingredients": [
+      "1 cup ground pecans or walnuts",
+      "1/2 cup breadcrumbs",
+      "2 tablespoons fresh parsley, chopped",
+      "2 tablespoons oil",
+      "2 teaspoons coarse black pepper",
+      "1/2 teaspoon salt",
+      "3-pound boneless venison loin roast"
+    ],
+    "steps": [
+      "Combine nuts, breadcrumbs, parsley, oil, pepper and salt in a bowl.",
+      "Place the roast on a rack in a roast pan and rub with a small amount of oil.",
+      "Coat the roast with the nut mixture on all sides, pressing to make it stick.",
+      "Roast in a 425° F oven for 30 minutes or until desired doneness.",
+      "Let rest for 5 minutes before slicing."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game"
+    ]
+  },
+  {
+    "id": "game-venison-mignons",
+    "title": "Venison Mignons",
+    "protein": "venison",
+    "proteins": [
+      "venison",
+      "bacon"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 720,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/venison-mignons",
+    "image": "",
+    "ingredients": [
+      "1 Venison backstrap",
+      "1 extra large onion",
+      "½ cup chopped garlic",
+      "6 strips lean bacon",
+      "2 cups liquid marinade (homemade or commercial)"
+    ],
+    "steps": [
+      "Remove any silver skin from venison backstrap. Slice crossways into 3/4' to 1\" slabs.",
+      "Lightly season them with salt, pepper, cajun or seasoning of your choice. Wrap a slice of bacon tightly around the slab and pin with a toothpick. Slice onion and place on top of each mignon. In a shallow dish, pour a little of the marinade to cover the bottom, then place each mignon in the dish and pour additional marinade over the meat. Refrigerate the remaining marinade.",
+      "Cover the dish and refrigerate for 12 hours then flip the mignons.",
+      "Cover and refrigerate for an additional 12 hours.",
+      "Remove from refrigerator, and remove onions for later sauteing.",
+      "Grill mignons and brush on marinade as it cooks until pink barely shows in the middle of the meat.",
+      "Saute' the onions and garlic and garnish the mignons."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-venison-pizza",
+    "title": "Venison Pizza",
+    "protein": "venison",
+    "proteins": [
+      "venison",
+      "bacon"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 80,
+    "servings": 5,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/venison-pizza",
+    "image": "",
+    "ingredients": [
+      "1 pkg. yeast",
+      "4 cups flour",
+      "2 teaspoons salt",
+      "1/4 cup olive oil (optional)",
+      "1 1/2 cups warm water",
+      "1-2 pounds ground venison",
+      "1/2 cup chopped onion",
+      "1/2 cup chopped green peppers",
+      "Salt and pepper",
+      "2 cups sliced morel or button mushrooms",
+      "1 clove garlic, sliced",
+      "1 cup green peppers, sliced in strips"
+    ],
+    "steps": [
+      "Mix yeast, flour and salt. Add warm water and oil and mix. Knead on a floured surface until dough is soft. Place in greased bowl to rise for about 1 hour. While dough is rising, prepare ground venison, onion, green peppers and salt and pepper.",
+      "Brown venison with peppers and onions in a skillet. Remove from skillet and set aside.",
+      "Sautè peppers and garlic in olive oil. Add mushrooms and finish cooking. Drain and set aside. Prepare the following: Pizza sauce or tomato paste Diced pepperoni or Canadian bacon Grated mozzarella cheese",
+      "Roll out half of dough to fit pizza stone or pan. Spread on a thin layer of sauce, then cover with half of venison, pepperoni or bacon, mushrooms and peppers, and then cheese. Repeat for the other pizza. Bake in a 450F oven for 15-20 minutes. Makes 5 servings."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game"
+    ]
+  },
+  {
+    "id": "game-venison-pot-pie",
+    "title": "Venison Pot Pie",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 3,
+    "timeMin": 45,
+    "servings": 5,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/venison-pot-pie",
+    "image": "",
+    "ingredients": [
+      "1 pound venison, cut into 1/2-inch cubes",
+      "2 tablespoons cooking oil",
+      "2 cups beef broth",
+      "1 teaspoon thyme, crushed",
+      "1/4 teaspoon pepper",
+      "1 10-ounce package frozen peas and carrots",
+      "2 medium potatoes, peeled and cubed",
+      "1/2 cup beef broth",
+      "1/3 cup flour",
+      "3/4 cup flour",
+      "3/4 teaspoon baking powder",
+      "1/2 teaspoon sugar",
+      "3 tablespoons butter",
+      "1/3 cup milk"
+    ],
+    "steps": [
+      "Remove all fat from meat.",
+      "Brown meat in hot oil in a large saucepan.",
+      "Stir in the 2 cups broth, thyme and pepper.",
+      "Bring to a boil, then reduce heat, cover and simmer for 45 minutes.",
+      "Add vegetables and simmer until meat is tender (15-30 minutes).",
+      "Mix the 1/2 cup broth and 1/3 cup flour.",
+      "Add to meat mixture and cook until thickened.",
+      "Pour into a 2-quart casserole dish.",
+      "Prepare the biscuit topping by stirring together the 3/4 cup flour, baking powder, sugar and a dash of salt.",
+      "Make a well in the center and add the milk.",
+      "Stir until just mixed, then spoon in 6 mounds atop the meat and gravy.",
+      "Bake in a 450F oven for 12 minutes."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game"
+    ]
+  },
+  {
+    "id": "game-venison-pot-roast",
+    "title": "Venison Pot Roast",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 120,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/venison-pot-roast",
+    "image": "",
+    "ingredients": [
+      "2-3 pound boneless venison roast",
+      "2 tablespoons cooking oil",
+      "2/3 cup tomato juice",
+      "1/2 cup finely chopped onion",
+      "1/2 cup finely chopped carrot",
+      "2 teaspoons beef bouillon",
+      "3 tablespoons flour",
+      "1/2 cup sour cream or plain yogurt"
+    ],
+    "steps": [
+      "Remove all fat from roast.",
+      "In a 4- to 6-quart pot, brown meat in oil.",
+      "Blot any remaining oil or fat.",
+      "Add juice, onion, carrot and bouillon.",
+      "Bring to a boil, then reduce heat and simmer, covered, for 1 1/2 to 2 hours until meat is tender.",
+      "To make a sauce, add water to juices to equal 2 cups of liquid.",
+      "Stir flour into sour cream or yogurt.",
+      "Stir into juices in pot.",
+      "Cook and stir over medium heat until thickened and bubbly."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game"
+    ]
+  },
+  {
+    "id": "game-venison-pot-roast-with-vegetables",
+    "title": "Venison Pot Roast With Vegetables",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 150,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/venison-pot-roast-vegetables",
+    "image": "",
+    "ingredients": [
+      "2-3 pound boneless venison roast",
+      "2 tablespoons cooking oil",
+      "1/2 cup chopped onion",
+      "1 clove sliced garlic",
+      "2 teaspoons beef bouillon",
+      "Salt and pepper to taste",
+      "Peeled potatoes, carrots and onions"
+    ],
+    "steps": [
+      "Remove all fat from roast.",
+      "In a 4 to 6 quart pot, brown meat in oil.",
+      "Blot any remaining oil or fat.",
+      "Add onion, garlic, bouillon, salt and pepper.",
+      "Pour in 1 to 2 cups water and cover.",
+      "Bring to a boil, then reduce heat and simmer, covered, for 1 1/2 to 2 hours until meat is tender.",
+      "Add vegetables cut into chunks for quicker cooking.",
+      "Make sure vegetables are covered with broth or add enough water to cover.",
+      "Allow vegetables to simmer in broth for 30 minutes."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game"
+    ]
+  },
+  {
+    "id": "game-venison-quesadillas-i",
+    "title": "Venison Quesadillas I",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 30,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/venison-quesadillas-i",
+    "image": "",
+    "ingredients": [
+      "1 lb. venison roast or cutlets, sliced in thin strips",
+      "¼ c. lime juice",
+      "2 cloves garlic",
+      "½ tsp. cumin",
+      "Salt and pepper",
+      "1 Tbs. Worcestershire sauce",
+      "1 medium onion, diced",
+      "2 Tbs. olive oil",
+      "1 sweet pepper, diced",
+      "4-6 large flour tortillas",
+      "¼ c. fresh cilantro",
+      "1 can black beans, rinsed",
+      "1 c. corn-on-the-cob (cut off)",
+      "1 tomato, diced",
+      "½ lb. grated cheese (pepper or Monterey jack)",
+      "Fresh Fruit Chipotle",
+      "1 medium clove garlic",
+      "2 Tbs. fresh cilantro",
+      "2 Tbs. lime juice",
+      "¼ tsp. salt ¼ tsp. cumin",
+      "1 tsp. chipotle pepper (or more to taste)",
+      "1½ c. fresh fruit (pineapple, apple, strawberry, kiwi or mango)"
+    ],
+    "steps": [
+      "Mix marinade ingredients and add venison strips. Let marinate for 30 minutes or longer.",
+      "Place all chipotle ingredients in food processor and chop.",
+      "Saute venison in a small amount of oil until nearly done, then add onion and pepper and cook slightly. Set aside to build quesadillas.",
+      "Add a small amount of oil to a skillet or griddle and warm. Place cheese on half of tortilla shell and add some of the meat mixture. Top with fresh cilantro and other favorites such as tomato, black beans and corn. Fold over and grill on both sides until golden and warmed through. Serve with fresh fruit chipotle."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-venison-quesadillas-ii",
+    "title": "Venison Quesadillas II",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 60,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/venison-quesadillas-ii",
+    "image": "",
+    "ingredients": [
+      "1 pound ground venison",
+      "1 cup or more salsa",
+      "8 large flour tortillas",
+      "1/2 cup chopped green pepper",
+      "4 chopped green onions",
+      "2 cups shredded Monterey Jack cheese",
+      "Refried beans, optional",
+      "Jalapeño peppers, optional"
+    ],
+    "steps": [
+      "Cook ground venison adding 1/2 cup salsa and salt and pepper to taste.",
+      "Spread refried beans on half of each tortilla, if desired.",
+      "Top with peppers, onions and seasoned venison.",
+      "Sprinkle cheese over half of each tortilla and fold in half, pressing gently.",
+      "Cook quesadillas in a large skillet over medium heat until lightly browned, turning once.",
+      "Cut into wedges and serve with salsa."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game"
+    ]
+  },
+  {
+    "id": "game-venison-spiedini",
+    "title": "Venison Spiedini",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 20,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/venison-spiedini",
+    "image": "",
+    "ingredients": [
+      "1 lb. venison tenderloin, sliced into 8 cutlets and pounded thin with a tenderizer",
+      "8 slices prosciutto or other ham",
+      "8 slices provolone cheese",
+      "1 cup bread crumbs",
+      "1 onion, cut in wedges",
+      "1 pepper, cut in sections",
+      "olive oil",
+      "bay leaves"
+    ],
+    "steps": [
+      "Top with ham, then cheese and roll with venison to outside. Turn roll in olive oil and pat with breadcrumbs. Salt and pepper to taste.",
+      "Place rolls on skewers, alternating with onion, pepper and bay leaves.",
+      "Bake at 350F for 20 minutes, covered with foil.",
+      "Remove foil and broil for 1-5 minutes until crispy."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-venison-steak-rolls",
+    "title": "Venison Steak Rolls",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 60,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/venison-steak-rolls",
+    "image": "",
+    "ingredients": [
+      "6 Tbs. rice vinegar",
+      "6 Tbs. soy sauce",
+      "4 tsp. brown sugar",
+      "1 Tbs. sesame oil",
+      "Salt and pepper",
+      "16 asparagus spears",
+      "16 green onions",
+      "1 red bell pepper, sliced",
+      "2 lbs. venison steaks, cut into 16 strips, 1/4-1/2\" thick"
+    ],
+    "steps": [
+      "Pound each venison steak to 1/8-inch thick, then salt and pepper.",
+      "Marinate in mix of vinegar, soy sauce, brown sugar and sesame oil for 1/2-hour or overnight.",
+      "Roll each slice of venison around a sprig of asparagus, onion and pepper slice, beginning at small end. Roll up and secure with toothpick. Place on greased baking sheet. Complete for all steak slices.",
+      "Pour remaining marinade over steak rolls and broil for 5 minutes or until desired doneness. Reserve marinade from baking sheet and thicken for serving sauce."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game"
+    ]
+  },
+  {
+    "id": "game-venison-stew-with-wild-mushroom-and-biscuits",
+    "title": "Venison Stew with Wild Mushroom and Biscuits",
+    "protein": "venison",
+    "proteins": [
+      "venison"
+    ],
+    "budget": 2,
+    "difficulty": 3,
+    "timeMin": 20,
+    "servings": 6,
+    "style": "Wild game / camp",
+    "source": "Texas Parks & Wildlife",
+    "sourceUrl": "https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/venison_stew.phtml",
+    "image": "",
+    "ingredients": [
+      "Serves 6",
+      "1 lb. venison, fully trimmed 1\" dice",
+      "1 cup flour with ¾ tablespoon salt and 1 teaspoon white pepper added",
+      "½ cup clarified butter or olive oil",
+      "2 tablespoons garlic, chopped",
+      "2 tablespoons red onion, diced fine",
+      "2 cups burgundy (red) wine",
+      "4 oz. dried porcini mushrooms (Italian)",
+      "1 quart rich veal stock",
+      "2 small Idaho potatoes, medium dice",
+      "1 yellow onion, julienned",
+      "1 poblano pepper",
+      "2 ribs celery, diced fine",
+      "1 small carrot, julienned",
+      "1 red bell pepper, diced fine",
+      "2 dashes Tabasco©",
+      "1-½ tablespoons Worcestershire Sauce",
+      "1-½ tablespoons salt",
+      "½ teaspoon white pepper"
+    ],
+    "steps": [
+      "Blister skin on poblano. Peel, seed and dice fine.",
+      "Heat butter or oil in a heavy bottomed pot until it just begins to smoke, about 350°.",
+      "Toss venison in seasoned flour, dusting off excess.",
+      "Add venison and brown in small batches. Reserve warm.",
+      "In the same pot, add garlic and red onion and sauté briefly. Add red wine and mushrooms, and reduce to one cup.",
+      "Add veal stock, potatoes, vegetables, and seasonings. Bring to a boil, reduce to a simmer and cook until potatoes are softened.",
+      "Add venison and adjust seasonings. Top pot with biscuits and bake in a preheated 450° oven for 10-12 minutes until biscuits are browned."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game"
+    ]
+  },
+  {
+    "id": "game-venison-bacon-appetizer",
+    "title": "Venison-Bacon Appetizer",
+    "protein": "venison",
+    "proteins": [
+      "venison",
+      "bacon"
+    ],
+    "budget": 2,
+    "difficulty": 2,
+    "timeMin": 720,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Missouri Department of Conservation",
+    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/venison/venison-bacon-appetizer",
+    "image": "",
+    "ingredients": [
+      "1 bottle Italian salad dressing",
+      "1 pound venison steak, tenderized",
+      "10 ounces bacon",
+      "Jalapeño peppers or water chestnuts"
+    ],
+    "steps": [
+      "Cut venison in thin, 1-inch-by-3-inch strips.",
+      "Marinate in salad dressing for 6-12 hours.",
+      "Remove venison strips from marinade and roll around a chestnut or pepper, then with a bacon slice cut in half on outside.",
+      "Secure with a toothpick.",
+      "Grill or broil 10-12 minutes or until done."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game",
+      "camp"
+    ]
+  },
+  {
+    "id": "game-wild-game-chili",
+    "title": "Wild Game Chili",
+    "protein": "venison",
+    "proteins": [
+      "venison",
+      "wild-hog",
+      "bacon"
+    ],
+    "budget": 2,
+    "difficulty": 3,
+    "timeMin": 45,
+    "servings": 11,
+    "style": "Wild game / camp",
+    "source": "Texas Parks & Wildlife",
+    "sourceUrl": "https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/game_chili.phtml",
+    "image": "",
+    "ingredients": [
+      "Serves 10-12",
+      "2 poblano chilies",
+      "6 ancho chilies",
+      "½ lb. bacon, ground",
+      "1 lb. venison, ¼\" cube (hindquarter is the best)",
+      "1 lb. wild boar, ¼\" cube (hindquarter is the best)",
+      "2 lbs. yellow onions, ¼\" dice",
+      "½ cup garlic, minced",
+      "2 ribs celery, diced",
+      "2 cups tomatoes, ¼\" dice",
+      "2 cups veal stock",
+      "Juice and zest of 1 lemon",
+      "2 tablespoons brown sugar",
+      "3 tablespoons cumin",
+      "¼ cup chili powder",
+      "2 tablespoons salt",
+      "2 teaspoons cayenne (diced jalapeño or serrano peppers are a great substitute for dry cayenne)"
+    ],
+    "steps": [
+      "Blister skin from poblanos, peel, then remove seeds and ribs. Cut into ¼\" dice.",
+      "Remove seeds from ancho chilies. Soak in half cup water to soften about 10 minutes. Purée in blender with a little veal stock. Set aside.",
+      "Render the fat from the bacon and reserve the cooked bacon and the drippings.",
+      "Clean all the venison and wild boar free of connective tissue and silverskin, and with a sharp knife cube into ¼\" pieces.",
+      "Next, brown the meat in small batches using high heat, a large heavy pot or skillet and several tablespoons of bacon drippings. By cooking in small batches you will sear and brown the meat quickly. This will give you the proper texture and color -- rich brown, not gray.",
+      "Remove the meat and set aside while you sauté the onions, garlic, celery, and poblanos in the same pot used for the meat. Add bacon drippings as needed.",
+      "Add the cooked bacon, then the tomatoes, veal stock, lemon juice and zest, brown sugar, cumin, chili powder and puréed anchos.",
+      "Bring to a boil and reduce to a simmer. Add the browned meat and simmer slowly for 45 minutes to an hour, adding a little beer or water as it becomes too thick.",
+      "Toppings vary from salsa to grated cheese, goat cheese or flavored sour creams. We are partial to our",
+      "Tomatillo White Chocolate Sauce as a topper."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game"
+    ]
+  },
+  {
+    "id": "game-green-chile-bake",
+    "title": "Green Chile Bake",
+    "protein": "wild-hog",
+    "proteins": [
+      "wild-hog",
+      "sausage"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 20,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Texas Parks & Wildlife",
+    "sourceUrl": "https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/green_chile_bake.phtml",
+    "image": "",
+    "ingredients": [
+      "8 large green chilies, roasted, peeled and de-seeded",
+      "1 pound feral hog pan sausage, cooked and drained",
+      "1 cup cooked diced potatoes",
+      "2 eggs, beaten",
+      "2 cups shredded cheddar and Monterey jack cheese",
+      "¼ cup Salsa - you pick the flavor"
+    ],
+    "steps": [
+      "In a medium casserole dish that has been sprayed with a non-stick spray, lay out 4 of the green chilies to cover the bottom. Put 1/2 of the cheese over the chilies.",
+      "Add sausage, potatoes and spoon the salsa over the top, pour eggs over mixture, top with the remaining chilies and the rest of the cheese.",
+      "Bake at 350 degrees for 20 minutes or until cheese is melted. By Patrick Mullin",
+      "Patrick Mullin is an award-winning wild game chef and is the Co-host of T.J. Greaney’s highly acclaimed Texas Outdoor Zone radio show in Austin, Texas. He is a prolific writer who specializes in outdoor cooking with his monthly column “The Camp Cook” appearing in the award-winning Texas lifestyle magazine Country Line Magazine."
+    ],
+    "tags": [
+      "wild-game",
+      "big-game",
+      "camp"
+    ]
+  }
+]

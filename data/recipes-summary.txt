@@ -1,0 +1,3 @@
+Merged 681 dinner recipes
+Sources: TheMealDB=585, Missouri Department of Conservation=69, Texas Parks & Wildlife=11, Connecticut DEEP=11, Wikibooks Cookbook (CC BY-SA)=5
+Proteins: vegetarian=131, chicken=78, beef=64, fish=56, shrimp=36, lamb=35, venison=35, beans=34, pork=31, sausage=26, ground-beef=23, bacon=22, turkey=22, eggs=16, ham=12, salmon=7, steak=7, squirrel=7, duck=6, crawfish=4, dove=4, goat=3, tuna=3, tofu=3, rabbit=3, other=2, trout=2, catfish=2, lobster=1, crab=1, ribs=1, goose=1, pheasant=1, quail=1, wild-hog=1
