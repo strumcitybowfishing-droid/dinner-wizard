@@ -24,11 +24,10 @@
       "Tortillas"
     ],
     "steps": [
-      "Watch the Wild Game Cooking: Blackened Catfish Tacos video",
       "In a bowl, mix together the black pepper, kosher salt and blackened seasoning until thoroughly combined. Press the catfish fillets into the spice mixture in the bowl and coat thoroughly.",
       "Arrange a portable heat source outdoors, such as a butane burner or side burner of a gas grill. Light the burner and place a skillet onto the burner over high heat. Pour the olive oil into the skillet covering the entire cooking surface.",
       "When the oil in the skillet is hot, lay the catfish fillets into the skillet. Cook until the spices are seared onto the fillets and the catfish is opaque and flaky inside, about 3 minutes per side. Don't breathe smoke from burning spices.",
-      "To serve, place the fish on the tortillas along with toppings. × Close"
+      "To serve, place the fish on the tortillas along with toppings."
     ],
     "tags": [
       "wild-game",
@@ -267,45 +266,6 @@
     ]
   },
   {
-    "id": "game-carter-smith-s-jalape-o-dove-poppers",
-    "title": "Carter Smith's Jalapeño Dove Poppers",
-    "protein": "dove",
-    "proteins": [
-      "dove",
-      "bacon"
-    ],
-    "budget": 2,
-    "difficulty": 2,
-    "timeMin": 20,
-    "servings": 9,
-    "style": "Wild game / camp",
-    "source": "Texas Parks & Wildlife",
-    "sourceUrl": "https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/jalapeno-dove-poppers.phtml",
-    "image": "",
-    "ingredients": [
-      "Serves 8 to 10",
-      "15 whole plucked dove breasts",
-      "Garlic salt",
-      "Black pepper",
-      "1 package (8 ounces) cream cheese",
-      "15 jalapeño slices, each slice halved (fresh or canned)",
-      "2 packages regular-sliced bacon, cut in half"
-    ],
-    "steps": [
-      "With a paring knife, separate breasts from breastbones to make 30 lobes.",
-      "Sprinkle very lightly with garlic salt and pepper.",
-      "Take a breast lobe, some cream cheese and a jalapeño slice, and wrap in bacon.",
-      "Secure with a toothpick.",
-      "Grill over mesquite, oak, or charcoal for 3 to 5 minutes, then turn and continue grilling until bacon is crisp.",
-      "Carter Smith served as Executive Director of the Texas Parks and Wildlife Department from 2008 through 2023. From Texas Parks & Wildlife Magazine"
-    ],
-    "tags": [
-      "wild-game",
-      "game-bird",
-      "camp"
-    ]
-  },
-  {
     "id": "game-charcoal-dove",
     "title": "Charcoal Dove",
     "protein": "dove",
@@ -466,7 +426,7 @@
       "Add the remaining butter to the hot pan and baste the fish. Increase amount of butter as desired. Brush, Fold & Crimp",
       "Brush the edge with water and fold over to form half circles. Crimp with a fork. Fry & Serve",
       "Heat frying oil to 325-350° Fahrenheit. Fry empanadas in batches until golden on both sides and drain. Keep warm in an oven and serve hot. Chef Bio - Jenny Nguyen-Wheatley",
-      "Jenny, who immigrated to the US from Vietnam, was first introduced to hunting in college and started a cooking website, Food for Hunters. Since then, Jenny has written for numerous hunting and outdoor magazines, and co-authored – with her husband,Rick Wheatley, – the book, Hunting for Food: Guide to Harvesting, Field Dressing and Cooking Wild Game. × Close"
+      "Jenny, who immigrated to the US from Vietnam, was first introduced to hunting in college and started a cooking website, Food for Hunters. Since then, Jenny has written for numerous hunting and outdoor magazines, and co-authored – with her husband,Rick Wheatley, – the book, Hunting for Food: Guide to Harvesting, Field Dressing and Cooking Wild Game."
     ],
     "tags": [
       "wild-game",
@@ -711,49 +671,6 @@
     "tags": [
       "wild-game",
       "game-bird"
-    ]
-  },
-  {
-    "id": "game-wild-rumake",
-    "title": "Wild Rumake",
-    "protein": "duck",
-    "proteins": [
-      "duck",
-      "goose",
-      "bacon"
-    ],
-    "budget": 2,
-    "difficulty": 2,
-    "timeMin": 495,
-    "servings": 4,
-    "style": "Wild game / camp",
-    "source": "Missouri Department of Conservation",
-    "sourceUrl": "https://mdc.mo.gov/discover-nature/recipes/waterfowl/wild-rumake",
-    "image": "",
-    "ingredients": [
-      "Duck/goose breast, thin-sliced strips (2\"-3\"x1\")",
-      "12-oz. bottle zesty Italian salad dressing",
-      "Toothpicks",
-      "1 pkg. Lipton onion soup mix",
-      "1 c. soy sauce",
-      "Green, yellow or red bell peppers, onions, water chestnuts, jalapenos, cut into 1\"x ½\" pieces",
-      "1 lb. bacon strips, cut in half",
-      "½ c. water",
-      "OR",
-      "Teriyaki sauce",
-      "Garlic powder",
-      "Chopped onion & green pepper",
-      "Bacon"
-    ],
-    "steps": [
-      "Mix onion soup, salad dressing, soy sauce, and water together and pour over meat. Marinate for at least 8 hours. Drain and lay slice of marinated meat on ½ slice of bacon, add a piece of onion and one other of the vegetables, and roll. Secure roll with a toothpick.",
-      "Grill rumake over medium heat on gas or charcoal grill. Cook for 10 to 15 minutes, keeping a close eye on it and pushing it around on the grill to keep it from burning. The fat from the bacon will cause the fire to flame up. Serve hot.",
-      "OR Slice duck breast in 1/8” thick slices, cover with teriyaki sauce and marinate for 6 hours. Drain and lay slices out flat. Top with finely chopped onion and green pepper and sprinkle with garlic powder to taste. Wrap in bacon and grill until bacon is brown."
-    ],
-    "tags": [
-      "wild-game",
-      "game-bird",
-      "camp"
     ]
   },
   {
@@ -1244,7 +1161,6 @@
       "3 bay leaves",
       "1 bunch parsley stems",
       "Tortilla Soup",
-      "Serves 8 generously",
       "½ cup fresh lime juice (Must be fresh!)",
       "1-½ cups cilantro, leaves only",
       "1-½ cups grilled or smoked pheasant or chicken meat, pulled off the bone and cut into bite-size pieces",
@@ -1272,6 +1188,41 @@
       "wild-game",
       "game-bird",
       "camp"
+    ]
+  },
+  {
+    "id": "game-roasted-quail-with-mushrooms",
+    "title": "Roasted Quail with Mushrooms",
+    "protein": "quail",
+    "proteins": [
+      "quail"
+    ],
+    "budget": 2,
+    "difficulty": 1,
+    "timeMin": 55,
+    "servings": 4,
+    "style": "Wild game / camp",
+    "source": "Texas Parks & Wildlife",
+    "sourceUrl": "https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/roasted_quail_mushrooms.phtml",
+    "image": "",
+    "ingredients": [
+      "4 quail",
+      "4 slices bacon",
+      "1 tablespoon oleo or butter",
+      "1/4 cup lemon juice",
+      "1/2 cup hot water",
+      "1/2 cup fresh mushrooms, chopped"
+    ],
+    "steps": [
+      "Wrap bacon around quail and secure with a skewer or toothpick.",
+      "Place birds in a shallow buttered pan; cover and bake at 350 F for 25-30 minutes.",
+      "Baste with a mixture of lemon juice and water and continue baking until the birds are tender.",
+      "About 20 minutes before the birds are done, add mushrooms.",
+      "Serve on toasted buns or rice with gravy."
+    ],
+    "tags": [
+      "wild-game",
+      "game-bird"
     ]
   },
   {
@@ -2820,7 +2771,8 @@
     "title": "Basic Venison Burgers",
     "protein": "venison",
     "proteins": [
-      "venison"
+      "venison",
+      "elk"
     ],
     "budget": 2,
     "difficulty": 1,
@@ -3035,7 +2987,8 @@
     "title": "Happy Camper Venison",
     "protein": "venison",
     "proteins": [
-      "venison"
+      "venison",
+      "elk"
     ],
     "budget": 2,
     "difficulty": 2,
@@ -3153,7 +3106,8 @@
     "title": "Mushroom and Venison Stew",
     "protein": "venison",
     "proteins": [
-      "venison"
+      "venison",
+      "elk"
     ],
     "budget": 2,
     "difficulty": 2,
@@ -3418,7 +3372,8 @@
     "title": "Swiss Venison Steak",
     "protein": "venison",
     "proteins": [
-      "venison"
+      "venison",
+      "elk"
     ],
     "budget": 2,
     "difficulty": 2,
@@ -3574,7 +3529,8 @@
     "title": "Venison Chili",
     "protein": "venison",
     "proteins": [
-      "venison"
+      "venison",
+      "elk"
     ],
     "budget": 2,
     "difficulty": 1,
@@ -3612,7 +3568,8 @@
     "title": "Venison Chili (Texas Parks & Wildlife)",
     "protein": "venison",
     "proteins": [
-      "venison"
+      "venison",
+      "elk"
     ],
     "budget": 2,
     "difficulty": 2,
@@ -3981,7 +3938,8 @@
     "title": "Venison Pot Roast",
     "protein": "venison",
     "proteins": [
-      "venison"
+      "venison",
+      "elk"
     ],
     "budget": 2,
     "difficulty": 2,
@@ -4022,7 +3980,8 @@
     "title": "Venison Pot Roast With Vegetables",
     "protein": "venison",
     "proteins": [
-      "venison"
+      "venison",
+      "elk"
     ],
     "budget": 2,
     "difficulty": 2,
@@ -4151,7 +4110,8 @@
     "title": "Venison Ragu",
     "protein": "venison",
     "proteins": [
-      "venison"
+      "venison",
+      "elk"
     ],
     "budget": 2,
     "difficulty": 2,
@@ -4301,7 +4261,8 @@
     "title": "Venison Stroganoff",
     "protein": "venison",
     "proteins": [
-      "venison"
+      "venison",
+      "elk"
     ],
     "budget": 2,
     "difficulty": 2,

@@ -1,35 +1,67 @@
-Wild-game dinner harvest: 110 complete recipes
+Wild-game dinner harvest: 109 complete recipes
 
-By protein:
+By primary protein:
   venison: 39
   turkey: 22
   squirrel: 9
-  dove: 7
   fish: 7
-  duck: 5
+  dove: 6
   rabbit: 5
   crawfish: 4
+  duck: 4
   pheasant: 4
   catfish: 2
   chicken: 1
   goose: 1
   other: 1
+  quail: 1
   sausage: 1
   trout: 1
   wild-hog: 1
 
+By protein tags (includes substitutes):
+  venison: 39
+  turkey: 23
+  fish: 12
+  chicken: 11
+  elk: 10
+  squirrel: 9
+  dove: 6
+  pheasant: 5
+  rabbit: 5
+  bacon: 4
+  crawfish: 4
+  duck: 4
+  sausage: 4
+  catfish: 2
+  other: 2
+  quail: 2
+  trout: 2
+  goose: 1
+  pork: 1
+  shrimp: 1
+  wild-hog: 1
+
 By source:
-  Missouri Department of Conservation: 67
+  Missouri Department of Conservation: 66
   Ohio DNR Wild Ohio Harvest Cookbook: 16
   Connecticut DEEP: 11
   Texas Parks & Wildlife: 10
   University of Missouri Extension: 3
   Wikibooks Cookbook (CC BY-SA): 3
 
-Allowed sources only: US state DNR/wildlife agencies, university extension, CC-BY-SA Wikibooks.
-Dropped commercial-cookbook TPWD pages (Afield / Hudson's on the Bend), snacks/jerky/canning-only,
-appetizers, and incomplete parses. Each remaining recipe has ingredients and step-by-step instructions.
-Ohio DNR listing pages are JS-gated; individual Wild Ohio Harvest Cookbook recipes were taken from live pages.
+Sources (public government / university extension / CC-BY-SA only):
+  - Connecticut DEEP Cooking with Wild Game
+  - Missouri Department of Conservation recipe library
+  - Ohio DNR Wild Ohio Harvest Cookbook (individual recipe pages)
+  - Texas Parks & Wildlife Wild Game & Fish Recipes (agency-hosted;
+    Afield and Hudson's on the Bend cookbook pages were excluded)
+  - University of Missouri Extension Can-Do Recipes: Venison (N670)
+  - Wikibooks Cookbook (CC BY-SA) classic country mains
+
+Skipped: MeatEater and other commercial cookbooks; jerky/canning-only;
+desserts; appetizer-only poppers; incomplete pages.
+Elk is tagged on several venison braises/stews/chilis/burgers as a 1:1 substitute.
 
 Titles:
   - [catfish] Cajun Blackened Catfish Tacos  (Texas Parks & Wildlife)
@@ -46,8 +78,6 @@ Titles:
     https://mdc.mo.gov/discover-nature/recipes/crayfish/crayfish-etouffee-ii
   - [crawfish] Crayfish Salad  (Missouri Department of Conservation)
     https://mdc.mo.gov/discover-nature/recipes/crayfish/crayfish-salad
-  - [dove] Carter Smith's Jalapeño Dove Poppers  (Texas Parks & Wildlife)
-    https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/jalapeno-dove-poppers.phtml
   - [dove] Charcoal Dove  (Missouri Department of Conservation)
     https://mdc.mo.gov/discover-nature/recipes/dove/charcoal-dove
   - [dove] Cook-In Dove  (Texas Parks & Wildlife)
@@ -68,8 +98,6 @@ Titles:
     https://ohiodnr.gov/discover-and-learn/education-training/wild-ohio-harvest-cookbook/waterfowl-recipes/stuffed-grilled-duck
   - [duck] Wild Duck with Cranberry Wild Rice  (Ohio DNR Wild Ohio Harvest Cookbook)
     https://ohiodnr.gov/discover-and-learn/education-training/wild-ohio-harvest-cookbook/waterfowl-recipes/wild-duck-cranberry-wild-rice
-  - [duck] Wild Rumake  (Missouri Department of Conservation)
-    https://mdc.mo.gov/discover-nature/recipes/waterfowl/wild-rumake
   - [fish] Carp Cajun  (Missouri Department of Conservation)
     https://mdc.mo.gov/discover-nature/recipes/fish/carp-cajun
   - [fish] Carp on a Stick  (Missouri Department of Conservation)
@@ -96,6 +124,8 @@ Titles:
     https://ohiodnr.gov/discover-and-learn/education-training/wild-ohio-harvest-cookbook/upland-game-recipes/pheasant-taco-chili
   - [pheasant] Pheasant Tortilla Soup  (Texas Parks & Wildlife)
     https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/pheasant_tortilla_soup.phtml
+  - [quail] Roasted Quail with Mushrooms  (Texas Parks & Wildlife)
+    https://tpwd.texas.gov/huntwild/hunt/wildgame-recipes/roasted_quail_mushrooms.phtml
   - [rabbit] Missouri Rabbit Cacciatore  (Missouri Department of Conservation)
     https://mdc.mo.gov/discover-nature/recipes/rabbit/rabbit-cacciatore
   - [rabbit] Rabbit Cathatori  (Connecticut DEEP)
