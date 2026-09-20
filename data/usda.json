@@ -476,49 +476,13 @@
     ]
   },
   {
-    "id": "usda-avocado-pita-pockets",
-    "title": "Avocado Pita Pockets",
-    "protein": "beans",
-    "proteins": [
-      "beans"
-    ],
-    "budget": 2,
-    "difficulty": 1,
-    "timeMin": 30,
-    "servings": 4,
-    "style": "Mediterranean",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/avocado-pita-pockets",
-    "image": "",
-    "ingredients": [
-      "1 ripe, fresh avocado, halved, pitted, peeled and diced",
-      "2 whole grain pita bread pockets, cut in half",
-      "1/4 cup canned chickpeas, rinsed and drained",
-      "2 tablespoons crumbled Cotija or Feta cheese",
-      "salt and pepper, to taste"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Fill pita pocket half with avocado, chickpeas and cheese, dividing evenly.",
-      "Heat in microwave for 15 to 20 seconds if desired.",
-      "Season to taste with salt and pepper."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "grains",
-      "vegetables"
-    ]
-  },
-  {
     "id": "usda-avocado-potato-and-grilled-chicken-salad",
     "title": "Avocado, Potato, and Grilled Chicken Salad",
     "protein": "chicken",
     "proteins": [
       "chicken"
     ],
-    "budget": 3,
+    "budget": 2,
     "difficulty": 1,
     "timeMin": 30,
     "servings": 4,
@@ -551,43 +515,6 @@
       "salad",
       "protein-foods",
       "vegetables"
-    ]
-  },
-  {
-    "id": "usda-baked-bananas",
-    "title": "Baked Bananas",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 40,
-    "servings": 6,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/baked-bananas",
-    "image": "",
-    "ingredients": [
-      "6 bananas, sliced lengthwise",
-      "3 tablespoons packed brown sugar",
-      "4 tablespoons margarine or butter, unsalted",
-      "1/2 cup raisins, or other dried chopped fruit",
-      "1/3 cup chopped pecans"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Preheat oven to 350 °F. Lightly grease a 9x13 inch pan.",
-      "Arrange the split bananas in the pan.",
-      "Top evenly with brown sugar, small pieces of margarine, raisins, and pecans.",
-      "Bake for 30 minutes."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "fruits",
-      "protein-foods"
     ]
   },
   {
@@ -1015,11 +942,11 @@
   {
     "id": "usda-baked-meatballs",
     "title": "Baked Meatballs",
-    "protein": "turkey",
+    "protein": "ground-beef",
     "proteins": [
+      "ground-beef",
       "turkey",
-      "beef",
-      "ground-beef"
+      "beef"
     ],
     "budget": 3,
     "difficulty": 2,
@@ -1338,39 +1265,6 @@
       "grains",
       "protein-foods",
       "vegetables"
-    ]
-  },
-  {
-    "id": "usda-basic-soup-and-sauce-mix",
-    "title": "Basic Soup and Sauce Mix",
-    "protein": "chicken",
-    "proteins": [
-      "chicken"
-    ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 20,
-    "servings": 9,
-    "style": "Italian",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/basic-soup-and-sauce-mix",
-    "image": "",
-    "ingredients": [
-      "2 cups milk, nonfat powdered",
-      "3/4 cup cornstarch",
-      "12 teaspoons chicken bouillon, low-sodium",
-      "2 tablespoons onion flakes, dried",
-      "2 teaspoons Italian seasoning"
-    ],
-    "steps": [
-      "Yield: Equal to about 3 cups dry or makes up to 9 cans equivalent cream soup. To use as a substitute for 1 can of cream soup: Storage: Store in closed plastic bag or air-tight container until ready to use.",
-      "It does not have to be refrigerated."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "soup",
-      "dairy"
     ]
   },
   {
@@ -2008,10 +1902,10 @@
   {
     "id": "usda-beefy-macaroni-and-cheese",
     "title": "Beefy Macaroni and Cheese",
-    "protein": "beef",
+    "protein": "ground-beef",
     "proteins": [
-      "beef",
-      "ground-beef"
+      "ground-beef",
+      "beef"
     ],
     "budget": 3,
     "difficulty": 2,
@@ -2091,51 +1985,6 @@
       "public-domain",
       "salad",
       "dairy",
-      "protein-foods",
-      "vegetables"
-    ]
-  },
-  {
-    "id": "usda-bell-pepper-and-apple-coleslaw",
-    "title": "Bell Pepper and Apple Coleslaw",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 35,
-    "servings": 4,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/bell-pepper-and-apple-coleslaw",
-    "image": "",
-    "ingredients": [
-      "For the Dressing:",
-      "1 tablespoon vegetable oil",
-      "1/4 cup apple juice",
-      "2 tablespoons cider vinegar",
-      "2 teaspoons Dijon mustard",
-      "1/4 teaspoon salt",
-      "1 dash black pepper",
-      "For the Salad:",
-      "1 small head green or Napa cabbage",
-      "1 orange or red bell pepper",
-      "1 Gala or Fuji apple",
-      "1/4 cup sliced almonds"
-    ],
-    "steps": [
-      "Whisk together dressing ingredients.",
-      "Shred or thinly slice cabbage.",
-      "Cut apple and pepper into small chunks.",
-      "Place cabbage, apples, pepper and almonds in large bowl.",
-      "Drizzle with dressing and toss."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "fruits",
       "protein-foods",
       "vegetables"
     ]
@@ -2367,11 +2216,11 @@
   {
     "id": "usda-black-bean-soup",
     "title": "Black Bean Soup",
-    "protein": "beef",
+    "protein": "beans",
     "proteins": [
-      "beef"
+      "beans"
     ],
-    "budget": 3,
+    "budget": 1,
     "difficulty": 1,
     "timeMin": 30,
     "servings": 4,
@@ -2405,11 +2254,11 @@
   {
     "id": "usda-black-bean-soup-0",
     "title": "Black Bean Soup",
-    "protein": "chicken",
+    "protein": "beans",
     "proteins": [
-      "chicken"
+      "beans"
     ],
-    "budget": 2,
+    "budget": 1,
     "difficulty": 1,
     "timeMin": 30,
     "servings": 5,
@@ -2502,10 +2351,10 @@
   {
     "id": "usda-black-eyed-pea-and-collard-greens-soup",
     "title": "Black-Eyed Pea and Collard Greens Soup",
-    "protein": "chicken",
+    "protein": "ham",
     "proteins": [
-      "chicken",
-      "ham"
+      "ham",
+      "chicken"
     ],
     "budget": 2,
     "difficulty": 3,
@@ -2548,57 +2397,6 @@
       "soup",
       "protein-foods",
       "vegetables"
-    ]
-  },
-  {
-    "id": "usda-blueberry-baked-oats",
-    "title": "Blueberry Baked Oats",
-    "protein": "eggs",
-    "proteins": [
-      "eggs"
-    ],
-    "budget": 1,
-    "difficulty": 3,
-    "timeMin": 35,
-    "servings": 4,
-    "style": "Mediterranean",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/blueberry-baked-oats",
-    "image": "",
-    "ingredients": [
-      "2 eggs",
-      "2 cups dry quick-cooking rolled oats",
-      "1 cup 1% milk",
-      "1 teaspoon baking powder",
-      "1/4 teaspoon salt",
-      "2 large bananas",
-      "1 cup fresh or frozen blueberries",
-      "2 tablespoons honey",
-      "1 teaspoon vanilla extract",
-      "1/2 cup fresh blueberries, divided",
-      "1 cup fat-free plain Greek yogurt",
-      "1 tablespoon lemon zest"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Preheat oven to 350°F.",
-      "Grease four 8-oz ramekins.",
-      "In a blender on high speed, blend eggs, oats, milk, baking powder and salt until the mixture is puréed and mixture resembles pancake batter.",
-      "Add bananas, blueberries, honey, and vanilla; pulse until puréed to smoothie texture.",
-      "Divide oats mixture among ramekins, filling about ¾ of the way full then divide ¼ cup fresh blueberries over top.",
-      "Transfer ramekins to a baking sheet.",
-      "Bake for 25 to 30 minutes or until golden around the edges and puffed.",
-      "Let cool for 5 minutes before serving.",
-      "Serve baked oats with dollops of Greek yogurt, remaining fresh blueberries and garnish with lemon zest."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "dairy",
-      "fruits",
-      "grains",
-      "protein-foods"
     ]
   },
   {
@@ -2837,11 +2635,11 @@
   {
     "id": "usda-broccoli-potato-soup",
     "title": "Broccoli Potato Soup",
-    "protein": "chicken",
+    "protein": "vegetarian",
     "proteins": [
-      "chicken"
+      "vegetarian"
     ],
-    "budget": 2,
+    "budget": 1,
     "difficulty": 3,
     "timeMin": 20,
     "servings": 4,
@@ -2922,52 +2720,6 @@
       "main-dish",
       "dairy",
       "grains",
-      "vegetables"
-    ]
-  },
-  {
-    "id": "usda-bronco-beans",
-    "title": "Bronco Beans",
-    "protein": "beans",
-    "proteins": [
-      "beans",
-      "eggs"
-    ],
-    "budget": 1,
-    "difficulty": 2,
-    "timeMin": 120,
-    "servings": 8,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/bronco-beans",
-    "image": "",
-    "ingredients": [
-      "1 tablespoon vegetable oil",
-      "2 yellow onions (peeled and chopped)",
-      "1 bell pepper (cored, seeded, and chopped)",
-      "2 jalapeno peppers (chopped)",
-      "4 cloves garlic (peeled and chopped)",
-      "1 tablespoon dried oregano",
-      "1 tablespoon dried thyme",
-      "1 teaspoon chili powder",
-      "4 cans (15.5 ounce) assorted low-sodium beans, including black, kidney, white, and chickpeas (drained and rinsed with cold water)",
-      "2 cans (14.5 ounce) low-sodium diced tomatoes (including the liquid)",
-      "1 1/2 cups water"
-    ],
-    "steps": [
-      "Put the pot over medium heat and when it is hot, add the oil.",
-      "Add the onions, garlic, bell pepper, jalapenos, oregano, thyme and chili powder and cook until tender, about 15 minutes.",
-      "Add the drained beans, tomatoes and 1 1/2 cups water and raise the heat to high and bring to a boil.",
-      "Lower the heat to low and let cook, partially covered, for 1 1/2 hours.",
-      "If the mixture gets too thick, add the remaining 1/2 cup water.",
-      "Serve immediately or transfer to a container once cooled.",
-      "Cover and refrigerate up to 2 days.",
-      "Garnish with cilantro and/or low-fat plain yogurt."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "side-dish",
       "vegetables"
     ]
   },
@@ -3058,44 +2810,6 @@
       "usda",
       "public-domain",
       "soup",
-      "protein-foods",
-      "vegetables"
-    ]
-  },
-  {
-    "id": "usda-butterfly-bite",
-    "title": "Butterfly Bite",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 2,
-    "timeMin": 40,
-    "servings": 6,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/butterfly-bite",
-    "image": "",
-    "ingredients": [
-      "3 celery stalks",
-      "12 twist pretzels (large, 3 ring)",
-      "6 tablespoons creamy peanut butter",
-      "3 tablespoons raisins"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Clean celery with vegetable brush under cool running water.",
-      "Cut celery in half cross wise.",
-      "Fill center of each celery stick with one tablespoon of peanut butter.",
-      "This is the body of the butterfly Add two pretzels to form the butterfly’s wings.",
-      "Use extra pretzel pieces for antenna and raisins for decoration."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "grains",
       "protein-foods",
       "vegetables"
     ]
@@ -3210,10 +2924,10 @@
   {
     "id": "usda-cabbage-roll-casserole",
     "title": "Cabbage Roll Casserole",
-    "protein": "beef",
+    "protein": "ground-beef",
     "proteins": [
-      "beef",
-      "ground-beef"
+      "ground-beef",
+      "beef"
     ],
     "budget": 3,
     "difficulty": 2,
@@ -3340,7 +3054,7 @@
     "proteins": [
       "chicken"
     ],
-    "budget": 3,
+    "budget": 2,
     "difficulty": 1,
     "timeMin": 35,
     "servings": 4,
@@ -3522,12 +3236,11 @@
   {
     "id": "usda-cheese-and-corn-chowder",
     "title": "Cheese and Corn Chowder",
-    "protein": "chicken",
+    "protein": "vegetarian",
     "proteins": [
-      "chicken",
-      "ham"
+      "vegetarian"
     ],
-    "budget": 2,
+    "budget": 1,
     "difficulty": 3,
     "timeMin": 20,
     "servings": 6,
@@ -4958,127 +4671,12 @@
     ]
   },
   {
-    "id": "usda-chili-and-spice-seasoning",
-    "title": "Chili and Spice Seasoning",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 25,
-    "servings": 4,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/chili-and-spice-seasoning",
-    "image": "",
-    "ingredients": [
-      "1/4 tablespoon paprika",
-      "2 tablespoons oregano (dried, crushed)",
-      "2 teaspoons chili powder",
-      "1 teaspoon garlic powder",
-      "1 teaspoon black pepper",
-      "1/2 teaspoon cayenne pepper",
-      "1/2 teaspoon dry mustard"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Mix together all ingredients.",
-      "Store in airtight container."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "soup"
-    ]
-  },
-  {
-    "id": "usda-chili-cheese-hominy",
-    "title": "Chili Cheese Hominy",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 2,
-    "timeMin": 15,
-    "servings": 8,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/chili-cheese-hominy",
-    "image": "",
-    "ingredients": [
-      "1 teaspoon vegetable oil (or cooking oil of choice)",
-      "1/2 cup onion, chopped (about 1/2 medium onion)",
-      "4 cups instant white or yellow hominy, cooked",
-      "2 cans (4 ounces each) chopped green chiles, drained",
-      "1 cup non-fat sour cream",
-      "1 teaspoon chili powder",
-      "1/8 teaspoon black pepper",
-      "3/4 cup shredded cheddar cheese, divided"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Heat oil in a large skillet over medium high heat (350 °F in an electric skillet).",
-      "Add onion and cook until tender, about 2 to 3 minutes.",
-      "Stir in hominy, green chiles, sour cream, chili powder and pepper.",
-      "Add half of the cheese and mix well.",
-      "Reduce heat to medium (300 °F in an electric skillet).",
-      "Cover and cook until heated through, about 3 to 5 minutes.",
-      "Sprinkle remaining cheese on top.",
-      "Cover and cook until cheese melts, about 5 minutes."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "soup",
-      "dairy",
-      "grains",
-      "vegetables"
-    ]
-  },
-  {
-    "id": "usda-chili-popcorn",
-    "title": "Chili Popcorn",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 35,
-    "servings": 4,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/chili-popcorn",
-    "image": "",
-    "ingredients": [
-      "4 cups popcorn",
-      "1 tablespoon margarine, melted",
-      "1 teaspoon chili powder",
-      "1/16 teaspoon (a dash) garlic powder"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Mix popcorn and margarine in a bowl.",
-      "Mix seasonings thoroughly and sprinkle over popcorn.",
-      "Mix well.",
-      "Serve immediately and enjoy with family and friends."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "soup",
-      "grains"
-    ]
-  },
-  {
     "id": "usda-chili-tomato-macaroni",
     "title": "Chili Tomato Macaroni",
-    "protein": "beef",
+    "protein": "ground-beef",
     "proteins": [
-      "beef",
-      "ground-beef"
+      "ground-beef",
+      "beef"
     ],
     "budget": 3,
     "difficulty": 2,
@@ -5116,154 +4714,6 @@
       "grains",
       "protein-foods",
       "vegetables"
-    ]
-  },
-  {
-    "id": "usda-chilled-blueberry-soup",
-    "title": "Chilled Blueberry Soup",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 30,
-    "servings": 4,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/chilled-blueberry-soup",
-    "image": "",
-    "ingredients": [
-      "2 cups fresh blueberries (about 2 6-oz containers)",
-      "1 cup 100% apple juice",
-      "1 1/2 cups plain low-fat yogurt",
-      "1 teaspoon cinnamon",
-      "Fresh mint leaves for garnish"
-    ],
-    "steps": [
-      "Rinse blueberries and set aside a few for garnishing.",
-      "Blend all ingredients in food processor or blender.",
-      "Serve immediately.",
-      "Garnish with mint leaves and blueberries, if desired."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "soup",
-      "dairy",
-      "fruits"
-    ]
-  },
-  {
-    "id": "usda-chilled-cantaloupe-soup",
-    "title": "Chilled Cantaloupe Soup",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 2,
-    "timeMin": 45,
-    "servings": 6,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/chilled-cantaloupe-soup",
-    "image": "",
-    "ingredients": [
-      "1 cantaloupe, peeled, seeded, and cubed",
-      "2 cups orange juice",
-      "1 tablespoon lime juice",
-      "1/4 teaspoon ground cinnamon"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Place cantaloupe and 1/2 cup orange juice in a container of a blender or food processor.",
-      "Cover with lid and blend until smooth.",
-      "Transfer to large bowl.",
-      "Stir in lime juice, cinnamon, and remaining orange juice.",
-      "Cover, and refrigerate for at least one hour.",
-      "Serve chilled."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "soup",
-      "fruits"
-    ]
-  },
-  {
-    "id": "usda-chocolate-peanut-butter-frozen-bars",
-    "title": "Chocolate Peanut Butter Frozen Bars",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 2,
-    "timeMin": 55,
-    "servings": 15,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/chocolate-peanut-butter-frozen-bars",
-    "image": "",
-    "ingredients": [
-      "2 packages (1.4 ounces each) low calorie chocolate pudding, instant (or cook and serve type)",
-      "3 1/2 cups skim milk",
-      "1/4 cup peanut butter",
-      "15 graham cracker rectangles (break crackers apart)"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Mix pudding according to package directions, except use 3 1/2 cups milk.",
-      "Beat in peanut butter.",
-      "Line a 9x13 inch pan with half the graham crackers.",
-      "Spread pudding mixture over graham crackers.",
-      "Top with remaining crackers.",
-      "Freeze for four hours.",
-      "Cut into squares and remove from pan.",
-      "Store in a plastic bag in the freezer."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "dairy",
-      "grains",
-      "protein-foods"
-    ]
-  },
-  {
-    "id": "usda-cinnamon-raisin-almond-balls",
-    "title": "Cinnamon Raisin Almond Balls",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 30,
-    "servings": 6,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/cinnamon-raisin-almond-balls",
-    "image": "",
-    "ingredients": [
-      "1 cup almonds",
-      "1 cup raisins",
-      "1 teaspoon cinnamon"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Rinse the raisins and almonds with water.",
-      "Toss them in the food processor with the cinnamon.",
-      "When sufficiently mixed, form into balls or bar shapes."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "fruits",
-      "protein-foods"
     ]
   },
   {
@@ -5588,228 +5038,12 @@
     ]
   },
   {
-    "id": "usda-corn-and-bean-medley",
-    "title": "Corn and Bean Medley",
-    "protein": "beans",
-    "proteins": [
-      "beans"
-    ],
-    "budget": 1,
-    "difficulty": 2,
-    "timeMin": 20,
-    "servings": 4,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/corn-and-bean-medley",
-    "image": "",
-    "ingredients": [
-      "1/4 cup onion, chopped",
-      "1 cup low-sodium whole-kernel canned corn",
-      "3/4 cup cooked kidney beans",
-      "3/4 teaspoon chili powder",
-      "hot pepper flakes (1/4 teaspoon, optional)"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Drain the canned corn, but reserve the liquid from the can.",
-      "Heat 3 tablespoons of liquid from canned corn in saucepan.",
-      "Cook onion in liquid until soft, about 2 minutes.",
-      "Add corn, kidney beans, chili powder, and hot red pepper flakes to onion mixture.",
-      "Cook over low heat for about 10 minutes."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "side-dish",
-      "vegetables"
-    ]
-  },
-  {
-    "id": "usda-corn-and-green-chili-salad",
-    "title": "Corn and Green Chili Salad",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 25,
-    "servings": 4,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/corn-and-green-chili-salad",
-    "image": "",
-    "ingredients": [
-      "2 cups frozen corn, thawed",
-      "1 cup canned diced tomatoes, low-sodium",
-      "1/2 can (4 ounces) green chiles",
-      "1/2 tablespoon vegetable oil (or cooking oil of choice)",
-      "1 tablespoon lime juice",
-      "1/3 cup green onion, sliced",
-      "2 tablespoons fresh cilantro, chopped"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Combine all ingredients in a medium bowl.",
-      "Mix well."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "salad",
-      "vegetables"
-    ]
-  },
-  {
-    "id": "usda-corn-bread",
-    "title": "Corn Bread",
-    "protein": "eggs",
-    "proteins": [
-      "eggs"
-    ],
-    "budget": 1,
-    "difficulty": 3,
-    "timeMin": 30,
-    "servings": 12,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/corn-bread",
-    "image": "",
-    "ingredients": [
-      "1 cup cornmeal",
-      "1 cup all-purpose flour",
-      "2 tablespoons sugar",
-      "1 tablespoon baking powder",
-      "1 egg",
-      "1/4 cup vegetable oil",
-      "1 cup non-fat (skim) milk"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Heat oven to 425 °F. Grease 8x9 inch pan.",
-      "Measure cornmeal, flour, sugar, and baking powder into a large mixing bowl.",
-      "Stir to combine ingredients.",
-      "Crack egg into a small bowl and beat with a fork to combine white and yolk.",
-      "Add egg, oil, and milk to flour mixture.",
-      "Mix until ingredients are well blended.",
-      "Pour batter into prepared pan.",
-      "Bake 20 to 25 minutes, until firm to touch or wooden pick inserted in the center comes out clean.",
-      "Create-a-Flavor Changes: Buttermilk Corn Bread: Use only 2 teaspoons baking powder and add 1/4 teaspoon baking soda.",
-      "Substitute 1 cup buttermilk for skim milk.",
-      "Whole Wheat Corn Bread: Use 1/2 cup all purpose flour and 1/2 cup whole wheat flour.",
-      "Corny Corn Bread: Add 1 cup kernels (fresh, frozen, or canned, well drained) with the milk.",
-      "Cheesy Corn Bread: Add 1/2 cup shredded cheddar cheese with the milk.",
-      "Chili Cheese Corn Bread: Add 1/2 teaspoon chili powder to the flour mixture.",
-      "Drain one 4-ounce can chopped green chilies.",
-      "Add chilies and 1/4 cup shredded Monterey jack cheese with the milk.",
-      "Blueberry Corn Bread: Fold 1 cup blueberries (fresh, frozen, or canned, well drained) into the batter.",
-      "Corn Bread Muffins: Pour batter into prepared muffin cups.",
-      "Bake 20 minutes at 400 °F."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "bread",
-      "grains"
-    ]
-  },
-  {
-    "id": "usda-corn-casserole",
-    "title": "Corn Casserole",
-    "protein": "chicken",
-    "proteins": [
-      "chicken",
-      "beef",
-      "ground-beef"
-    ],
-    "budget": 2,
-    "difficulty": 2,
-    "timeMin": 40,
-    "servings": 8,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/corn-casserole",
-    "image": "",
-    "ingredients": [
-      "2 eggs",
-      "2 cans (15 ounces each) cream-style corn",
-      "1/2 cup minced onion",
-      "2 teaspoons sugar",
-      "1 cup bread crumbs"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Preheat oven to 350 °F. Beat eggs in a bowl.",
-      "Add corn, minced onion, sugar, black pepper, and half the bread crumbs.",
-      "Stir and put into a greased 8x8 inch baking dish.",
-      "Sprinkle remaining bread crumbs on top of the casserole.",
-      "Baked at 350 °F for 30 minutes."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "grains",
-      "vegetables"
-    ]
-  },
-  {
-    "id": "usda-corn-casserole-0",
-    "title": "Corn Casserole",
-    "protein": "eggs",
-    "proteins": [
-      "eggs"
-    ],
-    "budget": 1,
-    "difficulty": 3,
-    "timeMin": 35,
-    "servings": 6,
-    "style": "Mexican",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/corn-casserole-0",
-    "image": "",
-    "ingredients": [
-      "1/2 cup onion, chopped",
-      "1 1/2 teaspoons vegetable oil",
-      "1 can low-sodium cream style corn (about 15 ounces)",
-      "3/4 cup yellow cornmeal",
-      "1/2 cup 1% low-fat milk",
-      "4 tablespoons dried egg mix (or 2 eggs)",
-      "1/4 cup all-purpose flour",
-      "1/2 teaspoon baking powder",
-      "Nonstick cooking spray"
-    ],
-    "steps": [
-      "Preheat oven to 350 °F. In a saucepan, cook onions over medium heat in vegetable oil until tender (about 4 to 5 minutes).",
-      "Open canned corn and drain liquid into a measuring cup.",
-      "If needed, add water to make 1 cup of liquid.",
-      "Add liquid and cornmeal to the cooked onions in the saucepan.",
-      "Stir until the mixture boils.",
-      "Remove saucepan from heat.",
-      "Mix in milk, corn, and dried egg mix.",
-      "In a mixing bowl, mix flour and baking powder.",
-      "Add cornmeal mixture.",
-      "Mix well.",
-      "Spray a 9-inch baking pan with nonstick cooking spray.",
-      "Pour mixture into baking pan.",
-      "Bake for 25 to 30 minutes.",
-      "Cut into 6 servings."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "grains",
-      "vegetables"
-    ]
-  },
-  {
     "id": "usda-corn-soup",
     "title": "Corn Soup",
-    "protein": "beef",
+    "protein": "ground-beef",
     "proteins": [
-      "beef",
-      "ground-beef"
+      "ground-beef",
+      "beef"
     ],
     "budget": 3,
     "difficulty": 2,
@@ -5892,11 +5126,11 @@
   {
     "id": "usda-cream-broccoli-soup",
     "title": "Cream of Broccoli Soup",
-    "protein": "chicken",
+    "protein": "vegetarian",
     "proteins": [
-      "chicken"
+      "vegetarian"
     ],
-    "budget": 2,
+    "budget": 1,
     "difficulty": 3,
     "timeMin": 20,
     "servings": 4,
@@ -6092,11 +5326,11 @@
   {
     "id": "usda-crispy-walleye-patties",
     "title": "Crispy Walleye Patties",
-    "protein": "eggs",
+    "protein": "fish",
     "proteins": [
-      "eggs"
+      "fish"
     ],
-    "budget": 1,
+    "budget": 3,
     "difficulty": 2,
     "timeMin": 20,
     "servings": 8,
@@ -6592,11 +5826,10 @@
   {
     "id": "usda-dirty-rice",
     "title": "Dirty Rice",
-    "protein": "chicken",
+    "protein": "ground-beef",
     "proteins": [
-      "chicken",
-      "beef",
-      "ground-beef"
+      "ground-beef",
+      "beef"
     ],
     "budget": 3,
     "difficulty": 3,
@@ -6880,10 +6113,10 @@
   {
     "id": "usda-enchilada-rice",
     "title": "Enchilada Rice",
-    "protein": "beef",
+    "protein": "ground-beef",
     "proteins": [
-      "beef",
-      "ground-beef"
+      "ground-beef",
+      "beef"
     ],
     "budget": 3,
     "difficulty": 2,
@@ -6979,8 +6212,7 @@
     "title": "Eve’s Tasty Turkey Tetrazzini",
     "protein": "turkey",
     "proteins": [
-      "turkey",
-      "chicken"
+      "turkey"
     ],
     "budget": 2,
     "difficulty": 3,
@@ -7269,10 +6501,10 @@
   {
     "id": "usda-five-happiness-fried-noodles",
     "title": "Five Happiness Fried Noodles",
-    "protein": "eggs",
+    "protein": "beans",
     "proteins": [
-      "eggs",
-      "beans"
+      "beans",
+      "eggs"
     ],
     "budget": 1,
     "difficulty": 2,
@@ -7318,10 +6550,10 @@
   {
     "id": "usda-four-layer-casserole",
     "title": "Four Layer Casserole",
-    "protein": "beef",
+    "protein": "ground-beef",
     "proteins": [
-      "beef",
-      "ground-beef"
+      "ground-beef",
+      "beef"
     ],
     "budget": 3,
     "difficulty": 3,
@@ -7410,336 +6642,12 @@
     ]
   },
   {
-    "id": "usda-frozen-pear-pops",
-    "title": "Frozen Pear Pops",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 35,
-    "servings": 4,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/frozen-pear-pops",
-    "image": "",
-    "ingredients": [
-      "1 cup canned pears, drained",
-      "1 cup low fat yogurt",
-      "6 ounces frozen orange juice concentrate, thawed",
-      "ice cube tray or small paper cups",
-      "straws or popsicle sticks"
-    ],
-    "steps": [
-      "Cut canned pears into small pieces.",
-      "Add yogurt and orange juice to cut pears and mix well to combine.",
-      "Divide into 8 ice cubes squares (or 4 small paper cups).",
-      "Place in cut straws or popsicle sticks.",
-      "Freeze and enjoy!"
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "dairy",
-      "fruits"
-    ]
-  },
-  {
-    "id": "usda-fruit-dippers",
-    "title": "Fruit Dippers",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 35,
-    "servings": 4,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/fruit-dippers",
-    "image": "",
-    "ingredients": [
-      "1/2 cup yogurt, low-fat vanilla",
-      "2 cups peanuts (chopped)",
-      "2 cups fruit (grapes, banana slices, apple wedges, strawberries)"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Combine yogurt and peanuts.",
-      "Mix with a spoon.",
-      "Place a toothpick in the center of each fruit.",
-      "Dip fruit into the yogurt peanut mixture."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "fruits",
-      "protein-foods"
-    ]
-  },
-  {
-    "id": "usda-fruit-milk-shakes",
-    "title": "Fruit Milk Shakes",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 11,
-    "servings": 2,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/fruit-milk-shakes",
-    "image": "",
-    "ingredients": [
-      "1 cup milk, fat-free (or water)",
-      "1/2 cup non-fat dry milk",
-      "2 ripe bananas (or 1/3 cup orange juice concentrate)",
-      "1/2 teaspoon vanilla",
-      "10 large ice cubes"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Place everything together into a blender.",
-      "Blend for 30 seconds to 1 minute."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "dairy",
-      "fruits"
-    ]
-  },
-  {
-    "id": "usda-fruit-pizza",
-    "title": "Fruit Pizza",
-    "protein": "eggs",
-    "proteins": [
-      "eggs"
-    ],
-    "budget": 1,
-    "difficulty": 3,
-    "timeMin": 20,
-    "servings": 12,
-    "style": "Italian",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/fruit-pizza",
-    "image": "",
-    "ingredients": [
-      "Cookie Crust",
-      "1/2 cup margarine",
-      "1/2 cup sugar",
-      "1 teaspoon vanilla extract",
-      "1 egg",
-      "2 cups flour, all-purpose",
-      "2 teaspoons baking powder",
-      "Cheese Spread",
-      "8 ounces cream cheese, nonfat (or light)",
-      "1/2 cup sugar",
-      "1 teaspoon vanilla extract"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Preheat oven to 375 °F. For crust, cream margarine, sugar, vanilla, and egg until light and fluffy.",
-      "Add flour and baking powder, mixing well.",
-      "Spread mixture about 1/8 inch thick on a pizza pan, baking sheet, or 9x13 inch pan.",
-      "Bake for 10 to 12 minutes or until lightly browned.",
-      "Cool.",
-      "For spread, mix together cream cheese, sugar, and vanilla.",
-      "Spread on cooled cookie crust.",
-      "Arrange fruit on top of pizza.",
-      "Refrigerate until serving time."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "dairy",
-      "grains"
-    ]
-  },
-  {
-    "id": "usda-fruit-pizza-go",
-    "title": "Fruit Pizza To Go",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 30,
-    "servings": 1,
-    "style": "Italian",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/fruit-pizza-go",
-    "image": "",
-    "ingredients": [
-      "1 English muffin (whole wheat)",
-      "2 tablespoons whipped fat-free strawberry cream cheese",
-      "2 strawberries, sliced",
-      "2 grapes, sliced",
-      "2 slices mandarin oranges"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Toast the English muffin until golden brown.",
-      "Spread cream cheese on toasted muffin.",
-      "Arrange sliced strawberries, grapes, and orange slices on top of the cream cheese."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "dairy",
-      "fruits",
-      "grains"
-    ]
-  },
-  {
-    "id": "usda-fruit-salad-jicama",
-    "title": "Fruit Salad with Jicama",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 2,
-    "timeMin": 120,
-    "servings": 7,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/fruit-salad-jicama",
-    "image": "",
-    "ingredients": [
-      "3 cups jicama (small slices)",
-      "2 cups watermelon (cut into pieces)",
-      "1 mango",
-      "1 small papaya",
-      "1 lime, juiced",
-      "2 kiwifruit",
-      "1 teaspoon lime or orange juice",
-      "1/4 teaspoon salt",
-      "1/4 teaspoon chili powder"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Wash, peel, and cut the jicama into thin slices.",
-      "Wash, peel, and cut the rest of the fruit (including the lime) into slices or small pieces.",
-      "On a large plate, arrange the fruit.",
-      "Sprinkle the lime or orange juice over the fruit.",
-      "In a small bowl, mix the salt and chili powder.",
-      "Sprinkle over the fruit and serve.",
-      "Refrigerate leftovers within 2 hours."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "salad",
-      "fruits",
-      "vegetables"
-    ]
-  },
-  {
-    "id": "usda-fruity-thai-pita-pockets",
-    "title": "Fruity Thai Pita Pockets",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 2,
-    "timeMin": 55,
-    "servings": 4,
-    "style": "Asian",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/fruity-thai-pita-pockets",
-    "image": "",
-    "ingredients": [
-      "1 can tropical fruit salad in 100% juice (15 ounces)",
-      "4 whole-grain pita pockets",
-      "4 cups fresh spinach (torn)",
-      "1/4 cup fresh cilantro (optional)",
-      "For the Spread:",
-      "3 tablespoons reserved juice from tropical fruit salad",
-      "1/2 cup natural peanut butter, crunchy or chunky",
-      "3 tablespoons fat-free cream cheese",
-      "1 tablespoon low-sodium soy sauce"
-    ],
-    "steps": [
-      "In a colander over a bowl, drain fruit salad well; reserve 3 tablespoons juice.",
-      "In a small bowl, whisk together reserved juice, peanut butter, cream cheese, and soy sauce.",
-      "Place drained fruit, spinach, and cilantro (if desired) in a bowl; mix gently.",
-      "Add sauce and toss.",
-      "Slice a small portion off each pita.",
-      "Tuck the slice inside the bottom of the pita.",
-      "Fill each pita pocket with the fruit-spinach mixture.",
-      "Wrap individually in plastic wrap and refrigerate.",
-      "Will keep well overnight."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "dairy",
-      "fruits",
-      "grains",
-      "protein-foods",
-      "vegetables"
-    ]
-  },
-  {
-    "id": "usda-fudgy-fruit",
-    "title": "Fudgy Fruit",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 2,
-    "timeMin": 20,
-    "servings": 4,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/fudgy-fruit",
-    "image": "",
-    "ingredients": [
-      "1/8 cup chocolate chips (or 2 tablespoons semi-sweet chips)",
-      "2 large bananas (peeled and cut into quarters)",
-      "8 large strawberries",
-      "1/4 cup unsalted peanuts (chopped)"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Place chocolate chips in a small microwave safe bowl.",
-      "Heat on high for 10 seconds and stir.",
-      "Repeat until chocolate is melted, about 30 seconds.",
-      "Place fruit on a small tray covered with a piece of waxed paper.",
-      "Use a spoon to drizzle the melted chocolate on top of the fruit.",
-      "Sprinkle the fruit with chopped nuts.",
-      "Cover the fruit and place in the refrigerator for 10 minutes or until the chocolate hardens.",
-      "Serve chilled."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "fruits",
-      "protein-foods"
-    ]
-  },
-  {
     "id": "usda-full-beans-hot-dish",
     "title": "Full of Beans Hot Dish",
-    "protein": "beef",
+    "protein": "ground-beef",
     "proteins": [
-      "beef",
       "ground-beef",
+      "beef",
       "pork"
     ],
     "budget": 3,
@@ -7780,11 +6688,11 @@
   {
     "id": "usda-garden-barley-soup",
     "title": "Garden Barley Soup",
-    "protein": "beef",
+    "protein": "vegetarian",
     "proteins": [
-      "beef"
+      "vegetarian"
     ],
-    "budget": 3,
+    "budget": 1,
     "difficulty": 2,
     "timeMin": 70,
     "servings": 6,
@@ -7871,10 +6779,10 @@
   {
     "id": "usda-garden-chili",
     "title": "Garden Chili",
-    "protein": "beef",
+    "protein": "ground-beef",
     "proteins": [
-      "beef",
-      "ground-beef"
+      "ground-beef",
+      "beef"
     ],
     "budget": 3,
     "difficulty": 3,
@@ -7922,9 +6830,8 @@
   {
     "id": "usda-garden-vegetable-soup",
     "title": "Garden Vegetable Soup",
-    "protein": "chicken",
+    "protein": "beef",
     "proteins": [
-      "chicken",
       "beef"
     ],
     "budget": 3,
@@ -8155,11 +7062,11 @@
   {
     "id": "usda-glazed-meatloaf",
     "title": "Glazed Meatloaf",
-    "protein": "turkey",
+    "protein": "ground-beef",
     "proteins": [
+      "ground-beef",
       "turkey",
-      "beef",
-      "ground-beef"
+      "beef"
     ],
     "budget": 4,
     "difficulty": 3,
@@ -8216,11 +7123,11 @@
   {
     "id": "usda-golden-split-pea-soup",
     "title": "Golden Split Pea Soup",
-    "protein": "chicken",
+    "protein": "beans",
     "proteins": [
-      "chicken"
+      "beans"
     ],
-    "budget": 2,
+    "budget": 1,
     "difficulty": 2,
     "timeMin": 55,
     "servings": 8,
@@ -8258,10 +7165,10 @@
   {
     "id": "usda-great-northern-bean-soup",
     "title": "Great Northern Bean Soup",
-    "protein": "chicken",
+    "protein": "ham",
     "proteins": [
-      "chicken",
-      "ham"
+      "ham",
+      "chicken"
     ],
     "budget": 2,
     "difficulty": 3,
@@ -8396,50 +7303,6 @@
     ]
   },
   {
-    "id": "usda-green-bean-and-mushroom-medley",
-    "title": "Green Bean and Mushroom Medley",
-    "protein": "beans",
-    "proteins": [
-      "beans"
-    ],
-    "budget": 1,
-    "difficulty": 2,
-    "timeMin": 15,
-    "servings": 8,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/green-bean-and-mushroom-medley",
-    "image": "",
-    "ingredients": [
-      "3 cups fresh green beans (cut into 1-inch lengths)",
-      "2 carrots (cut into thick strips)",
-      "3 tablespoons olive oil",
-      "1 large onion (sliced)",
-      "1 pound fresh mushrooms (sliced)",
-      "1 teaspoon lemon pepper seasoning",
-      "1/2 tablespoon garlic salt",
-      "1/4 cup almonds (toasted, slivered)"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Place green beans and carrots in 1 inch of boiling water.",
-      "Cover, and cook until tender but still firm.",
-      "Drain.",
-      "Add oil to heated skillet.",
-      "Sauté onions and mushrooms until almost tender.",
-      "Reduce heat, cover, and simmer 3 minutes.",
-      "Stir in green beans, carrots, lemon pepper, garlic salt, and toasted almonds.",
-      "Cover and cook for 5 minutes over medium heat."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "protein-foods",
-      "vegetables"
-    ]
-  },
-  {
     "id": "usda-green-bean-and-rice-casserole",
     "title": "Green Bean and Rice Casserole",
     "protein": "beans",
@@ -8483,7 +7346,7 @@
     "proteins": [
       "chicken"
     ],
-    "budget": 3,
+    "budget": 2,
     "difficulty": 3,
     "timeMin": 25,
     "servings": 4,
@@ -8648,10 +7511,10 @@
   {
     "id": "usda-ground-beef-stew",
     "title": "Ground Beef Stew",
-    "protein": "beef",
+    "protein": "ground-beef",
     "proteins": [
-      "beef",
       "ground-beef",
+      "beef",
       "turkey"
     ],
     "budget": 3,
@@ -8693,57 +7556,13 @@
     ]
   },
   {
-    "id": "usda-harvest-vegetable-salad",
-    "title": "Harvest Vegetable Salad",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 2,
-    "timeMin": 12,
-    "servings": 4,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/harvest-vegetable-salad",
-    "image": "",
-    "ingredients": [
-      "2 cups romaine lettuce (washed)",
-      "1 cup cilantro leaves (washed)",
-      "1 cup parsnips (peeled)",
-      "1 cup carrots (peeled)",
-      "1 cup turnips (peeled)",
-      "Dressing:",
-      "1/4 cup lime juice",
-      "1/2 teaspoon lime zest (grated)",
-      "1 teaspoon sugar",
-      "1/4 teaspoon chili powder",
-      "1 tablespoon olive oil"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Combine romaine lettuce and cilantro, and divide onto four plates.",
-      "Place parsnips, carrots, and turnips into 1 quart of boiling water.",
-      "Return water to a simmer, cook vegetables for 2 minutes.",
-      "Strain into a colander.",
-      "Mix ingredients for the dressing right before use.",
-      "Place hot vegetables on top of greens and top with homemade dressing."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "salad",
-      "vegetables"
-    ]
-  },
-  {
     "id": "usda-healthy-black-bean-soup",
     "title": "Healthy Black Bean Soup",
-    "protein": "chicken",
+    "protein": "beans",
     "proteins": [
-      "chicken"
+      "beans"
     ],
-    "budget": 2,
+    "budget": 1,
     "difficulty": 1,
     "timeMin": 35,
     "servings": 4,
@@ -8919,8 +7738,7 @@
     "title": "Hearty Vegetable Beef Soup",
     "protein": "beef",
     "proteins": [
-      "beef",
-      "chicken"
+      "beef"
     ],
     "budget": 3,
     "difficulty": 2,
@@ -9005,11 +7823,11 @@
   {
     "id": "usda-herbed-lentils-and-rice-casserole",
     "title": "Herbed Lentils and Rice Casserole",
-    "protein": "chicken",
+    "protein": "beans",
     "proteins": [
-      "chicken"
+      "beans"
     ],
-    "budget": 2,
+    "budget": 1,
     "difficulty": 2,
     "timeMin": 120,
     "servings": 4,
@@ -9043,83 +7861,6 @@
       "dairy",
       "grains",
       "vegetables"
-    ]
-  },
-  {
-    "id": "usda-hiding-rabbits",
-    "title": "Hiding Rabbits",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 2,
-    "timeMin": 50,
-    "servings": 2,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/hiding-rabbits",
-    "image": "",
-    "ingredients": [
-      "2 celery stalks (each piece cut in half lengthwise)",
-      "4 small cauliflower florets (cut in half)",
-      "2 tablespoons peanut butter"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Place one piece of celery in center of plate with the center facing up.",
-      "Use a butter knife to spread peanut butter on top edges.",
-      "Place second piece of celery on top, forming a log.",
-      "Cut log in half.",
-      "Repeat steps 1-3 with remaining 2 pieces of celery.",
-      "Place cauliflower florets on ends of each log, securing with remaining peanut butter.",
-      "Enjoy your Hiding Rabbits."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "protein-foods",
-      "vegetables"
-    ]
-  },
-  {
-    "id": "usda-homemade-pizza-crust",
-    "title": "Homemade Pizza Crust",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 2,
-    "timeMin": 50,
-    "servings": 4,
-    "style": "Italian",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/homemade-pizza-crust",
-    "image": "",
-    "ingredients": [
-      "1 teaspoon rapid rise yeast",
-      "1/2 cup lukewarm water",
-      "1/4 teaspoon salt",
-      "1 teaspoon oil",
-      "1 cup bread flour (approximately)"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Mix yeast, water, salt, and oil.",
-      "Add about 1 cup flour to make a stiff dough.",
-      "The amount of flour may vary slightly.",
-      "Knead the dough until it is very elastic (will stretch and not make a hole).",
-      "Use a rolling pin or clean bottle to obtain even thickness.",
-      "Lay it on a greased baking sheet to rise while you prepare toppings for pizza.",
-      "Bake at 400 °F with desired toppings until crust is browned and top is bubbly."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "grains"
     ]
   },
   {
@@ -9163,43 +7904,6 @@
       "main-dish",
       "grains",
       "protein-foods"
-    ]
-  },
-  {
-    "id": "usda-honey-milk-balls",
-    "title": "Honey Milk Balls",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 2,
-    "timeMin": 120,
-    "servings": 20,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/honey-milk-balls",
-    "image": "",
-    "ingredients": [
-      "1/4 cup honey*",
-      "1/4 cup peanut butter",
-      "1/2 cup dry milk, non-fat",
-      "1/2 cup cereal (crushed)"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Mix honey and peanut butter.",
-      "Gradually add dry milk and mix well.",
-      "Chill for easier handling.",
-      "With greased hands, form into small balls.",
-      "Roll in crushed cereal flakes.",
-      "Chill until firm.",
-      "Refrigerate leftovers within 2 hours."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish"
     ]
   },
   {
@@ -9325,41 +8029,6 @@
       "grains",
       "protein-foods",
       "vegetables"
-    ]
-  },
-  {
-    "id": "usda-hot-n-spicy-seasoning",
-    "title": "Hot 'N Spicy Seasoning",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 25,
-    "servings": 32,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/hot-n-spicy-seasoning",
-    "image": "",
-    "ingredients": [
-      "1 1/2 teaspoons white pepper (ground)",
-      "1/2 teaspoon cayenne pepper",
-      "1/2 teaspoon black pepper",
-      "1/2 teaspoon onion powder",
-      "1 1/4 teaspoons garlic powder",
-      "1 tablespoon basil (dried)",
-      "1 1/2 tablespoons thyme (dried)"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Mix all ingredients together.",
-      "Store in airtight container."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish"
     ]
   },
   {
@@ -9587,13 +8256,13 @@
   {
     "id": "usda-jollof-rice",
     "title": "Jollof Rice",
-    "protein": "chicken",
+    "protein": "bacon",
     "proteins": [
-      "chicken",
-      "pork",
-      "bacon"
+      "bacon",
+      "shrimp",
+      "chicken"
     ],
-    "budget": 4,
+    "budget": 5,
     "difficulty": 2,
     "timeMin": 30,
     "servings": 12,
@@ -9682,10 +8351,10 @@
   {
     "id": "usda-kibbeh-khamoustah",
     "title": "Kibbeh Khamoustah",
-    "protein": "beef",
+    "protein": "ground-beef",
     "proteins": [
-      "beef",
-      "ground-beef"
+      "ground-beef",
+      "beef"
     ],
     "budget": 3,
     "difficulty": 3,
@@ -9964,10 +8633,10 @@
   {
     "id": "usda-lentil-chili",
     "title": "Lentil Chili",
-    "protein": "beef",
+    "protein": "ground-beef",
     "proteins": [
-      "beef",
-      "ground-beef"
+      "ground-beef",
+      "beef"
     ],
     "budget": 3,
     "difficulty": 2,
@@ -10006,11 +8675,11 @@
   {
     "id": "usda-lentil-soup",
     "title": "Lentil Soup",
-    "protein": "chicken",
+    "protein": "beans",
     "proteins": [
-      "chicken"
+      "beans"
     ],
-    "budget": 2,
+    "budget": 1,
     "difficulty": 2,
     "timeMin": 40,
     "servings": 10,
@@ -10280,11 +8949,11 @@
   {
     "id": "usda-macaroni-chick-pea-soup",
     "title": "Macaroni Chick-Pea Soup",
-    "protein": "chicken",
+    "protein": "beans",
     "proteins": [
-      "chicken"
+      "beans"
     ],
-    "budget": 2,
+    "budget": 1,
     "difficulty": 2,
     "timeMin": 15,
     "servings": 4,
@@ -10321,60 +8990,13 @@
     ]
   },
   {
-    "id": "usda-mango-cucumber-soup",
-    "title": "Mango Cucumber Soup",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 3,
-    "timeMin": 25,
-    "servings": 4,
-    "style": "Mediterranean",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/mango-cucumber-soup",
-    "image": "",
-    "ingredients": [
-      "2 ripe mangoes, divided",
-      "1 English cucumber, divided",
-      "2 tablespoons chopped onion",
-      "1 jalapeño pepper, finely diced (optional)",
-      "lime, juiced",
-      "1/2 cup water",
-      "2 6-oz containers plain, non-fat Greek yogurt",
-      "1/4 cup fresh chopped cilantro"
-    ],
-    "steps": [
-      "Cut all but one half of mango into chunks, removing peel and pit; chill remaining mango half for use with garnish.",
-      "Slice off 1/4 of the cucumber and chill for use with garnish.",
-      "Coarsely chop remaining 3/4 of the cucumber.",
-      "Place chopped mango, cucumber, onion, and pepper (optional) in blender or food processor with lime juice and water.",
-      "Purée until smooth.",
-      "Blend in yogurt.",
-      "Chill until ready to serve.",
-      "About 15 to 30 minutes before serving, prepare garnish.",
-      "Dice chilled mango half, removing peel and pit; dice remaining cucumber.",
-      "Mix mango and cucumber dices with cilantro.",
-      "To serve, top bowls of soup with garnish."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "soup",
-      "dairy",
-      "fruits",
-      "vegetables"
-    ]
-  },
-  {
     "id": "usda-manhattan-clam-chowder",
     "title": "Manhattan Clam Chowder",
-    "protein": "vegetarian",
+    "protein": "fish",
     "proteins": [
-      "vegetarian"
+      "fish"
     ],
-    "budget": 1,
+    "budget": 3,
     "difficulty": 1,
     "timeMin": 240,
     "servings": 9,
@@ -10455,13 +9077,13 @@
   {
     "id": "usda-meatball-soup",
     "title": "Meatball Soup",
-    "protein": "chicken",
+    "protein": "ground-beef",
     "proteins": [
+      "ground-beef",
       "chicken",
-      "turkey",
-      "beef"
+      "turkey"
     ],
-    "budget": 3,
+    "budget": 2,
     "difficulty": 3,
     "timeMin": 40,
     "servings": 4,
@@ -10506,10 +9128,10 @@
   {
     "id": "usda-meatloaf-mug",
     "title": "Meatloaf in a Mug",
-    "protein": "beef",
+    "protein": "ground-beef",
     "proteins": [
-      "beef",
-      "ground-beef"
+      "ground-beef",
+      "beef"
     ],
     "budget": 2,
     "difficulty": 2,
@@ -10605,10 +9227,9 @@
     "title": "Mediterranean Chicken and White Bean Salad",
     "protein": "chicken",
     "proteins": [
-      "chicken",
-      "tuna"
+      "chicken"
     ],
-    "budget": 3,
+    "budget": 2,
     "difficulty": 1,
     "timeMin": 20,
     "servings": 4,
@@ -10846,36 +9467,6 @@
     ]
   },
   {
-    "id": "usda-mock-sour-cream",
-    "title": "Mock Sour Cream",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 20,
-    "servings": 10,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/mock-sour-cream",
-    "image": "",
-    "ingredients": [
-      "1 cup low-fat cottage cheese (or fat-free)",
-      "2 tablespoons fat-free (skim) milk",
-      "1 tablespoon lemon juice"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Combine all in the blender and blend until smooth."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish"
-    ]
-  },
-  {
     "id": "usda-mouth-watering-oven-fried-fish",
     "title": "Mouth-Watering Oven-Fried Fish",
     "protein": "fish",
@@ -10973,11 +9564,11 @@
   {
     "id": "usda-mushroom-barley-soup",
     "title": "Mushroom Barley Soup",
-    "protein": "chicken",
+    "protein": "vegetarian",
     "proteins": [
-      "chicken"
+      "vegetarian"
     ],
-    "budget": 2,
+    "budget": 1,
     "difficulty": 2,
     "timeMin": 30,
     "servings": 4,
@@ -11201,10 +9792,10 @@
   {
     "id": "usda-one-pan-spaghetti",
     "title": "One Pan Spaghetti",
-    "protein": "beef",
+    "protein": "ground-beef",
     "proteins": [
-      "beef",
-      "ground-beef"
+      "ground-beef",
+      "beef"
     ],
     "budget": 3,
     "difficulty": 2,
@@ -11249,11 +9840,11 @@
   {
     "id": "usda-one-pan-taco-rice",
     "title": "One Pan Taco Rice",
-    "protein": "turkey",
+    "protein": "ground-beef",
     "proteins": [
+      "ground-beef",
       "turkey",
-      "beef",
-      "ground-beef"
+      "beef"
     ],
     "budget": 3,
     "difficulty": 2,
@@ -11292,10 +9883,10 @@
   {
     "id": "usda-one-dish-roasted-potatoes-and-apples-chicken-sausage",
     "title": "One-Dish Roasted Potatoes and Apples with Chicken Sausage",
-    "protein": "chicken",
+    "protein": "sausage",
     "proteins": [
-      "chicken",
-      "sausage"
+      "sausage",
+      "chicken"
     ],
     "budget": 2,
     "difficulty": 2,
@@ -11331,42 +9922,6 @@
       "fruits",
       "protein-foods",
       "vegetables"
-    ]
-  },
-  {
-    "id": "usda-orange-cow",
-    "title": "Orange Cow",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 30,
-    "servings": 4,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/orange-cow",
-    "image": "",
-    "ingredients": [
-      "16 us fluid ounces orange juice",
-      "2 cups cold water",
-      "1/3 cup fat-free dry milk",
-      "1 teaspoon vanilla",
-      "1 cup ice"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Place all ingredients in blender or food processor.",
-      "Secure lid and blend until smooth.",
-      "Serve immediately."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "dairy",
-      "fruits"
     ]
   },
   {
@@ -11578,49 +10133,10 @@
     ]
   },
   {
-    "id": "usda-fiesta-mix",
-    "title": "Party Mix",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 30,
-    "servings": 4,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/fiesta-mix",
-    "image": "",
-    "ingredients": [
-      "1 cup cereal with fruit (flakes with raisins type)",
-      "1 cup bran cereal (chex type)",
-      "1 cup cereal (\"O\" type)",
-      "1/4 cup raisins",
-      "1/4 cup peanuts",
-      "1/4 cup shredded coconut"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Mix cereals together in a large bowl.",
-      "Add raisins, peanuts, and coconut; mix well.",
-      "Eat it dry or with milk."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "fruits",
-      "grains",
-      "protein-foods"
-    ]
-  },
-  {
     "id": "usda-party-time-pasta",
     "title": "Party-Time Pasta",
-    "protein": "chicken",
+    "protein": "turkey",
     "proteins": [
-      "chicken",
       "turkey"
     ],
     "budget": 2,
@@ -11673,10 +10189,10 @@
   {
     "id": "usda-pasta-bolognese",
     "title": "Pasta Bolognese",
-    "protein": "beef",
+    "protein": "ground-beef",
     "proteins": [
-      "beef",
-      "ground-beef"
+      "ground-beef",
+      "beef"
     ],
     "budget": 3,
     "difficulty": 3,
@@ -11912,114 +10428,6 @@
     ]
   },
   {
-    "id": "usda-peanut-butter-n-fruit-wich",
-    "title": "Peanut Butter 'n Fruit-wich",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 30,
-    "servings": 1,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/peanut-butter-n-fruit-wich",
-    "image": "",
-    "ingredients": [
-      "1 slice whole wheat bread",
-      "2 tablespoons peanut butter",
-      "1/4 medium apple, thinly sliced (or banana)",
-      "carrot, grated (2 tablespoons, optional)"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Spread 2 tablespoons peanut butter on bread.",
-      "Place fruit slices on top.",
-      "Optional: Top with grated carrot."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "fruits",
-      "grains",
-      "protein-foods"
-    ]
-  },
-  {
-    "id": "usda-peanut-butter-and-apple-wraps",
-    "title": "Peanut Butter and Apple Wraps",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 30,
-    "servings": 2,
-    "style": "Mexican",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/peanut-butter-and-apple-wraps",
-    "image": "",
-    "ingredients": [
-      "1 (7-inch across) whole wheat tortilla",
-      "1/4 cup low-fat peanut butter",
-      "2 tablespoons granola cereal",
-      "1/2 medium apple, sliced (suggest Red Delicious apple)"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Lay tortilla flat and spread peanut butter over 2/3 of the tortilla leaving edges at sides Sprinkle 2 tablespoons granola over peanut butter.",
-      "Cut apple slices into small chunks and place them on top of the granola.",
-      "Fold over the edges of the tortilla and roll up \"burrito style.\" Eat and Enjoy."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "fruits",
-      "grains",
-      "protein-foods"
-    ]
-  },
-  {
-    "id": "usda-peanut-butter-bananas",
-    "title": "Peanut Butter Bananas",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 2,
-    "timeMin": 40,
-    "servings": 4,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/peanut-butter-bananas",
-    "image": "",
-    "ingredients": [
-      "2 bananas",
-      "1/4 cup peanut butter",
-      "1/4 cup crushed nuts"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Peel bananas.",
-      "Spread the entire outside of each banana with peanut butter.",
-      "Roll the bananas in crushed nuts, sprinkles or other items.",
-      "Cut the bananas in one inch slices.",
-      "Store in the refrigerator or freezer until ready to serve."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "fruits",
-      "protein-foods"
-    ]
-  },
-  {
     "id": "usda-peanut-stew",
     "title": "Peanut Stew",
     "protein": "vegetarian",
@@ -12070,54 +10478,13 @@
     ]
   },
   {
-    "id": "usda-peanut-peach-n-pineapple-wrap",
-    "title": "Peanut, Peach, N Pineapple Wrap",
+    "id": "usda-peanutty-stew",
+    "title": "Peanutty Stew",
     "protein": "vegetarian",
     "proteins": [
       "vegetarian"
     ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 35,
-    "servings": 4,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/peanut-peach-n-pineapple-wrap",
-    "image": "",
-    "ingredients": [
-      "1 can sliced peaches (15 oz, drained)",
-      "1 can pineapple tidbits in juice (drained)",
-      "1/2 cup red or green bell pepper (chopped)",
-      "1 teaspoon cinnamon",
-      "4 whole wheat tortillas",
-      "1/2 cup chunky peanut butter",
-      "3 cups lettuce (shredded)"
-    ],
-    "steps": [
-      "In a medium bowl, combine peaches, pineapple, bell pepper, and cinnamon.",
-      "Warm the tortillas.",
-      "Spread 2 tablespoons of peanut butter on one side of each tortilla, leaving room on the edges.",
-      "Spoon equal portions of the peach mixture over peanut butter, then top with lettuce.",
-      "Fold the side and bottom edges of each tortilla toward the middle over the filling, then roll so the tortilla covers the filling."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "fruits",
-      "grains",
-      "protein-foods",
-      "vegetables"
-    ]
-  },
-  {
-    "id": "usda-peanutty-stew",
-    "title": "Peanutty Stew",
-    "protein": "chicken",
-    "proteins": [
-      "chicken"
-    ],
-    "budget": 3,
+    "budget": 2,
     "difficulty": 2,
     "timeMin": 20,
     "servings": 8,
@@ -12162,49 +10529,6 @@
     ]
   },
   {
-    "id": "usda-pear-pbj-bouquet",
-    "title": "Pear PB&J Bouquet",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 3,
-    "timeMin": 65,
-    "servings": 8,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/pear-pbj-bouquet",
-    "image": "",
-    "ingredients": [
-      "8 slices whole grain wheat bread",
-      "1 medium pear",
-      "8 teaspoons peanut butter",
-      "1 1/3 tablespoons strawberry preserves (4 teaspoons)"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Use a flower-shaped cookie cutter to cut each slide of bread.",
-      "If bread sticks to cutter, gently push the petals out with your fingers.",
-      "Wash the pear and dry it with a paper towel.",
-      "Cut the pear in half, and remove the core.",
-      "Cut each pear half into four slices, then cut each slice into five pieces.",
-      "You will only use the center three pieces of each slice, so go ahead and eat the end pieces.",
-      "Spread 1 teaspoon of peanut butter in a circle in the center of each of the flowers.",
-      "Place 3 pieces of pear on the peanut butter on each flower.",
-      "Arrange the pears so the skin is facing out and the white centers are touching in the middle.",
-      "Drizzle 1/2 teaspoon of strawberry preserves in the center of each flower and over the pears."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "fruits",
-      "grains",
-      "protein-foods"
-    ]
-  },
-  {
     "id": "usda-pear-quesadillas",
     "title": "Pear Quesadillas",
     "protein": "vegetarian",
@@ -12242,41 +10566,6 @@
       "dairy",
       "fruits",
       "grains"
-    ]
-  },
-  {
-    "id": "usda-pears-pod",
-    "title": "Pears in a Pod",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 30,
-    "servings": 4,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/pears-pod",
-    "image": "",
-    "ingredients": [
-      "4 medium celery stalks, cleaned and cut into 3-inch long pieces",
-      "1/2 cup creamy peanut butter",
-      "2 medium pears, cored and cut into chunks"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Spread the peanut butter into the center of the celery pieces.",
-      "Place the pear chunks on top of the peanut butter.",
-      "Serve on a plate and enjoy with your friends."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "fruits",
-      "protein-foods",
-      "vegetables"
     ]
   },
   {
@@ -12330,8 +10619,7 @@
     "protein": "turkey",
     "proteins": [
       "turkey",
-      "beef",
-      "ground-beef"
+      "beef"
     ],
     "budget": 4,
     "difficulty": 3,
@@ -12390,7 +10678,7 @@
     "proteins": [
       "chicken"
     ],
-    "budget": 3,
+    "budget": 2,
     "difficulty": 1,
     "timeMin": 30,
     "servings": 4,
@@ -13017,11 +11305,11 @@
   {
     "id": "usda-potato-soup",
     "title": "Potato Soup",
-    "protein": "fish",
+    "protein": "vegetarian",
     "proteins": [
-      "fish"
+      "vegetarian"
     ],
-    "budget": 3,
+    "budget": 1,
     "difficulty": 3,
     "timeMin": 25,
     "servings": 6,
@@ -13353,12 +11641,11 @@
   {
     "id": "usda-pumpkin-soup",
     "title": "Pumpkin Soup",
-    "protein": "chicken",
+    "protein": "beans",
     "proteins": [
-      "chicken",
-      "tuna"
+      "beans"
     ],
-    "budget": 3,
+    "budget": 1,
     "difficulty": 1,
     "timeMin": 25,
     "servings": 4,
@@ -13482,42 +11769,6 @@
       "grains",
       "protein-foods",
       "vegetables"
-    ]
-  },
-  {
-    "id": "usda-purple-cow",
-    "title": "Purple Cow",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 30,
-    "servings": 3,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/purple-cow",
-    "image": "",
-    "ingredients": [
-      "6 us fluid ounces grape juice (frozen)",
-      "1 cup water (cold)",
-      "1/3 cup milk (nonfat, dry)",
-      "1 teaspoon vanilla",
-      "1 cup ice (or more)"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Place all ingredients in blender or food processor.",
-      "Secure lid and blend until smooth.",
-      "Serve immediately."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "dairy",
-      "fruits"
     ]
   },
   {
@@ -13748,10 +11999,10 @@
   {
     "id": "usda-quick-chili",
     "title": "Quick Chili",
-    "protein": "beef",
+    "protein": "ground-beef",
     "proteins": [
-      "beef",
-      "ground-beef"
+      "ground-beef",
+      "beef"
     ],
     "budget": 2,
     "difficulty": 2,
@@ -13790,10 +12041,10 @@
   {
     "id": "usda-quick-skillet-lasagna",
     "title": "Quick Skillet Lasagna",
-    "protein": "beef",
+    "protein": "ground-beef",
     "proteins": [
-      "beef",
-      "ground-beef"
+      "ground-beef",
+      "beef"
     ],
     "budget": 3,
     "difficulty": 3,
@@ -13890,7 +12141,7 @@
     "proteins": [
       "beans"
     ],
-    "budget": 3,
+    "budget": 1,
     "difficulty": 3,
     "timeMin": 11,
     "servings": 4,
@@ -14161,8 +12412,7 @@
     "title": "Roast Turkey Breast with Rosemary, Sage, and Thyme",
     "protein": "turkey",
     "proteins": [
-      "turkey",
-      "chicken"
+      "turkey"
     ],
     "budget": 2,
     "difficulty": 2,
@@ -14249,10 +12499,9 @@
     "title": "Roasted Pork Tacos with Pico de Gallo",
     "protein": "pork",
     "proteins": [
-      "pork",
-      "steak"
+      "pork"
     ],
-    "budget": 5,
+    "budget": 4,
     "difficulty": 2,
     "timeMin": 28,
     "servings": 12,
@@ -14542,39 +12791,6 @@
     ]
   },
   {
-    "id": "usda-salt-free-all-purpose-blend",
-    "title": "Salt-free All Purpose Blend",
-    "protein": "fish",
-    "proteins": [
-      "fish"
-    ],
-    "budget": 2,
-    "difficulty": 1,
-    "timeMin": 25,
-    "servings": 4,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/salt-free-all-purpose-blend",
-    "image": "",
-    "ingredients": [
-      "2 tablespoons dried onion",
-      "2 tablespoons garlic powder",
-      "1 tablespoon paprika",
-      "1 1/2 teaspoons thyme",
-      "1/4 teaspoon black pepper"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Mix all ingredients in a small bowl, using a spoon.",
-      "Place mix into a container that allows you to shake to dispense."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish"
-    ]
-  },
-  {
     "id": "usda-sanchico-tuna-salad",
     "title": "Sanchico Tuna Salad",
     "protein": "tuna",
@@ -14615,67 +12831,11 @@
     ]
   },
   {
-    "id": "usda-sarahs-green-bean-casserole",
-    "title": "Sarah’s Green Bean Casserole",
-    "protein": "beans",
-    "proteins": [
-      "beans"
-    ],
-    "budget": 1,
-    "difficulty": 3,
-    "timeMin": 40,
-    "servings": 8,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/sarahs-green-bean-casserole",
-    "image": "",
-    "ingredients": [
-      "4 cups fresh green beans (trimmed)",
-      "1 cup onion (diced)",
-      "2 cups mushrooms (diced)",
-      "1 tablespoon butter",
-      "2 tablespoons flour",
-      "1 cup skim milk",
-      "1 tablespoon Worcestershire sauce",
-      "1/8 teaspoon black pepper",
-      "1/8 teaspoon garlic powder",
-      "3/4 teaspoon salt",
-      "16 low sodium whole wheat crackers",
-      "1 teaspoon olive oil",
-      "1/2 teaspoon onion powder"
-    ],
-    "steps": [
-      "Preheat the oven to 350 °F. Blanch the green beans in boiling water for about 4 minutes for crisper beans or longer for a softer texture.",
-      "Then plunge in ice water.",
-      "Drain and set aside.",
-      "Place diced onions and mushrooms in a microwaveable bowl and microwave for about 2 1/2 minutes on high to soften.",
-      "Set aside.",
-      "Melt the butter over medium heat.",
-      "Once melted, stir in flour with a whisk and cook for about 1 minute (continuously whisking).",
-      "Whisk in the milk and cook over low heat until you have a thick white sauce.",
-      "Stir in Worcestershire sauce, garlic powder, black pepper, and salt.",
-      "Stir the drained green beans, onions, and mushrooms into the white sauce (including any liquid with the onions and mushrooms).",
-      "Pour into a casserole dish sprayed with nonstick spray.",
-      "Crush the crackers and toss cracker crumbs with olive oil and onion powder.",
-      "Sprinkle over the top of the casserole.",
-      "Bake at 350 °F for about 30 minutes or until crackers are golden brown."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "dairy",
-      "grains",
-      "vegetables"
-    ]
-  },
-  {
     "id": "usda-sarahs-spicy-curry-turkey-soup",
     "title": "Sarah’s Spicy Curry Turkey Soup",
     "protein": "turkey",
     "proteins": [
-      "turkey",
-      "chicken"
+      "turkey"
     ],
     "budget": 3,
     "difficulty": 3,
@@ -14727,11 +12887,9 @@
     "title": "Sardine, Cucumber, and Tomato Sandwich",
     "protein": "fish",
     "proteins": [
-      "fish",
-      "salmon",
-      "tuna"
+      "fish"
     ],
-    "budget": 4,
+    "budget": 3,
     "difficulty": 2,
     "timeMin": 55,
     "servings": 4,
@@ -14809,10 +12967,10 @@
   {
     "id": "usda-savory-spicy-ground-beef-succotash",
     "title": "Savory and Spicy Ground Beef & Succotash",
-    "protein": "beef",
+    "protein": "ground-beef",
     "proteins": [
-      "beef",
-      "ground-beef"
+      "ground-beef",
+      "beef"
     ],
     "budget": 3,
     "difficulty": 2,
@@ -14850,10 +13008,10 @@
   {
     "id": "usda-savory-meatloaf-muffins",
     "title": "Savory Meatloaf Muffins",
-    "protein": "beef",
+    "protein": "ground-beef",
     "proteins": [
-      "beef",
-      "ground-beef"
+      "ground-beef",
+      "beef"
     ],
     "budget": 3,
     "difficulty": 1,
@@ -14885,39 +13043,6 @@
       "dairy",
       "grains",
       "protein-foods"
-    ]
-  },
-  {
-    "id": "usda-scallion-rice",
-    "title": "Scallion Rice",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 30,
-    "servings": 5,
-    "style": "Asian",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/scallion-rice",
-    "image": "",
-    "ingredients": [
-      "4 1/2 cups brown rice, cooked in unsalted water",
-      "1 1/2 teaspoons low-sodium bouillon granules",
-      "1/4 cup scallions, chopped"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Cook rice according to directions on the package.",
-      "Combine the cooked rice, bouillon granules, and scallions and mix well.",
-      "Measure 1-cup portions and serve."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "side-dish",
-      "grains"
     ]
   },
   {
@@ -14988,8 +13113,8 @@
     "protein": "tofu",
     "proteins": [
       "tofu",
-      "eggs",
-      "beans"
+      "beans",
+      "eggs"
     ],
     "budget": 1,
     "difficulty": 3,
@@ -15029,49 +13154,13 @@
     ]
   },
   {
-    "id": "usda-shirini",
-    "title": "Shirini",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 30,
-    "servings": 6,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/shirini",
-    "image": "",
-    "ingredients": [
-      "1 1/4 cups granulated sugar",
-      "1/2 cup water",
-      "4 winter squash (1 1/4 pounds of butternut, acorn, or pumpkin)",
-      "1/2 cup chopped walnuts",
-      "1/2 teaspoon cinnamon (optional)"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Boil the sugar and water until it forms a thick syrup in a medium saucepan.",
-      "Wash the pumpkin, peel it, remove the seeds, cut into pieces, and cook in the syrup until it is very thick and almost all absorbed.",
-      "Arrange the pumpkin on a plate and decorate with walnuts and cinnamon (optional)."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "protein-foods",
-      "vegetables"
-    ]
-  },
-  {
     "id": "usda-shorba-lamb-and-peanut-soup",
     "title": "Shorba (Lamb and Peanut Soup)",
     "protein": "lamb",
     "proteins": [
       "lamb",
-      "beef",
-      "ribs"
+      "ribs",
+      "beef"
     ],
     "budget": 4,
     "difficulty": 2,
@@ -15289,8 +13378,7 @@
     "title": "Skillet Catfish",
     "protein": "catfish",
     "proteins": [
-      "catfish",
-      "fish"
+      "catfish"
     ],
     "budget": 3,
     "difficulty": 2,
@@ -15480,11 +13568,11 @@
   {
     "id": "usda-skillet-pasta-dinner",
     "title": "Skillet Pasta Dinner",
-    "protein": "turkey",
+    "protein": "sausage",
     "proteins": [
+      "sausage",
       "turkey",
-      "beef",
-      "sausage"
+      "beef"
     ],
     "budget": 3,
     "difficulty": 2,
@@ -15793,11 +13881,11 @@
   {
     "id": "usda-slow-cooker-lentil-soup",
     "title": "Slow Cooker Lentil Soup",
-    "protein": "beef",
+    "protein": "beans",
     "proteins": [
-      "beef"
+      "beans"
     ],
-    "budget": 3,
+    "budget": 1,
     "difficulty": 1,
     "timeMin": 240,
     "servings": 6,
@@ -15878,9 +13966,8 @@
   {
     "id": "usda-slow-cook-barbecue",
     "title": "Slow-Cook Barbecue",
-    "protein": "beef",
+    "protein": "steak",
     "proteins": [
-      "beef",
       "steak"
     ],
     "budget": 4,
@@ -15970,8 +14057,7 @@
     "title": "Smoky Mustard-Maple Salmon",
     "protein": "salmon",
     "proteins": [
-      "salmon",
-      "fish"
+      "salmon"
     ],
     "budget": 4,
     "difficulty": 1,
@@ -16283,44 +14369,6 @@
     ]
   },
   {
-    "id": "usda-spicy-cucumber-orange-salad",
-    "title": "Spicy Cucumber & Orange Salad",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 2,
-    "timeMin": 40,
-    "servings": 4,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/spicy-cucumber-orange-salad",
-    "image": "",
-    "ingredients": [
-      "2 medium cucumbers",
-      "2 medium oranges",
-      "1 medium lemon or lime, juiced",
-      "1/2 teaspoon chili powder",
-      "1/4 teaspoon salt"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Wash the cucumbers, oranges and lemon or lime under cold running water.",
-      "Slice the cucumbers.",
-      "Peel and cut the oranges into small pieces.",
-      "Place cucumber slices and orange pieces in a medium size bowl.",
-      "Add chili powder, lemon or lime juice and salt."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "salad",
-      "fruits",
-      "vegetables"
-    ]
-  },
-  {
     "id": "usda-spicy-oven-baked-chicken",
     "title": "Spicy Oven-Baked Chicken",
     "protein": "chicken",
@@ -16409,11 +14457,11 @@
   {
     "id": "usda-spinach-and-meat-cakes",
     "title": "Spinach and Meat Cakes",
-    "protein": "turkey",
+    "protein": "ground-beef",
     "proteins": [
+      "ground-beef",
       "turkey",
-      "beef",
-      "ground-beef"
+      "beef"
     ],
     "budget": 3,
     "difficulty": 2,
@@ -16506,9 +14554,9 @@
   {
     "id": "usda-split-pea-soup",
     "title": "Split Pea Soup",
-    "protein": "ham",
+    "protein": "beans",
     "proteins": [
-      "ham"
+      "beans"
     ],
     "budget": 1,
     "difficulty": 2,
@@ -16876,11 +14924,11 @@
   {
     "id": "usda-stove-top-potato-and-cabbage-casserole",
     "title": "Stove Top Potato and Cabbage Casserole",
-    "protein": "chicken",
+    "protein": "vegetarian",
     "proteins": [
-      "chicken"
+      "vegetarian"
     ],
-    "budget": 2,
+    "budget": 1,
     "difficulty": 2,
     "timeMin": 15,
     "servings": 5,
@@ -16919,10 +14967,10 @@
   {
     "id": "usda-stuffed-bell-peppers",
     "title": "Stuffed Bell Peppers",
-    "protein": "beef",
+    "protein": "ground-beef",
     "proteins": [
-      "beef",
-      "ground-beef"
+      "ground-beef",
+      "beef"
     ],
     "budget": 3,
     "difficulty": 2,
@@ -17104,146 +15152,13 @@
     ]
   },
   {
-    "id": "usda-sunshine-rice",
-    "title": "Sunshine Rice",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 2,
-    "timeMin": 20,
-    "servings": 4,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/sunshine-rice",
-    "image": "",
-    "ingredients": [
-      "1 1/2 tablespoons vegetable oil (or cooking oil of choice)",
-      "1 1/4 cups celery, finely chopped, with leaves",
-      "1 1/2 cups onion, finely chopped",
-      "1 cup water",
-      "1/2 cup orange juice",
-      "2 tablespoons lemon juice",
-      "1 dash hot sauce",
-      "1 cup long-grain white rice, dry",
-      "1/4 cup almonds, slivered"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Heat oil in medium saucepan.",
-      "Add celery and onions and saute until tender, about 10 minutes.",
-      "Add water, orange and lemon juice, and hot sauce.",
-      "Bring to a boil.",
-      "Stir in rice and bring back to a boil.",
-      "Let stand covered until rice is tender and liquid is absorbed.",
-      "Stir in almonds.",
-      "Serve immediately as a side dish for a fish entree."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "fruits",
-      "grains",
-      "protein-foods",
-      "vegetables"
-    ]
-  },
-  {
-    "id": "usda-sweet-potato-casserole",
-    "title": "Sweet Potato Casserole",
-    "protein": "eggs",
-    "proteins": [
-      "eggs"
-    ],
-    "budget": 1,
-    "difficulty": 3,
-    "timeMin": 50,
-    "servings": 10,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/sweet-potato-casserole",
-    "image": "",
-    "ingredients": [
-      "4 sweet potatoes (about 1 lb)",
-      "3 egg whites",
-      "1/2 cup sugar",
-      "1 can evaporated milk, nonfat (12 ounce)",
-      "1 tablespoon vanilla extract",
-      "1 teaspoon cinnamon",
-      "1/2 teaspoon nutmeg",
-      "1/2 teaspoon ginger"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Rinse sweet potatoes in cold running water and pierce with a fork.",
-      "Microwave sweet potatoes on full power until tender, about 15 minutes.",
-      "Turn them half way during baking.",
-      "Preheat oven to 400 degrees.",
-      "Remove skin from sweet potatoes and mash with hand beaters or food processor.",
-      "Add the rest of the ingredients and mix until smooth.",
-      "Pour mixture in an 8 inch baking dish.",
-      "Bake until casserole is firm in the center, about 40 minutes.",
-      "Remove pan from oven.",
-      "Allow to stand for 5 minutes then cut into 10 squares.",
-      "Serve hot.",
-      "Refrigerate leftovers."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "dairy",
-      "vegetables"
-    ]
-  },
-  {
-    "id": "usda-sweet-potato-casserole-0",
-    "title": "Sweet Potato Casserole",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 2,
-    "timeMin": 30,
-    "servings": 6,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/sweet-potato-casserole-0",
-    "image": "",
-    "ingredients": [
-      "2 tablespoons 1% low fat milk",
-      "1 1/2 teaspoons brown sugar",
-      "1 teaspoon ground cinnamon",
-      "1/4 cup quick cooking oats, dry",
-      "2 3/4 cups low-sodium sweet potatoes, drained and chopped (about 15 ounces)"
-    ],
-    "steps": [
-      "Preheat oven to 350°F.",
-      "In a small bowl, combine milk, brown sugar, cinnamon, and oatmeal.",
-      "Mix well and set aside.",
-      "In a medium-sized baking pan, add the sweet potatoes so that they cover the bottom of the pan.",
-      "Add the oatmeal mixture on top of the sweet potatoes.",
-      "Bake for 20 minutes.",
-      "Serve hot or refrigerate and serve cold."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "vegetables"
-    ]
-  },
-  {
     "id": "usda-sweet-potato-harvest-salad",
     "title": "Sweet Potato Harvest Salad",
-    "protein": "chicken",
+    "protein": "vegetarian",
     "proteins": [
-      "chicken"
+      "vegetarian"
     ],
-    "budget": 2,
+    "budget": 1,
     "difficulty": 2,
     "timeMin": 20,
     "servings": 4,
@@ -17321,49 +15236,12 @@
     ]
   },
   {
-    "id": "usda-taco-flavored-potatoes",
-    "title": "Taco Flavored Potatoes",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 2,
-    "timeMin": 40,
-    "servings": 5,
-    "style": "Mexican",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/taco-flavored-potatoes",
-    "image": "",
-    "ingredients": [
-      "4 medium potatoes",
-      "2 tablespoons olive oil (or cooking oil of your choice)",
-      "2 tablespoons taco seasoning (1/2 package)",
-      "1/4 cup corn meal"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Preheat oven to 400 °F. Wash and scrub potatoes well.",
-      "Cut the potatoes in half, lengthwise and then into wedges.",
-      "Place potatoes in large mixing bowl, toss with the olive oil until potatoes are well coated.",
-      "Sprinkle the seasonings and corn meal over potatoes, toss again until coated.",
-      "Arrange the potatoes on a baking sheet.",
-      "Bake for approximately 30 minutes until potatoes are golden brown."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "vegetables"
-    ]
-  },
-  {
     "id": "usda-taco-salad",
     "title": "Taco Salad",
-    "protein": "beef",
+    "protein": "ground-beef",
     "proteins": [
-      "beef",
-      "ground-beef"
+      "ground-beef",
+      "beef"
     ],
     "budget": 3,
     "difficulty": 2,
@@ -17409,10 +15287,10 @@
   {
     "id": "usda-taco-soup",
     "title": "Taco Soup",
-    "protein": "beef",
+    "protein": "ground-beef",
     "proteins": [
-      "beef",
-      "ground-beef"
+      "ground-beef",
+      "beef"
     ],
     "budget": 3,
     "difficulty": 1,
@@ -17450,10 +15328,10 @@
   {
     "id": "usda-tastee-burgers",
     "title": "Tastee Burgers",
-    "protein": "eggs",
+    "protein": "beans",
     "proteins": [
-      "eggs",
-      "beans"
+      "beans",
+      "eggs"
     ],
     "budget": 1,
     "difficulty": 3,
@@ -17605,11 +15483,11 @@
   {
     "id": "usda-tasty-low-fat-cream-soup",
     "title": "Tasty Low-Fat Cream Soup",
-    "protein": "chicken",
+    "protein": "vegetarian",
     "proteins": [
-      "chicken"
+      "vegetarian"
     ],
-    "budget": 2,
+    "budget": 1,
     "difficulty": 3,
     "timeMin": 12,
     "servings": 2,
@@ -17778,13 +15656,13 @@
   {
     "id": "usda-tex-mex-skillet",
     "title": "Tex-Mex Skillet",
-    "protein": "chicken",
+    "protein": "ground-beef",
     "proteins": [
+      "ground-beef",
       "chicken",
-      "turkey",
-      "beef"
+      "turkey"
     ],
-    "budget": 4,
+    "budget": 3,
     "difficulty": 3,
     "timeMin": 20,
     "servings": 8,
@@ -17851,10 +15729,9 @@
     "title": "Thai Pineapple and Chicken",
     "protein": "chicken",
     "proteins": [
-      "chicken",
-      "fish"
+      "chicken"
     ],
-    "budget": 3,
+    "budget": 2,
     "difficulty": 3,
     "timeMin": 15,
     "servings": 4,
@@ -17988,10 +15865,10 @@
   {
     "id": "usda-three-sisters-stew",
     "title": "Three Sisters Stew",
-    "protein": "beef",
+    "protein": "ground-beef",
     "proteins": [
-      "beef",
-      "ground-beef"
+      "ground-beef",
+      "beef"
     ],
     "budget": 4,
     "difficulty": 2,
@@ -18126,11 +16003,11 @@
   {
     "id": "usda-tofu-tomato-and-spinach-soup",
     "title": "Tofu, Tomato, and Spinach Soup",
-    "protein": "chicken",
+    "protein": "tofu",
     "proteins": [
-      "chicken"
+      "tofu"
     ],
-    "budget": 2,
+    "budget": 1,
     "difficulty": 3,
     "timeMin": 75,
     "servings": 4,
@@ -18273,11 +16150,11 @@
   {
     "id": "usda-tortellini-soup",
     "title": "Tortellini Soup",
-    "protein": "chicken",
+    "protein": "beans",
     "proteins": [
-      "chicken"
+      "beans"
     ],
-    "budget": 3,
+    "budget": 2,
     "difficulty": 2,
     "timeMin": 120,
     "servings": 6,
@@ -19009,47 +16886,6 @@
     ]
   },
   {
-    "id": "usda-turkey-pinwheel-appetizers",
-    "title": "Turkey Pinwheel Appetizers",
-    "protein": "turkey",
-    "proteins": [
-      "turkey"
-    ],
-    "budget": 1,
-    "difficulty": 2,
-    "timeMin": 180,
-    "servings": 16,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/turkey-pinwheel-appetizers",
-    "image": "",
-    "ingredients": [
-      "8 ounces cream cheese, low-fat (garlic and herb)",
-      "6 flour tortillas (8 inch)",
-      "6 slices turkey (low sodium)",
-      "3 Roma tomatoes (medium, chopped)",
-      "3 cups baby spinach leaves"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "Place tortillas on microwaveable plate or paper towel; microwave uncovered on HIGH 10 to 15 seconds to soften.",
-      "Spread about 2 tablespoons cream cheese over each tortilla.",
-      "Top with a slice of turkey, chopped tomatoes, and spinach.",
-      "Roll up lightly; then wrap in plastic wrap.",
-      "Refrigerate 2 to 3 hours to blend flavors.",
-      "Cut each roll into eight 1-inch slices.",
-      "Arrange with cut side down on serving plate."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "grains",
-      "protein-foods",
-      "vegetables"
-    ]
-  },
-  {
     "id": "usda-turkey-potato-salad",
     "title": "Turkey Potato Salad",
     "protein": "turkey",
@@ -19141,8 +16977,8 @@
     "protein": "turkey",
     "proteins": [
       "turkey",
-      "beef",
-      "ground-beef"
+      "ground-beef",
+      "beef"
     ],
     "budget": 4,
     "difficulty": 3,
@@ -19302,10 +17138,10 @@
   {
     "id": "usda-two-bean-chili",
     "title": "Two Bean Chili",
-    "protein": "beef",
+    "protein": "ground-beef",
     "proteins": [
-      "beef",
-      "ground-beef"
+      "ground-beef",
+      "beef"
     ],
     "budget": 3,
     "difficulty": 1,
@@ -19390,8 +17226,7 @@
     "title": "Vegetable and Turkey Stir Fry",
     "protein": "turkey",
     "proteins": [
-      "turkey",
-      "chicken"
+      "turkey"
     ],
     "budget": 2,
     "difficulty": 2,
@@ -19802,7 +17637,7 @@
     "proteins": [
       "beans"
     ],
-    "budget": 3,
+    "budget": 1,
     "difficulty": 3,
     "timeMin": 15,
     "servings": 4,
@@ -19892,11 +17727,11 @@
   {
     "id": "usda-veggie-chow-mein",
     "title": "Veggie Chow Mein",
-    "protein": "chicken",
+    "protein": "eggs",
     "proteins": [
-      "chicken"
+      "eggs"
     ],
-    "budget": 2,
+    "budget": 1,
     "difficulty": 3,
     "timeMin": 13,
     "servings": 6,
@@ -20039,11 +17874,9 @@
     "title": "Veggie Stir-Fry with Turkey",
     "protein": "turkey",
     "proteins": [
-      "turkey",
-      "chicken",
-      "fish"
+      "turkey"
     ],
-    "budget": 3,
+    "budget": 2,
     "difficulty": 1,
     "timeMin": 15,
     "servings": 6,
@@ -20125,48 +17958,6 @@
     ]
   },
   {
-    "id": "usda-very-berry-muesli",
-    "title": "Very Berry Muesli",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 2,
-    "timeMin": 240,
-    "servings": 5,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/very-berry-muesli",
-    "image": "",
-    "ingredients": [
-      "1 cup low-fat fruit yogurt",
-      "1 cup old fashioned rolled oats, uncooked",
-      "1/2 cup fat-free (skim) milk, or 1% milk",
-      "1/2 cup dried fruit (try raisins, apricots, dates)",
-      "1/2 cup apples, chopped (about 1/3 of a medium apple)",
-      "1/2 cup frozen blueberries",
-      "1/4 cup toasted walnuts, chopped"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "In medium bowl, mix oats, yogurt, and milk.",
-      "Cover and refrigerate for 6 to 12 hours.",
-      "Add dried and fresh fruit, and mix gently.",
-      "Serve scoops of muesli in small dishes.",
-      "Sprinkle each serving with chopped nuts."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish",
-      "dairy",
-      "fruits",
-      "grains",
-      "protein-foods"
-    ]
-  },
-  {
     "id": "usda-vidalia-onion-and-tomato-salad-grilled-tuna",
     "title": "Vidalia Onion and Tomato Salad with Grilled Tuna",
     "protein": "tuna",
@@ -20219,11 +18010,12 @@
   {
     "id": "usda-walleye-chowder",
     "title": "Walleye Chowder",
-    "protein": "bacon",
+    "protein": "fish",
     "proteins": [
+      "fish",
       "bacon"
     ],
-    "budget": 2,
+    "budget": 3,
     "difficulty": 3,
     "timeMin": 40,
     "servings": 4,
@@ -20266,53 +18058,13 @@
     ]
   },
   {
-    "id": "usda-watermelon-gazpacho",
-    "title": "Watermelon Gazpacho",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 1,
-    "timeMin": 30,
-    "servings": 4,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/watermelon-gazpacho",
-    "image": "",
-    "ingredients": [
-      "4 cups cubed, seeded watermelon (divided)",
-      "1 cucumber (peeled, coarsely chopped, divided)",
-      "1 clove garlic (minced)",
-      "2 tablespoons chopped onion",
-      "2 teaspoons lime juice",
-      "1 teaspoon olive oil",
-      "1 tablespoon chopped fresh basil",
-      "1/8 teaspoon ground black pepper",
-      "1/2 jalapeño pepper, seeded and chopped (optional)"
-    ],
-    "steps": [
-      "In a small bowl, mix 1 cup of cubed watermelon and 1/2 of chopped cucumber; set aside.",
-      "Process remaining ingredients in a food processor or blender until puréed.",
-      "Transfer all ingredients to a large bowl and stir.",
-      "Refrigerate until ready to serve."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "soup",
-      "fruits",
-      "vegetables"
-    ]
-  },
-  {
     "id": "usda-wheat-berry-chili",
     "title": "Wheat Berry Chili",
-    "protein": "beef",
+    "protein": "beans",
     "proteins": [
-      "beef"
+      "beans"
     ],
-    "budget": 3,
+    "budget": 1,
     "difficulty": 1,
     "timeMin": 70,
     "servings": 8,
@@ -20446,45 +18198,6 @@
       "grains",
       "protein-foods",
       "vegetables"
-    ]
-  },
-  {
-    "id": "usda-wobbly-wonders",
-    "title": "Wobbly Wonders",
-    "protein": "vegetarian",
-    "proteins": [
-      "vegetarian"
-    ],
-    "budget": 1,
-    "difficulty": 3,
-    "timeMin": 40,
-    "servings": 20,
-    "style": "American home",
-    "source": "USDA MyPlate Kitchen",
-    "sourceUrl": "https://www.myplate.gov/recipes/wobbly-wonders",
-    "image": "",
-    "ingredients": [
-      "3 tablespoons flavored gelatin, choose your favorite",
-      "2 cups boiling water",
-      "1 1/2 cups 1% low-fat milk",
-      "1 package (3.5 ounces) vanilla instant pudding"
-    ],
-    "steps": [
-      "Wash hands with soap and water.",
-      "In a medium bowl, dissolve gelatin in boiling water.",
-      "Cool at least 30 minutes.",
-      "Pour milk into large mixing bowl and add pudding mix.",
-      "Using an electric mixer, beat 1 minute.",
-      "Gradually add and beat in gelatin mixture.",
-      "Pour into a 9x13 inch baking pan.",
-      "Chill in fridge for several hours.",
-      "Cut fun shapes with cookie cutters or knife.",
-      "Store in refrigerator."
-    ],
-    "tags": [
-      "usda",
-      "public-domain",
-      "main-dish"
     ]
   },
   {

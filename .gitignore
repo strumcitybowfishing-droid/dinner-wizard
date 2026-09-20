@@ -1,6 +1,9 @@
 data/_cache/
 data/_probe*
 data/_harvest_usda.py
+data/_list_titles.py
+data/_titles.txt
+tools/__pycache__/
 __pycache__/
 *.pyc
 .DS_Store

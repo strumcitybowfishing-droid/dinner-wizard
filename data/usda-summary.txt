@@ -1,56 +1,104 @@
 USDA MyPlate Kitchen harvest
 Source: USDA MyPlate Kitchen (US government public domain)
-List API: https://myplate.food/api/v1/recipes (1072 cards, reported total 1072)
+List API: https://myplate.food/api/v1/recipes (1072 cards total in collection)
 Details: JSON-LD / HTML from https://myplate.food/recipes/{slug}
 Canonical sourceUrl: https://www.myplate.gov/recipes/{slug}
-Official myplate.gov fetches returned HTTP 403; myplate.gov Kitchen was retired Jan 2026.
+Official myplate.gov fetches returned HTTP 403 (site retired Jan 2026).
 
-Complete recipes (ingredients AND steps): 460
-Dinner-like candidates: 460
-Skipped incomplete: 0
-Skipped after detail (not dinner): 0
-Fetch errors: 0
+Complete dinner-like recipes (ingredients AND steps): 403
+Fetched then dropped as snack/dessert/beverage/seasoning/side: 57
+All kept recipes have both ingredients and steps.
 
-List API categories:
-  Main dish: 318
-  Side dish: 190
-  Salad: 135
-  Soup: 107
-  Sauce: 99
-  Dessert: 81
-  Breakfast: 53
-  Bread: 43
-  Snack: 26
-  Beverage: 20
+Collection categories on the list API:
+  Main dish: 318, Soup: 107, Salad: 135, Side dish: 190,
+  Sauce: 99, Dessert: 81, Breakfast: 53, Bread: 43, Snack: 26, Beverage: 20
 
 Kept by category tag:
-  main-dish: 308
-  soup: 106
-  salad: 40
-  side-dish: 5
-  unknown: 1
+  main-dish: 267
+  soup: 98
+  salad: 36
+  side-dish: 2
 
 Primary protein counts:
-  chicken: 133
-  vegetarian: 92
-  beef: 55
-  beans: 43
-  turkey: 29
-  fish: 20
+  chicken: 104
+  vegetarian: 58
+  beans: 52
+  ground-beef: 32
+  beef: 28
+  turkey: 24
+  fish: 21
   tuna: 19
-  eggs: 18
   pork: 12
+  eggs: 11
   salmon: 10
-  ham: 6
-  tofu: 5
-  steak: 5
+  ham: 7
+  tofu: 6
+  steak: 6
+  sausage: 4
   catfish: 3
   shrimp: 3
-  sausage: 2
-  ground-beef: 2
   trout: 1
-  lamb: 1
   bacon: 1
+  lamb: 1
+
+Dropped titles:
+  usda-avocado-pita-pockets | Avocado Pita Pockets
+  usda-baked-bananas | Baked Bananas
+  usda-basic-soup-and-sauce-mix | Basic Soup and Sauce Mix
+  usda-bell-pepper-and-apple-coleslaw | Bell Pepper and Apple Coleslaw
+  usda-blueberry-baked-oats | Blueberry Baked Oats
+  usda-bronco-beans | Bronco Beans
+  usda-butterfly-bite | Butterfly Bite
+  usda-chili-and-spice-seasoning | Chili and Spice Seasoning
+  usda-chili-cheese-hominy | Chili Cheese Hominy
+  usda-chili-popcorn | Chili Popcorn
+  usda-chilled-blueberry-soup | Chilled Blueberry Soup
+  usda-chilled-cantaloupe-soup | Chilled Cantaloupe Soup
+  usda-chocolate-peanut-butter-frozen-bars | Chocolate Peanut Butter Frozen Bars
+  usda-cinnamon-raisin-almond-balls | Cinnamon Raisin Almond Balls
+  usda-corn-and-bean-medley | Corn and Bean Medley
+  usda-corn-and-green-chili-salad | Corn and Green Chili Salad
+  usda-corn-bread | Corn Bread
+  usda-corn-casserole | Corn Casserole
+  usda-corn-casserole-0 | Corn Casserole
+  usda-frozen-pear-pops | Frozen Pear Pops
+  usda-fruit-dippers | Fruit Dippers
+  usda-fruit-milk-shakes | Fruit Milk Shakes
+  usda-fruit-pizza | Fruit Pizza
+  usda-fruit-pizza-go | Fruit Pizza To Go
+  usda-fruit-salad-jicama | Fruit Salad with Jicama
+  usda-fruity-thai-pita-pockets | Fruity Thai Pita Pockets
+  usda-fudgy-fruit | Fudgy Fruit
+  usda-green-bean-and-mushroom-medley | Green Bean and Mushroom Medley
+  usda-harvest-vegetable-salad | Harvest Vegetable Salad
+  usda-hiding-rabbits | Hiding Rabbits
+  usda-homemade-pizza-crust | Homemade Pizza Crust
+  usda-honey-milk-balls | Honey Milk Balls
+  usda-hot-n-spicy-seasoning | Hot 'N Spicy Seasoning
+  usda-mango-cucumber-soup | Mango Cucumber Soup
+  usda-mock-sour-cream | Mock Sour Cream
+  usda-orange-cow | Orange Cow
+  usda-fiesta-mix | Party Mix
+  usda-peanut-butter-n-fruit-wich | Peanut Butter 'n Fruit-wich
+  usda-peanut-butter-and-apple-wraps | Peanut Butter and Apple Wraps
+  usda-peanut-butter-bananas | Peanut Butter Bananas
+  usda-peanut-peach-n-pineapple-wrap | Peanut, Peach, N Pineapple Wrap
+  usda-pear-pbj-bouquet | Pear PB&J Bouquet
+  usda-pears-pod | Pears in a Pod
+  usda-purple-cow | Purple Cow
+  usda-salt-free-all-purpose-blend | Salt-free All Purpose Blend
+  usda-sarahs-green-bean-casserole | Sarah’s Green Bean Casserole
+  usda-scallion-rice | Scallion Rice
+  usda-shirini | Shirini
+  usda-spicy-cucumber-orange-salad | Spicy Cucumber & Orange Salad
+  usda-sunshine-rice | Sunshine Rice
+  usda-sweet-potato-casserole | Sweet Potato Casserole
+  usda-sweet-potato-casserole-0 | Sweet Potato Casserole
+  usda-taco-flavored-potatoes | Taco Flavored Potatoes
+  usda-turkey-pinwheel-appetizers | Turkey Pinwheel Appetizers
+  usda-very-berry-muesli | Very Berry Muesli
+  usda-watermelon-gazpacho | Watermelon Gazpacho
+  usda-wobbly-wonders | Wobbly Wonders
 
 Sample titles:
   2-Step Chicken [chicken] ings=4 steps=7 usda-2-step-chicken
@@ -64,9 +112,7 @@ Sample titles:
   Apricot & Lemon Chicken [chicken] ings=5 steps=7 usda-apricot-lemon-chicken
   Asian Mango Chicken Wraps [chicken] ings=11 steps=9 usda-asian-mango-chicken-wraps
   Asparagus, Mandarin Orange, Chicken, and Rice [chicken] ings=10 steps=6 usda-asparagus-mandarin-orange-chicken-and-rice
-  Avocado Pita Pockets [beans] ings=5 steps=4 usda-avocado-pita-pockets
   Avocado, Potato, and Grilled Chicken Salad [chicken] ings=10 steps=5 usda-avocado-potato-and-grilled-chicken-salad
-  Baked Bananas [vegetarian] ings=5 steps=5 usda-baked-bananas
   Baked Chicken [chicken] ings=4 steps=4 usda-baked-chicken
   Baked Chicken Nuggets [chicken] ings=6 steps=15 usda-baked-chicken-nuggets
   Baked Chicken with Vegetables [chicken] ings=7 steps=7 usda-baked-chicken-vegetables
@@ -77,4 +123,11 @@ Sample titles:
   Baked Fish with Tomatoes, Peppers, and Onions [fish] ings=5 steps=5 usda-baked-fish-tomatoes-peppers-onions
   Baked Lemon Chicken [chicken] ings=9 steps=9 usda-baked-lemon-chicken
   Baked Lentils Casserole [beans] ings=9 steps=10 usda-baked-lentils-casserole
-  Baked Meatballs [turkey] ings=7 steps=7 usda-baked-meatballs
+  Baked Meatballs [ground-beef] ings=7 steps=7 usda-baked-meatballs
+  Baked Parmesan Fish [fish] ings=8 steps=10 usda-baked-parmesan-fish
+  Baked Pork Chops [pork] ings=6 steps=8 usda-baked-pork-chops
+  Baked Salmon with Herbs and Lemon [salmon] ings=9 steps=8 usda-baked-salmon-herbs-lemon
+  Baked Tofu [tofu] ings=5 steps=14 usda-baked-tofu
+  Baked Trout [trout] ings=9 steps=4 usda-baked-trout
+  Barley Jambalaya [turkey] ings=14 steps=26 usda-barley-jambalaya
+  BBQ Chicken Pizza [chicken] ings=5 steps=6 usda-bbq-chicken-pizza

@@ -1,0 +1,15 @@
+# NEW Render service for DINNER WIZARD only.
+# Do not point this at strumcity-line-dock. Do not reuse that service name.
+services:
+  - type: web
+    name: dinner-wizard
+    runtime: static
+    buildCommand: echo "DINNER WIZARD static"
+    staticPublishPath: .
+    headers:
+      - path: /data/*
+        name: Cache-Control
+        value: public, max-age=300
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=60
