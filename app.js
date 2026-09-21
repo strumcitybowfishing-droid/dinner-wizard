@@ -1727,7 +1727,7 @@ function renderGroceryBlock(recipe, factor) {
       '</div>' +
       '<ul class="grocery-list">' + rows + '</ul>' +
       (cart.approx ? '<p class="scale-note">' + cart.approx + ' item' + (cart.approx === 1 ? '' : 's') + ' were not an exact catalog match, so we estimated a pack and still added that money to the total.</p>' : '') +
-      '<p class="scale-note">Typical mid-2026 shelf prices for that chain’s common store-brand SKU. Not a live in-store tag.</p>' +
+      '<p class="scale-note">Typical U.S. store-brand shelf prices as of Sept 2026 (Walmart baseline, other chains scaled from BLS/USDA and national basket data). Not the live tag in your aisle — sales and zip codes still move the number.</p>' +
     '</section>'
   );
 }

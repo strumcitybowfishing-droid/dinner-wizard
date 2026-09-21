@@ -4,125 +4,138 @@
    Unknown recipe words still get an estimated SKU + approx price in the total.
    Prices are typical mid-2026 US shelf / club figures, not a live POS feed. */
 (function (root) {
+  /* Mult is vs typical Walmart store-brand shelf (1.00).
+     Sources: BLS/USDA meat & dairy 2026, grocery-tracker mid-2026 baskets,
+     Charlotte/TX sample shelves Sept 2026. Regional tags still vary. */
   const STORES = [
-    { id: 'walmart', label: 'Walmart', emoji: '⭐', mult: 0.90, family: 'regular', skuStyle: 'upc', prefix: '078742', brand: 'Great Value', search: 'https://www.walmart.com/search?q=' },
-    { id: 'aldi', label: 'Aldi', emoji: '🛒', mult: 0.84, family: 'regular', skuStyle: 'upc', prefix: '409910', brand: 'Aldi', search: 'https://www.aldi.us/results?q=' },
-    { id: 'sams', label: "Sam's Club", emoji: '🏷️', mult: 0.80, family: 'club', skuStyle: 'sams', prefix: '98', brand: "Member's Mark", search: 'https://www.samsclub.com/s/' },
-    { id: 'costco', label: 'Costco', emoji: '📦', mult: 0.78, family: 'club', skuStyle: 'item6', prefix: '', brand: 'Kirkland Signature', search: 'https://www.costco.com/CatalogSearch?keyword=' },
-    { id: 'kroger', label: 'Kroger', emoji: '🔵', mult: 1.00, family: 'regular', skuStyle: 'upc', prefix: '011110', brand: 'Kroger', search: 'https://www.kroger.com/search?query=' },
-    { id: 'heb', label: 'H-E-B', emoji: '🧡', mult: 0.96, family: 'regular', skuStyle: 'upc', prefix: '412201', brand: 'H-E-B', search: 'https://www.heb.com/search/?q=' },
-    { id: 'target', label: 'Target', emoji: '🎯', mult: 1.02, family: 'regular', skuStyle: 'upc', prefix: '085239', brand: 'Good & Gather', search: 'https://www.target.com/s?searchTerm=' },
-    { id: 'meijer', label: 'Meijer', emoji: '🛍️', mult: 0.98, family: 'regular', skuStyle: 'upc', prefix: '708820', brand: 'Meijer', search: 'https://www.meijer.com/shopping/search.html?query=' },
-    { id: 'foodlion', label: 'Food Lion', emoji: '🦁', mult: 0.92, family: 'regular', skuStyle: 'upc', prefix: '035826', brand: 'Food Lion', search: 'https://www.foodlion.com/search?q=' },
-    { id: 'publix', label: 'Publix', emoji: '💚', mult: 1.14, family: 'regular', skuStyle: 'upc', prefix: '041415', brand: 'Publix', search: 'https://www.publix.com/shop/search?searchTerm=' },
-    { id: 'safeway', label: 'Safeway', emoji: '🛒', mult: 1.10, family: 'regular', skuStyle: 'upc', prefix: '021130', brand: 'Signature Select', search: 'https://www.safeway.com/shop/search-results.html?q=' },
-    { id: 'albertsons', label: 'Albertsons', emoji: '🛒', mult: 1.10, family: 'regular', skuStyle: 'upc', prefix: '021130', brand: 'Signature Select', search: 'https://www.albertsons.com/shop/search-results.html?q=' },
-    { id: 'traderjoes', label: "Trader Joe's", emoji: '🌺', mult: 1.06, family: 'tj', skuStyle: 'item5', prefix: '', brand: "Trader Joe's", search: 'https://www.traderjoes.com/home/search?q=' },
-    { id: 'sprouts', label: 'Sprouts', emoji: '🌱', mult: 1.20, family: 'regular', skuStyle: 'upc', prefix: '646354', brand: 'Sprouts', search: 'https://shop.sprouts.com/store/sprouts/search?q=' },
-    { id: 'wholefoods', label: 'Whole Foods', emoji: '🥬', mult: 1.40, family: 'regular', skuStyle: 'upc', prefix: '099482', brand: '365', search: 'https://www.wholefoodsmarket.com/search?text=' }
+    { id: 'walmart', label: 'Walmart', emoji: '⭐', mult: 1.00, family: 'regular', skuStyle: 'upc', prefix: '078742', brand: 'Great Value', search: 'https://www.walmart.com/search?q=' },
+    { id: 'aldi', label: 'Aldi', emoji: '🛒', mult: 0.88, family: 'regular', skuStyle: 'upc', prefix: '409910', brand: 'Aldi', search: 'https://www.aldi.us/results?q=' },
+    { id: 'sams', label: "Sam's Club", emoji: '🏷️', mult: 0.86, family: 'club', skuStyle: 'sams', prefix: '98', brand: "Member's Mark", search: 'https://www.samsclub.com/s/' },
+    { id: 'costco', label: 'Costco', emoji: '📦', mult: 0.84, family: 'club', skuStyle: 'item6', prefix: '', brand: 'Kirkland Signature', search: 'https://www.costco.com/CatalogSearch?keyword=' },
+    { id: 'heb', label: 'H-E-B', emoji: '🧡', mult: 0.97, family: 'regular', skuStyle: 'upc', prefix: '412201', brand: 'H-E-B', search: 'https://www.heb.com/search/?q=' },
+    { id: 'foodlion', label: 'Food Lion', emoji: '🦁', mult: 0.93, family: 'regular', skuStyle: 'upc', prefix: '035826', brand: 'Food Lion', search: 'https://www.foodlion.com/search?q=' },
+    { id: 'meijer', label: 'Meijer', emoji: '🛍️', mult: 0.99, family: 'regular', skuStyle: 'upc', prefix: '708820', brand: 'Meijer', search: 'https://www.meijer.com/shopping/search.html?query=' },
+    { id: 'target', label: 'Target', emoji: '🎯', mult: 1.04, family: 'regular', skuStyle: 'upc', prefix: '085239', brand: 'Good & Gather', search: 'https://www.target.com/s?searchTerm=' },
+    { id: 'kroger', label: 'Kroger', emoji: '🔵', mult: 1.12, family: 'regular', skuStyle: 'upc', prefix: '011110', brand: 'Kroger', search: 'https://www.kroger.com/search?query=' },
+    { id: 'traderjoes', label: "Trader Joe's", emoji: '🌺', mult: 1.07, family: 'tj', skuStyle: 'item5', prefix: '', brand: "Trader Joe's", search: 'https://www.traderjoes.com/home/search?q=' },
+    { id: 'safeway', label: 'Safeway', emoji: '🛒', mult: 1.16, family: 'regular', skuStyle: 'upc', prefix: '021130', brand: 'Signature Select', search: 'https://www.safeway.com/shop/search-results.html?q=' },
+    { id: 'albertsons', label: 'Albertsons', emoji: '🛒', mult: 1.16, family: 'regular', skuStyle: 'upc', prefix: '021130', brand: 'Signature Select', search: 'https://www.albertsons.com/shop/search-results.html?q=' },
+    { id: 'publix', label: 'Publix', emoji: '💚', mult: 1.20, family: 'regular', skuStyle: 'upc', prefix: '041415', brand: 'Publix', search: 'https://www.publix.com/shop/search?searchTerm=' },
+    { id: 'sprouts', label: 'Sprouts', emoji: '🌱', mult: 1.26, family: 'regular', skuStyle: 'upc', prefix: '646354', brand: 'Sprouts', search: 'https://shop.sprouts.com/store/sprouts/search?q=' },
+    { id: 'wholefoods', label: 'Whole Foods', emoji: '🥬', mult: 1.45, family: 'regular', skuStyle: 'upc', prefix: '099482', brand: '365', search: 'https://www.wholefoodsmarket.com/search?text=' }
   ];
 
-  /* unit = how recipes measure it. pack* = what the store actually sells. */
+  /* unit = recipe measure. price = typical Walmart store-brand unit (Sept 2026).
+     pack = what you actually buy. Club packs are bigger, cheaper per unit. */
   const ITEMS = [
-    { id: 'chicken-breast', names: ['chicken breast', 'chicken breasts', 'boneless chicken'], unit: 'lb', price: 3.25, eachLb: 0.5, packs: { regular: [2.5, '2.5 lb tray'], club: [6.5, '6.5 lb bag'], tj: [1, '1 lb pack'] } },
-    { id: 'chicken-thigh', names: ['chicken thigh', 'chicken thighs'], unit: 'lb', price: 2.15, eachLb: 0.35, packs: { regular: [2.5, '2.5 lb tray'], club: [6, '6 lb bag'], tj: [1.5, '1.5 lb pack'] } },
-    { id: 'chicken-whole', names: ['whole chicken'], unit: 'lb', price: 1.85, eachLb: 4.2, packs: { regular: [4.2, '1 whole bird ~4.2 lb'], club: [2, '2-pack whole birds'], tj: [4, '1 whole bird'] } },
-    { id: 'chicken-wing', names: ['chicken wing', 'wings'], unit: 'lb', price: 3.1, packs: { regular: [3, '3 lb bag'], club: [8, '8 lb bag'], tj: [1.5, '1.5 lb pack'] } },
-    { id: 'chicken', names: ['chicken'], unit: 'lb', price: 2.9, eachLb: 0.5, packs: { regular: [2.5, '2.5 lb tray'], club: [6.5, '6.5 lb bag'], tj: [1, '1 lb pack'] } },
-    { id: 'turkey', names: ['ground turkey', 'turkey breast', 'turkey'], unit: 'lb', price: 3.4, packs: { regular: [1, '1 lb pack'], club: [3, '3 lb pack'], tj: [1, '1 lb pack'] } },
-    { id: 'ground-beef', names: ['ground beef', 'minced beef', 'beef mince', 'hamburger meat', 'ground chuck'], unit: 'lb', price: 5.85, packs: { regular: [1, '1 lb chub'], club: [5, '5 lb chub'], tj: [1, '1 lb pack'] } },
-    { id: 'steak', names: ['steak', 'ribeye', 'sirloin', 'new york strip', 't-bone', 'filet', 'fillet steak'], unit: 'lb', price: 11.9, packs: { regular: [1.2, '1.2 lb pack (2 steaks)'], club: [4, '4 lb family pack'], tj: [0.75, '2-pack steaks'] } },
-    { id: 'beef-roast', names: ['beef roast', 'chuck roast', 'pot roast', 'brisket', 'stew beef', 'beef'], unit: 'lb', price: 7.4, packs: { regular: [3, '3 lb roast'], club: [6, '6 lb roast'], tj: [2, '2 lb roast'] } },
-    { id: 'pork-chop', names: ['pork chop', 'pork chops'], unit: 'lb', price: 3.95, eachLb: 0.45, packs: { regular: [1.4, '4-pack chops ~1.4 lb'], club: [4, 'family pack ~4 lb'], tj: [1, '1 lb pack'] } },
-    { id: 'pork', names: ['pork loin', 'pork shoulder', 'pork tenderloin', 'pulled pork', 'pork'], unit: 'lb', price: 3.35, packs: { regular: [2.5, '2.5 lb roast'], club: [6, '6 lb roast'], tj: [1.5, '1.5 lb tenderloin'] } },
-    { id: 'bacon', names: ['bacon'], unit: 'lb', price: 5.9, packs: { regular: [1, '16 oz pack'], club: [3, '3 lb pack'], tj: [0.75, '12 oz pack'] } },
-    { id: 'ham', names: ['ham'], unit: 'lb', price: 3.85, packs: { regular: [1.5, '1.5 lb sliced ham'], club: [5, '5 lb ham'], tj: [1, '1 lb pack'] } },
-    { id: 'sausage', names: ['sausage', 'italian sausage', 'breakfast sausage', 'andouille', 'chorizo', 'kielbasa'], unit: 'lb', price: 4.25, packs: { regular: [1, '1 lb pack'], club: [3, '3 lb pack'], tj: [1, '1 lb pack'] } },
-    { id: 'ribs', names: ['ribs', 'spare rib', 'baby back'], unit: 'lb', price: 4.75, packs: { regular: [2.5, '1 rack ~2.5 lb'], club: [6, '2-rack pack'], tj: [2, '1 rack'] } },
-    { id: 'lamb', names: ['lamb', 'lamb chop', 'mutton'], unit: 'lb', price: 9.8, packs: { regular: [1.2, '1.2 lb pack'], club: [4, '4 lb pack'], tj: [1, '1 lb pack'] } },
-    { id: 'venison', names: ['venison', 'deer', 'elk'], unit: 'lb', price: 0, hunter: true, packs: { regular: [1, 'from the freezer'], club: [1, 'from the freezer'], tj: [1, 'from the freezer'] } },
-    { id: 'duck', names: ['duck', 'duck breast'], unit: 'lb', price: 6.9, packs: { regular: [1, '1 lb pack'], club: [3, '3 lb pack'], tj: [1, '1 lb pack'] } },
-    { id: 'fish', names: ['white fish', 'cod', 'tilapia', 'haddock', 'halibut', 'fish fillet', 'fish'], unit: 'lb', price: 6.5, packs: { regular: [1, '1 lb frozen bag'], club: [3, '3 lb bag'], tj: [1, '1 lb pack'] } },
-    { id: 'salmon', names: ['salmon'], unit: 'lb', price: 8.9, packs: { regular: [1.2, '2-fillet pack ~1.2 lb'], club: [3, '3 lb bag'], tj: [0.75, '2-pack fillets'] } },
-    { id: 'catfish', names: ['catfish'], unit: 'lb', price: 5.8, packs: { regular: [1, '1 lb pack'], club: [3, '3 lb bag'], tj: [1, '1 lb pack'] } },
-    { id: 'trout', names: ['trout'], unit: 'lb', price: 7.4, packs: { regular: [1, '1 lb pack'], club: [2.5, '2.5 lb pack'], tj: [1, '1 lb pack'] } },
-    { id: 'tuna-fresh', names: ['tuna steak', 'fresh tuna'], unit: 'lb', price: 10.2, packs: { regular: [0.8, '~0.8 lb steak'], club: [2, '2 lb pack'], tj: [0.6, '1 steak'] } },
-    { id: 'tuna-can', names: ['canned tuna', 'tuna'], unit: 'each', price: 1.18, packs: { regular: [4, '4-pack 5 oz cans'], club: [8, '8-pack cans'], tj: [1, '1 can'] } },
-    { id: 'shrimp', names: ['shrimp', 'prawn'], unit: 'lb', price: 7.9, packs: { regular: [1, '1 lb bag'], club: [2, '2 lb bag'], tj: [1, '1 lb bag'] } },
-    { id: 'crawfish', names: ['crawfish', 'crayfish', 'crawdad'], unit: 'lb', price: 5.9, packs: { regular: [2, '2 lb bag'], club: [5, '5 lb bag'], tj: [1, '1 lb bag'] } },
-    { id: 'crab', names: ['crab', 'crabmeat'], unit: 'lb', price: 12.5, packs: { regular: [0.5, '8 oz tub'], club: [1, '1 lb tub'], tj: [0.5, '8 oz tub'] } },
-    { id: 'scallops', names: ['scallop'], unit: 'lb', price: 14.5, packs: { regular: [1, '1 lb bag'], club: [2.5, '2.5 lb bag'], tj: [0.75, '12 oz bag'] } },
-    { id: 'eggs', names: ['egg', 'eggs'], unit: 'each', price: 0.22, packs: { regular: [12, '1 dozen'], club: [24, '2 dozen'], tj: [12, '1 dozen'] } },
-    { id: 'milk', names: ['milk', 'whole milk'], unit: 'gal', price: 3.35, packs: { regular: [1, '1 gallon'], club: [2, '2-pack gallons'], tj: [0.5, 'half gallon'] } },
-    { id: 'butter', names: ['butter', 'unsalted butter'], unit: 'lb', price: 4.25, packs: { regular: [1, '1 lb (4 sticks)'], club: [4, '4 lb pack'], tj: [1, '1 lb'] } },
-    { id: 'cheddar', names: ['cheddar', 'cheese', 'shredded cheese', 'mexican cheese', 'halloumi'], unit: 'lb', price: 4.6, packs: { regular: [0.5, '8 oz block'], club: [2, '2 lb block'], tj: [0.5, '8 oz pack'] } },
-    { id: 'parmesan', names: ['parmesan', 'parmigiano'], unit: 'lb', price: 7.8, packs: { regular: [0.5, '8 oz shaker/wedge'], club: [1.5, '24 oz wedge'], tj: [0.44, '7 oz wedge'] } },
-    { id: 'mozzarella', names: ['mozzarella'], unit: 'lb', price: 4.4, packs: { regular: [0.5, '8 oz ball/bag'], club: [2, '2 lb bag'], tj: [0.5, '8 oz'] } },
-    { id: 'cream', names: ['heavy cream', 'whipping cream', 'sour cream', 'cream'], unit: 'oz', price: 0.16, packs: { regular: [16, '16 oz tub'], club: [48, '48 oz tub'], tj: [16, '16 oz'] } },
-    { id: 'yogurt', names: ['yogurt', 'greek yogurt'], unit: 'oz', price: 0.11, packs: { regular: [32, '32 oz tub'], club: [48, '48 oz tub'], tj: [32, '32 oz'] } },
-    { id: 'rice', names: ['rice', 'white rice', 'brown rice', 'jasmine rice'], unit: 'lb', price: 1.05, packs: { regular: [2, '2 lb bag'], club: [25, '25 lb bag'], tj: [1.5, '1.5 lb bag'] } },
-    { id: 'pasta', names: ['pasta', 'spaghetti', 'penne', 'noodles', 'egg noodles', 'macaroni'], unit: 'lb', price: 1.2, packs: { regular: [1, '16 oz box'], club: [6, '6 lb bag'], tj: [1, '1 lb box'] } },
-    { id: 'grits', names: ['grits', 'cornmeal', 'polenta'], unit: 'lb', price: 1.15, packs: { regular: [2, '2 lb bag'], club: [5, '5 lb bag'], tj: [1.5, '24 oz'] } },
-    { id: 'bread', names: ['bread', 'loaf', 'sandwich bread'], unit: 'loaf', price: 1.85, packs: { regular: [1, '1 loaf'], club: [2, '2-pack loaves'], tj: [1, '1 loaf'] } },
-    { id: 'buns', names: ['bun', 'buns', 'hamburger bun', 'roll', 'rolls'], unit: 'each', price: 0.32, packs: { regular: [8, '8-count pack'], club: [16, '16-count pack'], tj: [6, '6-count'] } },
-    { id: 'tortillas', names: ['tortilla', 'tortillas'], unit: 'each', price: 0.18, packs: { regular: [10, '10-count pack'], club: [24, '24-count pack'], tj: [8, '8-count'] } },
-    { id: 'flour', names: ['flour', 'all-purpose flour', 'plain flour'], unit: 'lb', price: 0.55, packs: { regular: [5, '5 lb bag'], club: [25, '25 lb bag'], tj: [2, '2 lb bag'] } },
-    { id: 'sugar', names: ['sugar', 'brown sugar', 'white sugar'], unit: 'lb', price: 0.78, packs: { regular: [4, '4 lb bag'], club: [10, '10 lb bag'], tj: [2, '2 lb bag'] } },
-    { id: 'oil', names: ['olive oil', 'vegetable oil', 'canola oil', 'cooking oil', 'oil'], unit: 'oz', price: 0.28, packs: { regular: [17, '17 oz bottle'], club: [68, '2 L / 68 oz jug'], tj: [16.9, '500 ml bottle'] } },
-    { id: 'potato', names: ['potato', 'potatoes', 'russet'], unit: 'lb', price: 0.78, packs: { regular: [5, '5 lb bag'], club: [15, '15 lb bag'], tj: [3, '3 lb bag'] } },
-    { id: 'sweet-potato', names: ['sweet potato', 'yam'], unit: 'lb', price: 1.05, packs: { regular: [3, '3 lb bag'], club: [10, '10 lb bag'], tj: [2, '2 lb bag'] } },
-    { id: 'onion', names: ['onion', 'onions', 'red onion', 'yellow onion', 'white onion'], unit: 'lb', price: 1.05, eachLb: 0.5, packs: { regular: [3, '3 lb bag'], club: [10, '10 lb bag'], tj: [2, '2 lb bag'] } },
-    { id: 'garlic', names: ['garlic clove', 'clove garlic', 'garlic'], unit: 'clove', price: 0.08, packs: { regular: [10, '1 bulb (~10 cloves)'], club: [30, '3-bulb mesh bag'], tj: [10, '1 bulb'] } },
-    { id: 'carrot', names: ['carrot', 'carrots'], unit: 'lb', price: 0.95, packs: { regular: [2, '2 lb bag'], club: [5, '5 lb bag'], tj: [1, '1 lb bag'] } },
-    { id: 'celery', names: ['celery'], unit: 'each', price: 1.68, packs: { regular: [1, '1 bunch'], club: [2, '2-pack bunches'], tj: [1, '1 bunch'] } },
-    { id: 'broccoli', names: ['broccoli'], unit: 'lb', price: 1.95, packs: { regular: [1, '1 crown ~1 lb'], club: [3, '3 lb bag'], tj: [1, '1 crown'] } },
-    { id: 'green-beans', names: ['green bean', 'green beans', 'string beans'], unit: 'lb', price: 1.85, packs: { regular: [1, '1 lb bag'], club: [2, '2 lb bag'], tj: [0.75, '12 oz bag'] } },
-    { id: 'asparagus', names: ['asparagus'], unit: 'lb', price: 3.1, packs: { regular: [1, '1 lb bunch'], club: [2.5, '2.5 lb pack'], tj: [1, '1 bunch'] } },
+    { id: 'chicken-breast', names: ['chicken breast', 'chicken breasts', 'boneless chicken'], unit: 'lb', price: 3.20, eachLb: 0.5, packs: { regular: [2.5, '2.5 lb tray'], club: [6.5, '6.5 lb bag'], tj: [1, '1 lb pack'] } },
+    { id: 'chicken-thigh', names: ['chicken thigh', 'chicken thighs'], unit: 'lb', price: 2.38, eachLb: 0.35, packs: { regular: [2.5, '2.5 lb tray'], club: [6, '6 lb bag'], tj: [1.5, '1.5 lb pack'] } },
+    { id: 'chicken-whole', names: ['whole chicken'], unit: 'lb', price: 1.64, eachLb: 4.2, packs: { regular: [4.2, '1 whole bird ~4.2 lb'], club: [2, '2-pack whole birds'], tj: [4, '1 whole bird'] } },
+    { id: 'chicken-wing', names: ['chicken wing', 'wings'], unit: 'lb', price: 2.78, packs: { regular: [3, '3 lb bag'], club: [8, '8 lb bag'], tj: [1.5, '1.5 lb pack'] } },
+    { id: 'chicken', names: ['chicken'], unit: 'lb', price: 2.98, eachLb: 0.45, packs: { regular: [2.5, '2.5 lb tray'], club: [6.5, '6.5 lb bag'], tj: [1, '1 lb pack'] } },
+    { id: 'turkey', names: ['ground turkey', 'turkey breast', 'turkey'], unit: 'lb', price: 3.98, packs: { regular: [1, '1 lb pack'], club: [3, '3 lb pack'], tj: [1, '1 lb pack'] } },
+    { id: 'ground-beef', names: ['ground beef', 'minced beef', 'beef mince', 'hamburger meat', 'ground chuck', '80/20'], unit: 'lb', price: 6.49, packs: { regular: [1, '1 lb chub'], club: [5, '5 lb chub'], tj: [1, '1 lb pack'] } },
+    { id: 'steak', names: ['steak', 'ribeye', 'sirloin', 'new york strip', 't-bone', 'filet mignon', 'fillet steak'], unit: 'lb', price: 12.48, packs: { regular: [1.25, '~1.25 lb (2 steaks)'], club: [4, '4 lb family pack'], tj: [0.75, '2-pack steaks'] } },
+    { id: 'beef-roast', names: ['beef roast', 'chuck roast', 'pot roast', 'brisket', 'stew beef', 'stewing beef'], unit: 'lb', price: 7.48, packs: { regular: [3, '3 lb roast'], club: [6, '6 lb roast'], tj: [2, '2 lb roast'] } },
+    { id: 'beef', names: ['beef'], unit: 'lb', price: 6.98, packs: { regular: [1, '1 lb pack'], club: [5, '5 lb pack'], tj: [1, '1 lb pack'] } },
+    { id: 'pork-chop', names: ['pork chop', 'pork chops'], unit: 'lb', price: 3.48, eachLb: 0.45, packs: { regular: [1.4, '4-pack chops ~1.4 lb'], club: [4, 'family pack ~4 lb'], tj: [1, '1 lb pack'] } },
+    { id: 'pork', names: ['pork loin', 'pork shoulder', 'pork tenderloin', 'pulled pork', 'pork butt', 'pork'], unit: 'lb', price: 3.28, packs: { regular: [2.5, '2.5 lb roast'], club: [6, '6 lb roast'], tj: [1.5, '1.5 lb tenderloin'] } },
+    { id: 'bacon', names: ['bacon'], unit: 'lb', price: 5.48, packs: { regular: [1, '16 oz pack'], club: [3, '3 lb pack'], tj: [0.75, '12 oz pack'] } },
+    { id: 'ham', names: ['ham'], unit: 'lb', price: 4.28, packs: { regular: [1.5, '1.5 lb sliced ham'], club: [5, '5 lb ham'], tj: [1, '1 lb pack'] } },
+    { id: 'sausage', names: ['italian sausage', 'breakfast sausage', 'andouille', 'chorizo', 'kielbasa', 'sausage'], unit: 'lb', price: 3.98, packs: { regular: [1, '1 lb pack'], club: [3, '3 lb pack'], tj: [1, '1 lb pack'] } },
+    { id: 'ribs', names: ['baby back', 'spare rib', 'pork rib', 'ribs'], unit: 'lb', price: 4.48, packs: { regular: [2.5, '1 rack ~2.5 lb'], club: [6, '2-rack pack'], tj: [2, '1 rack'] } },
+    { id: 'lamb', names: ['lamb chop', 'leg of lamb', 'lamb'], unit: 'lb', price: 9.98, packs: { regular: [1.2, '1.2 lb pack'], club: [4, '4 lb pack'], tj: [1, '1 lb pack'] } },
+    { id: 'venison', names: ['venison', 'deer meat', 'elk'], unit: 'lb', price: 0, hunter: true, packs: { regular: [1, 'from the freezer'], club: [1, 'from the freezer'], tj: [1, 'from the freezer'] } },
+    { id: 'duck', names: ['duck breast', 'duck'], unit: 'lb', price: 7.48, packs: { regular: [1, '1 lb pack'], club: [3, '3 lb pack'], tj: [1, '1 lb pack'] } },
+    { id: 'fish', names: ['white fish', 'tilapia', 'cod fillet', 'haddock', 'halibut', 'fish fillet'], unit: 'lb', price: 5.48, packs: { regular: [1, '1 lb frozen bag'], club: [3, '3 lb bag'], tj: [1, '1 lb pack'] } },
+    { id: 'salmon', names: ['salmon'], unit: 'lb', price: 9.98, packs: { regular: [1.2, '2-fillet pack ~1.2 lb'], club: [3, '3 lb bag'], tj: [0.75, '2-pack fillets'] } },
+    { id: 'catfish', names: ['catfish'], unit: 'lb', price: 5.48, packs: { regular: [1, '1 lb pack'], club: [3, '3 lb bag'], tj: [1, '1 lb pack'] } },
+    { id: 'trout', names: ['trout'], unit: 'lb', price: 7.28, packs: { regular: [1, '1 lb pack'], club: [2.5, '2.5 lb pack'], tj: [1, '1 lb pack'] } },
+    { id: 'tuna-fresh', names: ['tuna steak', 'fresh tuna'], unit: 'lb', price: 9.98, packs: { regular: [0.8, '~0.8 lb steak'], club: [2, '2 lb pack'], tj: [0.6, '1 steak'] } },
+    { id: 'tuna-can', names: ['canned tuna', 'tuna'], unit: 'each', price: 1.08, packs: { regular: [4, '4-pack 5 oz cans'], club: [8, '8-pack cans'], tj: [1, '1 can'] } },
+    { id: 'shrimp', names: ['shrimp', 'prawn'], unit: 'lb', price: 7.48, packs: { regular: [1, '1 lb bag'], club: [2, '2 lb bag'], tj: [1, '1 lb bag'] } },
+    { id: 'crawfish', names: ['crawfish', 'crayfish', 'crawdad'], unit: 'lb', price: 5.98, packs: { regular: [2, '2 lb bag'], club: [5, '5 lb bag'], tj: [1, '1 lb bag'] } },
+    { id: 'crab', names: ['crabmeat', 'crab meat', 'crab'], unit: 'lb', price: 12.98, packs: { regular: [0.5, '8 oz tub'], club: [1, '1 lb tub'], tj: [0.5, '8 oz tub'] } },
+    { id: 'scallops', names: ['scallop'], unit: 'lb', price: 14.98, packs: { regular: [1, '1 lb bag'], club: [2.5, '2.5 lb bag'], tj: [0.75, '12 oz bag'] } },
+    { id: 'eggs', names: ['eggs', 'egg'], unit: 'each', price: 0.233, packs: { regular: [12, '1 dozen Grade A'], club: [24, '2 dozen'], tj: [12, '1 dozen'] } },
+    { id: 'milk', names: ['whole milk', '2% milk', 'milk'], unit: 'gal', price: 3.28, packs: { regular: [1, '1 gallon'], club: [2, '2-pack gallons'], tj: [0.5, 'half gallon'] } },
+    { id: 'butter', names: ['unsalted butter', 'salted butter', 'butter'], unit: 'lb', price: 3.98, packs: { regular: [1, '1 lb (4 sticks)'], club: [4, '4 lb pack'], tj: [1, '1 lb'] } },
+    { id: 'cheddar', names: ['cheddar', 'shredded cheese', 'mexican cheese', 'colby jack'], unit: 'lb', price: 4.60, packs: { regular: [0.5, '8 oz block'], club: [2, '2 lb block'], tj: [0.5, '8 oz pack'] } },
+    { id: 'parmesan', names: ['parmesan', 'parmigiano'], unit: 'lb', price: 7.96, packs: { regular: [0.5, '8 oz shaker/wedge'], club: [1.5, '24 oz wedge'], tj: [0.44, '7 oz wedge'] } },
+    { id: 'mozzarella', names: ['mozzarella'], unit: 'lb', price: 4.38, packs: { regular: [0.5, '8 oz ball/bag'], club: [2, '2 lb bag'], tj: [0.5, '8 oz'] } },
+    { id: 'cream', names: ['heavy cream', 'whipping cream', 'heavy whipping cream'], unit: 'oz', price: 0.20, packs: { regular: [16, '1 pint / 16 oz'], club: [32, '32 oz'], tj: [16, '16 oz'] } },
+    { id: 'sour-cream', names: ['sour cream'], unit: 'oz', price: 0.14, packs: { regular: [16, '16 oz tub'], club: [48, '48 oz tub'], tj: [16, '16 oz'] } },
+    { id: 'yogurt', names: ['greek yogurt', 'yogurt'], unit: 'oz', price: 0.083, packs: { regular: [32, '32 oz tub'], club: [48, '48 oz tub'], tj: [32, '32 oz'] } },
+    { id: 'rice', names: ['jasmine rice', 'white rice', 'brown rice', 'rice'], unit: 'lb', price: 0.95, packs: { regular: [2, '2 lb bag'], club: [25, '25 lb bag'], tj: [1.5, '1.5 lb bag'] } },
+    { id: 'pasta', names: ['spaghetti', 'penne', 'egg noodles', 'macaroni', 'pasta', 'noodles'], unit: 'lb', price: 1.10, packs: { regular: [1, '16 oz box'], club: [6, '6 lb bag'], tj: [1, '1 lb box'] } },
+    { id: 'grits', names: ['grits', 'cornmeal', 'polenta'], unit: 'lb', price: 1.08, packs: { regular: [2, '2 lb bag'], club: [5, '5 lb bag'], tj: [1.5, '24 oz'] } },
+    { id: 'bread', names: ['sandwich bread', 'loaf', 'bread'], unit: 'loaf', price: 1.58, packs: { regular: [1, '1 loaf'], club: [2, '2-pack loaves'], tj: [1, '1 loaf'] } },
+    { id: 'buns', names: ['hamburger bun', 'hot dog bun', 'dinner roll', 'buns', 'rolls'], unit: 'each', price: 0.31, packs: { regular: [8, '8-count pack'], club: [16, '16-count pack'], tj: [6, '6-count'] } },
+    { id: 'tortillas', names: ['flour tortilla', 'corn tortilla', 'tortilla', 'tortillas'], unit: 'each', price: 0.17, packs: { regular: [10, '10-count pack'], club: [24, '24-count pack'], tj: [8, '8-count'] } },
+    { id: 'flour', names: ['all-purpose flour', 'plain flour', 'flour'], unit: 'lb', price: 0.52, packs: { regular: [5, '5 lb bag'], club: [25, '25 lb bag'], tj: [2, '2 lb bag'] } },
+    { id: 'sugar', names: ['brown sugar', 'white sugar', 'sugar'], unit: 'lb', price: 0.72, packs: { regular: [4, '4 lb bag'], club: [10, '10 lb bag'], tj: [2, '2 lb bag'] } },
+    { id: 'oil', names: ['olive oil', 'vegetable oil', 'canola oil', 'cooking oil', 'oil'], unit: 'oz', price: 0.36, packs: { regular: [17, '17 oz bottle'], club: [68, '2 L / 68 oz jug'], tj: [16.9, '500 ml bottle'] } },
+    { id: 'sesame-oil', names: ['sesame oil'], unit: 'oz', price: 0.42, packs: { regular: [8, '8 oz bottle'], club: [16, '16 oz'], tj: [8, '8 oz'] } },
+    { id: 'potato', names: ['russet potato', 'potato', 'potatoes'], unit: 'lb', price: 0.74, packs: { regular: [5, '5 lb bag'], club: [15, '15 lb bag'], tj: [3, '3 lb bag'] } },
+    { id: 'sweet-potato', names: ['sweet potato', 'yam'], unit: 'lb', price: 1.08, packs: { regular: [3, '3 lb bag'], club: [10, '10 lb bag'], tj: [2, '2 lb bag'] } },
+    { id: 'onion', names: ['yellow onion', 'red onion', 'white onion', 'onion', 'onions', 'shallot'], unit: 'lb', price: 0.98, eachLb: 0.5, packs: { regular: [3, '3 lb bag'], club: [10, '10 lb bag'], tj: [2, '2 lb bag'] } },
+    { id: 'garlic', names: ['garlic clove', 'clove garlic', 'garlic'], unit: 'clove', price: 0.07, packs: { regular: [10, '1 bulb (~10 cloves)'], club: [30, '3-bulb mesh bag'], tj: [10, '1 bulb'] } },
+    { id: 'carrot', names: ['carrot', 'carrots'], unit: 'lb', price: 0.92, packs: { regular: [2, '2 lb bag'], club: [5, '5 lb bag'], tj: [1, '1 lb bag'] } },
+    { id: 'celery', names: ['celery'], unit: 'each', price: 1.48, packs: { regular: [1, '1 bunch'], club: [2, '2-pack bunches'], tj: [1, '1 bunch'] } },
+    { id: 'broccoli', names: ['broccoli'], unit: 'lb', price: 1.98, packs: { regular: [1, '1 crown ~1 lb'], club: [3, '3 lb bag'], tj: [1, '1 crown'] } },
+    { id: 'green-beans', names: ['green bean', 'green beans', 'string beans'], unit: 'lb', price: 1.78, packs: { regular: [1, '1 lb bag'], club: [2, '2 lb bag'], tj: [0.75, '12 oz bag'] } },
+    { id: 'asparagus', names: ['asparagus'], unit: 'lb', price: 2.98, packs: { regular: [1, '1 lb bunch'], club: [2.5, '2.5 lb pack'], tj: [1, '1 bunch'] } },
     { id: 'spinach', names: ['spinach'], unit: 'oz', price: 0.22, packs: { regular: [8, '8 oz clamshell'], club: [16, '1 lb clamshell'], tj: [6, '6 oz'] } },
-    { id: 'lettuce', names: ['lettuce', 'romaine', 'salad greens', 'rocket', 'arugula', 'cabbage'], unit: 'each', price: 2.05, packs: { regular: [1, '1 head / bag'], club: [3, '3-count romaine'], tj: [1, '1 bag'] } },
-    { id: 'tomato', names: ['tomato', 'tomatoes', 'roma tomato', 'plum tomato'], unit: 'lb', price: 1.65, eachLb: 0.4, packs: { regular: [1, '1 lb pack'], club: [5, '5 lb box'], tj: [1, '1 lb pack'] } },
-    { id: 'pepper', names: ['bell pepper', 'red pepper', 'green pepper', 'yellow pepper', 'capsicum'], unit: 'each', price: 0.98, packs: { regular: [1, '1 pepper'], club: [6, '6-count bag'], tj: [3, '3-pack'] } },
-    { id: 'jalapeno', names: ['jalapeno', 'jalapeño', 'green chilli'], unit: 'each', price: 0.22, packs: { regular: [1, '1 pepper'], club: [8, '8 oz bag ~8 peppers'], tj: [1, '1 pepper'] } },
-    { id: 'corn', names: ['corn on the cob', 'sweet corn', 'corn'], unit: 'each', price: 0.48, packs: { regular: [4, '4-ear pack'], club: [12, '12-ear bag'], tj: [4, '4-ear'] } },
-    { id: 'zucchini', names: ['zucchini', 'courgette', 'squash'], unit: 'lb', price: 1.45, packs: { regular: [1, '~1 lb (2 squash)'], club: [3, '3 lb bag'], tj: [1, '1 lb'] } },
-    { id: 'mushroom', names: ['mushroom', 'mushrooms'], unit: 'oz', price: 0.28, packs: { regular: [8, '8 oz tray'], club: [24, '24 oz pack'], tj: [8, '8 oz'] } },
-    { id: 'avocado', names: ['avocado'], unit: 'each', price: 1.25, packs: { regular: [1, '1 avocado'], club: [6, '6-count bag'], tj: [4, '4-pack'] } },
-    { id: 'lemon', names: ['lemon juice', 'lime juice', 'lemon', 'lime'], unit: 'each', price: 0.48, packs: { regular: [1, '1 fruit'], club: [5, '2 lb bag ~5'], tj: [1, '1 fruit'] } },
-    { id: 'apple', names: ['apple', 'apples'], unit: 'lb', price: 1.55, packs: { regular: [3, '3 lb bag'], club: [6, '6 lb bag'], tj: [2, '2 lb bag'] } },
+    { id: 'lettuce', names: ['romaine', 'salad greens', 'iceberg', 'lettuce', 'cabbage'], unit: 'each', price: 1.98, packs: { regular: [1, '1 head / bag'], club: [3, '3-count romaine'], tj: [1, '1 bag'] } },
+    { id: 'tomato', names: ['roma tomato', 'plum tomato', 'tomato', 'tomatoes'], unit: 'lb', price: 1.58, eachLb: 0.4, packs: { regular: [1, '1 lb pack'], club: [5, '5 lb box'], tj: [1, '1 lb pack'] } },
+    { id: 'pepper', names: ['bell pepper', 'red pepper', 'green pepper', 'yellow pepper', 'capsicum'], unit: 'each', price: 0.88, packs: { regular: [1, '1 pepper'], club: [6, '6-count bag'], tj: [3, '3-pack'] } },
+    { id: 'jalapeno', names: ['jalapeno', 'jalapeño'], unit: 'each', price: 0.20, packs: { regular: [1, '1 pepper'], club: [8, '8 oz bag ~8 peppers'], tj: [1, '1 pepper'] } },
+    { id: 'corn', names: ['corn on the cob', 'sweet corn', 'frozen corn', 'corn'], unit: 'each', price: 0.48, packs: { regular: [4, '4-ear pack'], club: [12, '12-ear bag'], tj: [4, '4-ear'] } },
+    { id: 'zucchini', names: ['zucchini', 'courgette', 'yellow squash'], unit: 'lb', price: 1.38, packs: { regular: [1, '~1 lb (2 squash)'], club: [3, '3 lb bag'], tj: [1, '1 lb'] } },
+    { id: 'mushroom', names: ['mushroom', 'mushrooms'], unit: 'oz', price: 0.27, packs: { regular: [8, '8 oz tray'], club: [24, '24 oz pack'], tj: [8, '8 oz'] } },
+    { id: 'avocado', names: ['avocado'], unit: 'each', price: 1.18, packs: { regular: [1, '1 avocado'], club: [6, '6-count bag'], tj: [4, '4-pack'] } },
+    { id: 'lemon', names: ['lemon juice', 'lemon'], unit: 'each', price: 0.48, packs: { regular: [1, '1 lemon'], club: [5, '2 lb bag ~5'], tj: [1, '1 lemon'] } },
+    { id: 'lime', names: ['lime juice', 'lime'], unit: 'each', price: 0.38, packs: { regular: [1, '1 lime'], club: [8, '2 lb bag ~8'], tj: [1, '1 lime'] } },
+    { id: 'apple', names: ['apple', 'apples'], unit: 'lb', price: 1.48, packs: { regular: [3, '3 lb bag'], club: [6, '6 lb bag'], tj: [2, '2 lb bag'] } },
     { id: 'banana', names: ['banana'], unit: 'lb', price: 0.58, packs: { regular: [2, '~2 lb bunch'], club: [4, '3–4 lb bunch'], tj: [2, 'bunch'] } },
-    { id: 'berries', names: ['blueberry', 'strawberry', 'raspberry', 'berries'], unit: 'oz', price: 0.32, packs: { regular: [16, '16 oz clamshell'], club: [32, '2 lb clamshell'], tj: [16, '16 oz'] } },
-    { id: 'beans', names: ['black bean', 'pinto', 'kidney bean', 'cannellini', 'chickpea', 'garbanzo', 'lentil', 'beans'], unit: 'each', price: 1.05, packs: { regular: [1, '15 oz can'], club: [8, '8-pack cans'], tj: [1, '1 can'] } },
-    { id: 'broth', names: ['chicken broth', 'beef broth', 'stock', 'broth', 'stock cube', 'bouillon'], unit: 'oz', price: 0.05, packs: { regular: [32, '32 oz carton'], club: [96, '3-pack 32 oz'], tj: [32, '32 oz'] } },
-    { id: 'tomato-sauce', names: ['tomato sauce', 'marinara', 'crushed tomato', 'diced tomato', 'tomato paste', 'passata'], unit: 'oz', price: 0.07, packs: { regular: [15, '15 oz can'], club: [102, '6-pack 15 oz'], tj: [18, '18 oz jar'] } },
-    { id: 'soy', names: ['soy sauce', 'tamari'], unit: 'oz', price: 0.12, packs: { regular: [10, '10 oz bottle'], club: [40, '40 oz bottle'], tj: [10, '10 oz'] } },
-    { id: 'hotsauce', names: ['hot sauce', 'hotsauce', 'buffalo', 'sriracha', 'chilli sauce'], unit: 'oz', price: 0.16, packs: { regular: [12, '12 oz bottle'], club: [28, '28 oz bottle'], tj: [10, '10 oz'] } },
+    { id: 'berries', names: ['strawberry', 'blueberry', 'raspberry', 'berries'], unit: 'oz', price: 0.28, packs: { regular: [16, '16 oz clamshell'], club: [32, '2 lb clamshell'], tj: [16, '16 oz'] } },
+    { id: 'herbs', names: ['fresh cilantro', 'fresh parsley', 'fresh basil', 'cilantro', 'parsley', 'mint', 'dill'], unit: 'each', price: 1.28, packs: { regular: [1, '1 bunch'], club: [2, '2 bunches'], tj: [1, '1 bunch'] } },
+    { id: 'beans', names: ['black beans', 'pinto beans', 'kidney beans', 'cannellini', 'chickpeas', 'garbanzo', 'lentils', 'black bean', 'pinto'], unit: 'each', price: 0.98, packs: { regular: [1, '15 oz can'], club: [8, '8-pack cans'], tj: [1, '1 can'] } },
+    { id: 'broth', names: ['chicken broth', 'beef broth', 'chicken stock', 'beef stock', 'stock cube', 'bouillon', 'broth'], unit: 'oz', price: 0.06, packs: { regular: [32, '32 oz carton'], club: [96, '3-pack 32 oz'], tj: [32, '32 oz'] } },
+    { id: 'tomato-sauce', names: ['crushed tomato', 'diced tomato', 'tomato sauce', 'tomato paste', 'marinara', 'passata'], unit: 'oz', price: 0.079, packs: { regular: [15, '15 oz can'], club: [90, '6-pack 15 oz'], tj: [18, '18 oz jar'] } },
+    { id: 'soy', names: ['soy sauce', 'tamari'], unit: 'oz', price: 0.11, packs: { regular: [10, '10 oz bottle'], club: [40, '40 oz bottle'], tj: [10, '10 oz'] } },
+    { id: 'hotsauce', names: ['hot sauce', 'buffalo sauce', 'sriracha'], unit: 'oz', price: 0.15, packs: { regular: [12, '12 oz bottle'], club: [28, '28 oz bottle'], tj: [10, '10 oz'] } },
     { id: 'mayo', names: ['mayonnaise', 'mayo'], unit: 'oz', price: 0.12, packs: { regular: [30, '30 oz jar'], club: [64, '64 oz jar'], tj: [16, '16 oz'] } },
-    { id: 'mustard', names: ['mustard'], unit: 'oz', price: 0.11, packs: { regular: [14, '14 oz bottle'], club: [30, '30 oz'], tj: [8, '8 oz'] } },
+    { id: 'mustard', names: ['mustard'], unit: 'oz', price: 0.10, packs: { regular: [14, '14 oz bottle'], club: [30, '30 oz'], tj: [8, '8 oz'] } },
     { id: 'ketchup', names: ['ketchup', 'catsup'], unit: 'oz', price: 0.09, packs: { regular: [20, '20 oz bottle'], club: [64, '64 oz'], tj: [13.5, '13.5 oz'] } },
-    { id: 'vinegar', names: ['vinegar', 'apple cider vinegar', 'balsamic'], unit: 'oz', price: 0.1, packs: { regular: [16, '16 oz bottle'], club: [67, '2 L jug'], tj: [16, '16 oz'] } },
-    { id: 'honey', names: ['honey', 'maple syrup'], unit: 'oz', price: 0.24, packs: { regular: [12, '12 oz bottle'], club: [40, '40 oz'], tj: [12, '12 oz'] } },
-    { id: 'breadcrumbs', names: ['breadcrumb', 'panko'], unit: 'oz', price: 0.13, packs: { regular: [15, '15 oz canister'], club: [48, '48 oz'], tj: [8, '8 oz'] } },
+    { id: 'vinegar', names: ['apple cider vinegar', 'balsamic vinegar', 'white vinegar', 'vinegar'], unit: 'oz', price: 0.09, packs: { regular: [16, '16 oz bottle'], club: [67, '2 L jug'], tj: [16, '16 oz'] } },
+    { id: 'honey', names: ['maple syrup', 'honey'], unit: 'oz', price: 0.26, packs: { regular: [12, '12 oz bottle'], club: [40, '40 oz'], tj: [12, '12 oz'] } },
+    { id: 'wine', names: ['white wine', 'red wine', 'dry wine', 'cooking wine'], unit: 'each', price: 7.98, packs: { regular: [1, '750 ml bottle'], club: [2, '2-pack 750 ml'], tj: [1, '750 ml'] } },
+    { id: 'breadcrumbs', names: ['breadcrumb', 'panko'], unit: 'oz', price: 0.12, packs: { regular: [15, '15 oz canister'], club: [48, '48 oz'], tj: [8, '8 oz'] } },
     { id: 'tofu', names: ['tofu'], unit: 'oz', price: 0.14, packs: { regular: [14, '14 oz pack'], club: [28, '2-pack'], tj: [14, '14 oz'] } },
-    { id: 'ginger', names: ['ginger'], unit: 'oz', price: 0.35, packs: { regular: [4, '4 oz hand'], club: [8, '8 oz'], tj: [4, '4 oz'] } },
-    { id: 'coconut-milk', names: ['coconut milk'], unit: 'oz', price: 0.12, packs: { regular: [13.5, '13.5 oz can'], club: [81, '6-pack cans'], tj: [13.5, '1 can'] } },
-    { id: 'salt', names: ['kosher salt', 'sea salt', 'salt'], unit: 'oz', price: 0, pantry: true, packs: { regular: [26, '26 oz canister'], club: [48, '48 oz'], tj: [16, '16 oz'] } },
-    { id: 'black-pepper', names: ['black pepper', 'ground pepper'], unit: 'oz', price: 0, pantry: true, packs: { regular: [3, '3 oz grinder'], club: [16, '16 oz'], tj: [1.7, '1.7 oz'] } },
-    { id: 'spices', names: ['paprika', 'cumin', 'chili powder', 'oregano', 'thyme', 'rosemary', 'basil', 'cinnamon', 'cayenne', 'garlic powder', 'onion powder', 'italian seasoning', 'curry', 'turmeric', 'seasoning', 'spice', 'cilantro', 'parsley', 'baking powder', 'blackened'], unit: 'oz', price: 0.42, packs: { regular: [2.5, '2.5 oz spice jar'], club: [18, '18 oz restaurant jar'], tj: [1.8, '1.8 oz jar'] } },
+    { id: 'ginger', names: ['fresh ginger', 'ginger'], unit: 'oz', price: 0.32, packs: { regular: [4, '4 oz hand'], club: [8, '8 oz'], tj: [4, '4 oz'] } },
+    { id: 'coconut-milk', names: ['coconut milk'], unit: 'oz', price: 0.13, packs: { regular: [13.5, '13.5 oz can'], club: [81, '6-pack cans'], tj: [13.5, '1 can'] } },
+    { id: 'cornstarch', names: ['corn starch', 'cornstarch'], unit: 'oz', price: 0.10, packs: { regular: [16, '16 oz box'], club: [32, '32 oz'], tj: [8, '8 oz'] } },
+    { id: 'baking-powder', names: ['baking powder', 'baking soda'], unit: 'oz', price: 0.12, packs: { regular: [8, '8 oz can'], club: [16, '16 oz'], tj: [8, '8 oz'] } },
+    { id: 'salt', names: ['kosher salt', 'sea salt', 'table salt', 'salt'], unit: 'oz', price: 0, pantry: true, packs: { regular: [26, '26 oz canister'], club: [48, '48 oz'], tj: [16, '16 oz'] } },
+    { id: 'black-pepper', names: ['black pepper', 'ground pepper', 'pepper'], unit: 'oz', price: 0, pantry: true, packs: { regular: [3, '3 oz grinder'], club: [16, '16 oz'], tj: [1.7, '1.7 oz'] } },
+    { id: 'spices', names: ['chili powder', 'garlic powder', 'onion powder', 'italian seasoning', 'paprika', 'cumin', 'oregano', 'thyme', 'rosemary', 'cinnamon', 'cayenne', 'curry powder', 'turmeric', 'cajun seasoning', 'blackened'], unit: 'oz', price: 0.48, packs: { regular: [2.5, '2.5 oz spice jar'], club: [18, '18 oz restaurant jar'], tj: [1.8, '1.8 oz jar'] } },
     { id: 'water', names: ['water', 'ice'], unit: 'oz', price: 0, pantry: true, packs: { regular: [1, 'from the tap'], club: [1, 'from the tap'], tj: [1, 'from the tap'] } }
   ];
 
   const GUESS = [
-    { re: /chicken|turkey|beef|steak|pork|lamb|duck|sausage|bacon|ham|rib/, unit: 'lb', price: 5.5, pack: [1, '1 lb pack'] },
-    { re: /fish|salmon|shrimp|cod|tilapia|tuna|crab|scallop/, unit: 'lb', price: 8.2, pack: [1, '1 lb pack'] },
-    { re: /powder|spice|season|cumin|paprika|oregano|thyme|curry/, unit: 'oz', price: 0.45, pack: [2.5, '2.5 oz spice jar'] },
-    { re: /cilantro|parsley|basil|herb|mint|dill/, unit: 'each', price: 1.49, pack: [1, '1 bunch'] },
-    { re: /oil|sauce|vinegar|syrup|dressing|wine/, unit: 'oz', price: 0.18, pack: [12, '12 oz bottle'] },
-    { re: /milk|cream|yogurt|cheese|butter/, unit: 'oz', price: 0.16, pack: [16, '16 oz pack'] },
-    { re: /onion|pepper|tomato|lettuce|spinach|broccoli|carrot|potato/, unit: 'lb', price: 1.6, pack: [1, '1 lb produce'] },
-    { re: /rice|pasta|noodle|flour|sugar|bean/, unit: 'lb', price: 1.35, pack: [1, '1 lb bag / box'] },
-    { re: /can|canned/, unit: 'each', price: 1.29, pack: [1, '1 can'] }
+    { re: /chicken|turkey|ground beef|beef|steak|pork|lamb|duck|sausage|bacon|ham|rib/, unit: 'lb', price: 6.49, pack: [1, '1 lb pack'] },
+    { re: /fish|salmon|shrimp|cod|tilapia|tuna|crab|scallop/, unit: 'lb', price: 7.98, pack: [1, '1 lb pack'] },
+    { re: /cilantro|parsley|basil|herb|mint|dill/, unit: 'each', price: 1.28, pack: [1, '1 bunch'] },
+    { re: /chili powder|garlic powder|onion powder|paprika|cumin|oregano|thyme|curry|season/, unit: 'oz', price: 0.48, pack: [2.5, '2.5 oz spice jar'] },
+    { re: /wine/, unit: 'each', price: 7.98, pack: [1, '750 ml bottle'] },
+    { re: /oil|sauce|vinegar|syrup|dressing/, unit: 'oz', price: 0.16, pack: [12, '12 oz bottle'] },
+    { re: /milk|cream|yogurt|cheese|butter/, unit: 'oz', price: 0.15, pack: [16, '16 oz pack'] },
+    { re: /onion|pepper|tomato|lettuce|spinach|broccoli|carrot|potato/, unit: 'lb', price: 1.48, pack: [1, '1 lb produce'] },
+    { re: /rice|pasta|noodle|flour|sugar|bean/, unit: 'lb', price: 1.18, pack: [1, '1 lb bag / box'] },
+    { re: /can|canned/, unit: 'each', price: 1.18, pack: [1, '15 oz can'] }
   ];
-  const GUESS_DEFAULT = { unit: 'each', price: 2.49, pack: [1, '1 pack (est.)'] };
+  const GUESS_DEFAULT = { unit: 'each', price: 2.28, pack: [1, '1 pack (est.)'] };
 
   const NAME_UNIT = {
     tbsp: 'tbsp', tablespoon: 'tbsp', tsp: 'tsp', teaspoon: 'tsp',
@@ -201,13 +214,18 @@
     return { qty, unit, name: name || text, raw: text };
   }
 
+  function aliasHit(hay, alias) {
+    const t = String(alias).toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return new RegExp('(^|[^a-z0-9])' + t + '(?![a-z])', 'i').test(hay);
+  }
+
   function findItem(name) {
     const n = String(name || '').toLowerCase();
     let best = null;
     let bestLen = 0;
     ITEMS.forEach((item) => {
       item.names.forEach((alias) => {
-        if (n.includes(alias) && alias.length > bestLen) {
+        if (aliasHit(n, alias) && alias.length > bestLen) {
           best = item;
           bestLen = alias.length;
         }
@@ -224,13 +242,15 @@
     return GUESS_DEFAULT;
   }
 
-  function needInItemUnit(parsed, unit) {
+  function needInItemUnit(parsed, unit, eachLb) {
     const qty = parsed.qty || 1;
     const u = parsed.unit;
+    const pieceLb = eachLb || 0.45;
     if (unit === 'each' || unit === 'clove') {
       if (!u || u === 'each' || u === 'clove' || u === 'piece' || u === 'bunch') return qty;
       if (u === 'dozen') return qty * 12;
-      if (u === 'lb') return qty * 3;
+      if (u === 'lb') return qty / (pieceLb || 0.5);
+      if (u === 'tsp' || u === 'tbsp') return Math.max(qty, 1);
       return qty;
     }
     if (unit === 'loaf') return u === 'slice' ? qty / 20 : Math.max(qty, 1);
@@ -258,10 +278,10 @@
     if (u === 'oz') return qty / 16;
     if (u === 'g') return qty / 453.6;
     if (u === 'kg') return qty * 2.204;
-    if (u === 'each' || u === 'clove' || !u) return qty * 0.45;
+    if (u === 'each' || u === 'clove' || !u) return qty * pieceLb;
     if (u === 'can') return qty * 0.9;
     if (u === 'cup') return qty * 0.5;
-    return qty * 0.45;
+    return qty * pieceLb;
   }
 
   function packFor(item, store) {
@@ -335,7 +355,7 @@
       const item = findItem(parsed.name);
       if (!item) {
         const kind = guessKind(parsed.name);
-        const need = Math.max(needInItemUnit(parsed, kind.unit) * factor, 0.02);
+        const need = Math.max(needInItemUnit(parsed, kind.unit, 0.45) * factor, 0.02);
         const rec = approxRecord(store, parsed, need);
         rec.raw = raw;
         rec.name = parsed.name;
@@ -352,7 +372,7 @@
         rec.packs = 0;
         return rec;
       }
-      const need = Math.max(needInItemUnit(parsed, item.unit) * factor, 0.02);
+      const need = Math.max(needInItemUnit(parsed, item.unit, item.eachLb) * factor, 0.02);
       const rec = skuRecord(store, item, need);
       rec.raw = raw;
       rec.name = item.names[0];
