@@ -2238,7 +2238,14 @@ function onHash() {
 function boot() {
   const host = location.hostname;
   const local = host === 'localhost' || host === '127.0.0.1';
-  if (!local && host !== 'dinner-wizard-app.onrender.com') {
+  const appHosts = {
+    'dinner-wizard-app.onrender.com': 1,
+    'dinner-wizard.com': 1,
+    'www.dinner-wizard.com': 1,
+    'thedinnerwizard.com': 1,
+    'www.thedinnerwizard.com': 1
+  };
+  if (!local && !appHosts[host]) {
     location.replace(SIGNED_IN_HOST + '/' + location.hash + location.search);
     return;
   }
