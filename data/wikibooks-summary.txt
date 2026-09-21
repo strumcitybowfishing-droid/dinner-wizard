@@ -1,0 +1,122 @@
+Wikibooks Cookbook harvest for Dinner Wizard
+Date: 2026-09-21
+
+Source
+------
+Wikibooks Cookbook (https://en.wikibooks.org/wiki/Cookbook) is licensed CC BY-SA.
+Harvested via the MediaWiki API: https://en.wikibooks.org/w/api.php
+Seeded from dinner-like categories (main course, stew, soup, casserole, curry,
+pasta, meat/poultry/seafood trees) and parsed Ingredients + Procedure from wikitext.
+Skipped desserts, drinks, condiments-only, ingredient pages, disambiguation, and incomplete recipes.
+
+Kept
+----
+1197 complete dinner recipes (every record has ingredients AND steps).
+Candidate Cookbook pages fetched: 1330 (listed 1330).
+
+Skip reasons
+------------
+condiment=57, dessert-title=24, few-ingredients:2=11, side=11, few-steps:0=8, breakfast=6, few-ingredients:0=5, few-ingredients:1=4, dessert=3, few-steps:1=2, ingredient-page=1, not-recipe=1
+
+Primary protein
+---------------
+  chicken 255
+  vegetarian 138
+  beans 101
+  beef 79
+  pork 62
+  ground-beef 58
+  fish 55
+  shrimp 53
+  steak 50
+  eggs 45
+  crawfish 39
+  ribs 31
+  bacon 28
+  lamb 28
+  sausage 20
+  salmon 20
+  ham 19
+  turkey 18
+  crab 18
+  tofu 15
+  duck 15
+  catfish 14
+  tuna 14
+  scallops 5
+  lobster 5
+  venison 4
+  rabbit 3
+  goose 2
+  goat 2
+  trout 1
+
+Style
+-----
+  Wikibooks 616
+  Italian 130
+  Indian 103
+  Chinese 58
+  American home 52
+  Mexican 41
+  French 27
+  Japanese 21
+  Middle Eastern 20
+  Southern 19
+  British 17
+  Spanish 11
+  German 10
+  Zambian 10
+  Creole / Cajun 10
+  Caribbean 9
+  Thai 8
+  Greek 7
+  Nigerian 5
+  Vietnamese 5
+
+Normalization
+-------------
+  id: wiki-<slug>
+  title: Cookbook: prefix stripped
+  protein vocab matches mealdb/usda (chicken, beef, pork, ground-beef, vegetarian, …)
+  budget 1-5 from protein + ingredient count
+  difficulty 1-3 from Wikibooks 1-5 rating or step count
+  timeMin from Recipe summary Time, else step heuristic
+  servings from Recipe summary (default 4)
+  style from cuisine/origin/category if obvious, else "Wikibooks"
+  source: Wikibooks Cookbook (CC BY-SA)
+  tags include wikibooks, cc-by-sa
+  image left empty
+
+Output
+------
+  C:\Users\johnn\Desktop\Dinner Wizard\data\wikibooks.json
+  C:\Users\johnn\Desktop\Dinner Wizard\data\wikibooks-summary.txt
+
+Sample titles
+-------------
+  20-Minute Beef Stroganoff [beef, 13 ings, 9 steps]
+  Abula (Nigerian Three Stews) [crawfish, 14 ings, 12 steps]
+  Adult Macaroni and Cheese [vegetarian, 11 ings, 4 steps]
+  African Cabbage Stew [chicken, 13 ings, 6 steps]
+  African Salad II [crawfish, 17 ings, 9 steps]
+  Agedashi Tofu [tofu, 9 ings, 8 steps]
+  Ager Soup [catfish, 9 ings, 6 steps]
+  Agnolotti Pasta Soup (Agnolotti in Brodo) [chicken, 7 ings, 5 steps]
+  Albanian Fried Meatballs [vegetarian, 13 ings, 5 steps]
+  Albanian Meat with Walnuts [chicken, 6 ings, 6 steps]
+  Algerian Chakhchoukha (Vegetable and Flatbread Stew) [chicken, 13 ings, 7 steps]
+  Algerian Couscous with Meat and Vegetables [chicken, 22 ings, 14 steps]
+  Alicha Wot (Mild Ethiopian Stew) [beef, 14 ings, 10 steps]
+  Alsatian Chicken Fricassée [chicken, 13 ings, 8 steps]
+  Alsatian Fish Stew (Matelote de poissons d'Alsace) [crawfish, 20 ings, 11 steps]
+  Alsatian Fresh Noodles (Nouilles fraîches à l'Alsacienne) [eggs, 5 ings, 10 steps]
+  Angels on Horseback (Bacon-wrapped Oysters) [bacon, 6 ings, 4 steps]
+  Apple Crusted Ham [ham, 4 ings, 5 steps]
+  Apple Parsnip Soup [vegetarian, 9 ings, 6 steps]
+  Apple Stuffed Pork Chops [ribs, 7 ings, 6 steps]
+  Apple Stuffed Pork Loin [pork, 5 ings, 4 steps]
+  Applewood Bacon [bacon, 6 ings, 9 steps]
+  Arambasici (Croatian Sour Cabbage Rolls) [ham, 18 ings, 12 steps]
+  Arroz con Gandules (Puerto Rican Rice and Pigeon Peas) [turkey, 25 ings, 11 steps]
+  Arroz con Maiz (Rice with Corn) [sausage, 23 ings, 13 steps]

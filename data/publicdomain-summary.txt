@@ -1,0 +1,1332 @@
+Public-domain / US-government / university-extension dinner harvest
+Date: 2026-09-21
+
+Kept 630 complete dinner recipes (every record has ingredients AND steps).
+
+Sources (allowed only)
+----------------------
+  - Texas A&M AgriLife Extension Dinner Tonight (dinnertonight.tamu.edu)
+    university extension; WP Recipe JSON-LD with ingredients + instructions
+  - Iowa State University Extension Spend Smart. Eat Smart.
+    university extension; structured Ingredients <ul> + Instructions <ol>
+  - NIH MedlinePlus healthy dinner/soup recipes (US government, 17 USC 105)
+    skipped titles already present in usda.json / mealdb.json / wildgame.json
+  - Wikibooks Cookbook stew / main-course leftovers (CC BY-SA 4.0)
+    parsed from Ingredients + Procedure wikitext via MediaWiki API
+    (main-course category listing was rate-limited; stew batch kept)
+
+Not used: MeatEater, AllRecipes, Food Network, NYT, ATK, BBC, copyrighted
+cookbooks, TheMealDB (already harvested), USDA MyPlate Kitchen (already in usda.json).
+Fannie Farmer / Gutenberg HTML was inspected but recipes are narrative prose
+without structured ingredient lists, so they were not imported.
+Dropped after fetch: desserts, drinks, breakfast pancakes/muffins/oatmeal,
+side salads, dips, sauces, seasoning mixes, and incomplete pages.
+
+By source:
+  Texas A&M AgriLife Extension Dinner Tonight: 379
+  Iowa State University Extension Spend Smart. Eat Smart.: 102
+  Wikibooks Cookbook (CC BY-SA): 81
+  NIH MedlinePlus: 68
+
+By primary protein:
+  chicken: 191
+  vegetarian: 126
+  beans: 54
+  ground-beef: 51
+  turkey: 39
+  fish: 27
+  beef: 27
+  pork: 24
+  eggs: 18
+  salmon: 16
+  steak: 14
+  tuna: 10
+  shrimp: 10
+  ham: 6
+  catfish: 5
+  bacon: 4
+  sausage: 3
+  tofu: 2
+  crab: 2
+  lamb: 1
+
+By style:
+  American country: 173
+  American home: 130
+  Italian: 120
+  Mexican: 89
+  Mediterranean: 43
+  Asian: 41
+  Creole / Cajun: 15
+  Southern: 15
+  Indian: 4
+
+Normalization
+  id: pd-<slug> (suffix -2, -3 on collisions)
+  budget 1-5 from protein, ingredient count, or published cost/serving
+  difficulty 1-3 from step count
+  timeMin from stated times else step heuristic
+  image left empty
+  tags always include public-domain
+
+Titles:
+  - [bacon] Cheesy Potato Soup  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/cheesy-potato-soup/
+  - [bacon] Chuck Wagon Beans  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AChuck_Wagon_Beans
+  - [bacon] Jalapeno Popper Pastry Pinwheels  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/jalapeno-popper-pastry-pinwheels/
+  - [bacon] Spicy Green Beans  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/spicy-green-beans/
+  - [beans] Al Pastor Chickpea and Cauliflower Tacos  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/al-pastor-chickpea-and-cauliflower-tacos/
+  - [beans] Bean and Avocado Wrap  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/bean-avocado-wrap/
+  - [beans] Black Bean and Rice Stuffed Bell Peppers  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/black-bean-and-rice-stuffed-bell-peppers/
+  - [beans] Black Bean and Spinach Quesadillas  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/black-bean-and-spinach-quesadillas/
+  - [beans] Black Bean Burgers  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/black-bean-burgers/
+  - [beans] Black Bean Salsa with Pineapple  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/black-bean-salsa-with-pineapple/
+  - [beans] Black Bean Skillet  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/black-bean-skillet/
+  - [beans] Buffalo Chickpea Wrap  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/buffalo-chickpea-wrap/
+  - [beans] Butternut Squash Enchiladas  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/butternut-squash-enchiladas/
+  - [beans] Butternut Squash Stew  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/butternut-squash-stew/
+  - [beans] Caribbean Casserole  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/caribbean-casserole/
+  - [beans] Chickpea Curry (Masaledaar Chole)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AChickpea_Curry_%28Masaledaar_Chole%29
+  - [beans] Chickpea Soup with Nopales  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chickpea-and-cactus-soup/
+  - [beans] Chickpea Stew  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AChickpea_Stew
+  - [beans] Cowboy Caviar  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/cowboy-caviar/
+  - [beans] Easy Cheesy Enchiladas  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/easy-cheesy-enchiladas/
+  - [beans] Easy Minestrone Pasta  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/minestrone-pasta/
+  - [beans] Egyptian Lentil Stew  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AEgyptian_Lentil_Stew
+  - [beans] Fabes con Almejas (Spanish Beans with Clams)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AFabes_con_Almejas_%28Spanish_Beans_with_Clams%29
+  - [beans] Fiesta Garden Tacos  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/fiesta-garden-tacos/
+  - [beans] Garbanzo Bean Stew  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AGarbanzo_Bean_Stew
+  - [beans] Greek Orzo Pasta Salad  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/greek-orzo-pasta-salad/
+  - [beans] Indian Lentils and Pasta  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/indian-lentils-and-pasta/
+  - [beans] Kale and White Bean Soup  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/kale-and-white-bean-soup/
+  - [beans] Lentil Soup  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/lentil-soup/
+  - [beans] Lentil Taco Filling  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/lentil-taco-filling/
+  - [beans] Lentil Tacos  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/lentil-tacos/
+  - [beans] Lentil, Potato, and Tomato Curry  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ALentil%2C_Potato%2C_and_Tomato_Curry
+  - [beans] Mediterranean Street Tacos  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/mediterranean-street-tacos/
+  - [beans] Mesir Wat (Spicy Ethiopian Lentil Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AMesir_Wat_%28Spicy_Ethiopian_Lentil_Stew%29
+  - [beans] Minestra  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AMinestra
+  - [beans] Pinto Bean Soup with Lime Crema  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/pinto-bean-soup-with-lime-crema/
+  - [beans] Quinoa and Chickpea Tabbouleh  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/quinoa-and-chickpea-tabbouleh/
+  - [beans] Quinoa Cakes  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/quinoa-cakes/
+  - [beans] Sauteed Dill Chickpeas  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/sauteed-dill-chickpeas/
+  - [beans] Shakshuka  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/shakshuka/
+  - [beans] Skillet Gnocchi  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/skillet-gnocchi/
+  - [beans] Skillet Vegetable Enchiladas  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/skillet-vegetable-enchiladas/
+  - [beans] Slow Cooker Quinoa and Black Bean Stuffed Bell Peppers  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/slow-cooker-quinoa-black-bean-stuffed-bell-peppers/
+  - [beans] Sopes  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/sopes-english/
+  - [beans] Southwest Bean Burrito  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/southwest-bean-burrito/
+  - [beans] Spicy Lentil and Quinoa Bowl  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/spicy-lentil-and-quinoa-bowl/
+  - [beans] Spicy Stuffed Potatoes  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/spicy-stuffed-potatoes/
+  - [beans] Spinach and Black Bean Enchiladas  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/spinach-and-black-bean-enchiladas/
+  - [beans] Sweet Potato Burritos  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/sweet-potato-burritos/
+  - [beans] Tex-Mex Sorghum Stuffed Mushrooms  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/tex-mex-mushrooms/
+  - [beans] Three Can Chili  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/three-can-chili/
+  - [beans] Tortilla Casserole  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/tortilla-casserole/
+  - [beans] Vegetarian Chili  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/vegetarian-chili-2/
+  - [beans] Vegetarian Enchilada Casserole  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/vegetarian-enchilada-casserole/
+  - [beans] Very Vegetable Curry  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/vegetable-curry/
+  - [beans] Warm Bean and Arugula Salad  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/warm-bean-and-arugula-salad/
+  - [beans] Winter Black Bean Soup  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/winter-black-bean-soup/
+  - [beans] Yetsom Shiro (Ethiopian Vegan Chickpea Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AYetsom_Shiro_%28Ethiopian_Vegan_Chickpea_Stew%29
+  - [beef] Alicha Wot (Mild Ethiopian Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AAlicha_Wot_%28Mild_Ethiopian_Stew%29
+  - [beef] Beef and Barley Stew  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ABeef_and_Barley_Stew
+  - [beef] Beef and Guinness Casserole  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ABeef_and_Guinness_Casserole
+  - [beef] Beef and Vegetable Stir Fry  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/beef-vegetable-stir-fry/
+  - [beef] Beef Stew  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/beef-stew/
+  - [beef] Beef Stew  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/beef-stew/
+  - [beef] Beef Stew I  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ABeef_Stew_I
+  - [beef] Beef Stew II  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ABeef_Stew_II
+  - [beef] Braised Shortribs  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ABraised_Shortribs
+  - [beef] Cachupa (Cape Verdean Corn Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ACachupa_%28Cape_Verdean_Corn_Stew%29
+  - [beef] Classic Pot Roast  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AClassic_Pot_Roast
+  - [beef] Crock Pot Beef Stew  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ACrock_Pot_Beef_Stew
+  - [beef] Dublin Lamb Stew  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ADublin_Lamb_Stew
+  - [beef] French Onion Beef and Noodles  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/french-onion-beef-and-noodles/
+  - [beef] French Onion Roast Pockets  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/french-onion-roast-pockets/
+  - [beef] Ghormeh Sabzi (Iranian Herb Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AGhormeh_Sabzi_%28Iranian_Herb_Stew%29
+  - [beef] Goulash  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AGoulash
+  - [beef] Green Chili Beef Stew  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AGreen_Chili_Beef_Stew
+  - [beef] Hachee (Dutch Beef Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AHachee_%28Dutch_Beef_Stew%29
+  - [beef] Key Wat (Ethiopian Red Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AKey_Wat_%28Ethiopian_Red_Stew%29
+  - [beef] Lamb and Okra Stew (Khoresht Bamiye)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ALamb_and_Okra_Stew_%28Khoresht_Bamiye%29
+  - [beef] Mocha Rubbed Pot Roast  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/mocha-rubbed-pot-roast/
+  - [beef] Ramen Noodle Skillet  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/ramen-noodle-skillet/
+  - [beef] Roast Beef and Blue Cheese Salad  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/roast-beef-blue-cheese-salad/
+  - [beef] Slow Cooker French Onion Roast  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/french-onion-roast/
+  - [beef] Slow Cooker Roast  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/slow-cooker-roast/
+  - [beef] Zambian Beef Stew  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AZambian_Beef_Stew
+  - [catfish] Catfish Tacos with Pico de Gallo and Avocado Crema  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/catfish-tacos/
+  - [catfish] Fumbua (Wild Spinach Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AFumbua_%28Wild_Spinach_Stew%29
+  - [catfish] Liberian Eggplant Stew  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ALiberian_Eggplant_Stew
+  - [catfish] Mbong Tchobi (Cameroonian Spicy Black Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AMbong_Tchobi_%28Cameroonian_Spicy_Black_Stew%29
+  - [catfish] Zambian Fish Stew  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AZambian_Fish_Stew
+  - [chicken] African Cabbage Stew  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AAfrican_Cabbage_Stew
+  - [chicken] Asian Chicken and Brown Rice Salad  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/asian-chicken-brown-rice-salad/
+  - [chicken] Autumn Soup  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/autumn-soup/
+  - [chicken] Autumn Squash Bisque with Ginger  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/autumn-squash-bisque-with-ginger/
+  - [chicken] Baked Risotto with Lemon Seared Scallops  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/baked-risotto-with-lemon-seared-scallops/
+  - [chicken] Balsamic Chicken and Spinach Salad  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/balsamic-chicken-and-spinach-salad/
+  - [chicken] Barbecue Chicken Casserole  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/barbecue-chicken-casserole/
+  - [chicken] Barbecue Chicken Tostadas  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/barbecue-chicken-tostadas/
+  - [chicken] BBQ Chicken Sliders  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/bbq-chicken-sliders/
+  - [chicken] Bethany's Skillet Chicken and Rice Casserole  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/skillet-chicken-and-rice-casserole/
+  - [chicken] Black Bean Casserole  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/black-bean-casserole/
+  - [chicken] Black Bean Soup  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/black-bean-soup/
+  - [chicken] Blackberry Chipotle Chicken  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/blackberry-chipotle-chicken/
+  - [chicken] Booyah (Chicken Vegetable Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ABooyah_%28Chicken_Vegetable_Stew%29
+  - [chicken] Braised Mediterranean Chicken  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/braised-mediterranean-chicken/
+  - [chicken] Brazilian Feijoada  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ABrazilian_Feijoada
+  - [chicken] Brown Rice Risotto  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/brown-rice-risotto/
+  - [chicken] Buffalo Chicken Meatballs  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/buffalo-chicken-meatballs/
+  - [chicken] Buffalo Chicken Salad  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/buffalo-chicken-salad/
+  - [chicken] Buffalo Chicken Sweet Potato  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/buffalo-chicken-sweet-potato/
+  - [chicken] Burgoo  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ABurgoo
+  - [chicken] California Chicken Pasta  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/california-chicken-pasta/
+  - [chicken] Cauliflower Fried Rice  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/cauliflower-fried-rice/
+  - [chicken] Charro Beans Multifunction Cooker  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/charro-beans-m/
+  - [chicken] Cheesy Chicken Casserole  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/cheesy-chicken-casserole/
+  - [chicken] Cheesy Chicken Enchilada Bake  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/cheesy-chicken-enchilada-bake/
+  - [chicken] Cheesy Chicken Pasta  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/cheesy-chicken-pasta/
+  - [chicken] Cheesy Chicken Spinach Noodle Casserole  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/cheesy-chicken-spinach-noodle-casserole/
+  - [chicken] Cheesy Pot Pie Cups  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/cheesy-pot-pie-cups/
+  - [chicken] Chereh Tamba (Gambian Groundnut Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AChereh_Tamba_%28Gambian_Groundnut_Stew%29
+  - [chicken] Chicken Alfredo Pasta  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/chicken-alfredo-pasta/
+  - [chicken] Chicken and Black Bean Salsa Burritos  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/chicken-and-black-bean-salsa-burritos/
+  - [chicken] Chicken and Black-eyed Pea Stew  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AChicken_and_Black-eyed_Pea_Stew
+  - [chicken] Chicken and Broccoli Alfredo  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-broccoli-alfredo/
+  - [chicken] Chicken and Broccoli Pockets  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-and-broccoli-pockets/
+  - [chicken] Chicken and Dumpling Casserole  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/chicken-and-dumpling-casserole/
+  - [chicken] Chicken and Dumplings  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AChicken_and_Dumplings
+  - [chicken] Chicken and Fruit Salad  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-and-fruit-salad/
+  - [chicken] Chicken and Gnocchi Dumplings  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-and-gnocchi-dumplings/
+  - [chicken] Chicken and Rice Soup  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/chicken-and-rice-soup/
+  - [chicken] Chicken and Rice Stir Fry  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-and-rice-stir-fry/
+  - [chicken] Chicken and Spinach Lasagna  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-spinach-lasagna/
+  - [chicken] Chicken and Summer Veggies Grilling Pocket  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-and-summer-veggies-grilling-pocket/
+  - [chicken] Chicken Avocado Mango Tacos  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-avocado-mango-tacos/
+  - [chicken] Chicken Burrito Bowl  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/chicken-burrito-bowl/
+  - [chicken] Chicken Cabbage Stir-fry  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/chicken-cabbage-stir-fry/
+  - [chicken] Chicken Caesar Pitas  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-caesar-pitas/
+  - [chicken] Chicken Caprese Spaghetti Squash  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-caprese-spaghetti-squash/
+  - [chicken] Chicken Ceasar Pasta Salad  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-ceasar-pasta-salad/
+  - [chicken] Chicken Creole  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/chicken-creole/
+  - [chicken] Chicken Entrée Salad  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-entree-salad/
+  - [chicken] Chicken Fajitas  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/chicken-fajitas/
+  - [chicken] Chicken Flautas Air Fryer  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-flautas/
+  - [chicken] Chicken Fried Steak Air Fryer Minis  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-fried-steak-air-fryer-minis/
+  - [chicken] Chicken Garden Spring Rolls  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-garden-spring-rolls/
+  - [chicken] Chicken Gumbo  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-gumbo/
+  - [chicken] Chicken Gyro Sheet Pan Meal  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-gyro-sheet-pan-meal/
+  - [chicken] Chicken Harvest Lunch Bowl  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-harvest-lunch-bowl/
+  - [chicken] Chicken Madras  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AChicken_Madras
+  - [chicken] Chicken Marsala  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-marsala/
+  - [chicken] Chicken Mull  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AChicken_Mull
+  - [chicken] Chicken Multifunction Cooker  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-multifunction-cooker/
+  - [chicken] Chicken Noodle Soup  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/favorite-chicken-noodle-soup/
+  - [chicken] Chicken Parmesan  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-parmesan/
+  - [chicken] Chicken Parmesan Sliders  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-parmesan-sliders/
+  - [chicken] Chicken Pepper Bake  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/chicken-pepper-bake/
+  - [chicken] Chicken Salad  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/anyday-picnic-salad/
+  - [chicken] Chicken Salad Pita with Yogurt Sauce  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-salad-pita-yogurt-sauce/
+  - [chicken] Chicken Sausage and Vegetable Sheet Pan Meal  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-sausage-and-vegetable-sheet-pan-meal/
+  - [chicken] Chicken Soup with Tortilla  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/chicken-soup-with-tortilla/
+  - [chicken] Chicken Taco Wraps with Spicy Sauce  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-taco-wraps-with-spicy-sauce/
+  - [chicken] Chicken Tacos with Roasted Street Corn  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-tacos-with-roasted-street-corn/
+  - [chicken] Chicken Tenders  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/chicken-tenders/
+  - [chicken] Chicken Veggie Risotto  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-veggie-risotto/
+  - [chicken] Chicken with Mushrooms  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/chicken-with-mushrooms/
+  - [chicken] Chicken with Peachy Ginger Sauce Slow Cooker  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-with-peachy-ginger-sauce-slow-cooker/
+  - [chicken] Chicken, Broccoli and Sesame Stir Fry  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-broccoli-and-sesame-stir-fry/
+  - [chicken] Chicken, Broccoli, and Cheese Skillet  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/chicken-broccoli-and-cheese-skillet/
+  - [chicken] Chicken, Corn, and Rice Casserole  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/chicken-corn-and-rice-casserole/
+  - [chicken] Chicken, Mushroom and Caramelized Onion Flatbread  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-mushroom-and-caramelized-onion-flatbread/
+  - [chicken] Chinese Chicken  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chinese-chicken/
+  - [chicken] Chipotle Chicken Taco Salad  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chipotle-chicken-taco-salad/
+  - [chicken] Cognac Beef Stew  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ACognac_Beef_Stew
+  - [chicken] Corn Stuffed Pork Chops  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/corn-stuffed-pork-chops/
+  - [chicken] Couscous Chicken  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/couscous-chicken/
+  - [chicken] Creamy Hamburger Potato Soup  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/creamy-hamburger-potato-soup/
+  - [chicken] Creamy Potato Leek Soup  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/creamy-potato-leek-soup/
+  - [chicken] Crispy Baked Chicken  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/crispy-baked-chicken/
+  - [chicken] Crunchy Chicken Nuggets  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/crunchy-chicken-nuggets/
+  - [chicken] Delicious Cajun Chicken  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/cajun-chicken/
+  - [chicken] Dill Pickle Chicken Salad  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/dill-pickle-chicken-salad/
+  - [chicken] Domoda (Gambian Peanut Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ADomoda_%28Gambian_Peanut_Stew%29
+  - [chicken] Dorowot Fitfit (Ethiopian Chicken Stew Salad)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ADorowot_Fitfit_%28Ethiopian_Chicken_Stew_Salad%29
+  - [chicken] Easy Cheesy Enchiladas  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/easy-cheesy-enchiladas/
+  - [chicken] Easy Chicken Fajitas  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-fajitas/
+  - [chicken] Easy Spinach and Chicken Pasta  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/easy-spinach-chicken-pasta/
+  - [chicken] Estofado de Pollo (Chicken Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AEstofado_de_Pollo_%28Chicken_Stew%29
+  - [chicken] Fajita Street Tacos  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/fajita-street-tacos/
+  - [chicken] Frijoles Antioqueños (Colombian Bean Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AFrijoles_Antioque%C3%B1os_%28Colombian_Bean_Stew%29
+  - [chicken] Garbanzo Bean Soup  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/garbanzo-bean-soup/
+  - [chicken] Garlic and Herb Lentils  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/garlic-and-herb-lentils/
+  - [chicken] Greek Protein Bowls  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/greek-protein-bowls/
+  - [chicken] Green Chili Pork Stew  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/green-chili-pork-stew/
+  - [chicken] Green Enchilada Soup  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/green-enchilada-soup/
+  - [chicken] Green Pea Soup  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/green-pea-soup/
+  - [chicken] Ham and Brown Rice  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/ham-brown-rice/
+  - [chicken] Ham and Vegetable Chowder  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/ham-and-vegetable-chowder/
+  - [chicken] Hamburger Stoup  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AHamburger_Stoup
+  - [chicken] Hearty Two Bean Minestrone Soup  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/hearty-two-bean-minestrone-soup/
+  - [chicken] Hearty Veggie Soup  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/hearty-veggie-soup/
+  - [chicken] Herb Cubes  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/get-cooking-with-herbs/
+  - [chicken] Italian Artichoke Chicken  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/italian-artichoke-chicken/
+  - [chicken] Italian Chicken  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/italian-chicken/
+  - [chicken] Italian Chicken (Slow or Pressure Cooker)  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/italian-chicken-slow-cooker-pressure-cooker/
+  - [chicken] Italian Wedding Soup  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/italian-wedding-soup/
+  - [chicken] Jambalaya  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/jambalaya/
+  - [chicken] Kanda (Peanut Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AKanda_%28Peanut_Stew%29
+  - [chicken] Kedjenou Chicken (Chicken and Vegetable Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AKedjenou_Chicken_%28Chicken_and_Vegetable_Stew%29
+  - [chicken] Loaded Potato Soup  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/loaded-potato-soup-2/
+  - [chicken] Loaded Veggie Spaghetti  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/loaded-veggie-spaghetti/
+  - [chicken] Margarita Chicken  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/margarita-chicken/
+  - [chicken] Marry Me Chicken  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/marry-me-chicken/
+  - [chicken] Matcha Pea Soup  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/matcha-pea-soup/
+  - [chicken] Meat and Veggie Mac  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/meat-veggie-mac/
+  - [chicken] Mediterranean Chicken Bowl  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/mediterranean-chicken-bowl/
+  - [chicken] Mediterranean Chicken Sandwich  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/mediterranean-chicken-sandwich/
+  - [chicken] Mediterranean Chicken Wrap  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/mediterranean-chicken-wrap/
+  - [chicken] Mexican Chicken Soup  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/mexican-chicken-soup/
+  - [chicken] Mexican Chicken Soup  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/mexican-chicken-soup/
+  - [chicken] Minestrone Soup  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/minestrone-soup/
+  - [chicken] Mix It Up Stir Fry  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/beef-vegetable-stir-fry/
+  - [chicken] Moroccan Chicken Tagine  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/moroccan-chicken-tagine/
+  - [chicken] No Bake Quick Chicken Tetrazzini  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/no-bake-quick-chicken-tetrazzini/
+  - [chicken] One Dish Chicken Green Beans and Potatoes  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/one-dish-chicken-green-beans-potatoes/
+  - [chicken] One Pot Lentil Soup  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/one-pot-lentil-soup/
+  - [chicken] One Skillet Chicken Couscous  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/one-skillet-chicken-couscous/
+  - [chicken] One-Pan Chicken Alfredo  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/one-pan-chicken-alfredo/
+  - [chicken] Orzo Garlic Chicken  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/orzo-garlic-chicken/
+  - [chicken] Pad Thai Egg Rolls  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/pad-thai-egg-rolls/
+  - [chicken] Peanut Chicken Ramen Bowl  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/peanut-chicken-ramen-bowl/
+  - [chicken] Pineapple Veggie Chicken  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/pineapple-veggie-chicken/
+  - [chicken] Pollo con Chile y Zarzamora  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/pollo-con-chile-y-zarzamora/
+  - [chicken] Pork Pozole  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/pork-pozole/
+  - [chicken] Pozole with Chicken  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/pozole-with-chicken/
+  - [chicken] Pretzel-Crusted Chicken  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/pretzel-crusted-chicken/
+  - [chicken] Quick Chicken and Spring Vegetables  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/quick-chicken-spring-vegetables/
+  - [chicken] Quick Pad Thai  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/quick-pad-thai/
+  - [chicken] Rice Pilaf  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/rice-pilaf/
+  - [chicken] Rice with Chicken and Vegetables  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/rice-with-chicken-and-vegetables/
+  - [chicken] Roasted Cabbage and Bratwurst  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/roasted-cabbage-and-bratwurst/
+  - [chicken] Roasted Poblano and Creamy Corn Soup  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/roasted-poblano-corn-soup/
+  - [chicken] Salsa Orange Chicken  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/salsa-orange-chicken/
+  - [chicken] Salsa Verde Chicken  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/salsa-verde-chicken/
+  - [chicken] Savory Onion and Mushroom Pork Roast  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/savory-onion-mushroom-pork-roast/
+  - [chicken] Sesame Noodles with Broccoli and Chicken  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/sesame-noodles-with-broccoli-and-chicken/
+  - [chicken] Sheet Pan Chicken Fajitas  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/sheet-pan-chicken-fajitas/
+  - [chicken] Sheet Pan Chicken Tostadas  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/sheet-pan-chicken-tostadas/
+  - [chicken] Simple Skillet Pizzas  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/skillet-pizzas/
+  - [chicken] Skillet Braised Chicken  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/skillet-braised-chicken/
+  - [chicken] Skillet Noodle Pie  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/skillet-noodle-pie/
+  - [chicken] Slow Cooker Barbecue Chicken Thighs  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/slow-cooker-barbecue-chicken-thighs/
+  - [chicken] Slow Cooker Chicken and Dumplings  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/slow-cooker-chicken-dumplings/
+  - [chicken] Slow Cooker Chicken Stew  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/slow-cooker-chicken-stew/
+  - [chicken] Slow Cooker Chicken Taco Chili  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/slow-cooker-chicken-taco-chili/
+  - [chicken] Slow Cooker Mexican Chicken Soup  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/slow-cooker-mexican-chicken-soup/
+  - [chicken] Slow Cooker Spicy Peanut Chicken  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/slow-cooker-spicy-peanut-chicken/
+  - [chicken] Smokey Chicken, Black Bean, Sweet Potato Burrito  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-black-bean-sweet-potato-burrito/
+  - [chicken] Southwest Chicken Salad  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/southwest-chicken-salad/
+  - [chicken] Southwest Chicken Soup  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/southwest-chicken-soup/
+  - [chicken] Southwest Tortellini Pasta Salad  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/southwest-tortellini-pasta-salad/
+  - [chicken] Spicy Chicken Thighs  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/spicy-chicken-thighs/
+  - [chicken] Spicy Refried Beans  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/spicy-refried-beans/
+  - [chicken] Spicy Spaghetti with Grilled Chicken  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/spicy-spaghetti-grilled-chicken/
+  - [chicken] Spinach and Chicken Italian  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/spinach-and-chicken-italian/
+  - [chicken] Split Pea Soup  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/split-pea-soup/
+  - [chicken] Squash and Apple Soup  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/squash-and-apple-soup/
+  - [chicken] Stove Top Green Enchiladas  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/stove-top-green-enchiladas/
+  - [chicken] Strawberry Balsamic Chicken Sandwich  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/strawberry-balsamic-chicken-sandwich/
+  - [chicken] Sweet and Sour Rice  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/sweet-sour-rice/
+  - [chicken] Sweet and Tangy Chicken Quesadillas  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/sweet-tangy-chicken-quesadillas/
+  - [chicken] Teriyaki Rice Bowl  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/teriyaki-rice-bowl-2/
+  - [chicken] Thai Chicken Curry  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/thai-chicken-curry/
+  - [chicken] Vegetable Pasta Soup  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/vegetable-pasta-soup/
+  - [chicken] Vegetable Soup with Kale and Lentils  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/vegetable-soup-kale-lentils/
+  - [chicken] Veggie and Egg Rice  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/veggie-and-egg-rice/
+  - [chicken] West African Peanut Soup  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/west-african-peanut-soup/
+  - [chicken] White Chicken Chili  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/white-chicken-chili/
+  - [chicken] White Chili  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/white-chili/
+  - [chicken] Whole Meal Salad  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/whole-meal-salad/
+  - [chicken] Zesty Baked Chicken  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/zesty-baked-chicken/
+  - [chicken] Zucchini and Chicken Pie  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/zucchini-and-chicken-pie/
+  - [crab] Crab Cakes with Sorghum  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/crab-cakes-with-sorghum/
+  - [crab] Crispy Crab Taquitos  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/crispy-crab-taquitos/
+  - [eggs] Apple and Cheddar Galette  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/apple-and-cheddar-galette/
+  - [eggs] Candied Pecans  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/candied-pecans/
+  - [eggs] Easy Egg Salad  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/easy-egg-salad/
+  - [eggs] Easy Manicotti  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/easy-manicotti/
+  - [eggs] Easy Quiche  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/easy-quiche/
+  - [eggs] Egg Salad  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/creamy-egg-salad-sandwich/
+  - [eggs] Egg Salad Veggie Wrap  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/egg-salad-veggie-wrap/
+  - [eggs] Kale Quiche  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/kale-quiche/
+  - [eggs] Leek and Potato Frittata  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/leek-and-potato-frittata/
+  - [eggs] Panko Onion Rings with Homemade Ranch  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/panko-onion-rings/
+  - [eggs] Savory Squash Casserole  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/savory-squash-casserole/
+  - [eggs] Scrambled Egg Skillet  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/scrambled-egg-skillet/
+  - [eggs] Sorghum Fried Rice  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/sorghum-fried-rice/
+  - [eggs] Spinach Quiche  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/spinach-quiche/
+  - [eggs] Sweet Potato Casserole  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/sweet-potato-casserole/
+  - [eggs] Vegetable Cheese Tart  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/vegetable-cheese-tart/
+  - [eggs] Vegetable Fried Rice  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/vegetable-fried-rice/
+  - [eggs] Vegetable Frittata  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/vegetable-frittata/
+  - [fish] Air Fried Red Snapper  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/air-fried-red-snapper/
+  - [fish] Asian Tilapia with Red Pepper and Scallion Slaw  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/asian-tilapia/
+  - [fish] Bachelor Fish Stew  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ABachelor_Fish_Stew
+  - [fish] Baked Fish and Chips  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/baked-fish-and-chips/
+  - [fish] Baked Tilapia  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/baked-tilapia/
+  - [fish] Baked Tilapia with Tomatoes  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/baked-tilapia-with-tomatoes/
+  - [fish] Blackened Tilapia  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/blackened-tilapia/
+  - [fish] Bouillabaisse  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ABouillabaisse
+  - [fish] Cajun Grilled Fish Tacos  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/cajun-grilled-fish-tacos/
+  - [fish] Cioppino (Italian Seafood Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ACioppino_%28Italian_Seafood_Stew%29
+  - [fish] Crispy Parmesan Baked Fish  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/crispy-parmesan-baked-fish/
+  - [fish] Fish and Noodle Skillet  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/fish-noodle-skillet/
+  - [fish] Fish and Spinach Bake  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/fish-and-spinach-bake/
+  - [fish] Fish Salad  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/fish-salad/
+  - [fish] Fish Sandwich  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/fish-sandwich/
+  - [fish] Fish Tacos  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/fish-tacos-2/
+  - [fish] Herbed Citrus Grouper  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/herbed-citrus-grouper/
+  - [fish] Italian Style Cod  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/italian-style-cod/
+  - [fish] Liberian Palm Oil Stew  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ALiberian_Palm_Oil_Stew
+  - [fish] Mbongo Tchobi (Cameroonian Black Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AMbongo_Tchobi_%28Cameroonian_Black_Stew%29
+  - [fish] Moqueca de Peixe (Brazilian Seafood Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AMoqueca_de_Peixe_%28Brazilian_Seafood_Stew%29
+  - [fish] Mustard Crusted Fish  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/mustard-crusted-fish/
+  - [fish] Parrilla Tilapia Hamburguesas  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/parrilla-tilapia-hamburguesas/
+  - [fish] Parsley Crusted Fish  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/parsley-crusted-fish/
+  - [fish] Tacos de Pescado a la Parilla Estilo Cajún  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/tacos-de-pescado-la-parilla-estilo-cajun/
+  - [fish] Tex Mex Tabbouleh  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/tex-mex-tabbouleh/
+  - [fish] Thai Chicken and Vegetable Curry  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/thai-chicken-and-vegetable-curry/
+  - [ground-beef] Beef and Broccoli  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/beef-and-broccoli/
+  - [ground-beef] Beef and Cheese French Bread  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/beef-and-cheese-french-bread/
+  - [ground-beef] Beef and Rice  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/beef-and-rice/
+  - [ground-beef] Beef Goulash  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/beef-goulash/
+  - [ground-beef] Beef Italian Pasta  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/beef-italian-pasta/
+  - [ground-beef] Beef Skillet Supper  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/beef-skillet-supper/
+  - [ground-beef] Beef Stuffed Acorn Squash  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/beef-stuffed-acorn-squash/
+  - [ground-beef] Beef Stuffed Pasta  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/beef-stuffed-pasta/
+  - [ground-beef] Beefy Sausage Zucchini Bake  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/beefy-sausage-zucchini-bake/
+  - [ground-beef] Beefy Vegetable Stuffed Peppers  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/beefy-vegetable-stuffed-peppers/
+  - [ground-beef] Burger Bowls with Sweet Potato Wedges  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/burger-bowls/
+  - [ground-beef] Cabbage & Meatballs  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/cabbage-meatballs/
+  - [ground-beef] Cheesy Beef Pasta  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/cheesy-beef-pasta/
+  - [ground-beef] Cheesy Lasagna Rolls  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/lasagna-rolls/
+  - [ground-beef] Chili  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chili/
+  - [ground-beef] Chili Mac  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chili-mac/
+  - [ground-beef] Deep Dish Pizza Casserole  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/deep-dish-pizza-casserole/
+  - [ground-beef] Easy Meatballs  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/easy-meatballs/
+  - [ground-beef] Four Layer Supper  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/four-layer-supper/
+  - [ground-beef] Homemade Hamburger Helper  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/homemade-hamburger-helper/
+  - [ground-beef] Meatloaf  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/meatloaf/
+  - [ground-beef] Meatloaf  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/meatloaf/
+  - [ground-beef] Mexican Vegetable and Beef Skillet Meal  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/mexican-vegetable-and-beef-skillet-meal/
+  - [ground-beef] Mini Beef and Potato Casserole  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/mini-beef-and-potato-casserole/
+  - [ground-beef] Nacho Mac n' Cheese  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/nacho-mac-n-cheese/
+  - [ground-beef] Not Your Mom's Meatloaf  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/not-moms-meatloaf/
+  - [ground-beef] One-Pan Spaghetti  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/one-pan-spaghetti/
+  - [ground-beef] Philly Cheesesteak Casserole  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/philly-cheesesteak-casserole/
+  - [ground-beef] Poblano Casserole  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/poblano-casserole/
+  - [ground-beef] Pumpkin Chili  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/pumpkin-chili/
+  - [ground-beef] Quick Beef Casserole  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/quick-beef-casserole/
+  - [ground-beef] Quick Lasagna  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/quick-lasagna/
+  - [ground-beef] Ravioli Bake  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/ravioli-bake/
+  - [ground-beef] Runzas  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/runzas/
+  - [ground-beef] Salsa Beef & Rice  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/salsa-beef-rice/
+  - [ground-beef] Skillet Lasagna  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/skillet-lasagna/
+  - [ground-beef] Skinny Sloppy Joes  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/skinny-sloppy-joes/
+  - [ground-beef] Sloppy Joes  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/sloppy-joes/
+  - [ground-beef] Slow Cooker Sloppy Joes  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/slow-cooker-sloppy-joes/
+  - [ground-beef] Slow Cooker Taco Soup  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/slow-cooker-taco-soup/
+  - [ground-beef] Southwest Beef Skillet  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/southwest-beef-skillet/
+  - [ground-beef] Spaghetti with Ground Beef  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/spaghetti-with-ground-beef/
+  - [ground-beef] Spicy Rice Casserole  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/spicy-rice-casserole/
+  - [ground-beef] Spicy Stuffed Bell Peppers  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/spicy-stuffed-bell-peppers/
+  - [ground-beef] Superhero Shepherd's Pie  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/superhero-shepherds-pie/
+  - [ground-beef] Taco Boats  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/taco-boats/
+  - [ground-beef] Tamale Pie  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/tamale-pie/
+  - [ground-beef] Tasty Hamburger Skillet  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/tasty-hamburger-skillet/
+  - [ground-beef] Tasty Taco Rice Salad  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/tasty-taco-rice-salad/
+  - [ground-beef] Tex Mex Beef Skillet  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/tex-mex-beef-skillet/
+  - [ground-beef] Three Cheese Lasagna  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/three-cheese-lasagna/
+  - [ham] Ham and Cheese Pinwheels  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/ham-cheese-pinwheels/
+  - [ham] Ham and Cheese Quiche  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/ham-and-cheese-quiche/
+  - [ham] Ham, Swiss, and Green Bean Spaghetti  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/ham-swiss-and-green-bean-spaghetti/
+  - [ham] Kawlata (Maltese Vegetable and Pork Soup)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AKawlata_%28Maltese_Vegetable_and_Pork_Soup%29
+  - [ham] Pasta Salad with Peas and Ham  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/pasta-salad-peas-ham/
+  - [ham] Vegetable-Stuffed Nilgai  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/vegetable-stuffed-nilgai/
+  - [lamb] Fårikål (Norwegian Lamb and Cabbage Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AF%C3%A5rik%C3%A5l_%28Norwegian_Lamb_and_Cabbage_Stew%29
+  - [pork] Apple and Leek Pork Chops  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/apple-leek-pork-chops/
+  - [pork] Baked Pork Chops  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/baked-pork-chops/
+  - [pork] Dinuguan (Pork Blood Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ADinuguan_%28Pork_Blood_Stew%29
+  - [pork] Easy Orange Pork Stir Fry  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/easy-orange-pork-stir-fry/
+  - [pork] Fruit and Walnut Stuffed Pork Loin  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/fruit-and-walnut-stuffed-pork-loin/
+  - [pork] Glazed Pork Chops  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/glazed-pork-chops/
+  - [pork] Herb Crusted Pork Chops  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/herb-crusted-pork-chops/
+  - [pork] Menudo (Mexican Tripe and Hominy Soup)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AMenudo_%28Mexican_Tripe_and_Hominy_Soup%29
+  - [pork] Peachy Pork Tenderloin  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/peachy-pork-tenderloin/
+  - [pork] Pork Loin and Vegetables  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/pork-loin-vegetables/
+  - [pork] Pork Tenderloin with Cayenne Cherry Sauce  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/pork-tenderloin-cayenne-cherry-sauce/
+  - [pork] Salsa Verde Pork  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/salsa-verde-pork/
+  - [pork] Salsa Verde Pork Street Tacos  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/salsa-verde-pork-street-tacos/
+  - [pork] Sheet Pan Greek Pork Chops  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/sheet-pan-greek-pork-chops/
+  - [pork] Shredded Pork Sandwich  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/shredded-pork-sandwich-2/
+  - [pork] Skillet Chops and Rice  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/skillet-chops-rice/
+  - [pork] Slow Cooker Pork Cacciatore  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/slow-cooker-pork-cacciatore/
+  - [pork] Slow Cooker Pork Chili  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/slow-cooker-pork-chili/
+  - [pork] Slow Cooker Pork Roast  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/slow-cooker-pork-roast/
+  - [pork] Slow Cooker Pulled Pork  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/slow-cooker-pulled-pork/
+  - [pork] Slow Cooker Street Tacos  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/slow-cooker-street-tacos/
+  - [pork] Smokey Pork Tenderloin Tacos  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/smokey-pork-tenderloin-tacos/
+  - [pork] Sweet Pork Stir Fry  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/sweet-pork-stir-fry/
+  - [pork] Teriyaki Ginger Pork Tenderloin  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/teriyaki-ginger-pork-tenderloin/
+  - [salmon] Bang Bang Salmon Bowls  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/bang-bang-salmon-bowls/
+  - [salmon] Broiled Salmon  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/broiled-salmon/
+  - [salmon] Citrus Pan Fried Fish  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/pan-fried-tilapia-orange-sauce/
+  - [salmon] Crunchy Lime Wasabi Salmon  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/crunchy-lime-wasabi-salmon/
+  - [salmon] Dijon Salmon  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/dijon-salmon/
+  - [salmon] Hot Alaska Salmon Melts  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/hot-alaska-salmon-melts/
+  - [salmon] Orange and Ginger Salmon  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/orange-and-ginger-salmon/
+  - [salmon] Oven Baked Salmon  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/oven-baked-salmon/
+  - [salmon] Salmon Bowtie Pasta  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/salmon-bowtie-pasta/
+  - [salmon] Salmon Pasta Skillet  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/salmon-pasta-skillet/
+  - [salmon] Salmon Patties  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/salmon-patties/
+  - [salmon] Salmon Patties  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/salmon-patties/
+  - [salmon] Salmon Salad Mix  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/salmon-salad-mix/
+  - [salmon] Salmon Wraps  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/salmon-wraps/
+  - [salmon] Spicy Salmon Sushi Cups  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/spicy-salmon-sushi-cups/
+  - [salmon] Wild Rice with Salmon Stew  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/wild-rice-with-salmon-stew/
+  - [sausage] Cassoulet  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ACassoulet
+  - [sausage] Lentil and Sausage Stew  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ALentil_and_Sausage_Stew
+  - [sausage] Rice with Black Beans and Sausage  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/rice-with-black-beans-and-sausage/
+  - [shrimp] Italian Shrimp Fettucini  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/italian-shrimp-fettucini/
+  - [shrimp] Sautéed Mung Beans  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/sauteed-mung-beans/
+  - [shrimp] Shrimp & Asparagus Risotto  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/shrimp-asparagus-risotto/
+  - [shrimp] Shrimp & Broccoli Alfredo  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/shrimp-broccoli-alfredo/
+  - [shrimp] Shrimp and Slaw Street Tacos  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/shrimp-and-slaw-street-tacos/
+  - [shrimp] Shrimp and Veggie Mac N' Cheese  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/shrimp-and-veggie-mac-n-cheese/
+  - [shrimp] Shrimp Tacos with Lime Crema Sauce  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/shrimp-tacos-with-lime-crema-sauce/
+  - [shrimp] Shrimp, Pineapple & Veggie Skewers  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/shrimp-pineapple-veggie-skewers/
+  - [shrimp] Spicy Garlic and Shrimp Pasta  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/spicy-garlic-shrimp-pasta/
+  - [shrimp] Spicy Shrimp Spinach Salad  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/spicy-shrimp-spinach-salad/
+  - [steak] BBQ Pepper Steak  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/bbq-pepper-steak/
+  - [steak] Beef & Cauliflower  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/beef-cauliflower/
+  - [steak] Beef and Broccoli Stir Fry  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/beef-broccoli-stir-fry/
+  - [steak] Beef Kabobs  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/beef-kabobs/
+  - [steak] Beef Stir Fry  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/beef-stir-fry/
+  - [steak] Beef Teriyaki Skillet  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/beef-teriyaki-skillet/
+  - [steak] Boeuf Bourguignon  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ABoeuf_Bourguignon
+  - [steak] Bulgogi (Korean BBQ Beef)  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/bulgogi-korean-bbq-beef/
+  - [steak] Mediterranean Beef Stew  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AMediterranean_Beef_Stew
+  - [steak] Not Your Average Steak Sandwich  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/not-average-steak-sandwich/
+  - [steak] Spinach, Mushroom and Feta Stuffed Flank Steak  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/spinach-mushroom-and-feta-stuffed-flank-steak/
+  - [steak] Steak Tacos  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/steak-tacos/
+  - [steak] Stir-Fried Beef and Potatoes  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/stir-fried-beef-and-potatoes/
+  - [steak] Swiss Steak Deluxe  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/swiss-steak-deluxe/
+  - [tofu] Rice Bowl Southwestern Style  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/rice-bowl-southwestern-style/
+  - [tofu] Vegetarian Tofu Enchiladas  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/vegetarian-tofu-enchiladas/
+  - [tuna] Apple Tuna Salad  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/apple-tuna-salad/
+  - [tuna] Beet, Tuna, and White Bean Salad  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/beet-tuna-and-white-bean-salad/
+  - [tuna] Blackened Tuna Patties  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/blackened-tuna-patties/
+  - [tuna] Spicy Tuna Salad  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/spicy-tuna-salad/
+  - [tuna] Stovetop Tuna Casserole  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/stovetop-tuna-casserole/
+  - [tuna] Tuna Cakes  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/tuna-cakes/
+  - [tuna] Tuna Melt Sandwich  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/tuna-melt-sandwich/
+  - [tuna] Tuna Melt Sandwiches  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/tuna-melt-sandwiches/
+  - [tuna] Tuna Veggie Melt  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/tuna-veggie-melt/
+  - [tuna] Wraps “Your Way”  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/wraps-your-way/
+  - [turkey] Baked Potato Soup  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/baked-potato-soup/
+  - [turkey] Baked Ziti  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/baked-ziti/
+  - [turkey] Chicken Bow Tie Sausage Pasta  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chicken-bow-tie-sausage-pasta/
+  - [turkey] Chili  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/10-minute-chili/
+  - [turkey] Cranberry Almond Wrap  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/cranberry-almond-wrap/
+  - [turkey] Grape and Avocado Grilled Cheese Sandwiches  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/grape-and-avocado-grilled-cheese-sandwiches/
+  - [turkey] Greek Meatballs  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/greek-meatballs/
+  - [turkey] Herbed Turkey Breast  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/slow-cooker-herbed-turkey-breast/
+  - [turkey] Italian Tortellini Soup  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/italian-tortellini-soup/
+  - [turkey] Italian Zucchini Meatballs  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/italian-spinach-zucchini-meatballs/
+  - [turkey] Meatball Orzo Soup  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/meatball-orzo-soup/
+  - [turkey] Meatballs  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/meatballs/
+  - [turkey] Mexican Lasagna  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/mexican-lasagna/
+  - [turkey] Pasta Fagioli Soup  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/pasta-fagioli-soup/
+  - [turkey] Pepperoni Frittata  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/pepperoni-frittata/
+  - [turkey] Pizza Boats  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/pizza-boats/
+  - [turkey] Quick Turkey Rice Soup  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/quick-turkey-rice-soup/
+  - [turkey] Quinoa Butternut Squash Fall Bake  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/quinoa-butternut-squash-fall-bake/
+  - [turkey] Roasted Vegetables and Kielbasa  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/roasted-vegetables-and-kielbasa/
+  - [turkey] Sausage and Vegetable Skillet  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/sausage-and-vegetable-skillet/
+  - [turkey] Sausage, Kale and White Bean Stew  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/sausage-kale-and-white-bean-stew/
+  - [turkey] Skillet Lasagna  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/skillet-lasagna/
+  - [turkey] Southwest Turkey Bake  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/southwest-turkey-bake/
+  - [turkey] Stromboli  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/stromboli/
+  - [turkey] Stuffed Baked Potatoes  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/stuffed-baked-potatoes/
+  - [turkey] Stuffed Peppers  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/stuffed-peppers/
+  - [turkey] Tater Tot Casserole  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/tater-tot-casserole/
+  - [turkey] Tortilla Layer Sandwich  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/tortilla-layer-sandwich/
+  - [turkey] Turkey and Wild Rice Soup  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/turkey-and-wild-rice-soup/
+  - [turkey] Turkey Burrito Bowl  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/turkey-burrito-bowl/
+  - [turkey] Turkey Ginger Rice Lettuce Wraps  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/turkey-ginger-rice-lettuce-wraps/
+  - [turkey] Turkey Pumpkin Chili  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/turkey-pumpkin-chili/
+  - [turkey] Turkey Sausage and Spinach Strata  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/turkey-sausage-and-spinach-strata/
+  - [turkey] Turkey Stroganoff  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/turkey-stroganoff/
+  - [turkey] Turkey Vegetable Quiche  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/turkey-vegetable-quiche/
+  - [turkey] Turkey, Broccoli, Rice Casserole  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/turkey-broccoli-rice-casserole/
+  - [turkey] Vegetable Beef Soup  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/vegetable-beef-soup/
+  - [turkey] Vegetables and Turkey Stir-Fry  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/vegetables-and-turkey-stir-fry/
+  - [turkey] Zucchini Chowder  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/zucchini-chowder/
+  - [vegetarian] Atkilt Wat (Ethiopian Cabbage and Potato Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AAtkilt_Wat_%28Ethiopian_Cabbage_and_Potato_Stew%29
+  - [vegetarian] Bagre Cocido a la Parmesana  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/bagre-cocido-la-parmesana-2/
+  - [vegetarian] Bagre Cocido a la Parmesana  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/bagre-cocido-la-parmesana/
+  - [vegetarian] Baked Potato with Cheesy Vegetables  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/baked-potato-cheesy-vegetables/
+  - [vegetarian] Balsamic Brussels Sprouts  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/balsamic-brussels-sprouts/
+  - [vegetarian] Balsamic Glazed Carrots  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/balsamic-glazed-carrots/
+  - [vegetarian] Beet and Cabbage Stew  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ABeet_and_Cabbage_Stew
+  - [vegetarian] Blueberry Apricot Yogurt Parfaits  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/apricot-blueberry-dessert/
+  - [vegetarian] Bok Choy Spicy Stir Fry  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/bok-choy-spicy-stir-fry/
+  - [vegetarian] Butternut Squash Mac n Cheese  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/butternut-squash-mac-n-cheese/
+  - [vegetarian] Butternut Squash Soup  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/butternut-squash-soup/
+  - [vegetarian] Cauliflower Alfredo Veggie Bake  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/cauliflower-alfredo-veggie-bake/
+  - [vegetarian] Chakalaka (South African Vegetable Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AChakalaka_%28South_African_Vegetable_Stew%29
+  - [vegetarian] Cheese Broccoli Ranch Mashed Potatoes  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/cheese-broccoli-ranch-mashed-potatoes/
+  - [vegetarian] Cheesy Broccoli Soup  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/cheesy-broccoli-soup/
+  - [vegetarian] Cheesy Vegetable Pasta  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/cheesy-pasta-summer-veggies/
+  - [vegetarian] Chikwanda (Zambian Sweet Potato Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AChikwanda_%28Zambian_Sweet_Potato_Stew%29
+  - [vegetarian] Chili Lime Edamame  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chili-lime-edamame/
+  - [vegetarian] Chimichurri Grilled Zucchini  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chimichurri-grilled-zucchini/
+  - [vegetarian] Chocolate Almond Butter Bark  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chocolate-almond-butter-bark/
+  - [vegetarian] Chocolate Covered Strawberry Bark  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chocolate-covered-strawberry-bark/
+  - [vegetarian] Chuletas de Cerdo Rellenas de Maíz  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/chuletas-de-cerdo-rellenas-de-maiz/
+  - [vegetarian] Coconut Watermelon Zing  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/coconut-watermelon-zing/
+  - [vegetarian] Cran-Orange Swiss Chard  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/cran-orange-swiss-chard/
+  - [vegetarian] Cranberry Apple Coleslaw  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/cranberry-apple-coleslaw/
+  - [vegetarian] Creamy Pumpkin Pasta  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/creamy-pumpkin-pasta/
+  - [vegetarian] Curried Pumpkin Soup  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/curried-pumpkin-soup/
+  - [vegetarian] Eel alla Milanese  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AEel_alla_Milanese
+  - [vegetarian] Eggplant Delight  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/eggplant-delight/
+  - [vegetarian] Egyptian Okra Stew  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AEgyptian_Okra_Stew
+  - [vegetarian] Ensalada de Pollo Estilo Búfalo  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/ensalada-de-pollo-estilo-bufalo/
+  - [vegetarian] Ensalada de Pollo Sabor a Mango  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/ensalada-de-pollo-sabor-mango/
+  - [vegetarian] Ensalada de Tortellini Italiano de Preparación Rápida  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/ensalada-de-tortellini-italiano-de-preparacion-rapida/
+  - [vegetarian] Ensalada Vaquera  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/ensalada-vaquera/
+  - [vegetarian] Entula (Ugandan Eggplant Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AEntula_%28Ugandan_Eggplant_Stew%29
+  - [vegetarian] Estofado Húngaro de Carne de Res Saludable  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/estofado-hungaro-de-carne-de-res-saludable/
+  - [vegetarian] Fasolia (Ethiopian Green Bean Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AFasolia_%28Ethiopian_Green_Bean_Stew%29
+  - [vegetarian] Flatbread Pizza  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/flatbread-pizza/
+  - [vegetarian] Fruit Tacos  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/fruit-tacos/
+  - [vegetarian] Garden Fresh Ravioli  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/ravioli-tomatoes/
+  - [vegetarian] Garden Vegetable Sandwich  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/garden-vegetable-sandwich/
+  - [vegetarian] Gnocchi and Summer Vegetables Sheet Pan Dinner  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/gnocchi-and-summer-vegetables/
+  - [vegetarian] Green Beans and Mushrooms Roasted  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/green-beans-and-mushrooms-roasted/
+  - [vegetarian] Grilled Cheese and Fruit Sandwich  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/grilled-cheese-fruit-sandwich/
+  - [vegetarian] Grilled Dove Breast  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/grilled-dove-breast/
+  - [vegetarian] Grilled Eggplant  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/grilled-eggplant/
+  - [vegetarian] Grilled Fruit Kabobs  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/grilled-fruit-kabobs/
+  - [vegetarian] Grilled Peach Sundae  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/grilled-peach-sundae/
+  - [vegetarian] Grilled Quail Salad  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/grilled-quail-salad/
+  - [vegetarian] Hamli (Ethiopian Spinach Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AHamli_%28Ethiopian_Spinach_Stew%29
+  - [vegetarian] Homemade Basil Pesto  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/homemade-basil-pesto/
+  - [vegetarian] Homemade Kale Chips  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/parmesan-kale-chips/
+  - [vegetarian] Homemade Mac and Cheese  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/homemade-mac-cheese/
+  - [vegetarian] Hummus and Veggie Wrap  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/hummus-veggie-wrap/
+  - [vegetarian] Ifisashi (Zambian Peanut and Spinach Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AIfisashi_%28Zambian_Peanut_and_Spinach_Stew%29
+  - [vegetarian] Ifisashi n'Ubwoko (Rwandan Peanut Spinach Stew with Mushroom)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AIfisashi_n%27Ubwoko_%28Rwandan_Peanut_Spinach_Stew_with_Mushroom%29
+  - [vegetarian] Ikijumba (Rwandan Sweet Potato Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AIkijumba_%28Rwandan_Sweet_Potato_Stew%29
+  - [vegetarian] Ikijumba n'Umutsima (Rwandan Sweet Potato Stew with Corn and Bean Dish)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AIkijumba_n%27Umutsima_%28Rwandan_Sweet_Potato_Stew_with_Corn_and_Bean_Dish%29
+  - [vegetarian] Irish Stew  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AIrish_Stew
+  - [vegetarian] Keralan Vegetable Stew  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AKeralan_Vegetable_Stew
+  - [vegetarian] Kik Alicha (Yellow Split Pea Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AKik_Alicha_%28Yellow_Split_Pea_Stew%29
+  - [vegetarian] Kimchi Quesadillas  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/kimchi-quesadillas/
+  - [vegetarian] Lemon Almond Roasted Broccoli  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/lemon-almond-roasted-broccoli/
+  - [vegetarian] Liberian Collard Greens Stew  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ALiberian_Collard_Greens_Stew
+  - [vegetarian] Lumanda (Zambian Okra Stew)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3ALumanda_%28Zambian_Okra_Stew%29
+  - [vegetarian] Make Ahead Burritos  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/make-ahead-mexican-rollups/
+  - [vegetarian] Maltese Rabbit Stew (Stuffat tal-Fenek)  (Wikibooks Cookbook (CC BY-SA))
+    https://en.wikibooks.org/wiki/Cookbook%3AMaltese_Rabbit_Stew_%28Stuffat_tal-Fenek%29
+  - [vegetarian] Marinade - Basic  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/marinade-basic/
+  - [vegetarian] Marinade Mexican Inspired  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/marinade-mexican-inspired/
+  - [vegetarian] Marinated Tomatoes  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/marinated-tomatoes/
+  - [vegetarian] Mediterranean Hummus Board  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/mediterranean-hummus-board/
+  - [vegetarian] Melon Splash Pops  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/melon-splash-pops/
+  - [vegetarian] Mini Apple Pies Airfryer  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/mini-apple-pies-airfryer/
+  - [vegetarian] Mint Sugar Snap Peas  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/mint-sugar-snap-peas/
+  - [vegetarian] Mushroom Bulgur Pilaf  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/mushroom-bulgur-pilaf/
+  - [vegetarian] Mushroom Rice  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/mushroom-rice/
+  - [vegetarian] Okra Simple Roasted  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/okra-simple-roasted/
+  - [vegetarian] Paradise Pops  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/paradise-pops/
+  - [vegetarian] Parmesan Asparagus  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/parmesan-asparagus/
+  - [vegetarian] Parmesan Pasta Chips  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/parmesan-pasta-chips/
+  - [vegetarian] Pasta Caprese  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/pasta-caprese/
+  - [vegetarian] Pasta Ratatouille  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/pasta-ratatouille/
+  - [vegetarian] Pasta with Spinach Sauce  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/pasta-with-spinach-sauce/
+  - [vegetarian] Peanut Butter Wraps  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/peanut-butter-wraps/
+  - [vegetarian] Pita Pockets  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/pita-pockets/
+  - [vegetarian] Pizza on a Potato  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/pizza-on-a-potato/
+  - [vegetarian] Pollo en Ajo y Lima  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/pollo-en-ajo-y-lima/
+  - [vegetarian] Pozole de Puerco  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/pozole-de-puerco/
+  - [vegetarian] Protein Hot Chocolate  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/protein-hot-chocolate/
+  - [vegetarian] Pumpkin Ricotta Stuffed Shells  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/pumpkin-ricotta-stuffed-shells/
+  - [vegetarian] Raspberry Limeade  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/raspberry-limeade/
+  - [vegetarian] Rice and Red Beans  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/rice-red-beans/
+  - [vegetarian] Roasted Fries  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/roasted-fries/
+  - [vegetarian] Roasted Tomato and Spinach Pasta  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/roasted-tomato-spinach-pasta/
+  - [vegetarian] Roasted Veggie Barley Bowl  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/roasted-veggie-barley-bowl/
+  - [vegetarian] Rub - Fancy  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/rub-fancy/
+  - [vegetarian] Salsa Verde  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/salsa-verde/
+  - [vegetarian] Sandwich Kabob  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/sandwich-kabob/
+  - [vegetarian] Sauteed Parmesan Vegetables  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/sauteed-parmesan-vegetables/
+  - [vegetarian] Sautéed Vegetable and Potato Hash  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/sauteed-vegetable-and-potato-hash/
+  - [vegetarian] Slow Cooker Black Eyed Pea Soup  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/slow-cooker-black-eyed-pea-soup/
+  - [vegetarian] Sopa de Garbanzos Con Nopales  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/sopa-de-garbanzos-con-nopales/
+  - [vegetarian] Sopes  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/sopes/
+  - [vegetarian] Southern Roasted Vegetable Pasta  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/southern-roasted-vegetable-pasta/
+  - [vegetarian] Speedy Quesadillas  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/quesadillas-mushroom-blackolive/
+  - [vegetarian] Spinach Artichoke Stuffed Mushrooms  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/spinach-artichoke-stuffed-mushrooms/
+  - [vegetarian] Spinach Pasta Toss  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/spinach-pasta-toss/
+  - [vegetarian] Spinach Quesadillas  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/spinach-quesadillas/
+  - [vegetarian] Spring Fling Vegetable Chowder  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/spring-fling-vegetable-chowder/
+  - [vegetarian] Strawberry Soup  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/strawberry-soup/
+  - [vegetarian] Stuffed Pasta Shells  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/easy-stuffed-pasta-shells/
+  - [vegetarian] Stuffed Portabella Mushrooms  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/stuffed-portabella-mushrooms/
+  - [vegetarian] Supreme Grilled Cheese Sandwiches  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/supreme-grilled-cheese-sandwiches/
+  - [vegetarian] Sweet & Spicy Cauliflower  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/sweet-spicy-cauliflower/
+  - [vegetarian] Tex Mex Cauli Rice  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/tex-mex-cauli-rice/
+  - [vegetarian] Tostada Bar  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/tostada-bar/
+  - [vegetarian] Twice Baked Spaghetti Squash  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/twice-baked-spaghetti-squash/
+  - [vegetarian] Vegetable Enchiladas  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/vegetable-enchiladas/
+  - [vegetarian] Vegetable Quesadillas  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/vegetable-quesadillas/
+  - [vegetarian] Veggie Stew  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/veggie-stew/
+  - [vegetarian] Yellow Squash Roasted  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/yellow-squash-roasted/
+  - [vegetarian] Zesty Tomato Soup  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/zesty-tomato-soup/
+  - [vegetarian] Zesty Veggie Flatbread  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/zesty-veggie-flatbread/
+  - [vegetarian] Zucchini Hummus Wrap  (Iowa State University Extension Spend Smart. Eat Smart.)
+    https://spendsmart.extension.iastate.edu/recipe/zucchini-humus-wrap/
+  - [vegetarian] Zucchini Pizza Boats  (NIH MedlinePlus)
+    https://medlineplus.gov/recipes/zucchini-pizza-boats/
+  - [vegetarian] Zucchini Stir Fry  (Texas A&M AgriLife Extension Dinner Tonight)
+    https://dinnertonight.tamu.edu/recipe/zucchini-stir-fry/
