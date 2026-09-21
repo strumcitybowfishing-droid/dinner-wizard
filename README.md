@@ -2,6 +2,14 @@
 
 A family dinner picker. You tap. The hat decides.
 
+**Full project notes (if you lose the AI chat):**  
+`C:\Users\johnn\Desktop\DINNER WIZARD - START HERE`
+
+**Live signed-in app:** https://dinner-wizard-app.onrender.com  
+(Old `dinner-wizard.onrender.com` and GitHub Pages redirect here.)
+
+This is **not** Line & Dock. Never push these files to `strumcity-line-dock`.
+
 Static mobile-first PWA — vanilla HTML, CSS, and JavaScript. No Node, no build step.
 
 This is a **new** app and repo. It is **not** Line & Dock. Never push these files to `strumcity-line-dock`.
