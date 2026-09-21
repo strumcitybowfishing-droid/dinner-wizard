@@ -1932,7 +1932,9 @@ function onHash() {
 /* ---------- boot ---------- */
 
 function boot() {
-  if (/\.github\.io$/i.test(location.hostname)) {
+  const host = location.hostname;
+  const local = host === 'localhost' || host === '127.0.0.1';
+  if (!local && host !== 'dinner-wizard-app.onrender.com') {
     location.replace(SIGNED_IN_HOST + '/' + location.hash);
     return;
   }
