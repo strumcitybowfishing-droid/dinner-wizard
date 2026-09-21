@@ -196,6 +196,29 @@ const DIFFS = [
   { n: 3, label: 'Project', blurb: 'I have time to cook' }
 ];
 
+const CUISINES = [
+  { id: 'southern', label: 'Southern comfort', aliases: ['southern', 'soul food', 'comfort', 'biscuits', 'gravy', 'fried chicken', 'cornbread'] },
+  { id: 'mexican', label: 'Mexican', aliases: ['mexican', 'mexico', 'taco', 'enchilada', 'salsa', 'burrito'] },
+  { id: 'texmex', label: 'Tex-Mex', aliases: ['tex-mex', 'tex mex', 'southwest', 'fajita', 'queso'] },
+  { id: 'italian', label: 'Italian', aliases: ['italian', 'italy', 'pasta', 'risotto', 'parmesan', 'marinara'] },
+  { id: 'cajun', label: 'Cajun / Creole', aliases: ['cajun', 'creole', 'louisiana', 'gumbo', 'jambalaya', 'etouffee'] },
+  { id: 'bbq', label: 'BBQ', aliases: ['bbq', 'barbecue', 'smoked', 'brisket'] },
+  { id: 'asian', label: 'Asian', aliases: ['chinese', 'japanese', 'thai', 'korean', 'vietnamese', 'asian', 'filipino', 'stir fry', 'stir-fry'] },
+  { id: 'indian', label: 'Indian', aliases: ['indian', 'curry', 'tikka', 'masala', 'tandoori'] },
+  { id: 'mediterranean', label: 'Mediterranean', aliases: ['mediterranean', 'greek', 'moroccan', 'turkish', 'lebanese'] },
+  { id: 'american', label: 'American', aliases: ['american', 'united states', 'usa'] },
+  { id: 'french', label: 'French', aliases: ['french', 'france'] },
+  { id: 'caribbean', label: 'Caribbean', aliases: ['caribbean', 'jamaican', 'cuban', 'jerk'] },
+  { id: 'irish', label: 'Irish / British', aliases: ['irish', 'british', 'english', 'scottish'] },
+  { id: 'spanish', label: 'Spanish', aliases: ['spanish', 'spain', 'tapas', 'paella'] },
+  { id: 'german', label: 'German', aliases: ['german'] },
+  { id: 'african', label: 'African', aliases: ['african', 'egyptian', 'kenyan', 'ethiopian'] },
+  { id: 'seafood', label: 'Seafood night', aliases: ['seafood', 'fish fry', 'boil', 'shrimp', 'crawfish'] },
+  { id: 'chili', label: 'Chili & stew', aliases: ['chili', 'stew', 'soup', 'chowder'] },
+  { id: 'skillet', label: 'Skillet / one-pan', aliases: ['skillet', 'one pan', 'one-pot', 'sheet pan'] },
+  { id: 'camp', label: 'Camp / wild game', aliases: ['camp', 'wild game', 'venison', 'backcountry'] }
+];
+
 const UNICODE_FRAC = {
   '½': 0.5, '⅓': 1 / 3, '⅔': 2 / 3, '¼': 0.25, '¾': 0.75,
   '⅛': 0.125, '⅜': 0.375, '⅝': 0.625, '⅞': 0.875,
@@ -218,7 +241,8 @@ const state = {
     adults: 2,
     children: 0,
     difficulty: 2,
-    store: 'walmart'
+    store: 'walmart',
+    cuisine: null
   },
   skippedIds: new Set(),
   currentRecipe: null,
@@ -560,7 +584,10 @@ async function loadRecipes() {
   const files = [
     ['./data/mealdb.json', 'TheMealDB'],
     ['./data/usda.json', 'USDA MyPlate'],
-    ['./data/wildgame.json', 'Wildlife agency']
+    ['./data/wildgame.json', 'Wildlife agency'],
+    ['./data/wikibooks.json', 'Wikibooks Cookbook'],
+    ['./data/publicdomain.json', 'Public domain'],
+    ['./data/extra.json', 'Dinner Wizard kitchen']
   ];
   const results = await Promise.allSettled(files.map(([url]) => fetchJson(url)));
   const recipes = [];
@@ -666,8 +693,23 @@ function matchesCut(recipe, protein, cut) {
   return mentioned.some((c) => c.id === cut);
 }
 
+function matchesCuisine(recipe, cuisine) {
+  if (!cuisine) return true;
+  const spec = CUISINES.find((c) => c.id === cuisine);
+  if (!spec) return true;
+  const hay = [
+    recipe.style,
+    recipe.source,
+    recipe.title,
+    ...(recipe.tags || []),
+    ...(recipe.proteins || [])
+  ].join(' ').toLowerCase().replace(/-/g, ' ');
+  return spec.aliases.some((alias) => hay.indexOf(alias) !== -1);
+}
+
 function getPool(maxBudget, maxDiff, opts) {
   const ignoreCut = opts && opts.ignoreCut;
+  const ignoreCuisine = opts && opts.ignoreCuisine;
   const never = new Set(
     Object.keys(state.store.ratings).filter((id) => state.store.ratings[id] === 'never')
   );
@@ -675,6 +717,7 @@ function getPool(maxBudget, maxDiff, opts) {
     if (state.skippedIds.has(recipe.id) || never.has(recipe.id)) return false;
     if (!matchesProtein(recipe, state.filters.protein)) return false;
     if (!ignoreCut && !matchesCut(recipe, state.filters.protein, state.filters.cut)) return false;
+    if (!ignoreCuisine && !matchesCuisine(recipe, state.filters.cuisine)) return false;
     if ((recipe.budget || 3) > maxBudget) return false;
     if ((recipe.difficulty || 2) > maxDiff) return false;
     return true;
@@ -687,21 +730,31 @@ function matchingPool() {
   }
   let maxB = state.filters.budget;
   let maxD = state.filters.difficulty;
-  const loosened = { budget: false, difficulty: false };
+  const loosened = { budget: false, difficulty: false, cut: false, cuisine: false };
+  function opts() {
+    return {
+      ignoreCut: loosened.cut,
+      ignoreCuisine: loosened.cuisine
+    };
+  }
   let pool = getPool(maxB, maxD);
+  if (!pool.length && state.filters.cuisine) {
+    loosened.cuisine = true;
+    pool = getPool(maxB, maxD, opts());
+  }
   if (!pool.length && state.filters.cut && state.filters.cut !== 'any') {
     loosened.cut = true;
-    pool = getPool(maxB, maxD, { ignoreCut: true });
+    pool = getPool(maxB, maxD, opts());
   }
   if (!pool.length) {
     maxB = 5;
     loosened.budget = true;
-    pool = getPool(maxB, maxD, loosened.cut ? { ignoreCut: true } : null);
+    pool = getPool(maxB, maxD, opts());
   }
   if (!pool.length) {
     maxD = 3;
     loosened.difficulty = true;
-    pool = getPool(maxB, maxD, loosened.cut ? { ignoreCut: true } : null);
+    pool = getPool(maxB, maxD, opts());
   }
   return { pool, loosened, emptyLibrary: false };
 }
@@ -835,6 +888,7 @@ function startDinner() {
   state.recipeMode = 'pick';
   state.filters.protein = null;
   state.filters.cut = null;
+  state.filters.cuisine = null;
   go('protein');
 }
 
@@ -879,6 +933,14 @@ function chooseDifficulty(n) {
   go('store');
 }
 
+function chooseCuisine(id) {
+  state.filters.cuisine = state.filters.cuisine === id ? null : id;
+  pickThree();
+  if (state.screen === 'pick') render();
+  else go('pick');
+  window.scrollTo(0, 0);
+}
+
 function chooseStore(id) {
   state.filters.store = id;
   state.store.preferredStore = id;
@@ -919,6 +981,7 @@ function cookThis() {
     filters: {
       protein: state.filters.protein,
       cut: state.filters.cut,
+      cuisine: state.filters.cuisine,
       budget: state.filters.budget,
       adults: state.filters.adults,
       children: state.filters.children,
@@ -1274,7 +1337,27 @@ function renderPick() {
     '<p class="lead">Names only. Tap the one that sounds like dinner.</p>' +
     banner +
     '<div class="hat-list">' + cards + '</div>' +
-    '<button class="btn ghost" data-act="three-more" style="margin-top:16px">Three more names</button>'
+    '<button class="btn ghost" data-act="three-more" style="margin-top:16px">Three more names</button>' +
+    renderFeelingSpecific()
+  );
+}
+
+function renderFeelingSpecific() {
+  const on = state.filters.cuisine;
+  return (
+    '<section class="specific-block">' +
+      '<p class="kicker">Feeling specific</p>' +
+      '<h3 class="block-title">Filter by food type</h3>' +
+      '<p class="muted">Tap one and the hat will pull three names in that lane.</p>' +
+      '<div class="store-switch">' +
+        CUISINES.map((c) =>
+          '<button class="chip-btn' + (on === c.id ? ' on' : '') + '" data-act="cuisine" data-id="' + esc(c.id) + '">' +
+            esc(c.label) +
+          '</button>'
+        ).join('') +
+      '</div>' +
+      (on ? '<button class="linkish" data-act="cuisine-clear">Clear food-type filter</button>' : '') +
+    '</section>'
   );
 }
 
@@ -1337,6 +1420,7 @@ function renderRecipe() {
     ? ''
     : '<div class="chips">' +
         '<span class="chip">' + esc(plateLabel()) + '</span>' +
+        (state.filters.cuisine ? '<span class="chip">' + esc((CUISINES.find((c) => c.id === state.filters.cuisine) || {}).label || state.filters.cuisine) + '</span>' : '') +
         '<span class="chip">' + esc(budgetLabel(state.filters.budget)) + '</span>' +
         '<span class="chip">' + esc(diffLabel(state.filters.difficulty)) + '</span>' +
         '<span class="chip">' + state.filters.adults + ' adult' + (state.filters.adults === 1 ? '' : 's') +
@@ -1624,6 +1708,12 @@ function onClick(event) {
   }
   else if (act === 'hat') chooseHatName(btn.dataset.id);
   else if (act === 'three-more') threeMore();
+  else if (act === 'cuisine') chooseCuisine(btn.dataset.id);
+  else if (act === 'cuisine-clear') {
+    state.filters.cuisine = null;
+    pickThree();
+    render();
+  }
   else if (act === 'swap-side') {
     if (window.DWSides && state.currentRecipe) {
       state.currentSides = DWSides.swapOne(state.currentRecipe, state.currentSides, btn.dataset.id, {

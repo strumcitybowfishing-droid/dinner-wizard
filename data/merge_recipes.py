@@ -10,6 +10,9 @@ SOURCES = [
     ROOT / "mealdb.json",
     ROOT / "usda.json",
     ROOT / "wildgame.json",
+    ROOT / "wikibooks.json",
+    ROOT / "publicdomain.json",
+    ROOT / "extra.json",
 ]
 OUT = ROOT / "recipes.json"
 SUMMARY = ROOT / "recipes-summary.txt"
