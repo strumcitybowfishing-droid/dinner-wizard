@@ -104,6 +104,12 @@ h3,
   top: 8px;
 }
 
+#top {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+
 #main {
   flex: 1;
   padding: 18px 18px 28px;
@@ -178,6 +184,25 @@ h3,
   letter-spacing: 0.07em;
   font-weight: 700;
   text-align: center;
+}
+
+.topbar .brand.home-hit {
+  border: 0;
+  background: transparent;
+  min-height: var(--tap);
+  padding: 0 6px;
+}
+
+.home-logo {
+  width: var(--tap);
+  height: var(--tap);
+  min-width: var(--tap);
+  border: 0;
+  border-radius: 14px;
+  background: transparent;
+  padding: 0;
+  display: grid;
+  place-items: center;
 }
 
 .topbar .mark {

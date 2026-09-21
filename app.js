@@ -915,6 +915,12 @@ function back() {
   go(prev);
 }
 
+function goHome() {
+  state.recipeMode = 'pick';
+  go('home');
+  window.scrollTo(0, 0);
+}
+
 function startDinner() {
   state.skippedIds = new Set();
   state.currentRecipe = null;
@@ -1156,8 +1162,10 @@ function renderTop() {
   top.innerHTML =
     '<div class="topbar">' +
       '<button class="icon-btn" data-act="back" aria-label="' + backLabel + '">←</button>' +
-      '<p class="brand">DINNER WIZARD</p>' +
-      '<img class="mark" src="' + iconSrc() + '" alt="" width="36" height="36" onerror="this.src=\'./icons/icon.svg\'">' +
+      '<button class="brand home-hit" data-act="home" type="button" aria-label="Home, start over">DINNER WIZARD</button>' +
+      '<button class="home-logo" data-act="home" type="button" aria-label="Home, start over">' +
+        '<img class="mark" src="' + iconSrc() + '" alt="" width="36" height="36" onerror="this.src=\'./icons/icon.svg\'">' +
+      '</button>' +
     '</div>';
 }
 
@@ -1842,6 +1850,7 @@ function onClick(event) {
   if (!btn) return;
   const act = btn.dataset.act;
   if (act === 'start') startDinner();
+  else if (act === 'home') goHome();
   else if (act === 'auth-mode') {
     state.authMode = btn.dataset.mode || 'login';
     state.authError = '';
