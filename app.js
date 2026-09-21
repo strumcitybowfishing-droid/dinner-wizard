@@ -982,7 +982,7 @@ function renderStore() {
   return (
     stepDots(5) +
     '<h2 class="screen-title">One store for the cart</h2>' +
-    '<p class="lead">We’ll price the whole plate — main plus two sides — as if everything came from this chain.</p>' +
+    '<p class="lead">We’ll build one cart at this chain using the packs they actually sell (a dozen eggs, a bottle of oil, a tray of chicken — not a pinch or a clove), and add an approx if something is oddball.</p>' +
     '<div class="protein-grid store-grid">' +
       groceryStores().map((s) =>
         '<button class="protein' + (s.id === selected ? ' is-on' : '') + '" data-act="store" data-id="' + esc(s.id) + '">' +
@@ -1204,36 +1204,48 @@ function renderGroceryBlock(recipe, factor) {
       esc(s.label) +
     '</button>'
   ).join('');
-  const rows = cart.lines.filter((l) => l.status === 'priced' || l.status === 'unknown' || l.status === 'hunter').map((l) => {
-    const price = l.status === 'priced' ? DWGrocery.money(l.dinner) : (l.status === 'hunter' ? 'on hand' : 'ask the store');
-    const href = l.query && store.search ? store.search + encodeURIComponent(l.query) : '';
-    const name = href
-      ? '<a href="' + esc(href) + '" target="_blank" rel="noopener noreferrer">' + esc(l.name || l.raw) + '</a>'
-      : esc(l.name || l.raw);
-    return '<li><span>' + name + '</span><span class="gprice">' + price + '</span></li>';
+  const rows = cart.lines.map((l) => {
+    const href = l.query && store.search ? store.search + encodeURIComponent(l.query) + (l.sku ? ' ' + l.sku : '') : '';
+    const title = href
+      ? '<a href="' + esc(href) + '" target="_blank" rel="noopener noreferrer">' + esc(l.product || l.name || l.raw) + '</a>'
+      : esc(l.product || l.name || l.raw);
+    let buy = '';
+    if (l.status === 'hunter') buy = 'From the freezer — $0.00';
+    else if (l.status === 'pantry') buy = 'Pantry staple — not added to the cart';
+    else {
+      buy = 'Buy ' + l.packs + ' × ' + esc(l.packLabel) + ' @ ' + DWGrocery.money(l.packPrice);
+    }
+    const tag = l.approx ? '<span class="approx-tag">approx</span> ' : '';
+    return (
+      '<li>' +
+        '<div>' +
+          '<div class="gname">' + tag + title + '</div>' +
+          '<div class="gsku">SKU ' + esc(l.sku || '—') + (l.approx ? ' · estimated pack' : '') + '</div>' +
+          '<div class="gbuy">' + buy + '</div>' +
+        '</div>' +
+        '<div class="gprice">' +
+          (l.status === 'hunter' || l.status === 'pantry'
+            ? '$0.00'
+            : DWGrocery.money(l.checkout)) +
+        '</div>' +
+      '</li>'
+    );
   }).join('');
-  const clubNote = store.club
-    ? '<p class="muted">Warehouse clubs sell bigger packs. Dinner share is ' +
-      DWGrocery.money(cart.dinner) + '; walking out the door is closer to ' +
-      DWGrocery.money(cart.checkout) + ' if you buy the club sizes.</p>'
-    : '';
   return (
     '<section class="grocery-block">' +
       '<h3 class="block-title">Cart at one store</h3>' +
-      '<p class="muted">Everything for the main and both sides, priced as typical ' + esc(store.label) + ' shelf prices.</p>' +
+      '<p class="muted">Sold as real packs — not a clove, a splash, or a slice. Unknown items still get an estimated SKU and an approx price in the total.</p>' +
       '<div class="store-switch">' + storeBtns + '</div>' +
       '<div class="total-card">' +
-        '<p class="kicker">' + esc(store.label) + '</p>' +
-        '<p class="total-price">' + DWGrocery.money(cart.dinner) + '</p>' +
-        '<p class="muted">whole plate for ' +
-          esc(String(state.filters.adults)) + ' adult' + (state.filters.adults === 1 ? '' : 's') +
-          (state.filters.children ? ' + ' + state.filters.children + ' kid' + (state.filters.children === 1 ? '' : 's') : '') +
-        '</p>' +
+        '<p class="kicker">Pay at ' + esc(store.label) + '</p>' +
+        '<p class="total-price">' + DWGrocery.money(cart.checkout) + '</p>' +
+        '<p class="muted">what the register rings if you buy every pack for this plate</p>' +
+        '<p class="dinner-share">This dinner uses about ' + DWGrocery.money(cart.dinner) +
+          '. Extra stays for later.</p>' +
       '</div>' +
-      clubNote +
       '<ul class="grocery-list">' + rows + '</ul>' +
-      (cart.unknown ? '<p class="scale-note">' + cart.unknown + ' specialty item' + (cart.unknown === 1 ? '' : 's') + ' not in the price book — check the aisle.</p>' : '') +
-      '<p class="scale-note">Estimates from USDA/BLS-style national averages, adjusted for this chain. Not a live store tag.</p>' +
+      (cart.approx ? '<p class="scale-note">' + cart.approx + ' item' + (cart.approx === 1 ? '' : 's') + ' were not an exact catalog match, so we estimated a pack and still added that money to the total.</p>' : '') +
+      '<p class="scale-note">Typical mid-2026 shelf prices for that chain’s common store-brand SKU. Not a live in-store tag.</p>' +
     '</section>'
   );
 }

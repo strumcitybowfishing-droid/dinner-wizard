@@ -1018,7 +1018,7 @@ h3,
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  padding: 8px 0;
+  padding: 10px 0;
   border-bottom: 1px solid var(--line);
   font-weight: 700;
 }
@@ -1027,9 +1027,41 @@ h3,
   color: var(--forest);
 }
 
+.gname {
+  color: var(--forest);
+}
+
+.gsku,
+.gbuy {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
 .gprice {
   color: var(--copper);
   white-space: nowrap;
+  font-size: 1.05rem;
+}
+
+.approx-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: #f3e6c8;
+  color: var(--gold-shadow);
+  border-radius: 6px;
+  padding: 1px 6px;
+  margin-right: 4px;
+}
+
+.dinner-share {
+  margin: 8px 0 0;
+  color: var(--cream);
+  font-weight: 700;
 }
 
 @media (prefers-reduced-motion: reduce) {
