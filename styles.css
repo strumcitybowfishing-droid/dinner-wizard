@@ -1080,6 +1080,28 @@ h3,
   border-top: 1px solid var(--line);
 }
 
+.auth-form {
+  display: grid;
+  gap: 12px;
+  margin: 12px 0 16px;
+}
+
+.auth-form label {
+  display: grid;
+  gap: 6px;
+  font-weight: 800;
+  color: var(--forest);
+}
+
+.auth-form input {
+  min-height: 52px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  padding: 10px 14px;
+  font: inherit;
+  background: var(--card);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .btn,
   .btn-dinner,

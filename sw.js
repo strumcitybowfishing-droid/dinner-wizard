@@ -1,4 +1,4 @@
-const CACHE = 'dinner-wizard-shell-v7';
+const CACHE = 'dinner-wizard-shell-v8';
 
 const SHELL = [
   './',

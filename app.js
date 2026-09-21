@@ -1,7 +1,8 @@
 /* DINNER WIZARD — family dinner picker. Vanilla JS, no build. */
 
 const STORAGE_KEY = 'dinner-wizard-v1';
-const SCREENS = ['home', 'protein', 'cut', 'budget', 'people', 'difficulty', 'store', 'pick', 'recipe', 'rate', 'folders'];
+const SCREENS = ['auth', 'home', 'protein', 'cut', 'budget', 'people', 'difficulty', 'store', 'pick', 'recipe', 'rate', 'folders'];
+const SIGNED_IN_HOST = 'https://dinner-wizard-app.onrender.com';
 const KID_SERVING = 0.6;
 
 const PROTEINS = [
@@ -251,6 +252,10 @@ const state = {
   pickMeta: null,
   recipeMode: 'pick',
   folderFilter: 'loved',
+  user: null,
+  authMode: 'login',
+  authError: '',
+  authBusy: false,
   store: { ratings: {}, tonight: null, history: [], preferredStore: 'walmart' }
 };
 
@@ -395,17 +400,40 @@ function loadStore() {
   }
 }
 
-function saveStore() {
-  const payload = {
+function storePayload() {
+  return {
     ratings: state.store.ratings,
     tonight: state.store.tonight,
     history: state.store.history.slice(-80),
     preferredStore: state.filters.store || state.store.preferredStore || 'walmart'
   };
+}
+
+function applyStorePayload(data) {
+  if (!data || typeof data !== 'object') return;
+  state.store = {
+    ratings: data.ratings && typeof data.ratings === 'object' ? data.ratings : {},
+    tonight: data.tonight || null,
+    history: Array.isArray(data.history) ? data.history : [],
+    preferredStore: data.preferredStore || state.store.preferredStore || 'walmart'
+  };
+  if (state.store.preferredStore) state.filters.store = state.store.preferredStore;
+}
+
+function saveStore() {
+  const payload = storePayload();
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
   } catch (err) {
     /* quota — keep going */
+  }
+  if (state.user) {
+    fetch('/api/me/store', {
+      method: 'PUT',
+      credentials: 'include',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).catch(() => {});
   }
 }
 
@@ -854,6 +882,7 @@ function scaleFactor(recipe) {
 
 function go(screen, push) {
   if (!SCREENS.includes(screen)) screen = 'home';
+  if (!state.user && screen !== 'auth') screen = 'auth';
   state.screen = screen;
   if (push !== false) {
     const hash = '#' + screen;
@@ -1098,6 +1127,15 @@ function stepDots(step) {
 
 function renderTop() {
   const top = document.getElementById('top');
+  if (state.screen === 'auth') {
+    top.innerHTML =
+      '<div class="hero">' +
+        '<img class="hero-icon" src="' + iconSrc() + '" alt="DINNER WIZARD" width="148" height="148" onerror="this.src=\'./icons/icon.svg\'">' +
+        '<h1>DINNER WIZARD</h1>' +
+        '<p class="tagline">Sign in so your folders stay with you.</p>' +
+      '</div>';
+    return;
+  }
   if (state.screen === 'home') {
     top.innerHTML =
       '<div class="hero">' +
@@ -1152,7 +1190,39 @@ function renderHome() {
         folderButton('maybe', '🤔', 'Maybe') +
         folderButton('never', '🚫', 'Never again') +
       '</div>' +
+      (state.user
+        ? '<p class="install-hint">Signed in as ' + esc(state.user.email) +
+          ' · free account · folders sync on this login. ' +
+          '<button class="linkish" data-act="logout" style="display:inline">Log out</button></p>'
+        : '') +
       '<p class="install-hint">Add DINNER WIZARD to your home screen from the browser menu. It works like a little kitchen app.</p>' +
+    '</div>'
+  );
+}
+
+function renderAuth() {
+  const signup = state.authMode === 'signup';
+  return (
+    '<div class="home-pad">' +
+      '<h2 class="screen-title">' + (signup ? 'Make a free account' : 'Sign in') + '</h2>' +
+      '<p class="lead">' +
+        (signup
+          ? 'Folders, tonight’s pick, and ratings live on your account so they survive a new phone.'
+          : 'Welcome back. Your Loved / Maybe / Never again folders are waiting.') +
+      '</p>' +
+      (state.authError ? '<p class="banner">' + esc(state.authError) + '</p>' : '') +
+      '<form class="auth-form" data-act="' + (signup ? 'do-signup' : 'do-login') + '">' +
+        '<label>Email<input id="auth-email" type="email" autocomplete="username" required placeholder="you@email.com"></label>' +
+        '<label>Password<input id="auth-password" type="password" autocomplete="' +
+          (signup ? 'new-password' : 'current-password') +
+          '" required minlength="8" placeholder="at least 8 characters"></label>' +
+        '<button class="btn gold" type="submit"' + (state.authBusy ? ' disabled' : '') + '>' +
+          (state.authBusy ? 'Working…' : (signup ? 'Create free account' : 'Sign in and stay signed in')) +
+        '</button>' +
+      '</form>' +
+      '<button class="linkish" data-act="auth-mode" data-mode="' + (signup ? 'login' : 'signup') + '">' +
+        (signup ? 'Already have an account? Sign in' : 'New here? Make a free account') +
+      '</button>' +
     '</div>'
   );
 }
@@ -1652,6 +1722,7 @@ function renderFolders() {
 function renderMain() {
   const main = document.getElementById('main');
   const screens = {
+    auth: renderAuth,
     home: renderHome,
     protein: renderProtein,
     cut: renderCut,
@@ -1677,10 +1748,23 @@ function render() {
 /* ---------- events ---------- */
 
 function onClick(event) {
+  const form = event.target.closest('form[data-act]');
+  if (form && (event.target.matches('button[type="submit"]') || event.target.closest('button[type="submit"]'))) {
+    event.preventDefault();
+    if (form.getAttribute('data-act') === 'do-signup') submitAuth('signup');
+    else submitAuth('login');
+    return;
+  }
   const btn = event.target.closest('[data-act]');
   if (!btn) return;
   const act = btn.dataset.act;
   if (act === 'start') startDinner();
+  else if (act === 'auth-mode') {
+    state.authMode = btn.dataset.mode === 'signup' ? 'signup' : 'login';
+    state.authError = '';
+    render();
+  }
+  else if (act === 'logout') logoutUser();
   else if (act === 'back') back();
   else if (act === 'go') go(btn.dataset.screen);
   else if (act === 'protein') {
@@ -1747,6 +1831,70 @@ function onKey(event) {
   }
 }
 
+async function submitAuth(mode) {
+  const emailEl = document.getElementById('auth-email');
+  const passEl = document.getElementById('auth-password');
+  const email = emailEl && emailEl.value.trim();
+  const password = passEl && passEl.value;
+  if (!email || !password) {
+    state.authError = 'Email and password, please.';
+    render();
+    return;
+  }
+  state.authBusy = true;
+  state.authError = '';
+  render();
+  try {
+    const res = await fetch(mode === 'signup' ? '/api/signup' : '/api/login', {
+      method: 'POST',
+      credentials: 'include',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email, password: password })
+    });
+    const body = await res.json().catch(() => ({}));
+    if (!res.ok) {
+      state.authError = body.error || 'Could not sign in.';
+      state.authBusy = false;
+      render();
+      return;
+    }
+    state.user = body.user;
+    if (body.store && body.store.ratings && Object.keys(body.store.ratings).length) {
+      applyStorePayload(body.store);
+    } else {
+      saveStore();
+    }
+    state.authBusy = false;
+    go('home');
+  } catch (err) {
+    state.authError = 'Network hiccup. Try again.';
+    state.authBusy = false;
+    render();
+  }
+}
+
+async function logoutUser() {
+  try {
+    await fetch('/api/logout', { method: 'POST', credentials: 'include' });
+  } catch (err) { /* still clear locally */ }
+  state.user = null;
+  go('auth');
+}
+
+async function initAuth() {
+  try {
+    const res = await fetch('/api/me', { credentials: 'include' });
+    if (!res.ok) return;
+    const body = await res.json();
+    state.user = body.user || null;
+    if (state.user && body.store && typeof body.store === 'object' && Object.keys(body.store).length) {
+      applyStorePayload(body.store);
+    }
+  } catch (err) {
+    state.user = null;
+  }
+}
+
 function onHash() {
   const hash = (location.hash || '#home').slice(1);
   const screen = SCREENS.includes(hash) ? hash : 'home';
@@ -1784,18 +1932,35 @@ function onHash() {
 /* ---------- boot ---------- */
 
 function boot() {
+  if (/\.github\.io$/i.test(location.hostname)) {
+    location.replace(SIGNED_IN_HOST + '/' + location.hash);
+    return;
+  }
   loadStore();
-  const hash = (location.hash || '').slice(1);
-  state.screen = SCREENS.includes(hash) ? hash : 'home';
-  render();
-
   document.getElementById('app').addEventListener('click', onClick);
+  document.getElementById('app').addEventListener('submit', function (event) {
+    const form = event.target.closest('form[data-act]');
+    if (!form) return;
+    event.preventDefault();
+    if (form.getAttribute('data-act') === 'do-signup') submitAuth('signup');
+    else submitAuth('login');
+  });
   document.getElementById('app').addEventListener('keydown', onKey);
   window.addEventListener('hashchange', onHash);
   window.addEventListener('popstate', onHash);
 
-  refreshLibrary().then(() => {
-    if (!state.recipes.length) startLibraryWatch();
+  initAuth().then(() => {
+    if (!state.user) {
+      state.screen = 'auth';
+      render();
+    } else {
+      const hash = (location.hash || '').slice(1);
+      state.screen = SCREENS.includes(hash) && hash !== 'auth' ? hash : 'home';
+      render();
+    }
+    refreshLibrary().then(() => {
+      if (!state.recipes.length) startLibraryWatch();
+    });
   });
 
   if ('serviceWorker' in navigator) {

@@ -1,5 +1,5 @@
-# NEW Render service for DINNER WIZARD only.
-# Do not point this at strumcity-line-dock. Do not reuse that service name.
+# dinner-wizard static site is the old public URL.
+# Signed-in app is dinner-wizard-app (Python). Do not touch strumcity-line-dock.
 services:
   - type: web
     name: dinner-wizard
@@ -13,3 +13,15 @@ services:
       - path: /*
         name: Cache-Control
         value: public, max-age=60
+  - type: web
+    name: dinner-wizard-app
+    runtime: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn -b 0.0.0.0:$PORT server:app
+    healthCheckPath: /ping
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.13.0"
+      - key: DATA_DIR
+        value: /opt/render/project/src/data
