@@ -857,6 +857,12 @@ h3,
   background: var(--loved);
 }
 
+.rate-btn.skipped {
+  background: var(--cream-dark);
+  color: var(--forest);
+  border: 2px solid var(--forest);
+}
+
 .rate-btn:active {
   filter: brightness(0.92);
   transform: translateY(2px);

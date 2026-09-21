@@ -784,6 +784,18 @@ function rateTonight(kind) {
     go('home');
     return;
   }
+  if (kind === 'not-cooked') {
+    const hist = state.store.history;
+    for (let i = hist.length - 1; i >= 0; i -= 1) {
+      if (hist[i].id === rec.id) {
+        hist[i].rating = 'not-cooked';
+        break;
+      }
+    }
+    saveStore();
+    cancelTonight();
+    return;
+  }
   state.store.ratings[rec.id] = kind;
   const hist = state.store.history;
   for (let i = hist.length - 1; i >= 0; i -= 1) {
@@ -1287,6 +1299,8 @@ function renderRateButtons(compact) {
       '<button class="rate-btn never" data-act="rate" data-kind="never">🚫 Never again</button>' +
       '<button class="rate-btn maybe" data-act="rate" data-kind="maybe">🤔 Maybe</button>' +
       '<button class="rate-btn loved" data-act="rate" data-kind="loved">💛 Loved it</button>' +
+      (compact ? '' :
+        '<button class="rate-btn skipped" data-act="rate" data-kind="not-cooked">🙅 Didn’t actually cook it</button>') +
     '</div>'
   );
 }
@@ -1305,7 +1319,7 @@ function renderRate() {
   return (
     '<p class="kicker">How was it?</p>' +
     '<h2 class="screen-title">' + esc(rec.title) + '</h2>' +
-    '<p class="lead">This files it into a folder so the hat learns the house rules.</p>' +
+    '<p class="lead">Loved / Maybe / Never again files it in a folder. Didn’t cook it just cancels tonight and you can pick another.</p>' +
     renderRateButtons(false) +
     '<button class="linkish" data-act="go" data-screen="home">I’ll rate later</button>'
   );
