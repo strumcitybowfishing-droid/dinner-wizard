@@ -1,7 +1,7 @@
 /* DINNER WIZARD — family dinner picker. Vanilla JS, no build. */
 
 const STORAGE_KEY = 'dinner-wizard-v1';
-const SCREENS = ['home', 'protein', 'budget', 'people', 'difficulty', 'recipe', 'rate', 'folders'];
+const SCREENS = ['home', 'protein', 'budget', 'people', 'difficulty', 'store', 'pick', 'recipe', 'rate', 'folders'];
 const KID_SERVING = 0.6;
 
 const PROTEINS = [
@@ -114,14 +114,17 @@ const state = {
     budget: 3,
     adults: 2,
     children: 0,
-    difficulty: 2
+    difficulty: 2,
+    store: 'walmart'
   },
   skippedIds: new Set(),
   currentRecipe: null,
+  currentSides: [],
+  choices: [],
   pickMeta: null,
   recipeMode: 'pick',
   folderFilter: 'loved',
-  store: { ratings: {}, tonight: null, history: [] }
+  store: { ratings: {}, tonight: null, history: [], preferredStore: 'walmart' }
 };
 
 let libraryTimer = null;
@@ -218,13 +221,16 @@ function loadStore() {
     state.store = {
       ratings: data.ratings && typeof data.ratings === 'object' ? data.ratings : {},
       tonight: data.tonight || null,
-      history: Array.isArray(data.history) ? data.history : []
+      history: Array.isArray(data.history) ? data.history : [],
+      preferredStore: data.preferredStore || 'walmart'
     };
+    if (state.store.preferredStore) state.filters.store = state.store.preferredStore;
     const last = state.store.tonight || state.store.history[state.store.history.length - 1];
     if (last && last.filters) {
       const f = last.filters;
       if (typeof f.adults === 'number') state.filters.adults = clamp(f.adults, 0, 20);
       if (typeof f.children === 'number') state.filters.children = clamp(f.children, 0, 20);
+      if (f.store) state.filters.store = f.store;
       if (eaters() < 1) state.filters.adults = 2;
     }
   } catch (err) {
@@ -236,7 +242,8 @@ function saveStore() {
   const payload = {
     ratings: state.store.ratings,
     tonight: state.store.tonight,
-    history: state.store.history.slice(-80)
+    history: state.store.history.slice(-80),
+    preferredStore: state.filters.store || state.store.preferredStore || 'walmart'
   };
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
@@ -517,17 +524,13 @@ function getPool(maxBudget, maxDiff) {
   });
 }
 
-function pickNext() {
+function matchingPool() {
   if (!state.recipes.length) {
-    state.currentRecipe = null;
-    state.pickMeta = { emptyLibrary: true };
-    return;
+    return { pool: [], emptyLibrary: true, loosened: {} };
   }
-
   let maxB = state.filters.budget;
   let maxD = state.filters.difficulty;
   const loosened = { budget: false, difficulty: false };
-
   let pool = getPool(maxB, maxD);
   if (!pool.length) {
     maxB = 5;
@@ -539,25 +542,60 @@ function pickNext() {
     loosened.difficulty = true;
     pool = getPool(maxB, maxD);
   }
+  return { pool, loosened, emptyLibrary: false };
+}
 
-  if (!pool.length) {
+function shuffle(list) {
+  const arr = list.slice();
+  for (let i = arr.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const tmp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = tmp;
+  }
+  return arr;
+}
+
+function pickThree() {
+  const found = matchingPool();
+  if (found.emptyLibrary) {
+    state.choices = [];
     state.currentRecipe = null;
-    state.pickMeta = { noMatch: true, loosened, skippedAll: state.skippedIds.size > 0 };
+    state.pickMeta = { emptyLibrary: true };
     return;
   }
-
-  const want = state.filters.budget;
-  let pick = null;
-  for (let dist = 0; dist <= 5; dist += 1) {
-    const group = pool.filter((r) => Math.abs((r.budget || 3) - want) === dist);
-    if (group.length) {
-      pick = group[Math.floor(Math.random() * group.length)];
-      break;
-    }
+  if (!found.pool.length) {
+    state.choices = [];
+    state.currentRecipe = null;
+    state.pickMeta = { noMatch: true, loosened: found.loosened, skippedAll: state.skippedIds.size > 0 };
+    return;
   }
+  const want = state.filters.budget;
+  const ranked = found.pool.slice().sort((a, b) => {
+    return Math.abs((a.budget || 3) - want) - Math.abs((b.budget || 3) - want);
+  });
+  const top = ranked.slice(0, Math.max(12, Math.min(ranked.length, 24)));
+  state.choices = shuffle(top).slice(0, 3);
+  state.pickMeta = { loosened: found.loosened, remaining: found.pool.length };
+}
 
-  state.currentRecipe = pick || pool[0];
-  state.pickMeta = { loosened, remaining: pool.length };
+function attachSides(recipe) {
+  if (!recipe || !window.DWSides) {
+    state.currentSides = [];
+    return;
+  }
+  state.currentSides = DWSides.pickTwo(recipe, {
+    maxDiff: state.filters.difficulty,
+    maxBudget: state.filters.budget
+  });
+}
+
+function pickNext() {
+  pickThree();
+  if (state.choices.length === 1) {
+    state.currentRecipe = state.choices[0];
+    attachSides(state.currentRecipe);
+  }
 }
 
 function parseLeadingQty(str) {
@@ -612,7 +650,7 @@ function go(screen, push) {
 }
 
 function back() {
-  const order = ['home', 'protein', 'budget', 'people', 'difficulty', 'recipe', 'rate'];
+  const order = ['home', 'protein', 'budget', 'people', 'difficulty', 'store', 'pick', 'recipe', 'rate'];
   if (state.screen === 'folders') {
     go('home');
     return;
@@ -628,6 +666,8 @@ function back() {
 function startDinner() {
   state.skippedIds = new Set();
   state.currentRecipe = null;
+  state.currentSides = [];
+  state.choices = [];
   state.pickMeta = null;
   state.recipeMode = 'pick';
   state.filters.protein = null;
@@ -657,16 +697,38 @@ function chooseBudget(n) {
 
 function chooseDifficulty(n) {
   state.filters.difficulty = Number(n);
+  go('store');
+}
+
+function chooseStore(id) {
+  state.filters.store = id;
+  state.store.preferredStore = id;
+  saveStore();
   state.recipeMode = 'pick';
-  pickNext();
+  pickThree();
+  go('pick');
+}
+
+function chooseHatName(id) {
+  const rec = (state.choices || []).find((r) => r.id === id) || byId(id);
+  if (!rec) return;
+  state.currentRecipe = rec;
+  attachSides(rec);
   go('recipe');
+}
+
+function threeMore() {
+  (state.choices || []).forEach((r) => state.skippedIds.add(r.id));
+  pickThree();
+  if (state.screen === 'pick') render();
+  else go('pick');
+  window.scrollTo(0, 0);
 }
 
 function skipRecipe() {
   if (state.currentRecipe) state.skippedIds.add(state.currentRecipe.id);
-  pickNext();
-  render();
-  window.scrollTo(0, 0);
+  pickThree();
+  go('pick');
 }
 
 function cookThis() {
@@ -680,8 +742,10 @@ function cookThis() {
       budget: state.filters.budget,
       adults: state.filters.adults,
       children: state.filters.children,
-      difficulty: state.filters.difficulty
-    }
+      difficulty: state.filters.difficulty,
+      store: state.filters.store
+    },
+    sideIds: (state.currentSides || []).map((s) => s.id)
   };
   state.store.tonight = entry;
   state.store.history.push(entry);
@@ -719,6 +783,7 @@ function openFolderRecipe(id) {
   const rec = byId(id);
   if (!rec) return;
   state.currentRecipe = rec;
+  attachSides(rec);
   state.recipeMode = 'browse';
   state.pickMeta = { browse: true };
   go('recipe');
@@ -743,7 +808,7 @@ function iconSrc() {
 
 function stepDots(step) {
   return '<div class="step-dots" aria-hidden="true">' +
-    [1, 2, 3, 4].map((n) => {
+    [1, 2, 3, 4, 5].map((n) => {
       const cls = n === step ? 'on' : (n < step ? 'done' : '');
       return '<span class="' + cls + '"></span>';
     }).join('') +
@@ -908,6 +973,72 @@ function renderDifficulty() {
   );
 }
 
+function groceryStores() {
+  return (window.DWGrocery && DWGrocery.STORES) || [];
+}
+
+function renderStore() {
+  const selected = state.filters.store;
+  return (
+    stepDots(5) +
+    '<h2 class="screen-title">One store for the cart</h2>' +
+    '<p class="lead">We’ll price the whole plate — main plus two sides — as if everything came from this chain.</p>' +
+    '<div class="protein-grid store-grid">' +
+      groceryStores().map((s) =>
+        '<button class="protein' + (s.id === selected ? ' is-on' : '') + '" data-act="store" data-id="' + esc(s.id) + '">' +
+          '<span class="emoji">' + s.emoji + '</span>' +
+          '<span class="plabel">' + esc(s.label) + '</span>' +
+        '</button>'
+      ).join('') +
+    '</div>' +
+    '<p class="scale-note">Prices are typical national shelf prices for that chain, not your store’s live tags. Pantry salt and pepper count as free.</p>'
+  );
+}
+
+function renderPick() {
+  if (state.pickMeta && state.pickMeta.emptyLibrary) {
+    return (
+      '<div class="empty">' +
+        '<img class="hat" src="' + iconSrc() + '" alt="" onerror="this.src=\'./icons/icon.svg\'">' +
+        '<h2 class="screen-title">Library loading</h2>' +
+        '<p class="lead">Other wizards are stocking the pantry. Try again in a moment.</p>' +
+        '<button class="btn gold" data-act="retry">Try again</button>' +
+      '</div>'
+    );
+  }
+  if (state.pickMeta && state.pickMeta.noMatch) {
+    return (
+      '<div class="empty">' +
+        '<h2 class="screen-title">Nothing in the hat</h2>' +
+        '<p class="lead">No matches for ' + esc(proteinLabel(state.filters.protein)) + '. Try another protein, or Surprise Me.</p>' +
+        '<div class="btn-row">' +
+          '<button class="btn gold" data-act="go" data-screen="protein">Pick a protein</button>' +
+          '<button class="btn forest" data-act="protein" data-id="surprise">✨ Surprise me</button>' +
+        '</div>' +
+      '</div>'
+    );
+  }
+  const names = state.choices || [];
+  if (!names.length) {
+    pickThree();
+  }
+  const cards = (state.choices || []).map((r) =>
+    '<button class="hat-name" data-act="hat" data-id="' + esc(r.id) + '">' + esc(r.title) + '</button>'
+  ).join('');
+  let banner = '';
+  if (state.pickMeta && state.pickMeta.loosened && (state.pickMeta.loosened.budget || state.pickMeta.loosened.difficulty)) {
+    banner = '<p class="banner">We loosened the filters a little so the hat had three names.</p>';
+  }
+  return (
+    '<p class="kicker">The hat pulled three</p>' +
+    '<h2 class="screen-title">Pick a name</h2>' +
+    '<p class="lead">Names only. Tap the one that sounds like dinner.</p>' +
+    banner +
+    '<div class="hat-list">' + cards + '</div>' +
+    '<button class="btn ghost" data-act="three-more" style="margin-top:16px">Three more names</button>'
+  );
+}
+
 function renderRecipe() {
   if (state.pickMeta && state.pickMeta.emptyLibrary) {
     return (
@@ -979,13 +1110,17 @@ function renderRecipe() {
 
   const steps = (recipe.steps || []).map((line) => '<li><span>' + esc(line) + '</span></li>').join('');
 
+  if (!browse && (!state.currentSides || state.currentSides.length < 2)) {
+    attachSides(recipe);
+  }
+
   const actions = browse
     ? '<div class="btn-row">' +
         '<button class="btn gold" data-act="go" data-screen="folders">Back to folders</button>' +
       '</div>' +
       renderRateButtons(true)
     : '<div class="btn-row">' +
-        '<button class="btn ghost" data-act="skip">Skip — try another</button>' +
+        '<button class="btn ghost" data-act="skip">Skip — three new names</button>' +
         '<button class="btn gold" data-act="cook">We’ll cook this</button>' +
       '</div>';
 
@@ -1009,8 +1144,97 @@ function renderRecipe() {
       (ingredients ? '<ul class="ingredients">' + ingredients + '</ul>' : '<p class="muted">No ingredient list in this record.</p>') +
       '<h3 class="block-title">Steps</h3>' +
       (steps ? '<ol class="steps">' + steps + '</ol>' : '<p class="muted">No steps in this record.</p>') +
+      renderSidesBlock(recipe, browse ? 1 : factor) +
+      renderGroceryBlock(recipe, browse ? 1 : factor) +
       actions +
     '</article>'
+  );
+}
+
+function renderSidesBlock(recipe, factor) {
+  const sides = state.currentSides || [];
+  if (!sides.length) return '';
+  const cards = sides.map((side) => {
+    const ings = (side.ingredients || []).map((line) =>
+      '<li>' + esc(scaleIngredient(line, factor)) + '</li>'
+    ).join('');
+    const steps = (side.steps || []).map((line) => '<li><span>' + esc(line) + '</span></li>').join('');
+    return (
+      '<div class="side-card">' +
+        '<div class="side-head">' +
+          '<div>' +
+            '<p class="kicker">' + (side.kind === 'veg' ? 'Veg side' : 'Starch side') + '</p>' +
+            '<h3>' + esc(side.title) + '</h3>' +
+            '<p class="muted">⏱ ' + esc(String(side.timeMin || 15)) + ' min</p>' +
+          '</div>' +
+          '<button class="btn ghost" data-act="swap-side" data-id="' + esc(side.id) + '">Swap</button>' +
+        '</div>' +
+        '<h4 class="block-title">Ingredients</h4>' +
+        '<ul class="ingredients">' + ings + '</ul>' +
+        '<h4 class="block-title">Steps</h4>' +
+        '<ol class="steps">' + steps + '</ol>' +
+      '</div>'
+    );
+  }).join('');
+  return (
+    '<section class="sides-block">' +
+      '<h3 class="block-title">Two sides that pair</h3>' +
+      '<p class="muted">A veg and a starch picked for this main. Swap if the house vetoes one.</p>' +
+      cards +
+    '</section>'
+  );
+}
+
+function renderGroceryBlock(recipe, factor) {
+  if (!window.DWGrocery) return '';
+  const storeId = state.filters.store || 'walmart';
+  const store = DWGrocery.storeById(storeId);
+  const groups = [
+    { label: 'Main', lines: DWGrocery.priceLines(recipe.ingredients || [], storeId, factor) }
+  ];
+  (state.currentSides || []).forEach((side) => {
+    groups.push({
+      label: side.title,
+      lines: DWGrocery.priceLines(side.ingredients || [], storeId, factor)
+    });
+  });
+  const cart = DWGrocery.cart(groups, storeId);
+  const storeBtns = groceryStores().map((s) =>
+    '<button class="chip-btn' + (s.id === storeId ? ' on' : '') + '" data-act="store-switch" data-id="' + esc(s.id) + '">' +
+      esc(s.label) +
+    '</button>'
+  ).join('');
+  const rows = cart.lines.filter((l) => l.status === 'priced' || l.status === 'unknown' || l.status === 'hunter').map((l) => {
+    const price = l.status === 'priced' ? DWGrocery.money(l.dinner) : (l.status === 'hunter' ? 'on hand' : 'ask the store');
+    const href = l.query && store.search ? store.search + encodeURIComponent(l.query) : '';
+    const name = href
+      ? '<a href="' + esc(href) + '" target="_blank" rel="noopener noreferrer">' + esc(l.name || l.raw) + '</a>'
+      : esc(l.name || l.raw);
+    return '<li><span>' + name + '</span><span class="gprice">' + price + '</span></li>';
+  }).join('');
+  const clubNote = store.club
+    ? '<p class="muted">Warehouse clubs sell bigger packs. Dinner share is ' +
+      DWGrocery.money(cart.dinner) + '; walking out the door is closer to ' +
+      DWGrocery.money(cart.checkout) + ' if you buy the club sizes.</p>'
+    : '';
+  return (
+    '<section class="grocery-block">' +
+      '<h3 class="block-title">Cart at one store</h3>' +
+      '<p class="muted">Everything for the main and both sides, priced as typical ' + esc(store.label) + ' shelf prices.</p>' +
+      '<div class="store-switch">' + storeBtns + '</div>' +
+      '<div class="total-card">' +
+        '<p class="kicker">' + esc(store.label) + '</p>' +
+        '<p class="total-price">' + DWGrocery.money(cart.dinner) + '</p>' +
+        '<p class="muted">whole plate for ' +
+          esc(String(state.filters.adults)) + ' adult' + (state.filters.adults === 1 ? '' : 's') +
+          (state.filters.children ? ' + ' + state.filters.children + ' kid' + (state.filters.children === 1 ? '' : 's') : '') +
+        '</p>' +
+      '</div>' +
+      clubNote +
+      '<ul class="grocery-list">' + rows + '</ul>' +
+      (cart.unknown ? '<p class="scale-note">' + cart.unknown + ' specialty item' + (cart.unknown === 1 ? '' : 's') + ' not in the price book — check the aisle.</p>' : '') +
+      '<p class="scale-note">Estimates from USDA/BLS-style national averages, adjusted for this chain. Not a live store tag.</p>' +
+    '</section>'
   );
 }
 
@@ -1090,6 +1314,8 @@ function renderMain() {
     budget: renderBudget,
     people: renderPeople,
     difficulty: renderDifficulty,
+    store: renderStore,
+    pick: renderPick,
     recipe: renderRecipe,
     rate: renderRate,
     folders: renderFolders
@@ -1114,12 +1340,12 @@ function onClick(event) {
   else if (act === 'back') back();
   else if (act === 'go') go(btn.dataset.screen);
   else if (act === 'protein') {
-    if (btn.dataset.id === 'surprise' && state.screen === 'recipe') {
+    if (btn.dataset.id === 'surprise' && (state.screen === 'recipe' || state.screen === 'pick')) {
       state.filters.protein = 'surprise';
       state.skippedIds = new Set();
       state.recipeMode = 'pick';
-      pickNext();
-      go('recipe');
+      pickThree();
+      go('pick');
     } else {
       chooseProtein(btn.dataset.id);
     }
@@ -1127,6 +1353,24 @@ function onClick(event) {
   else if (act === 'protein-other') chooseOtherProtein();
   else if (act === 'budget') chooseBudget(btn.dataset.n);
   else if (act === 'difficulty') chooseDifficulty(btn.dataset.n);
+  else if (act === 'store') chooseStore(btn.dataset.id);
+  else if (act === 'store-switch') {
+    state.filters.store = btn.dataset.id;
+    state.store.preferredStore = btn.dataset.id;
+    saveStore();
+    render();
+  }
+  else if (act === 'hat') chooseHatName(btn.dataset.id);
+  else if (act === 'three-more') threeMore();
+  else if (act === 'swap-side') {
+    if (window.DWSides && state.currentRecipe) {
+      state.currentSides = DWSides.swapOne(state.currentRecipe, state.currentSides, btn.dataset.id, {
+        maxDiff: state.filters.difficulty,
+        maxBudget: state.filters.budget
+      });
+      render();
+    }
+  }
   else if (act === 'nudge') nudge(btn.dataset.field, Number(btn.dataset.delta));
   else if (act === 'skip') skipRecipe();
   else if (act === 'cook') cookThis();
@@ -1153,10 +1397,21 @@ function onKey(event) {
 function onHash() {
   const hash = (location.hash || '#home').slice(1);
   const screen = SCREENS.includes(hash) ? hash : 'home';
+  if (screen === 'pick' && !(state.choices && state.choices.length) && state.filters.protein) {
+    pickThree();
+  }
   if (screen === 'recipe' && !state.currentRecipe) {
+    if (state.choices && state.choices.length) {
+      state.screen = 'pick';
+      render();
+      return;
+    }
     if (state.filters.protein) {
       state.recipeMode = 'pick';
-      pickNext();
+      pickThree();
+      state.screen = 'pick';
+      render();
+      return;
     } else if (state.store.tonight) {
       state.currentRecipe = byId(state.store.tonight.id);
       state.recipeMode = 'browse';

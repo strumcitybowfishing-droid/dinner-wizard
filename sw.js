@@ -1,10 +1,12 @@
-const CACHE = 'dinner-wizard-shell-v1';
+const CACHE = 'dinner-wizard-shell-v2';
 
 const SHELL = [
   './',
   './index.html',
   './styles.css',
   './app.js',
+  './grocery.js',
+  './sides.js',
   './manifest.json',
   './icons/icon.svg',
   './icons/wizard.jpg'
