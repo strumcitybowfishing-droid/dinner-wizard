@@ -1,4 +1,4 @@
-"""Dinner Wizard app server: accounts, synced folders, static files.
+"""Dinner Wizard app server: Supabase auth + folder storage + static files.
 Does not touch Line & Dock.
 """
 from __future__ import annotations
@@ -9,11 +9,12 @@ import json
 import os
 import re
 import secrets
-import smtplib
 import sqlite3
 import time
+import urllib.error
+import urllib.parse
+import urllib.request
 import uuid
-from email.message import EmailMessage
 from pathlib import Path
 
 from flask import Flask, jsonify, request, send_from_directory, session
@@ -23,10 +24,13 @@ DATA_DIR = Path(os.environ.get("DATA_DIR") or (ROOT / "data"))
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 SQLITE_PATH = DATA_DIR / "users.db"
 DATABASE_URL = os.environ.get("DATABASE_URL") or ""
+SUPABASE_URL = (os.environ.get("SUPABASE_URL") or "https://odnhnrgpqhodmjjekctj.supabase.co").rstrip("/")
+SUPABASE_SERVICE_ROLE = os.environ.get("SUPABASE_SERVICE_ROLE") or ""
 APP_BASE = os.environ.get("APP_BASE") or "https://dinner-wizard-app.onrender.com"
 
 EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 ITERATIONS = 210_000
+USE_SUPABASE = bool(SUPABASE_SERVICE_ROLE)
 
 
 def _secret_from_disk() -> str:
@@ -63,6 +67,105 @@ def check_password(password: str, stored: str) -> bool:
     return hmac.compare_digest(guess, digest)
 
 
+def new_recovery_code() -> str:
+    alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"
+    raw = "".join(secrets.choice(alphabet) for _ in range(8))
+    return "DW-" + raw[:4] + "-" + raw[4:]
+
+
+def sb(method: str, path: str, data=None, raw: bytes | None = None, content_type: str = "application/json"):
+    headers = {
+        "apikey": SUPABASE_SERVICE_ROLE,
+        "Authorization": "Bearer " + SUPABASE_SERVICE_ROLE,
+        "Content-Type": content_type,
+    }
+    body = raw
+    if data is not None and raw is None:
+        body = json.dumps(data).encode("utf-8")
+    req = urllib.request.Request(SUPABASE_URL + path, data=body, headers=headers, method=method)
+    try:
+        with urllib.request.urlopen(req, timeout=25) as res:
+            payload = res.read()
+            if not payload:
+                return res.status, {}
+            try:
+                return res.status, json.loads(payload.decode("utf-8"))
+            except json.JSONDecodeError:
+                return res.status, payload
+    except urllib.error.HTTPError as exc:
+        err = exc.read()
+        parsed = {}
+        try:
+            parsed = json.loads(err.decode("utf-8"))
+        except Exception:
+            parsed = {"error": err.decode("utf-8", "replace")[:400]}
+        return exc.code, parsed
+
+
+def sb_user_public(user: dict) -> dict:
+    meta = user.get("user_metadata") or {}
+    return {
+        "id": user.get("id"),
+        "email": user.get("email"),
+        "plan": meta.get("plan") or "free",
+        "hasRecovery": bool(meta.get("recovery_hash")),
+    }
+
+
+def sb_get_user_by_email(email: str):
+    status, data = sb("GET", "/auth/v1/admin/users?page=1&per_page=200")
+    users = (data or {}).get("users") if isinstance(data, dict) else []
+    email = email.lower()
+    for user in users or []:
+        if str(user.get("email") or "").lower() == email:
+            return user
+    return None
+
+
+def sb_get_user(uid: str):
+    status, data = sb("GET", "/auth/v1/admin/users/" + uid)
+    if status >= 400:
+        return None
+    return data
+
+
+def sb_read_store(uid: str) -> dict:
+    status, data = sb("GET", "/storage/v1/object/kitchen/" + uid + ".json")
+    if status >= 400:
+        return {}
+    if isinstance(data, dict):
+        return data
+    return {}
+
+
+def sb_write_store(uid: str, payload: dict) -> None:
+    headers_ok = {
+        "apikey": SUPABASE_SERVICE_ROLE,
+        "Authorization": "Bearer " + SUPABASE_SERVICE_ROLE,
+        "Content-Type": "application/json",
+        "x-upsert": "true",
+    }
+    body = json.dumps(payload).encode("utf-8")
+    req = urllib.request.Request(
+        SUPABASE_URL + "/storage/v1/object/kitchen/" + uid + ".json",
+        data=body,
+        headers=headers_ok,
+        method="POST",
+    )
+    try:
+        urllib.request.urlopen(req, timeout=25).read()
+    except urllib.error.HTTPError:
+        req = urllib.request.Request(
+            SUPABASE_URL + "/storage/v1/object/kitchen/" + uid + ".json",
+            data=body,
+            headers=headers_ok,
+            method="PUT",
+        )
+        urllib.request.urlopen(req, timeout=25).read()
+
+
+# ---- sqlite fallback (local, no Supabase env) ----
+
 def db():
     if DATABASE_URL.startswith("postgres"):
         import psycopg2
@@ -77,7 +180,9 @@ def db():
     return conn, "?"
 
 
-def init_db() -> None:
+def init_local_db() -> None:
+    if USE_SUPABASE:
+        return
     conn, p = db()
     cur = conn.cursor()
     cur.execute(
@@ -88,66 +193,18 @@ def init_db() -> None:
             password_hash TEXT NOT NULL,
             plan TEXT NOT NULL DEFAULT 'free',
             store_json TEXT NOT NULL DEFAULT '{}',
-            created_at REAL NOT NULL
+            created_at REAL NOT NULL,
+            recovery_hash TEXT
         )
         """
     )
-    if DATABASE_URL.startswith("postgres"):
-        cur.execute("ALTER TABLE users ADD COLUMN IF NOT EXISTS recovery_hash TEXT")
-        cur.execute(
-            """
-            CREATE TABLE IF NOT EXISTS password_resets (
-                email TEXT NOT NULL,
-                token_hash TEXT NOT NULL,
-                expires_at DOUBLE PRECISION NOT NULL
-            )
-            """
-        )
-    else:
-        cols = [row[1] for row in cur.execute("PRAGMA table_info(users)").fetchall()]
-        if "recovery_hash" not in cols:
-            cur.execute("ALTER TABLE users ADD COLUMN recovery_hash TEXT")
-        cur.execute(
-            """
-            CREATE TABLE IF NOT EXISTS password_resets (
-                email TEXT NOT NULL,
-                token_hash TEXT NOT NULL,
-                expires_at REAL NOT NULL
-            )
-            """
-        )
+    if not DATABASE_URL.startswith("postgres"):
         conn.commit()
     cur.close()
     conn.close()
 
 
-init_db()
-
-
-def fetch_user_by_email(email: str):
-    conn, p = db()
-    cur = conn.cursor()
-    cur.execute(
-        "SELECT id, email, password_hash, plan, store_json, recovery_hash FROM users WHERE email = " + p,
-        (email,),
-    )
-    row = cur.fetchone()
-    cur.close()
-    conn.close()
-    return row
-
-
-def fetch_user_by_id(uid: str):
-    conn, p = db()
-    cur = conn.cursor()
-    cur.execute(
-        "SELECT id, email, password_hash, plan, store_json, recovery_hash FROM users WHERE id = " + p,
-        (uid,),
-    )
-    row = cur.fetchone()
-    cur.close()
-    conn.close()
-    return row
+init_local_db()
 
 
 def row_map(row):
@@ -161,57 +218,22 @@ def row_map(row):
     return dict(zip(keys, row))
 
 
-def public_user(row) -> dict:
-    r = row_map(row)
-    return {
-        "id": r["id"],
-        "email": r["email"],
-        "plan": r["plan"] or "free",
-        "hasRecovery": bool(r.get("recovery_hash")),
-    }
-
-
 def require_user():
     uid = session.get("uid")
     if not uid:
         return None
-    return row_map(fetch_user_by_id(uid))
-
-
-def new_recovery_code() -> str:
-    alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"
-    raw = "".join(secrets.choice(alphabet) for _ in range(8))
-    return "DW-" + raw[:4] + "-" + raw[4:]
-
-
-def send_reset_email(to_email: str, token: str) -> bool:
-    host = os.environ.get("SMTP_HOST") or ""
-    user = os.environ.get("SMTP_USER") or ""
-    password = os.environ.get("SMTP_PASSWORD") or ""
-    if not host or not user or not password:
-        print("SMTP not configured; skip reset email", flush=True)
-        return False
-    port = int(os.environ.get("SMTP_PORT") or "587")
-    sender = os.environ.get("SMTP_FROM") or user
-    link = APP_BASE.rstrip("/") + "/?email=" + to_email + "&reset_token=" + token
-    msg = EmailMessage()
-    msg["Subject"] = "DINNER WIZARD password reset"
-    msg["From"] = sender
-    msg["To"] = to_email
-    msg.set_content(
-        "Reset your Dinner Wizard password:\n\n"
-        + link
-        + "\n\nThis link expires in 1 hour. If you did not ask, ignore this.\n"
-    )
-    try:
-        with smtplib.SMTP(host, port, timeout=20) as smtp:
-            smtp.starttls()
-            smtp.login(user, password)
-            smtp.send_message(msg)
-        return True
-    except Exception as exc:
-        print("SMTP send failed:", type(exc).__name__, flush=True)
-        return False
+    if USE_SUPABASE:
+        user = sb_get_user(uid)
+        if not user or user.get("id") != uid:
+            return None
+        return user
+    conn, p = db()
+    cur = conn.cursor()
+    cur.execute("SELECT id, email, password_hash, plan, store_json, recovery_hash FROM users WHERE id = " + p, (uid,))
+    row = row_map(cur.fetchone())
+    cur.close()
+    conn.close()
+    return row
 
 
 @app.get("/ping")
@@ -229,12 +251,36 @@ def signup():
         return jsonify({"error": "Enter a real email address."}), 400
     if len(password) < 8:
         return jsonify({"error": "Password must be at least 8 characters."}), 400
-    if fetch_user_by_email(email):
-        return jsonify({"error": "That email already has an account. Sign in."}), 409
-    uid = str(uuid.uuid4())
     recovery = new_recovery_code()
+    if USE_SUPABASE:
+        if sb_get_user_by_email(email):
+            return jsonify({"error": "That email already has an account. Sign in."}), 409
+        status, created = sb(
+            "POST",
+            "/auth/v1/admin/users",
+            {
+                "email": email,
+                "password": password,
+                "email_confirm": True,
+                "user_metadata": {"plan": "free", "recovery_hash": hash_password(recovery)},
+            },
+        )
+        if status >= 400:
+            msg = (created or {}).get("msg") or (created or {}).get("error") or "Could not create account."
+            return jsonify({"error": str(msg)}), 400
+        uid = created.get("id")
+        session.permanent = True
+        session["uid"] = uid
+        return jsonify({"user": sb_user_public(created), "store": {}, "recoveryCode": recovery})
+    # local fallback omitted path uses sqlite
     conn, p = db()
     cur = conn.cursor()
+    cur.execute("SELECT id FROM users WHERE email = " + p, (email,))
+    if cur.fetchone():
+        cur.close()
+        conn.close()
+        return jsonify({"error": "That email already has an account. Sign in."}), 409
+    uid = str(uuid.uuid4())
     cur.execute(
         "INSERT INTO users (id, email, password_hash, plan, store_json, created_at, recovery_hash) VALUES ("
         + ",".join([p] * 7)
@@ -247,13 +293,7 @@ def signup():
     conn.close()
     session.permanent = True
     session["uid"] = uid
-    return jsonify(
-        {
-            "user": {"id": uid, "email": email, "plan": "free", "hasRecovery": True},
-            "store": {},
-            "recoveryCode": recovery,
-        }
-    )
+    return jsonify({"user": {"id": uid, "email": email, "plan": "free", "hasRecovery": True}, "store": {}, "recoveryCode": recovery})
 
 
 @app.post("/api/login")
@@ -261,7 +301,25 @@ def login():
     body = request.get_json(silent=True) or {}
     email = str(body.get("email") or "").strip().lower()
     password = str(body.get("password") or "")
-    row = row_map(fetch_user_by_email(email))
+    if USE_SUPABASE:
+        status, data = sb(
+            "POST",
+            "/auth/v1/token?grant_type=password",
+            {"email": email, "password": password},
+        )
+        if status >= 400:
+            return jsonify({"error": "Email or password is wrong."}), 401
+        user = data.get("user") or {}
+        uid = user.get("id")
+        session.permanent = True
+        session["uid"] = uid
+        return jsonify({"user": sb_user_public(user), "store": sb_read_store(uid)})
+    conn, p = db()
+    cur = conn.cursor()
+    cur.execute("SELECT id, email, password_hash, plan, store_json, recovery_hash FROM users WHERE email = " + p, (email,))
+    row = row_map(cur.fetchone())
+    cur.close()
+    conn.close()
     if not row or not check_password(password, row["password_hash"]):
         return jsonify({"error": "Email or password is wrong."}), 401
     session.permanent = True
@@ -271,7 +329,7 @@ def login():
         store = json.loads(row["store_json"] or "{}")
     except json.JSONDecodeError:
         store = {}
-    return jsonify({"user": public_user(row), "store": store})
+    return jsonify({"user": {"id": row["id"], "email": row["email"], "plan": row["plan"], "hasRecovery": bool(row.get("recovery_hash"))}, "store": store})
 
 
 @app.post("/api/logout")
@@ -285,12 +343,14 @@ def me():
     user = require_user()
     if not user:
         return jsonify({"user": None}), 200
+    if USE_SUPABASE:
+        return jsonify({"user": sb_user_public(user), "store": sb_read_store(user["id"])})
     store = {}
     try:
         store = json.loads(user["store_json"] or "{}")
     except json.JSONDecodeError:
         store = {}
-    return jsonify({"user": public_user(user), "store": store})
+    return jsonify({"user": {"id": user["id"], "email": user["email"], "plan": user.get("plan") or "free", "hasRecovery": bool(user.get("recovery_hash"))}, "store": store})
 
 
 @app.put("/api/me/store")
@@ -301,17 +361,19 @@ def save_store():
     body = request.get_json(silent=True)
     if not isinstance(body, dict):
         return jsonify({"error": "Bad folder payload."}), 400
-    payload = json.dumps(body)
-    if len(payload) > 750_000:
+    if len(json.dumps(body)) > 750_000:
         return jsonify({"error": "Folder data is too large."}), 413
+    if USE_SUPABASE:
+        sb_write_store(user["id"], body)
+        return jsonify({"ok": True, "plan": (user.get("user_metadata") or {}).get("plan") or "free"})
     conn, p = db()
     cur = conn.cursor()
-    cur.execute("UPDATE users SET store_json = " + p + " WHERE id = " + p, (payload, user["id"]))
+    cur.execute("UPDATE users SET store_json = " + p + " WHERE id = " + p, (json.dumps(body), user["id"]))
     if not DATABASE_URL.startswith("postgres"):
         conn.commit()
     cur.close()
     conn.close()
-    return jsonify({"ok": True, "plan": user["plan"]})
+    return jsonify({"ok": True, "plan": user.get("plan")})
 
 
 @app.post("/api/me/password")
@@ -322,10 +384,18 @@ def change_password():
     body = request.get_json(silent=True) or {}
     old = str(body.get("oldPassword") or "")
     new = str(body.get("newPassword") or "")
-    if not check_password(old, user["password_hash"]):
-        return jsonify({"error": "Current password is wrong."}), 401
     if len(new) < 8:
         return jsonify({"error": "New password must be at least 8 characters."}), 400
+    if USE_SUPABASE:
+        status, data = sb("POST", "/auth/v1/token?grant_type=password", {"email": user.get("email"), "password": old})
+        if status >= 400:
+            return jsonify({"error": "Current password is wrong."}), 401
+        st, upd = sb("PUT", "/auth/v1/admin/users/" + user["id"], {"password": new})
+        if st >= 400:
+            return jsonify({"error": (upd or {}).get("msg") or "Could not update password."}), 400
+        return jsonify({"ok": True})
+    if not check_password(old, user["password_hash"]):
+        return jsonify({"error": "Current password is wrong."}), 401
     conn, p = db()
     cur = conn.cursor()
     cur.execute("UPDATE users SET password_hash = " + p + " WHERE id = " + p, (hash_password(new), user["id"]))
@@ -342,9 +412,15 @@ def issue_recovery():
     if not user:
         return jsonify({"error": "Sign in first."}), 401
     recovery = new_recovery_code()
+    hashed = hash_password(recovery)
+    if USE_SUPABASE:
+        meta = dict(user.get("user_metadata") or {})
+        meta["recovery_hash"] = hashed
+        sb("PUT", "/auth/v1/admin/users/" + user["id"], {"user_metadata": meta})
+        return jsonify({"recoveryCode": recovery})
     conn, p = db()
     cur = conn.cursor()
-    cur.execute("UPDATE users SET recovery_hash = " + p + " WHERE id = " + p, (hash_password(recovery), user["id"]))
+    cur.execute("UPDATE users SET recovery_hash = " + p + " WHERE id = " + p, (hashed, user["id"]))
     if not DATABASE_URL.startswith("postgres"):
         conn.commit()
     cur.close()
@@ -361,12 +437,19 @@ def close_account():
     password = str(body.get("password") or "")
     confirm = str(body.get("confirm") or "").strip().upper()
     if confirm != "CLOSE":
-        return jsonify({"error": 'Type CLOSE to confirm.'}), 400
+        return jsonify({"error": "Type CLOSE to confirm."}), 400
+    if USE_SUPABASE:
+        status, data = sb("POST", "/auth/v1/token?grant_type=password", {"email": user.get("email"), "password": password})
+        if status >= 400:
+            return jsonify({"error": "Password is wrong."}), 401
+        sb("DELETE", "/storage/v1/object/kitchen/" + user["id"] + ".json")
+        sb("DELETE", "/auth/v1/admin/users/" + user["id"])
+        session.clear()
+        return jsonify({"ok": True})
     if not check_password(password, user["password_hash"]):
         return jsonify({"error": "Password is wrong."}), 401
     conn, p = db()
     cur = conn.cursor()
-    cur.execute("DELETE FROM password_resets WHERE email = " + p, (user["email"],))
     cur.execute("DELETE FROM users WHERE id = " + p, (user["id"],))
     if not DATABASE_URL.startswith("postgres"):
         conn.commit()
@@ -381,30 +464,21 @@ def forgot():
     body = request.get_json(silent=True) or {}
     email = str(body.get("email") or "").strip().lower()
     mailed = False
-    if EMAIL_RE.match(email):
-        row = row_map(fetch_user_by_email(email))
-        if row:
-            token = secrets.token_urlsafe(24)
-            conn, p = db()
-            cur = conn.cursor()
-            cur.execute("DELETE FROM password_resets WHERE email = " + p, (email,))
-            cur.execute(
-                "INSERT INTO password_resets (email, token_hash, expires_at) VALUES (" + ",".join([p] * 3) + ")",
-                (email, hash_password(token), time.time() + 3600),
-            )
-            if not DATABASE_URL.startswith("postgres"):
-                conn.commit()
-            cur.close()
-            conn.close()
-            mailed = send_reset_email(email, token)
+    if USE_SUPABASE and EMAIL_RE.match(email):
+        status, data = sb(
+            "POST",
+            "/auth/v1/recover?redirect_to=" + urllib.parse.quote(APP_BASE.rstrip("/") + "/", safe=""),
+            {"email": email},
+        )
+        mailed = status < 400
     return jsonify(
         {
             "ok": True,
             "mailed": mailed,
             "message": (
-                "If that email has an account, we sent a reset link."
+                "If that email has an account, check it for a Dinner Wizard reset link."
                 if mailed
-                else "If email sending is off, use your recovery code (DW-XXXX-XXXX) with a new password below."
+                else "Use your recovery code (DW-XXXX-XXXX) with a new password if you saved one."
             ),
         }
     )
@@ -415,52 +489,23 @@ def reset_password():
     body = request.get_json(silent=True) or {}
     email = str(body.get("email") or "").strip().lower()
     new = str(body.get("newPassword") or "")
-    token = str(body.get("token") or "").strip()
     recovery = str(body.get("recoveryCode") or "").strip().upper()
     if not EMAIL_RE.match(email):
         return jsonify({"error": "Enter the account email."}), 400
     if len(new) < 8:
         return jsonify({"error": "New password must be at least 8 characters."}), 400
-    row = row_map(fetch_user_by_email(email))
-    if not row:
-        return jsonify({"error": "Could not reset that account."}), 400
-    ok = False
-    if recovery:
-        ok = check_password(recovery, row.get("recovery_hash") or "")
-    if token and not ok:
-        conn, p = db()
-        cur = conn.cursor()
-        cur.execute(
-            "SELECT token_hash, expires_at FROM password_resets WHERE email = " + p + " ORDER BY expires_at DESC",
-            (email,),
-        )
-        resets = cur.fetchall()
-        now = time.time()
-        for item in resets:
-            mapped = row_map(item) if not isinstance(item, (list, tuple)) else None
-            if mapped:
-                th, exp = mapped.get("token_hash"), mapped.get("expires_at")
-            else:
-                th, exp = item[0], item[1]
-            if exp and float(exp) >= now and check_password(token, th):
-                ok = True
-                break
-        if ok:
-            cur.execute("DELETE FROM password_resets WHERE email = " + p, (email,))
-        if not DATABASE_URL.startswith("postgres"):
-            conn.commit()
-        cur.close()
-        conn.close()
-    if not ok:
-        return jsonify({"error": "Recovery code or reset link is wrong or expired."}), 400
-    conn, p = db()
-    cur = conn.cursor()
-    cur.execute("UPDATE users SET password_hash = " + p + " WHERE id = " + p, (hash_password(new), row["id"]))
-    if not DATABASE_URL.startswith("postgres"):
-        conn.commit()
-    cur.close()
-    conn.close()
-    return jsonify({"ok": True})
+    if USE_SUPABASE:
+        user = sb_get_user_by_email(email)
+        if not user:
+            return jsonify({"error": "Could not reset that account."}), 400
+        meta = user.get("user_metadata") or {}
+        if not check_password(recovery, meta.get("recovery_hash") or ""):
+            return jsonify({"error": "Recovery code is wrong."}), 400
+        st, upd = sb("PUT", "/auth/v1/admin/users/" + user["id"], {"password": new})
+        if st >= 400:
+            return jsonify({"error": (upd or {}).get("msg") or "Could not reset."}), 400
+        return jsonify({"ok": True})
+    return jsonify({"error": "Could not reset that account."}), 400
 
 
 @app.route("/", defaults={"path": "index.html"})
@@ -481,5 +526,5 @@ def static_files(path: str):
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", "8765"))
-    print("DINNER WIZARD app server on", port, flush=True)
+    print("DINNER WIZARD app server on", port, "supabase=" + str(USE_SUPABASE), flush=True)
     app.run(host="0.0.0.0", port=port, debug=False)

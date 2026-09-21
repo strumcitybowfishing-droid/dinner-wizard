@@ -3,6 +3,8 @@
 const STORAGE_KEY = 'dinner-wizard-v1';
 const SCREENS = ['auth', 'account', 'home', 'protein', 'cut', 'budget', 'people', 'difficulty', 'store', 'pick', 'recipe', 'rate', 'folders'];
 const SIGNED_IN_HOST = 'https://dinner-wizard-app.onrender.com';
+const SUPABASE_URL = 'https://odnhnrgpqhodmjjekctj.supabase.co';
+const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9kbmhucmdwcWhvZG1qamVrY3RqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTAwMTU2NTksImV4cCI6MjEwNTU5MTY1OX0.SJR7G0PHUxXkkBqUeeNXY9Z0yB5EoCnWCsDFqAGMc8A';
 const KID_SERVING = 0.6;
 
 const PROTEINS = [
@@ -258,6 +260,8 @@ const state = {
   authBusy: false,
   recoveryCode: '',
   resetToken: '',
+  sbClient: null,
+  sbRecovery: false,
   store: { ratings: {}, tonight: null, history: [], preferredStore: 'walmart' }
 };
 
@@ -2016,6 +2020,20 @@ async function submitResetWithToken() {
   state.authError = '';
   render();
   try {
+    if (state.sbRecovery && state.sbClient) {
+      const { error } = await state.sbClient.auth.updateUser({ password: password });
+      state.authBusy = false;
+      if (error) {
+        state.authError = error.message || 'Link expired. Try again.';
+        render();
+        return;
+      }
+      state.authMode = 'login';
+      state.sbRecovery = false;
+      state.authError = 'Password updated. Sign in.';
+      render();
+      return;
+    }
     const res = await fetch('/api/reset', {
       method: 'POST',
       credentials: 'include',
@@ -2223,6 +2241,9 @@ function boot() {
       state.authMode = 'reset';
     }
   } catch (err) { /* ignore */ }
+  if (window.supabase && window.supabase.createClient) {
+    state.sbClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+  }
   loadStore();
   document.getElementById('app').addEventListener('click', onClick);
   document.getElementById('app').addEventListener('submit', function (event) {
@@ -2235,7 +2256,23 @@ function boot() {
   window.addEventListener('hashchange', onHash);
   window.addEventListener('popstate', onHash);
 
-  initAuth().then(() => {
+  initAuth().then(async () => {
+    if (state.sbClient) {
+      try {
+        const { data } = await state.sbClient.auth.getSession();
+        const hash = String(location.hash || '');
+        if ((data && data.session && hash.indexOf('type=recovery') !== -1) || hash.indexOf('type=recovery') !== -1) {
+          state.sbRecovery = true;
+          state.authMode = 'reset';
+          state.screen = 'auth';
+          render();
+          refreshLibrary().then(() => {
+            if (!state.recipes.length) startLibraryWatch();
+          });
+          return;
+        }
+      } catch (err) { /* ignore */ }
+    }
     if (state.resetToken) {
       state.authMode = 'reset';
       state.screen = 'auth';
