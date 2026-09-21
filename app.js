@@ -1,7 +1,7 @@
 /* DINNER WIZARD — family dinner picker. Vanilla JS, no build. */
 
 const STORAGE_KEY = 'dinner-wizard-v1';
-const SCREENS = ['auth', 'home', 'protein', 'cut', 'budget', 'people', 'difficulty', 'store', 'pick', 'recipe', 'rate', 'folders'];
+const SCREENS = ['auth', 'account', 'home', 'protein', 'cut', 'budget', 'people', 'difficulty', 'store', 'pick', 'recipe', 'rate', 'folders'];
 const SIGNED_IN_HOST = 'https://dinner-wizard-app.onrender.com';
 const KID_SERVING = 0.6;
 
@@ -256,6 +256,8 @@ const state = {
   authMode: 'login',
   authError: '',
   authBusy: false,
+  recoveryCode: '',
+  resetToken: '',
   store: { ratings: {}, tonight: null, history: [], preferredStore: 'walmart' }
 };
 
@@ -883,6 +885,7 @@ function scaleFactor(recipe) {
 function go(screen, push) {
   if (!SCREENS.includes(screen)) screen = 'home';
   if (!state.user && screen !== 'auth') screen = 'auth';
+  if (state.user && screen === 'auth' && state.authMode !== 'recovery') screen = 'home';
   state.screen = screen;
   if (push !== false) {
     const hash = '#' + screen;
@@ -894,7 +897,7 @@ function go(screen, push) {
 
 function back() {
   const order = ['home', 'protein', 'cut', 'budget', 'people', 'difficulty', 'store', 'pick', 'recipe', 'rate'];
-  if (state.screen === 'folders') {
+  if (state.screen === 'folders' || state.screen === 'account') {
     go('home');
     return;
   }
@@ -1192,8 +1195,9 @@ function renderHome() {
       '</div>' +
       (state.user
         ? '<p class="install-hint">Signed in as ' + esc(state.user.email) +
-          ' · free account · folders sync on this login. ' +
-          '<button class="linkish" data-act="logout" style="display:inline">Log out</button></p>'
+          ' · free account · folders sync on this login.<br>' +
+          '<button class="linkish" data-act="go" data-screen="account" style="display:inline">Account</button>' +
+          ' · <button class="linkish" data-act="logout" style="display:inline">Log out</button></p>'
         : '') +
       '<p class="install-hint">Add DINNER WIZARD to your home screen from the browser menu. It works like a little kitchen app.</p>' +
     '</div>'
@@ -1201,7 +1205,47 @@ function renderHome() {
 }
 
 function renderAuth() {
-  const signup = state.authMode === 'signup';
+  const mode = state.authMode || 'login';
+  if (mode === 'recovery') {
+    return (
+      '<div class="home-pad">' +
+        '<h2 class="screen-title">Save this recovery code</h2>' +
+        '<p class="lead">This is the only way to get back in if you forget the password (until email reset is on). Screenshot it.</p>' +
+        '<p class="recovery-code">' + esc(state.recoveryCode) + '</p>' +
+        '<button class="btn gold" data-act="go" data-screen="home">I saved it — continue</button>' +
+      '</div>'
+    );
+  }
+  if (mode === 'forgot') {
+    return (
+      '<div class="home-pad">' +
+        '<h2 class="screen-title">Forgot password</h2>' +
+        '<p class="lead">Use the recovery code you saved (DW-XXXX-XXXX), or ask for an email link.</p>' +
+        (state.authError ? '<p class="banner">' + esc(state.authError) + '</p>' : '') +
+        '<form class="auth-form" data-act="do-reset">' +
+          '<label>Email<input id="auth-email" type="email" required placeholder="you@email.com"></label>' +
+          '<label>Recovery code<input id="auth-recovery" type="text" autocomplete="off" placeholder="DW-XXXX-XXXX"></label>' +
+          '<label>New password<input id="auth-password" type="password" minlength="8" placeholder="at least 8 characters"></label>' +
+          '<button class="btn gold" type="submit"' + (state.authBusy ? ' disabled' : '') + '>Set new password</button>' +
+        '</form>' +
+        '<button class="btn ghost" data-act="do-forgot-email"' + (state.authBusy ? ' disabled' : '') + '>Email me a reset link</button>' +
+        '<button class="linkish" data-act="auth-mode" data-mode="login">Back to sign in</button>' +
+      '</div>'
+    );
+  }
+  if (mode === 'reset') {
+    return (
+      '<div class="home-pad">' +
+        '<h2 class="screen-title">Choose a new password</h2>' +
+        (state.authError ? '<p class="banner">' + esc(state.authError) + '</p>' : '') +
+        '<form class="auth-form" data-act="do-reset-token">' +
+          '<label>New password<input id="auth-password" type="password" minlength="8" required placeholder="at least 8 characters"></label>' +
+          '<button class="btn gold" type="submit"' + (state.authBusy ? ' disabled' : '') + '>Save password</button>' +
+        '</form>' +
+      '</div>'
+    );
+  }
+  const signup = mode === 'signup';
   return (
     '<div class="home-pad">' +
       '<h2 class="screen-title">' + (signup ? 'Make a free account' : 'Sign in') + '</h2>' +
@@ -1220,9 +1264,44 @@ function renderAuth() {
           (state.authBusy ? 'Working…' : (signup ? 'Create free account' : 'Sign in and stay signed in')) +
         '</button>' +
       '</form>' +
+      (signup
+        ? ''
+        : '<button class="linkish" data-act="auth-mode" data-mode="forgot">Forgot password?</button>') +
       '<button class="linkish" data-act="auth-mode" data-mode="' + (signup ? 'login' : 'signup') + '">' +
         (signup ? 'Already have an account? Sign in' : 'New here? Make a free account') +
       '</button>' +
+    '</div>'
+  );
+}
+
+function renderAccount() {
+  return (
+    '<div class="home-pad">' +
+      '<h2 class="screen-title">Account</h2>' +
+      '<p class="lead">' + esc(state.user && state.user.email || '') + ' · ' +
+        esc((state.user && state.user.plan) || 'free') + '</p>' +
+      (state.authError ? '<p class="banner">' + esc(state.authError) + '</p>' : '') +
+      (state.recoveryCode
+        ? '<p class="muted">New recovery code (save it, it will not show again):</p><p class="recovery-code">' +
+          esc(state.recoveryCode) + '</p>'
+        : '') +
+      '<h3 class="block-title">Change password</h3>' +
+      '<form class="auth-form" data-act="do-change-password">' +
+        '<label>Current password<input id="acct-old" type="password" required></label>' +
+        '<label>New password<input id="acct-new" type="password" minlength="8" required></label>' +
+        '<button class="btn gold" type="submit"' + (state.authBusy ? ' disabled' : '') + '>Update password</button>' +
+      '</form>' +
+      '<h3 class="block-title">Forgot-password backup</h3>' +
+      '<p class="muted">A recovery code lets you reset if you lose the password. You only see it once.</p>' +
+      '<button class="btn ghost" data-act="do-recovery"' + (state.authBusy ? ' disabled' : '') + '>Make a new recovery code</button>' +
+      '<h3 class="block-title">Close account</h3>' +
+      '<p class="muted">Deletes the login and synced folders. Type CLOSE and your password.</p>' +
+      '<form class="auth-form" data-act="do-close">' +
+        '<label>Type CLOSE<input id="acct-close" type="text" placeholder="CLOSE" autocomplete="off"></label>' +
+        '<label>Password<input id="acct-close-pass" type="password" required></label>' +
+        '<button class="btn ghost" type="submit"' + (state.authBusy ? ' disabled' : '') + '>Close this account</button>' +
+      '</form>' +
+      '<button class="linkish" data-act="logout">Log out</button>' +
     '</div>'
   );
 }
@@ -1723,6 +1802,7 @@ function renderMain() {
   const main = document.getElementById('main');
   const screens = {
     auth: renderAuth,
+    account: renderAccount,
     home: renderHome,
     protein: renderProtein,
     cut: renderCut,
@@ -1751,8 +1831,7 @@ function onClick(event) {
   const form = event.target.closest('form[data-act]');
   if (form && (event.target.matches('button[type="submit"]') || event.target.closest('button[type="submit"]'))) {
     event.preventDefault();
-    if (form.getAttribute('data-act') === 'do-signup') submitAuth('signup');
-    else submitAuth('login');
+    handleAuthForm(form.getAttribute('data-act'));
     return;
   }
   const btn = event.target.closest('[data-act]');
@@ -1760,10 +1839,12 @@ function onClick(event) {
   const act = btn.dataset.act;
   if (act === 'start') startDinner();
   else if (act === 'auth-mode') {
-    state.authMode = btn.dataset.mode === 'signup' ? 'signup' : 'login';
+    state.authMode = btn.dataset.mode || 'login';
     state.authError = '';
     render();
   }
+  else if (act === 'do-forgot-email') requestResetEmail();
+  else if (act === 'do-recovery') issueRecovery();
   else if (act === 'logout') logoutUser();
   else if (act === 'back') back();
   else if (act === 'go') go(btn.dataset.screen);
@@ -1831,6 +1912,15 @@ function onKey(event) {
   }
 }
 
+function handleAuthForm(act) {
+  if (act === 'do-signup') submitAuth('signup');
+  else if (act === 'do-login') submitAuth('login');
+  else if (act === 'do-reset') submitResetWithRecovery();
+  else if (act === 'do-reset-token') submitResetWithToken();
+  else if (act === 'do-change-password') changePassword();
+  else if (act === 'do-close') closeAccount();
+}
+
 async function submitAuth(mode) {
   const emailEl = document.getElementById('auth-email');
   const passEl = document.getElementById('auth-password');
@@ -1865,10 +1955,197 @@ async function submitAuth(mode) {
       saveStore();
     }
     state.authBusy = false;
+    if (mode === 'signup' && body.recoveryCode) {
+      state.recoveryCode = body.recoveryCode;
+      state.authMode = 'recovery';
+      go('auth');
+      return;
+    }
     go('home');
   } catch (err) {
     state.authError = 'Network hiccup. Try again.';
     state.authBusy = false;
+    render();
+  }
+}
+
+async function submitResetWithRecovery() {
+  const email = (document.getElementById('auth-email') || {}).value || '';
+  const recovery = (document.getElementById('auth-recovery') || {}).value || '';
+  const password = (document.getElementById('auth-password') || {}).value || '';
+  if (!email || !recovery || !password) {
+    state.authError = 'Email, recovery code, and a new password.';
+    render();
+    return;
+  }
+  state.authBusy = true;
+  state.authError = '';
+  render();
+  try {
+    const res = await fetch('/api/reset', {
+      method: 'POST',
+      credentials: 'include',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email.trim(), recoveryCode: recovery.trim(), newPassword: password })
+    });
+    const body = await res.json().catch(() => ({}));
+    state.authBusy = false;
+    if (!res.ok) {
+      state.authError = body.error || 'Could not reset.';
+      render();
+      return;
+    }
+    state.authMode = 'login';
+    state.authError = 'Password updated. Sign in.';
+    render();
+  } catch (err) {
+    state.authBusy = false;
+    state.authError = 'Network hiccup. Try again.';
+    render();
+  }
+}
+
+async function submitResetWithToken() {
+  const password = (document.getElementById('auth-password') || {}).value || '';
+  if (!password) {
+    state.authError = 'Enter a new password.';
+    render();
+    return;
+  }
+  state.authBusy = true;
+  state.authError = '';
+  render();
+  try {
+    const res = await fetch('/api/reset', {
+      method: 'POST',
+      credentials: 'include',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email: state.resetEmail || '',
+        token: state.resetToken || '',
+        newPassword: password
+      })
+    });
+    const body = await res.json().catch(() => ({}));
+    state.authBusy = false;
+    if (!res.ok) {
+      state.authError = body.error || 'Link expired. Try again.';
+      render();
+      return;
+    }
+    state.authMode = 'login';
+    state.resetToken = '';
+    state.authError = 'Password updated. Sign in.';
+    render();
+  } catch (err) {
+    state.authBusy = false;
+    state.authError = 'Network hiccup. Try again.';
+    render();
+  }
+}
+
+async function requestResetEmail() {
+  const email = (document.getElementById('auth-email') || {}).value || '';
+  if (!email) {
+    state.authError = 'Enter the account email first.';
+    render();
+    return;
+  }
+  state.authBusy = true;
+  state.authError = '';
+  render();
+  try {
+    const res = await fetch('/api/forgot', {
+      method: 'POST',
+      credentials: 'include',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: email.trim() })
+    });
+    const body = await res.json().catch(() => ({}));
+    state.authBusy = false;
+    state.authError = body.message || 'Check that email if an account exists.';
+    render();
+  } catch (err) {
+    state.authBusy = false;
+    state.authError = 'Network hiccup. Try again.';
+    render();
+  }
+}
+
+async function changePassword() {
+  const oldP = (document.getElementById('acct-old') || {}).value || '';
+  const newP = (document.getElementById('acct-new') || {}).value || '';
+  state.authBusy = true;
+  state.authError = '';
+  render();
+  try {
+    const res = await fetch('/api/me/password', {
+      method: 'POST',
+      credentials: 'include',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ oldPassword: oldP, newPassword: newP })
+    });
+    const body = await res.json().catch(() => ({}));
+    state.authBusy = false;
+    state.authError = res.ok ? 'Password updated.' : (body.error || 'Could not update.');
+    render();
+  } catch (err) {
+    state.authBusy = false;
+    state.authError = 'Network hiccup. Try again.';
+    render();
+  }
+}
+
+async function issueRecovery() {
+  state.authBusy = true;
+  state.authError = '';
+  render();
+  try {
+    const res = await fetch('/api/me/recovery', { method: 'POST', credentials: 'include' });
+    const body = await res.json().catch(() => ({}));
+    state.authBusy = false;
+    if (!res.ok) {
+      state.authError = body.error || 'Could not make a code.';
+    } else {
+      state.recoveryCode = body.recoveryCode || '';
+    }
+    render();
+  } catch (err) {
+    state.authBusy = false;
+    state.authError = 'Network hiccup. Try again.';
+    render();
+  }
+}
+
+async function closeAccount() {
+  const confirm = (document.getElementById('acct-close') || {}).value || '';
+  const password = (document.getElementById('acct-close-pass') || {}).value || '';
+  state.authBusy = true;
+  state.authError = '';
+  render();
+  try {
+    const res = await fetch('/api/me/close', {
+      method: 'POST',
+      credentials: 'include',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ confirm: confirm, password: password })
+    });
+    const body = await res.json().catch(() => ({}));
+    state.authBusy = false;
+    if (!res.ok) {
+      state.authError = body.error || 'Could not close the account.';
+      render();
+      return;
+    }
+    state.user = null;
+    state.store = { ratings: {}, tonight: null, history: [], preferredStore: 'walmart' };
+    try { localStorage.removeItem(STORAGE_KEY); } catch (err) { /* ignore */ }
+    state.authMode = 'login';
+    state.authError = 'Account closed.';
+    go('auth');
+  } catch (err) {
+    state.authBusy = false;
+    state.authError = 'Network hiccup. Try again.';
     render();
   }
 }
@@ -1935,24 +2212,35 @@ function boot() {
   const host = location.hostname;
   const local = host === 'localhost' || host === '127.0.0.1';
   if (!local && host !== 'dinner-wizard-app.onrender.com') {
-    location.replace(SIGNED_IN_HOST + '/' + location.hash);
+    location.replace(SIGNED_IN_HOST + '/' + location.hash + location.search);
     return;
   }
+  try {
+    const q = new URLSearchParams(location.search);
+    if (q.get('reset_token')) {
+      state.resetToken = q.get('reset_token');
+      state.resetEmail = q.get('email') || '';
+      state.authMode = 'reset';
+    }
+  } catch (err) { /* ignore */ }
   loadStore();
   document.getElementById('app').addEventListener('click', onClick);
   document.getElementById('app').addEventListener('submit', function (event) {
     const form = event.target.closest('form[data-act]');
     if (!form) return;
     event.preventDefault();
-    if (form.getAttribute('data-act') === 'do-signup') submitAuth('signup');
-    else submitAuth('login');
+    handleAuthForm(form.getAttribute('data-act'));
   });
   document.getElementById('app').addEventListener('keydown', onKey);
   window.addEventListener('hashchange', onHash);
   window.addEventListener('popstate', onHash);
 
   initAuth().then(() => {
-    if (!state.user) {
+    if (state.resetToken) {
+      state.authMode = 'reset';
+      state.screen = 'auth';
+      render();
+    } else if (!state.user) {
       state.screen = 'auth';
       render();
     } else {
