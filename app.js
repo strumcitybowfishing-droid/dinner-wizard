@@ -753,6 +753,31 @@ function cookThis() {
   go('home');
 }
 
+function cancelTonight() {
+  const tonight = state.store.tonight;
+  if (tonight && tonight.id) state.skippedIds.add(tonight.id);
+  if (tonight && tonight.filters) {
+    const f = tonight.filters;
+    if (f.protein != null) state.filters.protein = f.protein;
+    if (typeof f.budget === 'number') state.filters.budget = f.budget;
+    if (typeof f.adults === 'number') state.filters.adults = f.adults;
+    if (typeof f.children === 'number') state.filters.children = f.children;
+    if (typeof f.difficulty === 'number') state.filters.difficulty = f.difficulty;
+    if (f.store) state.filters.store = f.store;
+  }
+  state.store.tonight = null;
+  state.currentRecipe = null;
+  state.currentSides = [];
+  state.recipeMode = 'pick';
+  saveStore();
+  if (!state.filters.protein) {
+    startDinner();
+    return;
+  }
+  pickThree();
+  go('pick');
+}
+
 function rateTonight(kind) {
   const rec = state.currentRecipe || (state.store.tonight && byId(state.store.tonight.id));
   if (!rec) {
@@ -855,6 +880,7 @@ function renderHome() {
           '<button class="btn gold" data-act="open-recipe" data-id="' + esc(tonight.id) + '">See the recipe</button>' +
           (tonightRated ? '' : '<button class="btn forest" data-act="go-rate">Rate tonight’s dinner</button>') +
         '</div>' +
+        '<button class="btn ghost" data-act="cancel-tonight" style="margin-top:10px">Cancel tonight — pick another</button>' +
       '</article>';
   }
 
@@ -1114,11 +1140,16 @@ function renderRecipe() {
     attachSides(recipe);
   }
 
+  const isTonight = state.store.tonight && state.store.tonight.id === recipe.id;
   const actions = browse
     ? '<div class="btn-row">' +
-        '<button class="btn gold" data-act="go" data-screen="folders">Back to folders</button>' +
+        '<button class="btn gold" data-act="go" data-screen="' + (isTonight ? 'home' : 'folders') + '">' +
+          (isTonight ? 'Back home' : 'Back to folders') +
+        '</button>' +
       '</div>' +
-      renderRateButtons(true)
+      (isTonight
+        ? '<button class="btn ghost" data-act="cancel-tonight" style="margin-top:10px">Cancel tonight — pick another</button>'
+        : renderRateButtons(true))
     : '<div class="btn-row">' +
         '<button class="btn ghost" data-act="skip">Skip — three new names</button>' +
         '<button class="btn gold" data-act="cook">We’ll cook this</button>' +
@@ -1386,6 +1417,7 @@ function onClick(event) {
   else if (act === 'nudge') nudge(btn.dataset.field, Number(btn.dataset.delta));
   else if (act === 'skip') skipRecipe();
   else if (act === 'cook') cookThis();
+  else if (act === 'cancel-tonight') cancelTonight();
   else if (act === 'rate') rateTonight(btn.dataset.kind);
   else if (act === 'folders') openFolders(btn.dataset.kind);
   else if (act === 'open-recipe') {
