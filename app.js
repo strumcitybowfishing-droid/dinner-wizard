@@ -1,7 +1,7 @@
 /* DINNER WIZARD — family dinner picker. Vanilla JS, no build. */
 
 const STORAGE_KEY = 'dinner-wizard-v1';
-const SCREENS = ['home', 'protein', 'budget', 'people', 'difficulty', 'store', 'pick', 'recipe', 'rate', 'folders'];
+const SCREENS = ['home', 'protein', 'cut', 'budget', 'people', 'difficulty', 'store', 'pick', 'recipe', 'rate', 'folders'];
 const KID_SERVING = 0.6;
 
 const PROTEINS = [
@@ -80,6 +80,108 @@ const PROTEIN_ALIASES = {
   leftovers: ['leftover']
 };
 
+const CUTS = {
+  chicken: [
+    { id: 'any', label: 'Any cut', blurb: 'Whatever is in the fridge' },
+    { id: 'breast', label: 'Breasts', blurb: 'Boneless or bone-in', aliases: ['breast', 'breasts'] },
+    { id: 'thigh', label: 'Thighs', blurb: 'Juicy, hard to overcook', aliases: ['thigh', 'thighs'] },
+    { id: 'drumstick', label: 'Drumsticks', blurb: 'Legs', aliases: ['drumstick', 'drumsticks', 'chicken leg'] },
+    { id: 'wing', label: 'Wings', aliases: ['wing', 'wings'] },
+    { id: 'tender', label: 'Tenders', aliases: ['tender', 'tenders', 'tenderloin'] },
+    { id: 'whole', label: 'Whole bird', aliases: ['whole chicken', 'whole bird', 'roast chicken'] },
+    { id: 'ground', label: 'Ground', aliases: ['ground chicken'] }
+  ],
+  turkey: [
+    { id: 'any', label: 'Any cut', blurb: 'Whatever you have' },
+    { id: 'breast', label: 'Breast', aliases: ['breast', 'breasts'] },
+    { id: 'thigh', label: 'Thighs / legs', aliases: ['thigh', 'leg', 'drumstick'] },
+    { id: 'ground', label: 'Ground', aliases: ['ground turkey'] },
+    { id: 'whole', label: 'Whole bird', aliases: ['whole turkey'] }
+  ],
+  pork: [
+    { id: 'any', label: 'Any cut', blurb: 'Use what’s on hand' },
+    { id: 'chop', label: 'Chops', aliases: ['chop', 'chops'] },
+    { id: 'tenderloin', label: 'Tenderloin', aliases: ['tenderloin'] },
+    { id: 'loin', label: 'Loin roast', aliases: ['pork loin', 'loin roast'] },
+    { id: 'shoulder', label: 'Shoulder / butt', aliases: ['shoulder', 'boston butt', 'pork butt', 'picnic'] },
+    { id: 'ground', label: 'Ground', aliases: ['ground pork'] }
+  ],
+  lamb: [
+    { id: 'any', label: 'Any cut' },
+    { id: 'chop', label: 'Chops', aliases: ['chop', 'chops', 'rack'] },
+    { id: 'shoulder', label: 'Shoulder', aliases: ['shoulder'] },
+    { id: 'leg', label: 'Leg', aliases: ['leg of lamb', 'lamb leg'] },
+    { id: 'ground', label: 'Ground', aliases: ['ground lamb'] }
+  ],
+  venison: [
+    { id: 'any', label: 'Any cut', blurb: 'Use what’s in the freezer' },
+    { id: 'backstrap', label: 'Backstrap', blurb: 'Loin — steaks, medallions', aliases: ['backstrap', 'back strap', 'loin', 'medallion'] },
+    { id: 'tenderloin', label: 'Tenderloin', aliases: ['tenderloin'] },
+    { id: 'shoulder', label: 'Front shoulder', blurb: 'Roast, grind, or braise', aliases: ['shoulder', 'chuck', 'blade'] },
+    { id: 'hind', label: 'Hind roast / ham', aliases: ['hind', 'round', 'ham', 'rump'] },
+    { id: 'trimmings', label: 'Trimmings', blurb: 'Stew meat, scraps, chili cubes', aliases: ['stew', 'trim', 'trimming', 'cube', 'scrap'] },
+    { id: 'ground', label: 'Ground', aliases: ['ground venison', 'ground deer', 'burger'] },
+    { id: 'mystery', label: 'Mystery meat', blurb: 'Unlabeled bag. Keep it simple.', aliases: [] }
+  ],
+  elk: [
+    { id: 'any', label: 'Any cut' },
+    { id: 'backstrap', label: 'Backstrap', aliases: ['backstrap', 'loin', 'medallion'] },
+    { id: 'tenderloin', label: 'Tenderloin', aliases: ['tenderloin'] },
+    { id: 'shoulder', label: 'Front shoulder', aliases: ['shoulder', 'chuck'] },
+    { id: 'hind', label: 'Hind roast', aliases: ['hind', 'round', 'roast'] },
+    { id: 'trimmings', label: 'Trimmings', aliases: ['stew', 'trim', 'cube'] },
+    { id: 'ground', label: 'Ground', aliases: ['ground elk', 'burger'] },
+    { id: 'mystery', label: 'Mystery meat', aliases: [] }
+  ],
+  'wild hog': [
+    { id: 'any', label: 'Any cut' },
+    { id: 'loin', label: 'Loin / chops', aliases: ['loin', 'chop'] },
+    { id: 'shoulder', label: 'Shoulder', aliases: ['shoulder', 'butt'] },
+    { id: 'ham', label: 'Ham', aliases: ['ham', 'hind'] },
+    { id: 'trimmings', label: 'Trimmings', aliases: ['stew', 'trim', 'cube'] },
+    { id: 'ground', label: 'Ground', aliases: ['ground', 'sausage', 'burger'] },
+    { id: 'mystery', label: 'Mystery meat', aliases: [] }
+  ],
+  duck: [
+    { id: 'any', label: 'Any cut' },
+    { id: 'breast', label: 'Breast', aliases: ['breast'] },
+    { id: 'leg', label: 'Legs / thighs', aliases: ['leg', 'thigh', 'confit'] },
+    { id: 'whole', label: 'Whole bird', aliases: ['whole duck'] }
+  ],
+  goose: [
+    { id: 'any', label: 'Any cut' },
+    { id: 'breast', label: 'Breast', aliases: ['breast'] },
+    { id: 'leg', label: 'Legs', aliases: ['leg', 'thigh'] },
+    { id: 'whole', label: 'Whole bird', aliases: ['whole goose'] }
+  ],
+  pheasant: [
+    { id: 'any', label: 'Any cut' },
+    { id: 'breast', label: 'Breast', aliases: ['breast'] },
+    { id: 'whole', label: 'Whole bird', aliases: ['whole'] }
+  ],
+  rabbit: [
+    { id: 'any', label: 'Any cut' },
+    { id: 'whole', label: 'Whole', aliases: ['whole rabbit'] },
+    { id: 'pieces', label: 'Pieces', aliases: ['saddle', 'leg', 'loin'] }
+  ],
+  fish: [
+    { id: 'any', label: 'Any cut' },
+    { id: 'fillet', label: 'Fillets', aliases: ['fillet', 'filet'] },
+    { id: 'steak', label: 'Steaks', aliases: ['steak'] },
+    { id: 'whole', label: 'Whole fish', aliases: ['whole fish'] }
+  ],
+  salmon: [
+    { id: 'any', label: 'Any cut' },
+    { id: 'fillet', label: 'Fillet', aliases: ['fillet', 'filet'] },
+    { id: 'steak', label: 'Steak', aliases: ['steak'] }
+  ],
+  tuna: [
+    { id: 'any', label: 'Any cut' },
+    { id: 'steak', label: 'Steak', aliases: ['steak'] },
+    { id: 'can', label: 'Canned', aliases: ['canned', 'tin'] }
+  ]
+};
+
 const BUDGETS = [
   { n: 1, label: 'Tight / pantry', blurb: 'What we already have' },
   { n: 2, label: 'Cheap weeknight', blurb: 'Simple grocery run' },
@@ -111,6 +213,7 @@ const state = {
   libraryStatus: 'loading',
   filters: {
     protein: null,
+    cut: null,
     budget: 3,
     adults: 2,
     children: 0,
@@ -168,6 +271,35 @@ function proteinLabel(protein) {
   if (typeof protein === 'object') return protein.custom || 'Other';
   const found = PROTEINS.find((p) => p.id === protein);
   return found ? found.label : protein;
+}
+
+function proteinKey(protein) {
+  if (!protein || protein === 'surprise') return '';
+  const raw = typeof protein === 'object' ? protein.custom : protein;
+  const t = tidyProtein(raw);
+  if (CUTS[t]) return t;
+  if (/deer|venison/.test(t)) return 'venison';
+  if (/elk|wapiti/.test(t)) return 'elk';
+  if (/hog|boar/.test(t)) return 'wild hog';
+  if (/chicken/.test(t)) return 'chicken';
+  return t;
+}
+
+function cutsFor(protein) {
+  return CUTS[proteinKey(protein)] || null;
+}
+
+function cutLabel(cut, protein) {
+  if (!cut || cut === 'any') return '';
+  const list = cutsFor(protein);
+  const row = list && list.find((c) => c.id === cut);
+  return row ? row.label : cut;
+}
+
+function plateLabel() {
+  const p = proteinLabel(state.filters.protein);
+  const c = cutLabel(state.filters.cut, state.filters.protein);
+  return c ? p + ' · ' + c : p;
 }
 
 function budgetLabel(n) {
@@ -231,6 +363,7 @@ function loadStore() {
       if (typeof f.adults === 'number') state.filters.adults = clamp(f.adults, 0, 20);
       if (typeof f.children === 'number') state.filters.children = clamp(f.children, 0, 20);
       if (f.store) state.filters.store = f.store;
+      if (f.cut) state.filters.cut = f.cut;
       if (eaters() < 1) state.filters.adults = 2;
     }
   } catch (err) {
@@ -511,13 +644,37 @@ function matchesProtein(recipe, protein) {
   return aliases.some((alias) => includesTerm(hay, alias));
 }
 
-function getPool(maxBudget, maxDiff) {
+function grindFriendly(hay) {
+  return /chili|chilli|stew|taco|burger|sloppy|meatball|casserole|soup|hash|sausage|ragu|bolognese|shepherd|cottage pie|empanada|dumpling/.test(hay);
+}
+
+function matchesCut(recipe, protein, cut) {
+  const list = cutsFor(protein);
+  if (!list || !cut || cut === 'any') return true;
+  const spec = list.find((c) => c.id === cut);
+  if (!spec) return true;
+  const hay = haystack(recipe).replace(/-/g, ' ');
+  const mentioned = list.filter((c) =>
+    c.id !== 'any' && (c.aliases || []).some((a) => includesTerm(hay, a))
+  );
+  if (cut === 'mystery' || cut === 'trimmings' || cut === 'ground') {
+    if (grindFriendly(hay)) return true;
+    if (!mentioned.length) return true;
+    return mentioned.some((c) => c.id === cut || c.id === 'trimmings' || c.id === 'ground' || c.id === 'shoulder');
+  }
+  if (!mentioned.length) return true;
+  return mentioned.some((c) => c.id === cut);
+}
+
+function getPool(maxBudget, maxDiff, opts) {
+  const ignoreCut = opts && opts.ignoreCut;
   const never = new Set(
     Object.keys(state.store.ratings).filter((id) => state.store.ratings[id] === 'never')
   );
   return state.recipes.filter((recipe) => {
     if (state.skippedIds.has(recipe.id) || never.has(recipe.id)) return false;
     if (!matchesProtein(recipe, state.filters.protein)) return false;
+    if (!ignoreCut && !matchesCut(recipe, state.filters.protein, state.filters.cut)) return false;
     if ((recipe.budget || 3) > maxBudget) return false;
     if ((recipe.difficulty || 2) > maxDiff) return false;
     return true;
@@ -532,15 +689,19 @@ function matchingPool() {
   let maxD = state.filters.difficulty;
   const loosened = { budget: false, difficulty: false };
   let pool = getPool(maxB, maxD);
+  if (!pool.length && state.filters.cut && state.filters.cut !== 'any') {
+    loosened.cut = true;
+    pool = getPool(maxB, maxD, { ignoreCut: true });
+  }
   if (!pool.length) {
     maxB = 5;
     loosened.budget = true;
-    pool = getPool(maxB, maxD);
+    pool = getPool(maxB, maxD, loosened.cut ? { ignoreCut: true } : null);
   }
   if (!pool.length) {
     maxD = 3;
     loosened.difficulty = true;
-    pool = getPool(maxB, maxD);
+    pool = getPool(maxB, maxD, loosened.cut ? { ignoreCut: true } : null);
   }
   return { pool, loosened, emptyLibrary: false };
 }
@@ -650,7 +811,7 @@ function go(screen, push) {
 }
 
 function back() {
-  const order = ['home', 'protein', 'budget', 'people', 'difficulty', 'store', 'pick', 'recipe', 'rate'];
+  const order = ['home', 'protein', 'cut', 'budget', 'people', 'difficulty', 'store', 'pick', 'recipe', 'rate'];
   if (state.screen === 'folders') {
     go('home');
     return;
@@ -660,7 +821,9 @@ function back() {
     return;
   }
   const i = order.indexOf(state.screen);
-  go(i > 0 ? order[i - 1] : 'home');
+  let prev = i > 0 ? order[i - 1] : 'home';
+  if (prev === 'cut' && !cutsFor(state.filters.protein)) prev = 'protein';
+  go(prev);
 }
 
 function startDinner() {
@@ -671,11 +834,22 @@ function startDinner() {
   state.pickMeta = null;
   state.recipeMode = 'pick';
   state.filters.protein = null;
+  state.filters.cut = null;
   go('protein');
 }
 
 function chooseProtein(id) {
   state.filters.protein = id;
+  state.filters.cut = null;
+  if (id !== 'surprise' && cutsFor(id)) {
+    go('cut');
+    return;
+  }
+  go('budget');
+}
+
+function chooseCut(id) {
+  state.filters.cut = id || 'any';
   go('budget');
 }
 
@@ -687,6 +861,11 @@ function chooseOtherProtein() {
     return;
   }
   state.filters.protein = { custom: value };
+  state.filters.cut = null;
+  if (cutsFor(state.filters.protein)) {
+    go('cut');
+    return;
+  }
   go('budget');
 }
 
@@ -739,6 +918,7 @@ function cookThis() {
     pickedAt: new Date().toISOString(),
     filters: {
       protein: state.filters.protein,
+      cut: state.filters.cut,
       budget: state.filters.budget,
       adults: state.filters.adults,
       children: state.filters.children,
@@ -759,6 +939,7 @@ function cancelTonight() {
   if (tonight && tonight.filters) {
     const f = tonight.filters;
     if (f.protein != null) state.filters.protein = f.protein;
+    if (f.cut != null) state.filters.cut = f.cut;
     if (typeof f.budget === 'number') state.filters.budget = f.budget;
     if (typeof f.adults === 'number') state.filters.adults = f.adults;
     if (typeof f.children === 'number') state.filters.children = f.children;
@@ -947,6 +1128,24 @@ function renderProtein() {
   );
 }
 
+function renderCut() {
+  const list = cutsFor(state.filters.protein) || [];
+  const protein = proteinLabel(state.filters.protein);
+  return (
+    stepDots(1) +
+    '<h2 class="screen-title">Which cut?</h2>' +
+    '<p class="lead">' + esc(protein) + ' isn’t one thing. Pick the piece you’ve actually got.</p>' +
+    '<div class="choice-list">' +
+      list.map((c) =>
+        '<button class="choice plain" data-act="cut" data-id="' + esc(c.id) + '">' +
+          '<span class="clabel">' + esc(c.label) + '</span>' +
+          (c.blurb ? '<span class="blurb">' + esc(c.blurb) + '</span>' : '<span class="blurb">&nbsp;</span>') +
+        '</button>'
+      ).join('') +
+    '</div>'
+  );
+}
+
 function renderBudget() {
   return (
     stepDots(2) +
@@ -1048,7 +1247,7 @@ function renderPick() {
     return (
       '<div class="empty">' +
         '<h2 class="screen-title">Nothing in the hat</h2>' +
-        '<p class="lead">No matches for ' + esc(proteinLabel(state.filters.protein)) + '. Try another protein, or Surprise Me.</p>' +
+        '<p class="lead">No matches for ' + esc(plateLabel()) + '. Try another protein, or Surprise Me.</p>' +
         '<div class="btn-row">' +
           '<button class="btn gold" data-act="go" data-screen="protein">Pick a protein</button>' +
           '<button class="btn forest" data-act="protein" data-id="surprise">✨ Surprise me</button>' +
@@ -1064,8 +1263,10 @@ function renderPick() {
     '<button class="hat-name" data-act="hat" data-id="' + esc(r.id) + '">' + esc(r.title) + '</button>'
   ).join('');
   let banner = '';
-  if (state.pickMeta && state.pickMeta.loosened && (state.pickMeta.loosened.budget || state.pickMeta.loosened.difficulty)) {
-    banner = '<p class="banner">We loosened the filters a little so the hat had three names.</p>';
+  if (state.pickMeta && state.pickMeta.loosened && (state.pickMeta.loosened.budget || state.pickMeta.loosened.difficulty || state.pickMeta.loosened.cut)) {
+    banner = state.pickMeta.loosened.cut
+      ? '<p class="banner">No dish written just for that cut — use yours in these ' + esc(proteinLabel(state.filters.protein)) + ' recipes.</p>'
+      : '<p class="banner">We loosened the filters a little so the hat had three names.</p>';
   }
   return (
     '<p class="kicker">The hat pulled three</p>' +
@@ -1099,7 +1300,7 @@ function renderRecipe() {
     return (
       '<div class="empty">' +
         '<h2 class="screen-title">Nothing in the hat</h2>' +
-        '<p class="lead">No matches for ' + esc(proteinLabel(state.filters.protein)) + '. ' + note + ' Try another protein, or Surprise Me.</p>' +
+        '<p class="lead">No matches for ' + esc(plateLabel()) + '. ' + note + ' Try another protein, or Surprise Me.</p>' +
         '<div class="btn-row">' +
           '<button class="btn gold" data-act="go" data-screen="protein">Pick a protein</button>' +
           '<button class="btn forest" data-act="protein" data-id="surprise">✨ Surprise me</button>' +
@@ -1124,6 +1325,7 @@ function renderRecipe() {
   let banner = '';
   if (!browse && state.pickMeta && state.pickMeta.loosened) {
     const bits = [];
+    if (state.pickMeta.loosened.cut) bits.push('cut (use yours in this recipe)');
     if (state.pickMeta.loosened.budget) bits.push('budget');
     if (state.pickMeta.loosened.difficulty) bits.push('difficulty');
     if (bits.length) {
@@ -1134,7 +1336,7 @@ function renderRecipe() {
   const chips = browse
     ? ''
     : '<div class="chips">' +
-        '<span class="chip">' + esc(proteinLabel(state.filters.protein)) + '</span>' +
+        '<span class="chip">' + esc(plateLabel()) + '</span>' +
         '<span class="chip">' + esc(budgetLabel(state.filters.budget)) + '</span>' +
         '<span class="chip">' + esc(diffLabel(state.filters.difficulty)) + '</span>' +
         '<span class="chip">' + state.filters.adults + ' adult' + (state.filters.adults === 1 ? '' : 's') +
@@ -1368,6 +1570,7 @@ function renderMain() {
   const screens = {
     home: renderHome,
     protein: renderProtein,
+    cut: renderCut,
     budget: renderBudget,
     people: renderPeople,
     difficulty: renderDifficulty,
@@ -1399,6 +1602,7 @@ function onClick(event) {
   else if (act === 'protein') {
     if (btn.dataset.id === 'surprise' && (state.screen === 'recipe' || state.screen === 'pick')) {
       state.filters.protein = 'surprise';
+      state.filters.cut = null;
       state.skippedIds = new Set();
       state.recipeMode = 'pick';
       pickThree();
@@ -1408,6 +1612,7 @@ function onClick(event) {
     }
   }
   else if (act === 'protein-other') chooseOtherProtein();
+  else if (act === 'cut') chooseCut(btn.dataset.id);
   else if (act === 'budget') chooseBudget(btn.dataset.n);
   else if (act === 'difficulty') chooseDifficulty(btn.dataset.n);
   else if (act === 'store') chooseStore(btn.dataset.id);
